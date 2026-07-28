@@ -9,16 +9,16 @@
  "graph": {
   "nodes": 17283,
   "edges": 4815,
-  "supersedes_edges": 25,
-  "amends_edges": 93,
-  "distinct_superseded_grs": 25
+  "supersedes_edges": 33,
+  "amends_edges": 169,
+  "distinct_superseded_grs": 33
  },
  "headline": {
-  "dead_references": 21,
-  "rotted": 8,
-  "born_dead": 13,
+  "dead_references": 24,
+  "rotted": 10,
+  "born_dead": 14,
   "latent_cross_department": 2,
-  "distinct_citing_grs_in_force": 21,
+  "distinct_citing_grs_in_force": 24,
   "excluded_citing_gr_already_superseded": 0
  },
  "unverifiable": {
@@ -34,6 +34,27 @@
   "WARNING": "NOT dead references. These citations could not be resolved, and the explanation for almost all is that the cited order is absent from the public crawl — not that it was superseded. Never merge with the headline; reporting them as dead would multiply the number and make it false."
  },
  "findings": [
+  {
+   "kind": "ROTTED",
+   "citing_uid": "202404301225429207",
+   "citing_date": "2024-04-30",
+   "citing_dept": "General Administration",
+   "citing_subject": "Regarding the cancellation of the supernumerary post created for Mrs. Nishigandha Prasad Kumar, Assistant Section Officer, Agriculture  ADF Department.",
+   "target_uid": "202001181543297007",
+   "target_date": "2020-01-18",
+   "target_dept": "General Administration",
+   "target_subject": "Creation of 50 Supernumerary posts for Mantralaya cadre Officers / Employees appointed in scheduled tribe but not produce the same certificates.",
+   "superseded_by": "202607211654267907",
+   "superseded_on": "2026-07-21",
+   "superseded_by_subject": "Recommendation and Appointment  of Assistant Section Officer Smt. Kirti Ganesh Pawar from Limited Departmental Competative Exam 2016",
+   "days_dead_when_cited": null,
+   "days_until_death": 812,
+   "cross_dept_citation": false,
+   "cross_dept_supersession": false,
+   "citation_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्रमांक: एएससी-१५१९/प्र.क्र.१९१/१४-अ, दि. १८.०१.२०२०",
+   "supersession_evidence": "सामान्य प्रशासन विभाग, शा.नि.क्र. एएससी-१५१९/प्र.क्र.१९१/१४-अ, दि. १८.०१.२०२०",
+   "supersession_evidence_en": "The government decision dated 25.05.2004 is declared null and void."
+  },
   {
    "kind": "ROTTED",
    "citing_uid": "202101191655116908",
@@ -74,7 +95,7 @@
    "cross_dept_supersession": false,
    "citation_evidence": "शासन निर्णय वित्त विभाग क्रमांक : वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दिनांक ३.२.२०२२.",
    "supersession_evidence": "२)शासन निर्णय, वित्त विभाग, क्रमांक वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दि.०३.०२.२०२२.",
-   "supersession_evidence_en": "By superseding the previously issued orders regarding vehicle price limits"
+   "supersession_evidence_en": "By superseding the previously issued order regarding vehicle price limits"
   },
   {
    "kind": "ROTTED",
@@ -116,7 +137,28 @@
    "cross_dept_supersession": false,
    "citation_evidence": "वित्त विभाग, शासन निर्णय क्र.वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दि.०३.०२.२०२२",
    "supersession_evidence": "२)शासन निर्णय, वित्त विभाग, क्रमांक वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दि.०३.०२.२०२२.",
-   "supersession_evidence_en": "By superseding the previously issued orders regarding vehicle price limits"
+   "supersession_evidence_en": "By superseding the previously issued order regarding vehicle price limits"
+  },
+  {
+   "kind": "ROTTED",
+   "citing_uid": "202510171253162307",
+   "citing_date": "2025-10-17",
+   "citing_dept": "General Administration",
+   "citing_subject": "Creation of  Supernumerary posts for Mantralaya cadre Officers / Employees appointed in scheduled tribe but not produce the same certificates.",
+   "target_uid": "202001181543297007",
+   "target_date": "2020-01-18",
+   "target_dept": "General Administration",
+   "target_subject": "Creation of 50 Supernumerary posts for Mantralaya cadre Officers / Employees appointed in scheduled tribe but not produce the same certificates.",
+   "superseded_by": "202607211654267907",
+   "superseded_on": "2026-07-21",
+   "superseded_by_subject": "Recommendation and Appointment  of Assistant Section Officer Smt. Kirti Ganesh Pawar from Limited Departmental Competative Exam 2016",
+   "days_dead_when_cited": null,
+   "days_until_death": 277,
+   "cross_dept_citation": false,
+   "cross_dept_supersession": false,
+   "citation_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्र. एएससी-१५१९/प्र.क्र.१९१/१४-अ, दि. १८.०१.२०२०",
+   "supersession_evidence": "सामान्य प्रशासन विभाग, शा.नि.क्र. एएससी-१५१९/प्र.क्र.१९१/१४-अ, दि. १८.०१.२०२०",
+   "supersession_evidence_en": "The government decision dated 25.05.2004 is declared null and void."
   },
   {
    "kind": "ROTTED",
@@ -200,7 +242,7 @@
    "cross_dept_supersession": false,
    "citation_evidence": "शासन निर्णय वित्त विभाग क्रमांक : वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दिनांक ३.२.२०२२.",
    "supersession_evidence": "२)शासन निर्णय, वित्त विभाग, क्रमांक वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दि.०३.०२.२०२२.",
-   "supersession_evidence_en": "By superseding the previously issued orders regarding vehicle price limits"
+   "supersession_evidence_en": "By superseding the previously issued order regarding vehicle price limits"
   },
   {
    "kind": "BORN_DEAD",
@@ -221,7 +263,7 @@
    "cross_dept_supersession": false,
    "citation_evidence": "समक्रमांकाचे दिनांक २२.०७.२०१९ रोजीचे आदेश. आदेश संदर्भाधीन क्र.१ येथील आदेशान्वये श्रीमती गी.हे. राणे, कक्ष अधिकारी, सहकार, पणन व वस्त्रोद्योग विभाग (अ.क्र.",
    "supersession_evidence": "समक्रमांकाचे दिनांक २२.०७.२०१९ रोजीचे आदेश. आदेश संदर्भाधीन क्र.१ येथील आदेशान्वये श्री.नि.शं.क्षीरसागर, कक्ष अधिकारी, उच्च व तंत्रशिक्षण विभाग यांची महाराष्ट्र शासकीय कर्मचाऱ्यांच्या बदल्यांचे विनियमन आणि शासकीय कर्तव्ये पार पाडताना होणाऱ्या विलंबास प्रतिबंध अधिनियम, २००५ च्या कलम ४(४) व ४(५) अनुसार शालेय शिक्षण व क्रिडा विभागामध्ये बदली करण्यात आली आहे. तसेच संदर्भाधीन क्र.२ येथील आदेशान्वये श्र",
-   "supersession_evidence_en": "The unilateral release order of Mr. Ni.Sh... Ksheersagar, Office Officer (File No. 29) is cancelled for administrative reasons."
+   "supersession_evidence_en": "The one‑sided order relieving Shri ... is cancelled for administrative reasons."
   },
   {
    "kind": "BORN_DEAD",
@@ -241,8 +283,8 @@
    "cross_dept_citation": false,
    "cross_dept_supersession": false,
    "citation_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्र. संकीर्ण-२०१९/३१/प्र.क्र.१२/२०-अ दिनांक १७.२.२०२१",
-   "supersession_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्र. संकीर्ण-२०१९/३१/प्र.क्र.१२/२०-अ दिनांक १७.२.२०२१",
-   "supersession_evidence_en": "The government decision dated 17.2.2021, reference number 7, is being cancelled."
+   "supersession_evidence": "संदर्भीय क्रमांक ७ येथील दिनांक १७.२.२०२१ रोजीचा शासन निर्णय रद्द करण्यात येत आहे.",
+   "supersession_evidence_en": "The government decision dated 17.02.2021 referred to as reference number 7 is being cancelled."
   },
   {
    "kind": "BORN_DEAD",
@@ -263,7 +305,7 @@
    "cross_dept_supersession": false,
    "citation_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्रमांक : राजभ-२०२१/प्र.क्र.४१/२०-अ, दिनांक २६.२.२०२१",
    "supersession_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्रमांक राजभ-२०२१/प्र.क्र.४१/२०-अ, दिनांक २६.२.२०२१",
-   "supersession_evidence_en": "The government decision dated 26.2.2021, reference number 7, is being cancelled."
+   "supersession_evidence_en": "The government decision dated 26.2.2021 referred to as number 7 is being cancelled."
   },
   {
    "kind": "BORN_DEAD",
@@ -284,7 +326,28 @@
    "cross_dept_supersession": false,
    "citation_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्रमांक : राजभ-२०२१/प्र.क्र.४१/२०-अ, दिनांक २६.२.२०२१",
    "supersession_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्रमांक राजभ-२०२१/प्र.क्र.४१/२०-अ, दिनांक २६.२.२०२१",
-   "supersession_evidence_en": "The government decision dated 26.2.2021, reference number 7, is being cancelled."
+   "supersession_evidence_en": "The government decision dated 26.2.2021 referred to as number 7 is being cancelled."
+  },
+  {
+   "kind": "BORN_DEAD",
+   "citing_uid": "202607211650411707",
+   "citing_date": "2026-07-21",
+   "citing_dept": "General Administration",
+   "citing_subject": "Regarding the cancellation of the supernumerary post created for Mrs. Kirti Ganesh Pawar, Clerk-Typist, General Administration Department.",
+   "target_uid": "202001181543297007",
+   "target_date": "2020-01-18",
+   "target_dept": "General Administration",
+   "target_subject": "Creation of 50 Supernumerary posts for Mantralaya cadre Officers / Employees appointed in scheduled tribe but not produce the same certificates.",
+   "superseded_by": "202607211654267907",
+   "superseded_on": "2026-07-21",
+   "superseded_by_subject": "Recommendation and Appointment  of Assistant Section Officer Smt. Kirti Ganesh Pawar from Limited Departmental Competative Exam 2016",
+   "days_dead_when_cited": 0,
+   "days_until_death": null,
+   "cross_dept_citation": false,
+   "cross_dept_supersession": false,
+   "citation_evidence": "सामान्य प्रशासन विभाग, शासन निर्णय क्रमांक: एएससी-१५१९/प्र.क्र.१९१/१४-अ, दि. १८.०१.२०२०",
+   "supersession_evidence": "सामान्य प्रशासन विभाग, शा.नि.क्र. एएससी-१५१९/प्र.क्र.१९१/१४-अ, दि. १८.०१.२०२०",
+   "supersession_evidence_en": "The government decision dated 25.05.2004 is declared null and void."
   },
   {
    "kind": "BORN_DEAD",
@@ -496,7 +559,7 @@
    "cross_dept_supersession": false,
    "citation_evidence": "शासन निर्णय वित्त विभाग क्रमांक : वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दिनांक ३.२.२०२२.",
    "supersession_evidence": "२)शासन निर्णय, वित्त विभाग, क्रमांक वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दि.०३.०२.२०२२.",
-   "supersession_evidence_en": "By superseding the previously issued orders regarding vehicle price limits"
+   "supersession_evidence_en": "By superseding the previously issued order regarding vehicle price limits"
   },
   {
    "kind": "ROTTED",
@@ -517,7 +580,7 @@
    "cross_dept_supersession": false,
    "citation_evidence": "शासन निर्णय वित्त विभाग क्रमांक : वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दिनांक ३.२.२०२२.",
    "supersession_evidence": "२)शासन निर्णय, वित्त विभाग, क्रमांक वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम, दि.०३.०२.२०२२.",
-   "supersession_evidence_en": "By superseding the previously issued orders regarding vehicle price limits"
+   "supersession_evidence_en": "By superseding the previously issued order regarding vehicle price limits"
   }
  ]
 }

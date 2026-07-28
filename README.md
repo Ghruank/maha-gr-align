@@ -56,7 +56,7 @@ Every figure below is regenerable — see [Reproducing everything](#reproducing-
 | Citations extracted from Marathi | **27,948** |
 | Dependency edges resolved | **4,815** |
 | — of which cross-departmental | **1,538** (31.9%) |
-| **Dead references (GRs in force citing cancelled orders)** | **21** |
+| **Dead references (GRs in force citing cancelled orders)** | **24** |
 | Numeric magnitude errors in the English translation | **335** |
 | Template violations over 2,000 GRs | 23 errors, 576 warnings |
 | Full graph build time | **10 seconds** |

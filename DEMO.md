@@ -46,7 +46,7 @@ Click through to the Marathi evidence. Say the line:
 > "Every claim we make shows the verbatim Marathi sentence that produced it. If we can't show you
 > the sentence, the edge doesn't ship — and that's enforced by a test, not by good intentions."
 
-**21 dead references total.** Say the honest scope if asked: 5 distinct dead orders behind them.
+**24 dead references total.** Say the honest scope if asked: 7 distinct dead orders behind them, and 33 supersessions typed so far out of 718 candidate edges — the number grows with coverage, not with looser definitions.
 
 ### 1:20 — Why it's hard (40 s)
 
@@ -122,7 +122,7 @@ Add, in this order:
 > 100% of 600 sampled edges, and zero structural violations across 4,815 edges. We'd rather show
 > you five things we measured than one we didn't."
 
-**"Only 21 dead references out of 17,000 GRs?"**
+**"Only 24 dead references out of 17,000 GRs?"**
 > "Yes, and that's the honest number. 21,121 citations we could *not* resolve are reported
 > separately as unverifiable — mostly because the cited order isn't in the public crawl. Counting
 > those would give us a headline four times bigger and false. Also, we've typed supersession on

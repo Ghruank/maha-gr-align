@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-27T00:27:09",
+ "generated_at": "2026-07-28T20:18:24",
  "graph_built_at": "2026-07-26T13:18:12",
  "accuracy": {
   "value": null,
@@ -54,11 +54,11 @@
    "forward_in_time": 0,
    "type_out_of_vocabulary": 0,
    "empty_evidence": 0,
-   "typed_without_cue": 2,
+   "typed_without_cue": 0,
    "confidence_out_of_range": 0,
    "citations_lost": 0
   },
-  "total_violations": 2,
+  "total_violations": 0,
   "edges_checked": 4815
  },
  "groundedness": {
@@ -82,5 +82,160 @@
   },
   "resolution_rate_pct_DO_NOT_QUOTE_ALONE": 17.2,
   "note": "resolution rate is not an accuracy metric. Most unresolved citations cannot resolve for structural reasons (not a GR, outside the crawl, another department). Quote the breakdown, never the bare rate."
+ },
+ "cross_language": {
+  "comparable_edges": 3462,
+  "comparable_pct_of_edges": 71.9,
+  "agree_exact": 3232,
+  "agree_after_normalisation": 34,
+  "residual_disagreement": 196,
+  "agreement_lower_bound_pct": 94.34,
+  "not_comparable": {
+   "en_states_no_number": 731,
+   "en_silent": 622
+  },
+  "residual_sample": [
+   {
+    "src": "202210031613465005",
+    "cited_date": "2022-02-28",
+    "dst": "202203031209098605",
+    "target_no": "मविन्या १०२२/प्र.क्र .० ९/वि.प्र .४",
+    "english_no": [
+     "Mavinya 1022/ No.No. 28.02.2022",
+     "1022/ P.S. as on 28.02.2022. This has"
+    ]
+   },
+   {
+    "src": "202210311539498505",
+    "cited_date": "2022-09-30",
+    "dst": "202210031103191705",
+    "target_no": "पदनि-२०२२/प्र.क्र .२/२०२२/आ.पु.क .",
+    "english_no": [
+     "2/2022/ APCD 30.09.2022"
+    ]
+   },
+   {
+    "src": "202304121624305005",
+    "cited_date": "2022-02-28",
+    "dst": "202203031209098605",
+    "target_no": "मविन्या १०२२/प्र.क्र .० ९/वि.प्र .४",
+    "english_no": [
+     "Mavinya-1022/ No.No. 28.02.2022"
+    ]
+   },
+   {
+    "src": "202309151153249205",
+    "cited_date": "2023-04-12",
+    "dst": "202304121624305005",
+    "target_no": "मविन्या १०२२/प्र.क्र .० ९/वि.प्र .४",
+    "english_no": [
+     "Mavinya 1022/ No.No. 12.04.2023 5) Government Resolution",
+     "1022/ P.S. as on 12.04.2023. 31.08.2023"
+    ]
+   },
+   {
+    "src": "202409201814444405",
+    "cited_date": "2024-03-15",
+    "dst": "202403151916411205",
+    "target_no": "विकवि-१०२२/प्र क्र.०८/वि.प्र.४",
+    "english_no": [
+     "1019 / Q. 28 / V.P. 4"
+    ]
+   },
+   {
+    "src": "202510141214358305",
+    "cited_date": "2022-12-29",
+    "dst": "202212291639084705",
+    "target_no": "विविआ-१०१६/प्र.क्र .३६८/प्रशा-१",
+    "english_no": [
+     "VVIA-1016 / Q.No.368 / Pr. 29.12.2022"
+    ]
+   },
+   {
+    "src": "202512181422205605",
+    "cited_date": "2025-07-25",
+    "dst": "202507251736002205",
+    "target_no": "संकीर्ण २०२५/प्र.क्र.३२/२५/कोषा.प्रशा.५",
+    "english_no": [
+     "Narrow-2025 / Q. 32/25 Treasuries. 25.07.2025"
+    ]
+   },
+   {
+    "src": "201808161625524407",
+    "cited_date": "2018-07-11",
+    "dst": "201807111214404407",
+    "target_no": "सुकर्मी-२०१८/प्र.क्र .७५/१४",
+    "english_no": [
+     "72/ Work-14",
+     "11/07/2018"
+    ]
+   },
+   {
+    "src": "201812011058367307",
+    "cited_date": "2018-03-17",
+    "dst": "201803171213426307",
+    "target_no": "विप्रप्र-२०१८/प्र.क्र .५१/१८/१२-अ",
+    "english_no": [
+     "No. 2016/ Process. 8/16/ A.P.C"
+    ]
+   },
+   {
+    "src": "201905091540065707",
+    "cited_date": "2019-05-08",
+    "dst": "201905081241229007",
+    "target_no": "कअप १२१८/प्र.क्र .१०३/१४-ब",
+    "english_no": [
+     "1618/ PR No. 674/ A (Ministry)"
+    ]
+   },
+   {
+    "src": "201905281500478707",
+    "cited_date": "2018-09-17",
+    "dst": "201809171454263607",
+    "target_no": "विभाचौ १६१८/प्र.क्र .४२/११-अ",
+    "english_no": [
+     "Vichau 1618/ PR No. 12/ 11-A"
+    ]
+   },
+   {
+    "src": "201908161214451207",
+    "cited_date": "2019-07-10",
+    "dst": "201907101214027507",
+    "target_no": "एआयएस-१३१ ९/प्र.क्र .२६५/२०१ ९/दहा",
+    "english_no": [
+     null,
+     "n-State Civil Services for the year 2018"
+    ]
+   },
+   {
+    "src": "202001301618334807",
+    "cited_date": "2019-08-08",
+    "dst": "201908081121083407",
+    "target_no": "बदली-२०१ ९/प्र.क्र .५२/१४-अ",
+    "english_no": [
+     "16.12.2019"
+    ]
+   },
+   {
+    "src": "202008191425163207",
+    "cited_date": "2020-01-31",
+    "dst": "202001311741077607",
+    "target_no": "कअनि ११२०/प्र.क्र .०५/१४-ब",
+    "english_no": [
+     "36/14-B"
+    ]
+   },
+   {
+    "src": "202010151716352707",
+    "cited_date": "2018-11-27",
+    "dst": "201811271517068807",
+    "target_no": "प्रतिनि-२५१८/प्र.क्र .१६८/१४-अ",
+    "english_no": [
+     "2018/ PR No. 116/12-A",
+     "1 As per the order"
+    ]
+   }
+  ],
+  "interpretation": "LOWER BOUND on precision. Disagreement may originate on either side; inspection shows the English translation failing more often. Not a substitute for a hand-labelled accuracy figure."
  }
 }

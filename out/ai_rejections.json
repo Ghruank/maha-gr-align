@@ -1,15 +1,15 @@
 [
  {
-  "edge_index": 37,
-  "src": "202210031103191705",
-  "dst": "202204121800353105",
+  "edge_index": 606,
+  "src": "202106031309056507",
+  "dst": "202102171328439507",
   "link": "date",
-  "sentence": "शासन निर्णय : वरील संदर्भ क्र. १० येथील दि.१२.०४.२०२२ चा शासन निर्णय अधिक्रमित करुन पदभरतीबाबत खालीलप्रमाणे सुधारित सूचना देण्यात येत आहेत.",
-  "evidence_span": "अधिकरणित करुन",
+  "sentence": "संदर्भीय क्रमांक ७ येथील दिनांक १७.२.२०२१ रोजीचा शासन निर्णय रद्द करण्यात येत आहे.",
+  "evidence_span": "संदर्भीय क्रमांक ७ येथील दिनांक १७.२.2021 रोजीचा शासन निर्णय रद्द करण्यात येत आहे",
   "cancelled_object": "शासन निर्णय",
-  "gloss_en": "Government decision: By superseding the above reference No.10 dated 12.04.2022 government decision, revised instructions regarding recruitment are being issued.",
-  "confidence": 0.98,
-  "cache_key": "71923506a6cd1a262b2ea21b",
+  "gloss_en": "The government decision dated 17.02.2021 referred to as reference number 7 is being cancelled.",
+  "confidence": 0.96,
+  "cache_key": "d16cc75dbcc505d2f57d1230",
   "verdict": "FLAGGED",
   "type": "SUPERSEDES",
   "proposed_type": "SUPERSEDES",
@@ -28,7 +28,7 @@
    },
    "G1_grounding": {
     "pass": false,
-    "why": "span not verbatim in source: 'अधिकरणित करुन'"
+    "why": "span not verbatim in source: 'संदर्भीय क्रमांक ७ येथील दिनांक १७.२.2021 रोजीचा शासन निर्णय रद्द करण्'"
    },
    "G4_numeric": {
     "pass": true,
@@ -41,21 +41,21 @@
   },
   "failed_hard": [],
   "failed_soft": [
-   "G1_grounding: span not verbatim in source: 'अधिकरणित करुन'"
+   "G1_grounding: span not verbatim in source: 'संदर्भीय क्रमांक ७ येथील दिनांक १७.२.2021 रोजीचा शासन निर्णय रद्द करण्'"
   ],
   "notes": []
  },
  {
-  "edge_index": 167,
-  "src": "202507301203326505",
-  "dst": "202504231650456005",
-  "link": "sole_citation",
-  "sentence": "(१५) संचालक, लेखा व कोषागारे, महाराष्ट्र राज्य यांचे पत्र क्रमांक: संलेको-२०२४/सुधारणा/न.क्र.५२/IT",
-  "evidence_span": "संक...",
+  "edge_index": 919,
+  "src": "202209071552006007",
+  "dst": "202208081713489207",
+  "link": "date",
+  "sentence": "संदर्भ: १)शासन निर्णय, सामान्य प्रशासन विभाग क्रमांक टिआरएन २०१३/प्र.क्र.८४/१३/१२-अ, दिनांक २०.०१.२०१४ २) शासन निर्णय, वित्त विभाग क्रमांक पदनि २०१६/प्र.क्र.७/१६/वित्तीय सुधारणा-१, दिनांक २०.०२.२०१६ ३)शासन निर्णय, सामान्य प्रशासन विभाग क्रमांक टिआरएन-०५१७/प्र.क्र.३६/सीपीटीपी, दिनांक २१.०७.२०१७ ४) कार्यालयीन आदेश क्रमांक,सामान्य प्रशासन विभाग क्रमांक टिआरएन -०६२२/प्र.क्र.३८/ सीपीटीपी-ब, दिनांक ०१.०८.२०२२ ५) शासन परिपत्रक क्रमांक सामान्य प्रशासन विभाग क्रमांक टिआरएन-०७२२/प्र.क्र.४३/ सीपीटीपी, दिनांक ०८.०८.२०२२ ६) वनामती, नागपूर याचे पत्र क्र.आस्था-०८२२/सीपीटीपी-८/३०४४/२०२२, दिनांक २४.०८.२०२२",
+  "evidence_span": "६) शासन परिपत्रक क्रमांक सामान्य प्रशासन विभाग क्रमांक टिआरएन-०७२२/प्र.क्र.४३/ सीपीटीपी, दिनांक ०८.०८.२०२२",
   "cancelled_object": null,
-  "gloss_en": "(15) Letter number of the Director, Accounts and Treasury, Government of Maharashtra: संलेको-2024/सुधारणा/No.52/IT",
-  "confidence": 0.98,
-  "cache_key": "831898da8e7ef5cb928a7107",
+  "gloss_en": "Reference: Government circular No. TRN-0722/Pr.No.43/CPTP dated 08.08.2022.",
+  "confidence": 0.97,
+  "cache_key": "bf5cd8a1fd25a3df4aaeab58",
   "verdict": "FLAGGED",
   "type": "REFERENCES",
   "proposed_type": "REFERENCES",
@@ -74,7 +74,7 @@
    },
    "G1_grounding": {
     "pass": false,
-    "why": "span not verbatim in source: 'संक...'"
+    "why": "span not verbatim in source: '६) शासन परिपत्रक क्रमांक सामान्य प्रशासन विभाग क्रमांक टिआरएन-०७२२/प्र'"
    },
    "G4_numeric": {
     "pass": true,
@@ -87,21 +87,21 @@
   },
   "failed_hard": [],
   "failed_soft": [
-   "G1_grounding: span not verbatim in source: 'संक...'"
+   "G1_grounding: span not verbatim in source: '६) शासन परिपत्रक क्रमांक सामान्य प्रशासन विभाग क्रमांक टिआरएन-०७२२/प्र'"
   ],
   "notes": []
  },
  {
-  "edge_index": 2313,
-  "src": "202008191216377008",
-  "dst": "202007231533314808",
-  "link": "date",
-  "sentence": "शासननिर्णय : शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९८/तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व १३ मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे.",
-  "evidence_span": "अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे",
-  "cancelled_object": "रकाना क्रमांक १२ व 13",
-  "gloss_en": "In annexure “A” of Government Decision No. TEEM-2020/Pr.No.98/Tanshi-4 dated 23/07/2020, entry No.120, the numbers opposite the name of Mr. Babnarav Pachpute Vichardhara Trust’s Group of Institutions (Integrated Campus), Kasti, Shri Gonda, Ahmadnagar district, in rows 12 and 13 are being corrected from “12” and “-6” to “15” and “-3” respectively.",
-  "confidence": 0.97,
-  "cache_key": "50b4c29ae64ac461da3ac125",
+  "edge_index": 930,
+  "src": "202209131146358207",
+  "dst": "201909261059455507",
+  "link": "sole_citation",
+  "sentence": "२. उपरोक्त वाचा येथील अनुक्रमांक १ येथे नमूद शासन निर्णयान्वये पदव्युत्तर पदवी अभ्यासक्रमाची अंमलबजावणी करण्यास यशदा, पूणे या संस्थेस मंजूरी देण्यात आली आहे. शासकीय धोरणे आणि प्रशासकीय कार्यपद्धतीमध्ये वेळोवेळी होणारे बदल विचारात घेऊन पदव्युत्तर पदवी अभ्यासक्रमामध्ये सुधारणा करणे गरजेचे आहे. सदर अभ्यासक्रम प्रशासकीय कामकाजासाठी पूरक ठरावा यासाठी या अभ्यासक्रमामध्ये आवश्यक त्या सुधारणा करण्यासाठी सदर अभ्यासक्रम पुणे स्थित विद्यापिठाशी संलग्न केल्यास पदव्युत्तर पदवी अभ्यासक्रमाची अंमलबजावणी करणा-या यशदा, पुणे यांना समन्वयनाच्या दृष्टीने सोईचे होईल. सबब सदर अभ्यासक्रम यापुढे (सीपीटीपी-९ या तुकडीपासून) पुणे स्थित गोखले राज्यशास्त्र आणि अर्थशास्त्र संस्था या संस्थेच्या संयुक्त विद्यमाने राबविण्याची बाब शासनाच्या विचाराधीन होती. त्यासंदर्भात शासनाने पुढीलप्रमाणे निर्णय घेतला आहे.",
+  "evidence_span": "सदर अभ्यासक्रम ... सुधारणा करणे गरजेचे आहे",
+  "cancelled_object": "अभ्यासक्रम",
+  "gloss_en": "It is necessary to make amendments to the postgraduate curriculum as mentioned in the earlier decision.",
+  "confidence": 0.95,
+  "cache_key": "bf5cd8a1fd25a3df4aaeab58",
   "verdict": "FLAGGED",
   "type": "AMENDS",
   "proposed_type": "AMENDS",
@@ -120,7 +120,7 @@
    },
    "G1_grounding": {
     "pass": false,
-    "why": "span not verbatim in source: 'अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ '"
+    "why": "span not verbatim in source: 'सदर अभ्यासक्रम ... सुधारणा करणे गरजेचे आहे'"
    },
    "G4_numeric": {
     "pass": true,
@@ -133,7 +133,283 @@
   },
   "failed_hard": [],
   "failed_soft": [
-   "G1_grounding: span not verbatim in source: 'अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ '"
+   "G1_grounding: span not verbatim in source: 'सदर अभ्यासक्रम ... सुधारणा करणे गरजेचे आहे'"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 981,
+  "src": "202211211527483607",
+  "dst": "202210191134308207",
+  "link": "sole_citation",
+  "sentence": "३. सदर ज्येष्ठतासूची मा. सर्वोच्च न्यायालयात दाखल विशेष अनुज्ञा याचिका क्र.२८३०६/ २०१७ च्या निर्णयाच्या अधिन राहून प्रसिध्द करण्यात येत आहे. याशिवाय ज्या कर्मचाऱ्यांच्या नियुक्त्या नियमित पदोन्नतीच्या कोटयातील रिक्त पदावर तात्पुरत्या पदोन्नत्या दर्शवून ज्येष्ठतायादीत समावेश केला आहे, अश्या कर्मचाऱ्यांच्या तात्पुरत्या पदोन्नत्या कोणत्याही कारणास्तव निवडसूचीत बदल झाल्यामुळे रद्द झाल्यास किंवा सुधारित झाल्यास व त्यामुळे त्यांच्या सेवाज्येष्ठतेमध्ये बदल झाल्यास, त्या बदलाच्या अधीन संबंधित तात्पुरत्या कर्मचाऱ्यांचा ज्येष्ठतायादीत समावेश केलेला आहे.",
+  "evidence_span": "सदर ज्येष्ठतासूची ... प्रसिध्द करण्यात येत आहे",
+  "cancelled_object": null,
+  "gloss_en": "The said seniority list is being promulgated under the Supreme Court decision of special permission petition No. 28306/2017, and temporary promotions are included as described.",
+  "confidence": 0.9,
+  "cache_key": "de0993f9c71fd51302fe3d07",
+  "verdict": "FLAGGED",
+  "type": "NONE",
+  "proposed_type": "NONE",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'सदर ज्येष्ठतासूची ... प्रसिध्द करण्यात येत आहे'"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'सदर ज्येष्ठतासूची ... प्रसिध्द करण्यात येत आहे'"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 1113,
+  "src": "202303171527446207",
+  "dst": "202203081627167207",
+  "link": "sole_citation",
+  "sentence": "ज्ञापन: अधिदान व लेखा अधिकारी यांना कळविण्यात येते की, संदर्भाधीन अ.क्र.१ वरील ज्ञापनाद्वारे विमानचालन संचालनालयाच्या जुहू हँगर क्र. ६ स्थित असलेल्या भाडे वाढीस मंजूरी देण्यात आली आहे. तथापि भारतीय विमानपत्तन प्राधिकरणाने संदर्भाधीन पत्र क्र. २ अन्वये भाडयामध्ये सुधारणा केली आहे. त्यास अनुसरुन विमानचालन संचालनालयाने संदर्भाधीन अ. क्र.३ अन्वये सादर केलेल्या प्रस्तावानुसार, विमानचालन संचालनालयाच्या जुहू हँगर क्र.६ येथे स्थित असलेल्या कार्यालयाच्या भाड्यात भारतीय विमानपत्तन प्राधिकरणाने सदर कार्यालयासाठी दिनांक १/४/०२२ ते ३१/३/२०२५ या कालावधीकरीता दरमहा रु.४,०९,३३६/- (अक्षरी रूपये चार लाख नऊ हजार तीनशे छत्तीस फक्त) इतके भाडे + अनुज्ञेय कर अदा करण्यास सदर ज्ञापनाद्वारे मंजूरी देत आहे.",
+  "evidence_span": "संदर्भाधीन अ.क्र.१ वरील ज्ञापनाद्वारे ... मंजूरी देण्यात आली आहे",
+  "cancelled_object": null,
+  "gloss_en": "Reference memo grants approval for the rent as per earlier documents.",
+  "confidence": 0.9,
+  "cache_key": "e44957bf53fa99d9d32940c0",
+  "verdict": "FLAGGED",
+  "type": "REFERENCES",
+  "proposed_type": "REFERENCES",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'संदर्भाधीन अ.क्र.१ वरील ज्ञापनाद्वारे ... मंजूरी देण्यात आली आहे'"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'संदर्भाधीन अ.क्र.१ वरील ज्ञापनाद्वारे ... मंजूरी देण्यात आली आहे'"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 1302,
+  "src": "202310131625057107",
+  "dst": "202309141113366607",
+  "link": "date",
+  "sentence": "मा. सर्वोच्च न्यायालयाद्वारे दिनांक ०९.०९.२०२० रोजी सामाजिक व शैक्षणिकदृष्ट्या मागास प्रवर्ग (एसईबीसी) आरक्षण अधिनियम, २०१८ ला अंतरिम स्थगिती देण्यापूर्वी महाराष्ट्र लोकसेवा आयोग, निवड मंडळे व पदभरती करणाऱ्या इतर यंत्रणा यांनी शासन सेवेतील नियुक्तीकरिता शिफारस केलेल्या परंतु दि. ०९.०९.२०२० पूर्वी नियुक्ती न मिळालेल्या उमेदवारांना नियुक्ती देण्यासंदर्भात महाराष्ट्र अधिसंख्य पदांची निर्मिती व निवड केलेल्या उमेदवारांची नियुक्ती अधिनियम, २०२२ पारित करण्यात आला असून तो दि.०८.०९.२०२२ रोजी राजपत्रामध्ये प्रसिध्द करण्यात आला आहे. तद्नंतर, उपरोक्त मूळ अधिनियमात सुधारणा करून शासनाने महाराष्ट्र अधिसंख्य पदांची निर्मिती व निवड केलेल्या उमेदवारांची नियुक्ती (सुधारणा) अधिनियम, २०२२ पारित करून दि.१३.०१.२०२३ रोजी राजपत्रात प्रसिध्द केला. दि. १३.०१.२०२३ अन्वये प्रसिध्द सुधारित अधिनियमासोबत जोडलेल्या अनुसूचीमध्ये समाविष्ट १५५३ पदांपैकी सामान्य प्रशासन विभागाच्या अखत्यारीतील मंत्रालयीन कक्ष अधिकारी संवर्गातील एकूण ०६ पदांचा समावेश असून त्यापैकी श्रीमती श्रध्दा आनंद मगर या एकमेव उमेदवाराने अधिसंख्य पदावरील नियुक्ती स्विकारण्यामध्ये स्वारस्य दर्शविले असून आवश्यक कागदपत्रांच्या पडताळणीअंती तसेच वैद्यकिय तपासणी तसेच चारित्र्य पडताळणीअंती शासन मान्यतेने त्यांची कक्ष अधिकारी (अधिसंख्य) पदावर दि. १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली",
+  "evidence_span": "दिनांक १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली",
+  "cancelled_object": null,
+  "gloss_en": "Appointment was made by the order dated 14-09-2023",
+  "confidence": 0.95,
+  "cache_key": "0bb15d2f5985ba3617c4c9c5",
+  "verdict": "FLAGGED",
+  "type": "REFERENCES",
+  "proposed_type": "REFERENCES",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'दिनांक १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली'"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'दिनांक १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली'"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 1734,
+  "src": "202503261153117207",
+  "dst": "202503211747130907",
+  "link": "date",
+  "sentence": "येथील दिनांक २१.३.२०२५ रोजीचा शासन निर्णय अधिक्रमित करून आता रु.२,०४,३६,९०५/- इतक्या",
+  "evidence_span": "दिनांक २१.३.२०२५ रोजीचा शासन निर्णय अधिकरणित करून",
+  "cancelled_object": null,
+  "gloss_en": "By invoking the Government decision dated 21-03-2025, now Rs 2,04,36,905/-",
+  "confidence": 0.9,
+  "cache_key": "06d4b32c384bcf1080f4da4d",
+  "verdict": "FLAGGED",
+  "type": "REFERENCES",
+  "proposed_type": "REFERENCES",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'दिनांक २१.३.२०२५ रोजीचा शासन निर्णय अधिकरणित करून'"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'दिनांक २१.३.२०२५ रोजीचा शासन निर्णय अधिकरणित करून'"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 1734,
+  "src": "202503261153117207",
+  "dst": "202503211747130907",
+  "link": "sole_citation",
+  "sentence": "संदर्भाधीन क्र.२ येथील शासन निर्णय अधिक्रमित करून खालीलप्रमाणे सुधारित शासन निर्णय",
+  "evidence_span": "संदर्भाधीन क्र.२ येथील शासन निर्णय अधिकरणित करून खालीलप्रमाणे सुधारित शासन निर्णय",
+  "cancelled_object": "शासन निर्णय",
+  "gloss_en": "By invoking the referenced No.2 Government decision, the following amended Government decision",
+  "confidence": 0.85,
+  "cache_key": "06d4b32c384bcf1080f4da4d",
+  "verdict": "FLAGGED",
+  "type": "AMENDS",
+  "proposed_type": "AMENDS",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'संदर्भाधीन क्र.२ येथील शासन निर्णय अधिकरणित करून खालीलप्रमाणे सुधारित '"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'संदर्भाधीन क्र.२ येथील शासन निर्णय अधिकरणित करून खालीलप्रमाणे सुधारित '"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 2187,
+  "src": "202606251156032407",
+  "dst": "202606221209289007",
+  "link": "date",
+  "sentence": "सामान्य प्रशासन विभाग, शासन निर्णय समक्रमांक, दि. २२.०६.२०२६ अधिक्रमित करून",
+  "evidence_span": "अधिकृत करून",
+  "cancelled_object": null,
+  "gloss_en": "By virtue of the General Administration Department, Government Decision No. 22.06.2026.",
+  "confidence": 0.98,
+  "cache_key": "3a446a55a974aa1641f39c9f",
+  "verdict": "FLAGGED",
+  "type": "REFERENCES",
+  "proposed_type": "REFERENCES",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'अधिकृत करून'"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'अधिकृत करून'"
   ],
   "notes": []
  }
