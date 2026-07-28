@@ -29,6 +29,57 @@ Note the framing that keeps these coherent rather than four separate demos: **al
 downstream of one missing artefact — the dependency graph.** Build it and the features fall out;
 build the features without it and you get four shallow demos.
 
+## STATUS — what exists right now (read this first)
+
+Last updated 2026-07-28. **The deadline was extended**; a fresh evaluation document exists that
+has not yet been read into this file.
+
+Everything below is built, tested and committed. `make serve` → http://localhost:8000.
+
+| layer | file | state |
+| --- | --- | --- |
+| Parser | `parser.py` | ✅ regex only, no LLM |
+| Resolver | `resolver.py` | ✅ multi-department, two-key + digit key |
+| Graph | `graph.py` | ✅ **17,283 nodes, 4,815 edges, 1,538 cross-dept**, builds in 10 s |
+| AI edge typing | `type_edges.py` + `ai/` | ✅ batched, gated, cached. **33 SUPERSEDES, 169 AMENDS** |
+| Dead-reference audit | `audit.py` | ✅ **24 dead references** (10 rotted, 14 born dead, **2 latent cross-dept**) |
+| Blast radius | `api.py` `/api/blast/{uid}` | ✅ one Finance circular has **229 live dependents** across 3 other departments |
+| GR-Lint | `lint.py` | ✅ rules mined per department, **76.5% of GRs clean** |
+| Bilingual | `bilingual.py` | ✅ **335 magnitude errors**, 26 inconsistently-rendered terms |
+| Metrics | `metrics.py` | ✅ every pitch number, one command |
+| API + UI | `api.py`, `web/` | ✅ FastAPI + Vite/React/Cytoscape, 6 pages |
+| Tests | `tests/` | ✅ **41 passing, zero API calls** (`conftest.py` forces `AI_MODE=strict`) |
+
+**The demo makes no AI calls.** `api.py` contains no model-calling code at all; every AI output is
+precomputed, verified, and committed under `out/` and `out/ai_cache/`. Verified by replaying the
+whole typing pass with `AI_MODE=strict` and getting identical results.
+
+Docs: `README.md` (for judges) · `DEMO.md` (3-min script + answers to hard questions) ·
+`AI_ARCHITECTURE.md` (the seven gates) · `DESIGN.md` (forward-looking spec) · `CHECKLIST.md`
+(what was built and every measurement that corrected an assumption) · `Makefile`.
+
+### Known gaps / next up
+
+1. **The new evaluation document has not been read.** Do that before building anything else — it
+   may reassign priorities.
+2. **~380 of 718 candidate edges are still untyped**, purely from the token cap. `make type-edges`
+   then `make audit` grows the dead-reference count with no code change.
+3. **OWED to the user: the precision audit.** ~50 edges, human yes/no, ~15 min. Converts
+   `metrics.json`'s `accuracy: UNMEASURED` into a real number. They asked to be reminded.
+4. **Obligation-level conflict detection** (step 7) is the one problem-statement bullet only
+   partly addressed — cross-departmental *dependency* is done, semantic *contradiction* is not.
+5. STT and vision models are wired in `ai/client.py` but **never tested**.
+
+### Operational facts that cost time to learn
+
+- Groq's daily token cap is **per ORGANISATION, not per key** — new API keys do not reset it.
+- Groq needs `max_completion_tokens`, not `max_tokens`; a default `Python-urllib` User-Agent is
+  rejected by Cloudflare with `403 error code: 1010`.
+- **60% of tokens were prompt tokens** before batching. Batch, don't loop.
+- `pkill -f 'uvicorn api:app'` **matches the shell running it** — use `pkill -f "uvi[c]orn"`.
+- Running `make graph` alone resets `graph.json` to REFERENCES-only and the audit then finds
+  nothing. Re-run `make type-edges` (needs quota) or restore from git.
+
 ## The thesis (read this before writing any code)
 
 A Government Resolution is **not a document, it is a node in a legal dependency graph.**

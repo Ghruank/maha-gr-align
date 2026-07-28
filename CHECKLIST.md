@@ -913,6 +913,37 @@ missing artefact yields `available: false` rather than a 500.
 
 ---
 
+## Blast radius, packaging, git ✅ (2026-07-28)
+
+**Blast radius** — `api.py` `/api/blast/{uid}`, surfaced in the Graph Explorer node panel.
+Transitive dependents of a GR, ringed by depth and split by department; already-superseded GRs are
+excluded because they cannot break twice. This is the "drafting" half of the project title: the
+question a drafting officer cannot answer today.
+
+`[MEASURED]` The Finance *Fund Release 2025-26* circular has **229 live dependents — 228 of them in
+three OTHER departments** (School Education 162, GAD 50, HTE 16). 209 direct, 20 transitive.
+
+**Second AI typing pass, batched.** 8 sentences per call → SUPERSEDES 25 → **33**, AMENDS 93 →
+**169**, dead references 21 → **24** (7 distinct dead orders behind them). Stopped again on the
+daily cap with ~380 of 718 candidate edges still untyped.
+
+**Packaging:** `README.md` (judge-facing, with an explicit "what we do not claim" section),
+`DEMO.md` (3-minute script plus prepared answers to the hard questions), `Makefile` (every pitch
+number reproducible by one command; `type-edges` deliberately excluded from `all` as the only
+target that spends tokens).
+
+**Committed to git** — 420 files, four commits. Nothing had ever been committed before this point,
+which was the largest unmitigated risk in the project. All staged content was scanned for API keys
+first; `.env` is ignored and only `.env.example` (blank) and `ai/client.py` (reads from env)
+mention the variable.
+
+**Offline guarantee verified, not assumed.** `api.py` contains no model-calling code at all —
+`grep` confirms the only `ai/` import is read-only status for the health endpoint. Replaying the
+entire typing pass under `AI_MODE=strict` reproduces identical results (336 VERIFIED, 183 edges
+upgraded) with the client structurally unable to open a socket.
+
+---
+
 ## Next
 
 ### ⚠ OWED — precision audit (deferred by Ghruank 2026-07-26, explicitly asked to be reminded)
