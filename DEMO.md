@@ -91,10 +91,18 @@ answered on screen. That is the point of the page.
 
 Add, in this order:
 
-- **Graph Explorer** — click the Finance appropriation order with in-degree 209. "One Finance
-  circular that 209 GRs across four departments depend on. Supersede it and they all rot at once.
-  That's the blast radius." Superseded nodes are drawn hollow in dashed red — an arrow into one
-  *is* a dead reference, visible at a glance.
+- **Graph Explorer → blast radius.** Click the Finance "Fund Release 2025-26" node (the biggest
+  one). The side panel shows:
+
+  > **229 GRs still in force depend on this** — 162 School Education, 50 General Administration,
+  > 16 Higher & Technical Education.
+
+  Say: *"This is the question a drafting officer cannot answer today. Before you supersede a
+  Finance circular, this tells you 229 resolutions across three other departments lose the thing
+  they were standing on. Right now nobody finds that out until the complaints arrive."*
+
+  Superseded nodes are drawn hollow in dashed red — an arrow into one *is* a dead reference,
+  visible at a glance.
 - **GR-Lint** — "We didn't transcribe the Manual of Office Procedure. We mined what 2,800 GRs
   actually do, per department. A preamble appears in 78% of School Education resolutions and 31%
   of General Administration's — a hand-written rule would flag two-thirds of a department's lawful

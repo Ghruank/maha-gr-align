@@ -355,6 +355,68 @@ def lint_corpus(limit: int = Query(60, le=400)):
             "findings": d["sample_findings"][:limit]}
 
 
+@app.get("/api/blast/{uid}")
+def blast_radius(uid: str, depth: int = Query(3, ge=1, le=6)):
+    """What breaks if this GR is superseded — before it is superseded.
+
+    The problem statement asks for *drafting* support, and this is the question a drafting officer
+    cannot currently answer: supersede a Finance appropriation order and hundreds of GRs across
+    several departments lose the thing they were standing on. Today nobody can see that until the
+    complaints arrive.
+
+    Transitive dependents, breadth-first over incoming edges: everything that cites this GR, then
+    everything citing those, and so on. Depth is reported per ring because a first-ring dependent
+    is affected directly while a third-ring one is affected only through a chain, and conflating
+    them would overstate the damage.
+
+    GRs already superseded are counted separately and excluded from the headline — they are
+    already dead and cannot break twice.
+    """
+    if uid not in S.nodes:
+        raise HTTPException(404, f"GR {uid} not in the index")
+
+    superseded = {e["dst"] for e in S.graph["edges"] if e["type"] == "SUPERSEDES"}
+    rings, seen, frontier = [], {uid}, {uid}
+    for d in range(1, depth + 1):
+        nxt = set()
+        for u in frontier:
+            for e in S.in_edges.get(u, []):
+                if e["src"] not in seen:
+                    seen.add(e["src"])
+                    nxt.add(e["src"])
+        if not nxt:
+            break
+        rings.append({
+            "depth": d,
+            "count": len(nxt),
+            "live": len([u for u in nxt if u not in superseded]),
+            "already_superseded": len([u for u in nxt if u in superseded]),
+            "departments": dict(Counter(S.nodes[u]["dept"] for u in nxt if u in S.nodes)),
+            "sample": [{"uid": u, "date": S.nodes[u]["date"], "dept": S.nodes[u]["dept"],
+                        "subject": S.nodes[u]["subject"],
+                        "in_force": u not in superseded}
+                       for u in sorted(nxt, key=lambda x: -S.nodes[x]["in_degree"])[:25]],
+        })
+        frontier = nxt
+
+    affected = seen - {uid}
+    live = affected - superseded
+    depts = Counter(S.nodes[u]["dept"] for u in live if u in S.nodes)
+    own = S.nodes[uid]["dept"]
+    return {
+        "uid": uid, "node": S.nodes[uid],
+        "in_force": uid not in superseded,
+        "total_dependents": len(affected),
+        "live_dependents": len(live),
+        "already_superseded": len(affected & superseded),
+        "departments_affected": dict(depts.most_common()),
+        "other_departments_affected": {k: v for k, v in depts.items() if k != own},
+        "rings": rings,
+        "note": "Transitive dependents via REFERENCES/AMENDS/SUPERSEDES edges. Only citations we "
+                "could resolve are counted, so this is a LOWER bound on real blast radius.",
+    }
+
+
 @app.get("/api/bilingual")
 def bilingual(limit: int = Query(80, le=300)):
     d = _load("bilingual.json")

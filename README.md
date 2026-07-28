@@ -41,6 +41,7 @@ documents are public, the relationships between them are not.
 | **Cross Department Conflict Detection** | 1,538 cross-departmental dependency edges; dead-reference audit finds live GRs depending on replaced orders from *other* departments |
 | **Strict Template Enforcement** | GR-Lint, with rules **mined from the corpus** and carrying empirical support counts — not transcribed from the Manual of Office Procedure |
 | **Bilingual Legal Terminology** | Numeric parity (335 magnitude errors found) + a mined Marathi↔English glossary flagging inconsistently rendered legal terms |
+| *(and, for the "drafting" in the title)* | **Blast radius** — before you supersede a GR, see everything that depends on it. One Finance circular has **229 live dependents across three other departments** |
 
 ---
 

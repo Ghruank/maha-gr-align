@@ -106,9 +106,14 @@ export default function GraphExplorer() {
     }).catch(() => setBusy(false))
   }, [center, depth])
 
+  const [blast, setBlast] = useState<any>(null)
+
   useEffect(() => {
-    if (sel?.kind === 'node') api.node(sel.data.id).then(setDetail).catch(() => setDetail(null))
-    else setDetail(null)
+    if (sel?.kind === 'node') {
+      api.node(sel.data.id).then(setDetail).catch(() => setDetail(null))
+      fetch(`/api/blast/${sel.data.id}`).then(r => r.json()).then(setBlast)
+        .catch(() => setBlast(null))
+    } else { setDetail(null); setBlast(null) }
   }, [sel])
 
   return (
@@ -209,6 +214,40 @@ export default function GraphExplorer() {
                       <div className="mr" style={{ fontSize: 12.5 }}>{e.evidence}</div>
                     </div>
                   ))}
+                </div>
+              )}
+              {blast && blast.total_dependents > 0 && (
+                <div className="ev" style={{ borderLeftColor: 'var(--warn)' }}>
+                  <div className="lbl">Blast radius — what breaks if this GR is superseded</div>
+                  <div style={{ fontSize: 23, fontWeight: 680, color: 'var(--warn)' }}>
+                    {fmt(blast.live_dependents)}
+                    <span style={{ fontSize: 12.5, fontWeight: 400 }} className="muted">
+                      {' '}GRs still in force depend on this
+                    </span>
+                  </div>
+                  {Object.keys(blast.other_departments_affected).length > 0 && (
+                    <div style={{ fontSize: 12.5, marginTop: 6 }}>
+                      <b>{fmt(Object.values(blast.other_departments_affected)
+                        .reduce((a: any, b: any) => a + b, 0) as number)}</b> of them are in{' '}
+                      <b>other departments</b>:
+                      <table style={{ marginTop: 4 }}>
+                        <tbody>
+                          {Object.entries(blast.other_departments_affected)
+                            .sort((a: any, b: any) => b[1] - a[1])
+                            .map(([d, n]: any) => (
+                              <tr key={d}>
+                                <td style={{ fontSize: 12 }}>{d}</td>
+                                <td className="num">{fmt(n)}</td>
+                              </tr>
+                            ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                  <div className="muted" style={{ fontSize: 11.5, marginTop: 6 }}>
+                    {blast.rings.map((r: any) => `${r.count} at depth ${r.depth}`).join(' · ')}
+                    . Lower bound: only resolved citations are counted.
+                  </div>
                 </div>
               )}
               <button style={{ marginTop: 8 }} onClick={() => nav(`/graph/${sel.data.id}`)}>
