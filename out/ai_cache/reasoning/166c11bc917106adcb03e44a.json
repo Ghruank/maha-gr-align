@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"परिच्छेद क्र. १, २, ३ व ४ मध्ये परकीय चलनात झालेल्या दरातील वाढीनुसार खालीलप्रमाणे सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"परिच्छेद\",\"gloss_en\":\"A government decision has been issued for the purchase of a 976 D helicopter from Sircoski Helicopters for the air travel of important persons, under the government decision referred to in Government Resolution No. 1. Amendments are being made in paragraphs 1, 2, 3 and 4 of that decision as per the increase in foreign exchange rates.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-543d489e-17d9-4bb5-bf4f-5b2fe2a1bf2a",
+  "object": "chat.completion",
+  "created": 1785054281,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"परिच्छेद क्र. १, २, ३ व ४ मध्ये परकीय चलनात झालेल्या दरातील वाढीनुसार खालीलप्रमाणे सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"परिच्छेद\",\"gloss_en\":\"A government decision has been issued for the purchase of a 976 D helicopter from Sircoski Helicopters for the air travel of important persons, under the government decision referred to in Government Resolution No. 1. Amendments are being made in paragraphs 1, 2, 3 and 4 of that decision as per the increase in foreign exchange rates.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence in Marathi: \"शासन शुध्दीपत्रक संदर्भाधीन क्र.१ च्या शासन निर्णयान्वये शासनाच्या अतिमहत्वाच्या व्यक्तींच्या हवाई प्रवासाकरीता सिर्कोस्की हेलिकॉप्टरर्स या कंपनीकडून ९७६ D हे हेलिकॉप्टर खरेदी करण्यासंदर्भात शासन निर्णय जारी करण्यात आला आहे. सदर शासन निर्णयामधील परिच्छेद क्र. १, २, ३ व ४ मध्ये परकीय चलनात झालेल्या दरातील वाढीनुसार खालीलप्रमाणे सुधारणा करण्यात येत आहे.\"\n\nInterpretation: It says: \"A government decision has been issued regarding purchase of a helicopter from ... under the decision referenced in ... The paragraphs 1-4 of that decision are being amended as per exchange rate increase.\" So it is amending prior decision (paragraphs). It references prior GR (the candidate). It says \"सुधारणा करण्यात येत आहे\" meaning \"amendments are being made\". This is not superseding the whole order, just amending parts. So type = AMENDS.\n\ntarget_index = 1 (since candidate list index 1). evidence_span: need exact substring that shows amendment. Could be \"सुधारणा करण्यात येत आहे\". That phrase indicates amendment. Or \"परिच्छेद क्र. १, २, ३ व ४ मध्ये ... सुधारणा करण्यात येत आहे\". Use that exact substring: \"परिच्छेद क्र. १, २, ३ व ४ मध्ये ... सुधारणा करण्यात येत आहे\". Must be exact from sentence. Let's copy: \"परिच्छेद क्र. १, २, ३ व ४ मध्ये परकीय चलनात झालेल्या दरातील वाढीनुसार खालीलप्रमाणे सुधारणा करण्यात येत आहे\". That's the full clause.\n\ncancelled_object: Since it's amendment, not cancellation. The object being amended is \"परिच्छेद\". But cancelled_object field expects noun that is cancelled/amended. For AMENDS, we can put the noun being amended: \"परिच्छेद\". Or maybe \"परिच्छेद क्र. १, २, ३ व ४\". We'll put \"परिच्छेद\". Could also be \"शासन निर्णय\". But the amendment is to paragraphs. We'll choose \"परिच्छेद\". If null is allowed? It says \"the Marathi noun that is cancelled/amended, or null\". So we provide \"परिच्छेद\". Gloss_en: literal translation: \"A government decision has been issued for the purchase of a 976 D helicopter from Sircoski Helicopters for the air travel of important persons, under the government decision referred to in Government Resolution No. 1. Amendments are being made in paragraphs 1, 2, 3 and 4 of that decision as per the increase in foreign exchange rates.\"\n\nConfidence high 0.96.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280551355,
+   "prompt_tokens": 908,
+   "prompt_time": 0.038436118,
+   "completion_tokens": 812,
+   "completion_time": 1.682297937,
+   "total_tokens": 1720,
+   "total_time": 1.7207340549999999,
+   "completion_tokens_details": {
+    "reasoning_tokens": 652
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01kyerde7fe18t1z1b6dpr902a",
+   "seed": 908943330
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "166c11bc917106adcb03e44a",
+ "role": "reasoning"
+}

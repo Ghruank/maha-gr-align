@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्यात येत\",\"cancelled_object\":\"विभाग\",\"gloss_en\":\"Partial changes are being made and now in the department shown in column-6 opposite their name\",\"confidence\":0.92}",
+ "raw": {
+  "id": "chatcmpl-4428e815-5959-487a-8ed6-2d7074914772",
+  "object": "chat.completion",
+  "created": 1785091775,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्यात येत\",\"cancelled_object\":\"विभाग\",\"gloss_en\":\"Partial changes are being made and now in the department shown in column-6 opposite their name\",\"confidence\":0.92}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"अंशत: बदल करण्यात येत असून आता त्यांच्या नावासमोरील स्तंभ-६ मध्ये दर्शविलेल्या विभागात\"\n\nTranslation: \"Partial changes are being made and now in the department shown in column-6 opposite their name\". This seems like an amendment (अंशत: बदल) i.e., partial change. It references prior GR? It says \"अंशत: बदल करण्यात येत असून\". That indicates amendment to something. It likely amends prior GR. The prior GR is listed as candidate 1. So type = AMENDS. target_index = 1. evidence_span: need exact substring that shows amendment. The phrase \"अंशत: बदल करण्यात येत\" is the operative phrase. So evidence_span = \"अंशत: बदल करण्यात येत\". Cancelled_object: what is being changed? The sentence says \"अंशत: बदल\". The object is not explicit; maybe \"विभाग\". But the phrase \"विभागात\" indicates department. However the cancelled object is the thing being changed. Could be \"विभाग\". But the sentence says \"आता त्यांच्या नावासमोरील स्तंभ-६ मध्ये दर्शविलेल्या विभागात\". So the amendment is to the department shown in column-6. So cancelled_object could be \"विभाग\". However it's not cancelled, it's being changed. For AMENDS, cancelled_object is the noun that is amended. The instruction: \"cancelled_object\": \"<the Marathi noun that is cancelled/amended, or null>\". So we can put \"विभाग\". Or maybe \"स्तंभ-६\". But likely \"विभाग\". We'll choose \"विभाग\". Gloss_en: \"Partial changes are being made and now in the department shown in column-6 opposite their name\". Confidence maybe 0.92.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287193067,
+   "prompt_tokens": 788,
+   "prompt_time": 0.446741463,
+   "completion_tokens": 460,
+   "completion_time": 0.962686779,
+   "total_tokens": 1248,
+   "total_time": 1.409428242,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 390
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyfw5nreem3vwe7c3z4b27a1",
+   "seed": 633825682
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "1fa1056be8b5887ff9905aa4",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द\",\"cancelled_object\":\"बदल्या\",\"gloss_en\":\"The postings of the following assistant section officers made under the order are cancelled for administrative reasons.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-744a50fc-816a-4eb0-9b79-37d8f36bd708",
+  "object": "chat.completion",
+  "created": 1785091779,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द\",\"cancelled_object\":\"बदल्या\",\"gloss_en\":\"The postings of the following assistant section officers made under the order are cancelled for administrative reasons.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"आदेशान्वये करण्यात आलेल्या खालील सहायक कक्ष अधिकाऱ्यांच्या बदल्या प्रशासकीय कारणास्तव रद्द\"\n\nTranslation: \"The postings (transfers?) of the following assistant section officers made under the order are cancelled for administrative reasons.\"\n\nIt says \"रद्द\" (cancel). It refers to \"सहायक कक्ष अधिकाऱ्यांच्या बदल्या\" (postings of assistant section officers) that were made under the order. So it cancels the postings, which were made under a prior order. According to trap 2, if the sentence cancels appointments, approvals, sanctions, posts, funds, or committee memberships made under a prior GR, that GR is NOT superseded; it's AMENDS. So type = AMENDS.\n\ntarget_index: the prior GR list has one entry, index 1.\n\nevidence_span: need exact substring that justifies type. The phrase \"रद्द\" indicates cancellation. Also \"आदेशान्वये करण्यात आलेल्या ... बदल्या ... रद्द\". So evidence_span could be \"रद्द\". Must be exact substring from input. Provide \"रद्द\". Or longer: \"बदल्या प्रशासकीय कारणास्तव रद्द\". That includes cancellation. Use \"रद्द\". Probably fine.\n\ncancelled_object: the noun being cancelled: \"बदल्या\" (postings). Could be \"बदल्या\". The sentence says \"सहायक कक्ष अधिकाऱ्यांच्या बदल्या\". So cancelled_object = \"बदल्या\". Provide that.\n\ngloss_en: literal English translation: \"The postings of the following assistant section officers made under the order are cancelled for administrative reasons.\"\n\nconfidence: high, maybe 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282246448,
+   "prompt_tokens": 788,
+   "prompt_time": 0.016284186,
+   "completion_tokens": 425,
+   "completion_time": 1.205393178,
+   "total_tokens": 1213,
+   "total_time": 1.221677364,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 362
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_bb691ea66b",
+  "x_groq": {
+   "id": "req_01kyfw5sexew786kvpqkdr3ffy",
+   "seed": 1256688326
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "25ed93b3afac8c4ddbe08d70",
+ "role": "reasoning"
+}

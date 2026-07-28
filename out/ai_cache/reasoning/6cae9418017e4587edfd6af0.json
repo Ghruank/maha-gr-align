@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र. २ अन्वये निर्गमित करण्यात आलेला शासन निर्णय या शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Accordingly, the government decision issued under reference No. 2 is being imposed under this government decision.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-36423736-71bf-41b8-a13c-f536db0a21be",
+  "object": "chat.completion",
+  "created": 1785054373,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र. २ अन्वये निर्गमित करण्यात आलेला शासन निर्णय या शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Accordingly, the government decision issued under reference No. 2 is being imposed under this government decision.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. Let's translate roughly: \"2. Accordingly, the government decision issued under reference no.2 is being further imposed under this government decision. ... the district collector and district election officer, Bhandara office, for EVEM - VVPAT storage, new warehouse construction ... technical approval ... as per letter dated 09.12.2021, the revised estimate ... as per public works department, ministry, necessary changes ... the price details are as follows.\"\n\nThe sentence mentions \"संदर्भ क्र. २ अन्वये निर्गमित करण्यात आलेला शासन निर्णय या शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे.\" Means \"the government decision issued under reference No.2 is being further imposed under this government decision.\" This is referencing a prior decision (GR) and imposing it again. Is that superseding? It says the prior decision is being \"more imposed\" (अधिक्रमित) under this decision. That sounds like they are re-issuing or continuing the prior decision, not cancelling it. So it's a reference, not a change. No cancellation. So type = REFERENCES.\n\nTarget_index: which prior GR? The list has one candidate: index 1. So target_index = 1.\n\nEvidence_span: need exact substring that shows the relationship. Could be \"संदर्भ क्र. २ अन्वये निर्गमित करण्यात आलेला शासन निर्णय या शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\". That's the operative phrase. Must copy exactly from input. Let's locate: The sentence starts \"२. त्यानुसार संदर्भ क्र. २ अन्वये निर्गमित करण्यात आलेला शासन निर्णय या शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे.\" So evidence_span = \"संदर्भ क्र. २ अन्वये निर्गमित करण्यात आलेला शासन निर्णय या शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\"\n\nCancelled_object: none, null.\n\nGloss_en: literal translation: \"Accordingly, the government decision issued under reference No. 2 is being imposed under this government decision.\"\n\nConfidence maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282107153,
+   "prompt_tokens": 970,
+   "prompt_time": 0.019615143,
+   "completion_tokens": 535,
+   "completion_time": 1.108959713,
+   "total_tokens": 1505,
+   "total_time": 1.128574856,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 441
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyerg8aees5v96zz6jw6vpma",
+   "seed": 1398141835
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6cae9418017e4587edfd6af0",
+ "role": "reasoning"
+}

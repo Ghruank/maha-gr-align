@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"६. बदली झालेल्या कर्मचाऱ्यांनी त्यांची बदली रद्द करणे अथवा त्यासाठी प्रत्यक्ष अथवा अप्रत्यक्षरित्या दबाव आणल्यास संबंधितांची कृती गैरवर्तणूक समजण्यात येईल.\",\"cancelled_object\":null,\"gloss_en\":\"If transferred employees cancel their transfer or apply direct or indirect pressure for it, the actions of the concerned will be considered misconduct.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-08334224-9ccc-4218-8d9f-422607b255c3",
+  "object": "chat.completion",
+  "created": 1785091870,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"६. बदली झालेल्या कर्मचाऱ्यांनी त्यांची बदली रद्द करणे अथवा त्यासाठी प्रत्यक्ष अथवा अप्रत्यक्षरित्या दबाव आणल्यास संबंधितांची कृती गैरवर्तणूक समजण्यात येईल.\",\"cancelled_object\":null,\"gloss_en\":\"If transferred employees cancel their transfer or apply direct or indirect pressure for it, the actions of the concerned will be considered misconduct.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. Sentence: \"६. बदली झालेल्या कर्मचाऱ्यांनी त्यांची बदली रद्द करणे अथवा त्यासाठी प्रत्यक्ष अथवा अप्रत्यक्षरित्या दबाव आणल्यास संबंधितांची कृती गैरवर्तणूक समजण्यात येईल.\"\n\nTranslation: \"6. If transferred employees cancel their transfer or apply direct or indirect pressure for it, the actions of the concerned will be considered misconduct.\"\n\nThis is a rule about behavior, not referencing a prior GR. It mentions \"GR dated 2018-05-07\" as candidate prior GR, but does the sentence refer to it? The sentence does not explicitly cite the prior GR; it's a provision. It does not cancel or amend anything. It's not a deliberative mood. It's a rule. So relationship is NONE? Or maybe REFERENCES? The sentence does not mention the prior GR explicitly; it's just a rule. The candidate list is just prior GRs mentioned in it, but the sentence does not contain any reference like \"as per GR dated ...\". So likely NONE.\n\nThus type: NONE, target_index null, evidence_span maybe empty? But need an evidence_span substring justifying type. Could pick a phrase that shows no operative change? Maybe \"बदली झालेल्या कर्मचाऱ्यांनी\". But we need evidence for NONE. Could use the whole sentence as evidence that it's not referencing. But evidence_span must be exact substring that justifies type. For NONE, we can give the whole sentence.\n\ncancelled_object null. gloss_en: \"If transferred employees cancel their transfer or apply direct or indirect pressure for it, the actions of the concerned will be considered misconduct.\"\n\nConfidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.292521472,
+   "prompt_tokens": 813,
+   "prompt_time": 0.03068666,
+   "completion_tokens": 470,
+   "completion_time": 0.971302454,
+   "total_tokens": 1283,
+   "total_time": 1.001989114,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 352
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e1a78f200e",
+  "x_groq": {
+   "id": "req_01kyfw8jjqf3z8efdpsbtmc9rv",
+   "seed": 1409754524
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "28b974ebacc8b2f0bca5659c",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The above-mentioned Government Decision No. 4 dated 05‑09‑2024 is being overridden under this decision.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-19d7c03e-1cd7-4eaf-993e-16293795488e",
+  "object": "chat.completion",
+  "created": 1785055375,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The above-mentioned Government Decision No. 4 dated 05‑09‑2024 is being overridden under this decision.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence in Marathi:\n\n\"शासन निर्णय:- स्थानिक स्वराज्य संस्थांमधील २० व २० पेक्षा कमी पटसंख्या असलेल्या शाळांमधील मंजूर करण्यात आलेल्या दोन शिक्षकांपैकी एक शिक्षक सेवानिवृत्त शिक्षक किंबा डीएड, बीएड अर्हताधारक बेरोजगार शिक्षक यांमधून नियुक्‍त करण्याबाबत निर्गमित करण्यात आलेला उपरोक्‍त वाचा क्र.४ येथील शासन निर्णय दि.०५.०९.२०२४ या निर्णयान्वये अधिक्रमित करण्यात येत आहे.\"\n\nInterpretation: It says that a prior government decision (the one referenced as \"उपरोक्‍त वाचा क्र.४ येथील शासन निर्णय दि.०५.०९.२०२४\") is being \"अधिक्रमित\" (i.e., being superseded? Actually \"अधिक्रमित\" means \"overridden\" or \"overruled\". In Marathi, \"अधिक्रमित\" can mean \"overridden\" i.e., superseded. The phrase \"या निर्णयान्वये अधिक्रमित करण्यात येत आहे\" means \"by this decision, it is being overridden\". So the current sentence is stating that the prior decision is being overridden (canceled). That is a SUPERSEDES relationship: the prior order itself is being cancelled/overridden.\n\nWe need to check trap 2: If the sentence cancels appointments etc made under prior GR, that would be AMENDS. But here it says the prior decision itself is being \"अधिक्रमित\". That is canceling the order itself, not just its appointments. So type = SUPERSEDES.\n\ntarget_index: The prior GR list has one candidate: index 1.\n\nevidence_span: Must be exact substring from input that justifies type. The phrase \"अधिक्रमित करण्यात येत आहे\" indicates superseding. Also \"उपरोक्‍त वाचा क्र.४ येथील शासन निर्णय दि.०५.०९.२०२४\". The phrase that includes both reference and action: \"उपरोक्‍त वाचा क्र.४ येथील शासन निर्णय दि.०५.०९.२०२४ या निर्णयान्वये अधिक्रमित करण्यात येत आहे.\"\n\nWe need a substring that shows the action. Probably \"अधिक्रमित करण्यात येत आहे\". That is the operative verb.\n\ncancelled_object: The object being cancelled is the prior \"शासन निर्णय\". So noun: \"शासन निर्णय\". Could be \"उपरोक्‍त वाचा क्र.४ येथील शासन निर्णय\". But we need a Marathi noun. Use \"शासन निर्णय\". That is the object being superseded.\n\ngloss_en: Provide literal English translation: \"The above-mentioned Government Decision No. 4 dated 05.09.2024 is being overridden under this decision.\" Something like that.\n\nconfidence: high, maybe 0.97.\n\nCheck JSON format: compact.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284013142,
+   "prompt_tokens": 918,
+   "prompt_time": 0.028263121,
+   "completion_tokens": 725,
+   "completion_time": 1.508343763,
+   "total_tokens": 1643,
+   "total_time": 1.536606884,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 649
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "x_groq": {
+   "id": "req_01kyeseszefbct8anhkm96z8y4",
+   "seed": 1908617894
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "77bb7494c3cdf3b133ed35ea",
+ "role": "reasoning"
+}

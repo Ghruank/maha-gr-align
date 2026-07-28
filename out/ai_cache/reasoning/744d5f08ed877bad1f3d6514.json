@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या सदर शासन निर्णय निर्गमित झालेल्या दिनांकापासून रद्द करण्यात येत आहेत\",\"cancelled_object\":\"अशासकीय सदस्यांच्या नियुक्त्या\",\"gloss_en\":\"All the appointments of the non‑official members on the said committee are being cancelled from the date of issuance of this Government Decision.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-ab2cde4a-66fb-49ad-bfb6-d4a75519c3b1",
+  "object": "chat.completion",
+  "created": 1785054717,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या सदर शासन निर्णय निर्गमित झालेल्या दिनांकापासून रद्द करण्यात येत आहेत\",\"cancelled_object\":\"अशासकीय सदस्यांच्या नियुक्त्या\",\"gloss_en\":\"All the appointments of the non‑official members on the said committee are being cancelled from the date of issuance of this Government Decision.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. Let's parse.\n\nSentence (Marathi):\n\n\"महाराष्ट्र सार्वजनिक ग्रंथालये अधिनियम, १९६७ मध्ये सुधारणा सुचविण्यासाठी संदर्भ क्र. १ येथील दि.०६.०३.२०१९ रोजीच्या शासन निर्णयान्वये समिती गठित करण्यात आली आहे. तसेच संदर्भ क्र. २ येथील दि. १९.०७.२०१९ रोजीच्या शासन निर्णयान्वये सदर समितीस मुदतवाढ देण्यात आली असून समितीची कार्यकक्षा वाढविण्यात आली आहे. या शासन निर्णयान्वये सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या सदर शासन निर्णय निर्गमित झालेल्या दिनांकापासून रद्द करण्यात येत आहेत.\"\n\nInterpretation: It says: For amendment of the Maharashtra Public Libraries Act, 1967, a committee was formed under Government Decision dated 06-03-2019 (reference 1). Also, under Government Decision dated 19-07-2019 (reference 2), the committee was given extension and its scope increased. Under this Government Decision, all the non-official members' appointments to the committee are being cancelled from the date of issuance.\n\nThus, the sentence references two prior GRs (candidate list). It also says that under this (current) decision, the appointments of all non-official members to the committee are being cancelled. The prior GRs are about forming the committee and extending it. The current decision cancels the appointments of the non-official members. Are those appointments made under the prior GRs? Likely yes: the committee formed under the first GR had appointments of members (including non-official). The current decision cancels those appointments. According to trap 2: If the sentence cancels appointments made under a prior GR, that GR is NOT superseded; it's AMENDS, not SUPERSEDES. So relationship is AMENDS to one of the prior GRs? Which one? The cancellations refer to \"सदर शासन निर्णय\" (this decision) but the prior GRs are referenced as forming the committee and extending it. The cancellations are of appointments of non-official members \"सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या\". Those appointments were likely made under the first GR (formation) and maybe also under the second (extension). But the sentence says \"या शासन निर्णयान्वये\" (under this decision) the appointments are being cancelled. It does not explicitly say \"as per reference 1\" or \"as per reference 2\". However, the relationship is to the prior GRs because they are mentioned. The operative change is cancellation of appointments, which were made under those prior GRs. So we should classify as AMENDS, target_index? Which prior GR is being amended? Probably the first one (formation) because that's where appointments were made. The second is about extension, not appointments. So target_index = 1.\n\nCancelled_object: \"अशासकीय सदस्यांच्या नियुक्त्या\" (non-official members' appointments). Provide Marathi noun phrase: \"अशासकीय सदस्यांच्या नियुक्त्या\". Good.\n\nEvidence_span: need exact substring from sentence that justifies type. For AMENDS, we need phrase indicating cancellation of appointments. The phrase: \"सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या ... रद्द करण्यात येत आहेत\". So evidence_span could be \"सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या ... रद्द करण्यात येत आहेत\". Must be exact substring. Let's copy exact part: \"सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या सदर शासन निर्णय निर्गमित झालेल्या दिनांकापासून रद्द करण्यात येत आहेत\". That's the full clause.\n\nGloss_en: literal translation: \"All the appointments of the non-official members on the said committee are being cancelled from the date of issuance of this Government Decision.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck JSON fields: type, target_index, evidence_span, cancelled_object, gloss_en, confidence.\n\ntarget_index integer 1.\n\nMake sure evidence_span exactly matches substring. Let's copy from sentence:\n\nOriginal sentence: \"... या शासन निर्णयान्वये सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या सदर शासन निर्णय निर्गमित झालेल्या दिनांकापासून रद्द करण्यात येत आहेत.\"\n\nThus evidence_span = \"सदर समितीवरील खालील सर्व अशासकीय सदस्यांच्या नियुक्त्या सदर शासन निर्णय निर्गमित झालेल्या दिनांकापासून रद्द करण्यात येत आहेत\"\n\nMake sure no extra spaces. The sentence has a space before \"या\". The clause starts after \"या शासन निर्णयान्वये \". So the substring starts with \"सदर\". Good.\n\nNow produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314094953,
+   "prompt_tokens": 982,
+   "prompt_time": 0.854992858,
+   "completion_tokens": 1134,
+   "completion_time": 2.347310146,
+   "total_tokens": 2116,
+   "total_time": 3.202303004,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1022
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4140daa9c2",
+  "x_groq": {
+   "id": "req_01kyertpbhf7dvjdf7h7bxj2z7",
+   "seed": 654968453
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "744d5f08ed877bad1f3d6514",
+ "role": "reasoning"
+}

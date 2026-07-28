@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करून\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"General Administration Department, Government Decision with same number, dated 22.06.2026, superseding\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-a18e7fe6-2d2c-4964-8dcb-12d79ef06ab3",
+  "object": "chat.completion",
+  "created": 1785054656,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करून\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"General Administration Department, Government Decision with same number, dated 22.06.2026, superseding\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"सामान्य प्रशासन विभाग, शासन निर्णय समक्रमांक, दि. २२.०६.२०२६ अधिकृत करून\"\n\nActually it's \"अधिक्रमित करून\" maybe meaning \"by superseding\"? The phrase \"अधिक्रमित करून\" means \"by superseding\" (i.e., overriding). So the sentence says: \"General Administration Department, Government Decision with same number, dated 22.06.2026, by superseding\". So it's indicating that this order supersedes a prior order (the prior GR). So type = SUPERSEDES.\n\nTarget_index: which prior GR? There's only one candidate, index 1.\n\nEvidence_span: need exact substring that shows the operative verb. The phrase \"अधिक्रमित करून\" is the operative phrase. So evidence_span = \"अधिक्रमित करून\". Must be exact substring from input. The input sentence: \"सामान्य प्रशासन विभाग, शासन निर्णय समक्रमांक, दि. २२.०६.२०२६ अधिक्रमित करून\". Yes includes \"अधिक्रमित करून\". So evidence_span = \"अधिक्रमित करून\".\n\nCancelled_object: what is being cancelled? The order itself (the prior order). So cancelled_object = \"शासन निर्णय\". Or maybe \"शासन निर्णय\". The noun being cancelled is the prior order. The phrase \"शासन निर्णय\" is the object. So we can set \"शासन निर्णय\". Or \"शासन निर्णय समक्रमांक\". Probably \"शासन निर्णय\". We'll put \"शासन निर्णय\".\n\nGloss_en: literal translation: \"General Administration Department, Government Decision with same number, dated 22.06.2026, superseding\". Something like that. Provide literal: \"General Administration Department, Government Decision with same number, dated 22.06.2026, superseding\". We'll write: \"General Administration Department, Government Decision with same number, dated 22.06.2026, superseding\". That's fine.\n\nConfidence: high, maybe 0.98.\n\nReturn JSON.\n\nCheck traps: Not inside file numbers. \"अधिक्रमित करून\" is verb. It's superseding the prior order, not just referencing. So SUPERSEDES.\n\nGranularity: It cancels the prior order itself, not just appointments. So correct.\n\nThus produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281526851,
+   "prompt_tokens": 819,
+   "prompt_time": 0.079757399,
+   "completion_tokens": 555,
+   "completion_time": 1.168613107,
+   "total_tokens": 1374,
+   "total_time": 1.248370506,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 484
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_ca5edfaab2",
+  "x_groq": {
+   "id": "req_01kyerrwr6f22vhww4t7txz75d",
+   "seed": 208804455
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6dd4ed2cccc037a1d548ce42",
+ "role": "reasoning"
+}

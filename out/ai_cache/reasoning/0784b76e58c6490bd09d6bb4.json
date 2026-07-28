@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"पदे\",\"gloss_en\":\"Although the two Shipay positions were noted as temporary, they are permanent and are being amended; also the title is being changed, and amendments are being made to the Government Decision dated 14-01-2022.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-561c924d-e813-40d1-a299-dabc73656881",
+  "object": "chat.completion",
+  "created": 1785055251,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"पदे\",\"gloss_en\":\"Although the two Shipay positions were noted as temporary, they are permanent and are being amended; also the title is being changed, and amendments are being made to the Government Decision dated 14-01-2022.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence says: \"सदर २ पदे ही अस्थायी नसून, स्थायी असल्याने ने त्यात सुधारणा करण्यात येत आहे.\" Also mentions \"शासन निर्णय दिनांक १४.१.२०२२ रोजीच्या शासन निर्णयात पुढील प्रमाणे सुधारणा करण्यात येत आहेत\". So it is making amendments (सुधारणा) to prior order. It is not cancelling the whole order, just amending positions. So type AMENDS. target_index: which prior GR? There's only one candidate listed: index 1. So target_index = 1.\n\nEvidence_span: need exact substring that shows amendment. Could be \"सुधारणा करण्यात येत आहे\" or \"शासन निर्णय दिनांक १४.१.२०२२ रोजीच्या शासन निर्णयात पुढील प्रमाणे सुधारणा करण्यात येत आहेत\". Choose a span that includes \"सुधारणा\". Must be exact from input. The input sentence includes: \"...स्थायी असल्याने ने त्यात सुधारणा करण्यात येत आहे. तसेच ... बदल करण्यात येत असून, शासन निर्णय दिनांक १४.१.२०२२ रोजीच्या शासन निर्णयात पुढील प्रमाणे सुधारणा करण्यात येत आहेत:\" So we can pick \"सुधारणा करण्यात येत आहे\". That appears twice. Use first occurrence: \"सुधारणा करण्यात येत आहे\". That is exact.\n\nCancelled_object: what is being amended? It's the positions (पदे) that were temporary now permanent. The noun being changed is \"पदे\". Could also be \"शिपायांची २ पदे\". So cancelled_object maybe \"पदे\". Since it's amendment, not cancellation. But field expects the Marathi noun that is cancelled/amended. For AMENDS, we can still provide the object being amended. So \"पदे\". Or \"शिपाई\". The sentence says \"शिपाईची २ पदे ... स्थायी असल्याने ... सुधारणा\". So the object is \"पदे\". We'll put \"पदे\".\n\nGloss_en: literal translation: \"Although the two positions of Shipay in the Government Vidya Niketan, Dhule office were mentioned as temporary in the accompanying statement, they are not temporary but permanent, therefore they are being amended. Also, in the position title at Government Teacher School, Pune, the term Shipay is being changed to Naik, and amendments are being made to the Government Decision dated 14-01-2022 as follows.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.319081652,
+   "prompt_tokens": 979,
+   "prompt_time": 0.026725987,
+   "completion_tokens": 622,
+   "completion_time": 1.324444907,
+   "total_tokens": 1601,
+   "total_time": 1.351170894,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 528
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dd854ee2d7",
+  "x_groq": {
+   "id": "req_01kyesb14vfpwrsgg2h1t36dkg",
+   "seed": 1230778457
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0784b76e58c6490bd09d6bb4",
+ "role": "reasoning"
+}

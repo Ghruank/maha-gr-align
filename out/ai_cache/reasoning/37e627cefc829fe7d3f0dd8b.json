@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"रद्द करण्यात आली आहे\",\"cancelled_object\":null,\"gloss_en\":\"The requirement to submit a non‑criminal certificate for selection to posts reserved for open‑category women has been cancelled as per the Women and Child Development Department's government decision dated 04‑05‑2023.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-21303667-dfbd-4808-b3aa-43dc0c12fefd",
+  "object": "chat.completion",
+  "created": 1785091590,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"रद्द करण्यात आली आहे\",\"cancelled_object\":null,\"gloss_en\":\"The requirement to submit a non‑criminal certificate for selection to posts reserved for open‑category women has been cancelled as per the Women and Child Development Department's government decision dated 04‑05‑2023.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly: \"(॥) खुल्या प्रवर्गातील महिलांकरिता आरक्षित असलेल्या पदावरील निवडीकरिता खुल्या प्रवर्गातील महिला तसेच सर्व मागास प्रवर्गातील महिलांनी नॉन-क्रिमिलेअर प्रमाणपत्र सादर करण्याची अट महिला व बाल विकास विभागाच्या दि.४.५.2023 रोजीच्या शासन निर्णयान्वये रद्द करण्यात आली आहे. इतर मागासवर्ग, सामाजिक व शैक्षणिक मागास प्रवर्ग, विमुक्त जाती, भटक्या जमाती आणि विशेष मागास प्रवर्ग कल्याण विभागाच्या दि. 31-01-2020 च्या शासन निर्णयानुसार खुल्या प्रवर्गातील महिला, विजाभज, इमाव व विमा प्रवर्गातील व्यक्‍ती, शौक्षणिक व सामाजिकद्ृष्टया मागासप्रवर्ग आणि या प्रवर्गात समाविष्ट मराठा समाज आणि आर्थिकदृष्टया दुर्बल प्रवर्ग या प्रवर्गातील प्रगत व उन्नत गटात समाविष्ट नसलेल्या व्यक्तीना सक्षम प्राधिकारी यांनी निर्गमित पृष्ठ ११ पैकी २\"\n\nIt says: The condition that women from open category and all backward category women must submit non-criminal certificate for selection to posts reserved for open category women has been cancelled under the government decision of the Women and Child Development Department dated 4-5-2023. Then mentions other categories etc.\n\nThus the sentence cancels a condition (requirement) that was set by a prior decision (government decision) of Women and Child Development Department dated 4-5-2023. The prior GR list only includes one candidate: GR dated 2024-07-01, number आस्थाप-२०२२/प्र.क्र.७४/विमा प्रशासन. However the sentence references a decision dated 4-5-2023, not the candidate. So the candidate list does not match the referenced prior GR. So there is no relationship to the listed candidate. Therefore type is NONE (no relationship to listed GR). target_index null. evidence_span maybe a phrase indicating cancellation: \"रद्द करण्यात आली आहे\". That is the operative phrase. cancelled_object: \"नॉन-क्रिमिलेअर प्रमाणपत्र सादर करण्याची अट\" (the condition). But since no target, cancelled_object maybe null? The spec: cancelled_object is the Marathi noun that is cancelled/amended, or null. Since we are classifying as NONE, cancelled_object should be null. Provide gloss_en: literal English translation.\n\nThus JSON: type \"NONE\", target_index null, evidence_span \"रद्द करण्यात आली आहे\", cancelled_object null, gloss_en \"The requirement to submit a non‑criminal certificate ... has been cancelled.\", confidence maybe 0.97.\n\nCheck JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.323341511,
+   "prompt_tokens": 1023,
+   "prompt_time": 0.077084484,
+   "completion_tokens": 684,
+   "completion_time": 1.442560719,
+   "total_tokens": 1707,
+   "total_time": 1.519645203,
+   "completion_tokens_details": {
+    "reasoning_tokens": 597
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4b2f03d631",
+  "x_groq": {
+   "id": "req_01kyfw0029f05vjj83fptv62py",
+   "seed": 559403033
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "37e627cefc829fe7d3f0dd8b",
+ "role": "reasoning"
+}

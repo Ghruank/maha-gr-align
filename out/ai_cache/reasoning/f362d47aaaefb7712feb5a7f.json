@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन दि.२८.०८.२०२४ रोजीचे पत्र प्रशासकीय करणास्तव रद्द करण्यात येत\",\"cancelled_object\":\"पत्र\",\"gloss_en\":\"However, now by this letter, the referenced letter dated 28-08-2024 is being cancelled for administrative purposes.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-b1fd4940-69d6-49b3-873a-8c9c86e9a911",
+  "object": "chat.completion",
+  "created": 1785054564,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन दि.२८.०८.२०२४ रोजीचे पत्र प्रशासकीय करणास्तव रद्द करण्यात येत\",\"cancelled_object\":\"पत्र\",\"gloss_en\":\"However, now by this letter, the referenced letter dated 28-08-2024 is being cancelled for administrative purposes.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence (Marathi): \"२. तथापि आता या पत्रान्वये, संदर्भाधीन दि.२८.०८.२०२४ रोजीचे पत्र प्रशासकीय करणास्तव रद्द करण्यात येत\"\n\nTranslation: \"2. However, now by this letter, the referenced letter dated 28-08-2024 is being cancelled for administrative purposes.\"\n\nWe have one prior GR (index 1) dated 2024-08-28. The sentence says that the referenced letter (the prior GR) is being cancelled. Is this cancelling the prior order itself? The prior GR is a letter (order). The sentence says \"रद्द करण्यात येत\" (is being cancelled). That is cancelling the prior order itself, not just appointments etc. So this is SUPERSEDES? Wait: According to trap 2, supersedes only when the order itself is cancelled or replaced. Here they cancel the prior letter. So yes, SUPERSEDES.\n\nWe need target_index = 1 (1-based). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात येत\" is the operative phrase. Also maybe include \"संदर्भाधीन दि.२८.०८.२०२४ रोजीचे पत्र\". The evidence span should be a substring that justifies type. Could be \"संदर्भाधीन दि.२८.०८.२०२४ रोजीचे पत्र ... रद्द करण्यात येत\". Must be exact from input. Let's copy: \"संदर्भाधीन दि.२८.०८.२०२४ रोजीचे पत्र प्रशासकीय करणास्तव रद्द करण्यात येत\". That is a substring.\n\nCancelled_object: the noun being cancelled: \"पत्र\". Could be \"पत्र\". Or \"पत्र\" (letter). So \"पत्र\". Provide in Marathi.\n\nGloss_en: literal translation: \"However, now by this letter, the referenced letter dated 28-08-2024 is being cancelled for administrative purposes.\"\n\nConfidence high, maybe 0.99.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280946822,
+   "prompt_tokens": 803,
+   "prompt_time": 0.013057223,
+   "completion_tokens": 535,
+   "completion_time": 1.160257641,
+   "total_tokens": 1338,
+   "total_time": 1.173314864,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 436
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01kyerp2bger8tbstpa8epxdv2",
+   "seed": 361956018
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "f362d47aaaefb7712feb5a7f",
+ "role": "reasoning"
+}

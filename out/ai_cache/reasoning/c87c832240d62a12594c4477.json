@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"सदर शुद्धीपत्रक रद्द समजण्यात यावे\",\"cancelled_object\":\"शुद्धीपत्रक\",\"gloss_en\":\"The said purification document shall be considered cancelled.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-4ad4ed24-b7aa-458e-a80d-9c3f1d9b0534",
+  "object": "chat.completion",
+  "created": 1785055316,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"सदर शुद्धीपत्रक रद्द समजण्यात यावे\",\"cancelled_object\":\"शुद्धीपत्रक\",\"gloss_en\":\"The said purification document shall be considered cancelled.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence says: \"शासन शुध्दीपत्रक - वाचा येथे नमूद क्र. ४, दिनांक १३.०४.२०२३ रोजीच्या शुद्धीपत्रकान्वये ... यादीचे शुद्धीपत्रक प्रसिद्ध करण्यात आले आहे. सदर शुद्धीपत्रक रद्द समजण्यात यावे. त्याऐवजी ... निर्गमित करण्यात आलेल्या शासन निर्णयामधील ... शुध्दीपत्रक काढण्यात येत आहे.\"\n\nInterpretation: It says that the earlier \"शुद्धीपत्रक\" (purification/validation document) dated 13.04.2023 (the prior GR) should be considered cancelled (रद्द समजण्यात यावे). So it cancels that prior order's document. Is that superseding the prior order itself? The prior GR is a \"शुद्धीपत्रक\" (purification) that published a list. This sentence says that that prior \"शुद्धीपत्रक\" is to be considered cancelled, and a new one is being issued. So the prior order (the earlier \"शुद्धीपत्रक\") is being cancelled. That is a cancellation of the prior order itself, not just appointments. So type = SUPERSEDES. Need target_index = 1 (since only one candidate). evidence_span: need exact substring that indicates cancellation. The phrase \"सदर शुद्धीपत्रक रद्द समजण्यात यावे.\" That's the operative clause. So evidence_span = \"सदर शुद्धीपत्रक रद्द समजण्यात यावे\". Cancelled_object: the noun being cancelled is \"शुद्धीपत्रक\". Could be \"शुद्धीपत्रक\" (the prior document). So cancelled_object = \"शुद्धीपत्रक\". Gloss_en: literal translation: \"The said purification document shall be considered cancelled.\" Provide full translation of sentence? Probably just the gist. Provide something like: \"The said purification document shall be deemed cancelled.\" Confidence high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286815632,
+   "prompt_tokens": 960,
+   "prompt_time": 0.020158312,
+   "completion_tokens": 495,
+   "completion_time": 1.18116492,
+   "total_tokens": 1455,
+   "total_time": 1.201323232,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 426
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyesd1h6f4s82af1wby32mfj",
+   "seed": 1550813607
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "c87c832240d62a12594c4477",
+ "role": "reasoning"
+}

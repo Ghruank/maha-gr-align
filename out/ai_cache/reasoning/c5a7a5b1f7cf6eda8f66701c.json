@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made to the interim shared seniority list dated 01.01.2018.\",\"confidence\":0.95}",
+ "raw": {
+  "id": "chatcmpl-fe1feddb-8886-4bd0-99c8-8ee5e39b312c",
+  "object": "chat.completion",
+  "created": 1785091860,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made to the interim shared seniority list dated 01.01.2018.\",\"confidence\":0.95}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"दिनांक ०१.०१.२०१८ रोजीच्या अंतरिम सामायिक ज्येष्ठतासूचीमध्ये पुढील प्रमाणे सुधारणा करण्यात येत आहे :\"\n\nTranslation: \"In the interim shared seniority list dated 01.01.2018, the following improvements are being made:\"\n\nIt mentions \"सुधारणा\" (improvements/amendments) being made to a list. It references a prior GR? The candidate prior GR is \"GR dated 2019-01-01, number कअनि १११८/प्र.क्र.६६/१४-ब\". The sentence does not explicitly mention that prior GR; it just says improvements are being made to the interim shared seniority list dated 01.01.2018. The prior GR is from 2019, but the sentence refers to a list dated 2018. There's no explicit reference to the prior GR. So relationship likely NONE (no relationship) or maybe REFERENCES? The sentence does not cite the prior GR; it's just a statement of amendment to a list. The prior GR is not mentioned. So target_index null.\n\nType: AMENDS? The sentence says \"सुधारणा करण्यात येत आहे\" i.e., amendments are being made to the list. But the list is not a prior GR; it's a list. The prior GR is not referenced. So we cannot say it amends that GR. So NONE.\n\nThus JSON: type \"NONE\", target_index null, evidence_span maybe the phrase \"सुधारणा करण्यात येत आहे\". Cancelled_object null. Gloss_en: \"Amendments are being made to the interim shared seniority list dated 01.01.2018.\" Confidence maybe 0.95.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286664994,
+   "prompt_tokens": 815,
+   "prompt_time": 1.004619979,
+   "completion_tokens": 443,
+   "completion_time": 0.909238141,
+   "total_tokens": 1258,
+   "total_time": 1.91385812,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 373
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyfw888xes9ay4nd47w2xsa7",
+   "seed": 1962507715
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "c5a7a5b1f7cf6eda8f66701c",
+ "role": "reasoning"
+}

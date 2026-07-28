@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"२.सहसंचालक (सुधारणा/संगणक)\",\"cancelled_object\":null,\"gloss_en\":\"2. Co-ordinator (Amendment/Computer)\",\"confidence\":0.85}",
+ "raw": {
+  "id": "chatcmpl-0bec5d61-5f9e-4ce1-9dc1-94a908683222",
+  "object": "chat.completion",
+  "created": 1785091726,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"२.सहसंचालक (सुधारणा/संगणक)\",\"cancelled_object\":null,\"gloss_en\":\"2. Co-ordinator (Amendment/Computer)\",\"confidence\":0.85}",
+     "reasoning": "We need to classify the sentence: \"२.सहसंचालक (सुधारणा/संगणक)\". Prior GR list includes one: GR dated 2026-04-01, number संकीर्ण-२०२२/प्र.क्र.२९/कोषा प्रशा-४.\n\nWe need to see relationship. Sentence appears to be a heading maybe \"2. सहसंचालक (सुधारणा/संगणक)\" meaning \"2. Co-ordinator (Amendment/Computer)\". It likely references a prior GR? It might be an amendment to a prior order about co-ordinator? Hard to know. The sentence is just a title line, not a verb. No operative verb like \"रद्द\", \"रद्द करण्यात येत आहे\", \"सुधारणा\", but \"सुधारणा\" inside parentheses could be a cue word but inside parentheses maybe indicates amendment? However trap 1: cue words inside file numbers are not verbs. Here \"सुधारणा/संगणक\" is inside parentheses after \"सहसंचालक\". Not a file number. Could be indicating amendment to the role of co-ordinator? The phrase \"सहसंचालक (सुधारणा/संगणक)\" could be read as \"Co-ordinator (Amendment/Computer)\". Might be indicating that the co-ordinator position is being amended (maybe a new computer co-ordinator). The sentence lacks explicit verb like \"नियुक्ती रद्द\" etc. So likely it's just a heading referencing a prior GR? It mentions prior GR list includes one. The sentence may be referencing that prior GR (maybe the prior GR established a co-ordinator, and this is an amendment). But we need to decide type.\n\nGiven no explicit operative verb, likely it's a reference (just citing prior GR). So type = REFERENCES. target_index = 1 (since only one candidate). evidence_span: need exact substring that justifies type. Could be the whole sentence? The phrase \"सहसंचालक (सुधारणा/संगणक)\" shows it's a heading, not a decision. So evidence could be the whole sentence. Cancelled_object null. Gloss_en: \"2. Co-ordinator (Amendment/Computer)\". Confidence maybe 0.85.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.321279146,
+   "prompt_tokens": 802,
+   "prompt_time": 0.01955199,
+   "completion_tokens": 566,
+   "completion_time": 1.970315808,
+   "total_tokens": 1368,
+   "total_time": 1.9898677980000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 493
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c652c0ffaa",
+  "x_groq": {
+   "id": "req_01kyfw44yqf8zbcsrxrfb4vdm2",
+   "seed": 1833898713
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "c2d3e31c1353898039f87799",
+ "role": "reasoning"
+}

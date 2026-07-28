@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The matter of amending Government Decision No. TE‑2020/Pr. No.98/Section‑4 dated 23/07/2020 and reducing/closing the admission capacity of the curriculum in Annexure B was under the government's consideration.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-8ecd8710-c523-4782-8d77-8eab657bc963",
+  "object": "chat.completion",
+  "created": 1785054768,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The matter of amending Government Decision No. TE‑2020/Pr. No.98/Section‑4 dated 23/07/2020 and reducing/closing the admission capacity of the curriculum in Annexure B was under the government's consideration.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence. The sentence is in the \"प्रस्तावना\" (introductory) section. It says: \"प्रस्तावना : ... शासनाच्या विचाराधीन होती.\" It mentions that the matter was under consideration (विचाराधीन). According to trap 3, deliberative mood is not a decision; such sentences are considered REFERENCES. So type = REFERENCES. target_index: which prior GR is referenced? It mentions GR dated 2020-07-23, number टीईएम-२०२०/प्र.क्र.९८/तांशि-४. That's candidate 1. So target_index = 1.\n\nevidence_span: need exact substring that justifies type. Could be \"विचाराधीन होती\" or maybe the phrase indicating it's under consideration. The sentence includes \"शासनाच्या विचाराधीन होती.\" That indicates deliberative. So evidence_span = \"शासनाच्या विचाराधीन होती\". Must be exact substring from input. Let's verify: The input contains \"... शासनाच्या विचाराधीन होती.\" Yes.\n\ncancelled_object: Since it's not cancelling anything, null.\n\ngloss_en: Provide literal English translation. Let's translate: \"Introduction: ... the matter of making amendments to the Government Decision No. TE... dated 23/07/2020 and reducing the admission capacity/closing the course in Annexure B was under consideration of the government.\" Something like that. Provide literal translation.\n\nconfidence: high, maybe 0.98.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286728677,
+   "prompt_tokens": 952,
+   "prompt_time": 0.022671157,
+   "completion_tokens": 414,
+   "completion_time": 1.310321145,
+   "total_tokens": 1366,
+   "total_time": 1.332992302,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 313
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyerw9byfcfvtyt3yytrmezb",
+   "seed": 771844300
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "ee91af2db313cee1763f4a17",
+ "role": "reasoning"
+}

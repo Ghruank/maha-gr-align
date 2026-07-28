@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या सुधारणा करण्यास शासनाची मान्यता प्रदान करण्यात येत आहे\",\"cancelled_object\":\"शाळांची नावे/UDISE नंबर\",\"gloss_en\":\"Reference No.2, pursuant to Reference No.1, a proposal has been received to amend the names/UDISE numbers of three schools in the list attached to the government decision, and the government is granting approval for these amendments.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-17ff27f8-90c3-4102-859d-e9223cf1bd8f",
+  "object": "chat.completion",
+  "created": 1785055350,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या सुधारणा करण्यास शासनाची मान्यता प्रदान करण्यात येत आहे\",\"cancelled_object\":\"शाळांची नावे/UDISE नंबर\",\"gloss_en\":\"Reference No.2, pursuant to Reference No.1, a proposal has been received to amend the names/UDISE numbers of three schools in the list attached to the government decision, and the government is granting approval for these amendments.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. Sentence in Marathi: \"२. संदर्भ क्र.२ अन्वये संदर्भ क्र.१ येथील शासन निर्णया सोबतच्या शाळांच्या यादीतील एकूण ३ शाळांची नावे/UDISE नंबर यात सुधारणा करण्याबाबतचा प्रस्ताव प्राप्त झाला आहे. खालीलप्रमाणे या सुधारणा करण्यास शासनाची मान्यता प्रदान करण्यात येत आहे.\"\n\nInterpretation: It says: \"Reference No.2 pursuant to Reference No.1, a proposal has been received to make amendments to the names/UDISE numbers of a total of 3 schools in the list of schools attached to the government decision. As follows, approval is being provided by the government to make these amendments.\"\n\nThus the sentence is about granting approval to make amendments to school names/UDISE numbers. It references prior GRs (reference numbers). It does not cancel or supersede prior order; it is granting approval to amend. This is an amendment? Actually it's granting approval to make amendments to the list. The prior GR is a decision that listed schools. This sentence says they are approving changes to that list. That is an amendment to the prior order (the list). So the relationship is AMENDS (modifies part of prior order). Not supersedes because the order itself remains, just changes some entries.\n\nWe need target_index: which candidate prior GR is being referenced? There's only one candidate: index 1. So target_index = 1.\n\nEvidence_span: need exact substring that justifies type. For AMENDS, we need phrase indicating amendment. The sentence includes \"सुधारणा करण्याबाबतचा प्रस्ताव\" and \"या सुधारणा करण्यास शासनाची मान्यता प्रदान करण्यात येत आहे.\" So evidence_span could be \"या सुधारणा करण्यास शासनाची मान्यता प्रदान करण्यात येत आहे\". That shows amendment.\n\nCancelled_object: what is being amended? The noun being changed: \"शाळांच्या यादीतील एकूण ३ शाळांची नावे/UDISE नंबर\". So cancelled_object? Actually it's being amended, not cancelled. For AMENDS, we still fill cancelled_object with the noun that is being amended? The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. So we can put \"शाळांची नावे/UDISE नंबर\". Probably \"शाळांची नावे/UDISE नंबर\". Provide that.\n\nGloss_en: literal English translation: \"Reference No.2, pursuant to Reference No.1, a proposal has been received to amend the names/UDISE numbers of a total of three schools in the list of schools attached to the government decision. Accordingly, the government is providing approval to make these amendments.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286079197,
+   "prompt_tokens": 864,
+   "prompt_time": 0.069514153,
+   "completion_tokens": 685,
+   "completion_time": 1.477389665,
+   "total_tokens": 1549,
+   "total_time": 1.546903818,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 575
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyese29kf8ct6dhxc3s8g9dw",
+   "seed": 13864902
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "f68c673cf3ebd24f757390d9",
+ "role": "reasoning"
+}

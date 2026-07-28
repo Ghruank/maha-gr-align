@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक ११.९.२०१९ अन्वये सह सचिव व उप सचिव यांच्या मंजूर करण्यात येणाऱ्या ठोक भरपाई रक्कमेमध्ये सुधारणा केली आहे\",\"cancelled_object\":\"ठोक भरपाई रक्कम\",\"gloss_en\":\"The Finance Department, according to the Seventh Pay Commission, has made an amendment to the lump‑sum compensation amount approved for Joint Secretaries and Under Secretaries under Government Decision dated 11‑Sep‑2019.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-dbd4ab4f-b9ca-4369-bb48-167daf09c2da",
+  "object": "chat.completion",
+  "created": 1785054018,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक ११.९.२०१९ अन्वये सह सचिव व उप सचिव यांच्या मंजूर करण्यात येणाऱ्या ठोक भरपाई रक्कमेमध्ये सुधारणा केली आहे\",\"cancelled_object\":\"ठोक भरपाई रक्कम\",\"gloss_en\":\"The Finance Department, according to the Seventh Pay Commission, has made an amendment to the lump‑sum compensation amount approved for Joint Secretaries and Under Secretaries under Government Decision dated 11‑Sep‑2019.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence describes: \"मंत्रालयीन विभागातील सहसचिव/उप सचिव व ... ठोक भरपाई रक्कम मंजूर ... वित्त विभागाच्या दिनांक 10.7.2013 च्या शासन निर्णयान्वये ... त्याच धर्तीवर ... शासन निर्णय दिनांक 8.2.2019 अन्वये मंजूर ... आता वित्त विभागाने सातव्या वेतन आयोगानुसार शासन निर्णय दिनांक 11.9.2019 अन्वये सह सचिव व उप सचिव यांच्या मंजूर करण्यात येणाऱ्या ठोक भरपाई रक्कमेमध्ये सुधारणा केली आहे. त्यानुसार मा.\"\n\nSo it references prior decisions: 2013 decision, 2019-02-08 decision (candidate), and now a new decision 11.9.2019 that makes \"सुधारणा\" (amendment) to the amount. This is not superseding the prior order itself, but amending the amount (the \"ठोक भरपाई रक्कम\") approved under prior decisions. According to trap 2, if it cancels/changes amounts, that's AMENDS, not SUPERSEDES. The sentence says \"सुधारणा केली आहे\" i.e., amendment. So type = AMENDS. target_index: which prior GR is being amended? The sentence mentions the 2019-02-08 decision (candidate 1). Also mentions 2013 decision but not in candidate list. So target is index 1. evidence_span: need exact substring that shows amendment relationship. Could be \"शासन निर्णय दिनांक ११.९.२०१९ अन्वये ... ठोक भरपाई रक्कमेमध्ये सुधारणा केली आहे\". That is the operative phrase. So evidence_span = \"शासन निर्णय दिनांक ११.९.२०१९ अन्वये ... ठोक भरपाई रक्कमेमध्ये सुधारणा केली आहे\". Must be exact substring from input. Let's locate exact text: The sentence: \"... आता वित्त विभागाने सातव्या वेतन आयोगानुसार शासन निर्णय दिनांक ११.९.२०१९ अन्वये सह सचिव व उप सचिव यांच्या मंजूर करण्यात येणाऱ्या ठोक भरपाई रक्कमेमध्ये सुधारणा केली आहे. त्यानुसार मा.\"\n\nThus evidence_span: \"शासन निर्णय दिनांक ११.९.२०१९ अन्वये सह सचिव व उप सचिव यांच्या मंजूर करण्यात येणाऱ्या ठोक भरपाई रक्कमेमध्ये सुधारणा केली आहे\". That is exact.\n\ncancelled_object: what is being amended? The \"ठोक भरपाई रक्कम\". So cancelled_object maybe \"ठोक भरपाई रक्कम\". But it's amendment, not cancellation. The field expects the noun that is cancelled/amended. So \"ठोक भरपाई रक्कम\". Provide that.\n\ngloss_en: literal translation: \"The Ministry department's Joint Secretary/Under Secretary and equivalent officers were provided a lump sum compensation amount as per pay scale under the Finance Department's Government Decision dated 10.7.2013. Similarly, the Governor's Joint Secretary/Under Secretary (V.V.M.) and Joint Secretary/Under Secretary (Education) were granted lump sum compensation under Government Decision dated 8.2.2019. Now the Finance Department, according to the Seventh Pay Commission, has made an amendment to the lump sum compensation amount approved for Joint Secretaries and Under Secretaries under Government Decision dated 11.9.2019. Accordingly, ...\"\n\nconfidence high, say 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286576651,
+   "prompt_tokens": 989,
+   "prompt_time": 0.021577013,
+   "completion_tokens": 872,
+   "completion_time": 2.011743341,
+   "total_tokens": 1861,
+   "total_time": 2.033320354,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 740
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_87b3c396db",
+  "x_groq": {
+   "id": "req_01kyer5c96fafb3kpt2z4ey5tr",
+   "seed": 2121945476
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "3dada968bd090e1bd5a49326",
+ "role": "reasoning"
+}

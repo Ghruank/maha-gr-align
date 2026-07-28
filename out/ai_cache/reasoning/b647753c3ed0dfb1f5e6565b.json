@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":null,\"gloss_en\":\"Partial changes are made to 1442/Pr.No.35/R. and Ka.-2 dated 13-09-2024, in the following table.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-e2c0257c-b589-41c6-9adb-cf93a9fb17d3",
+  "object": "chat.completion",
+  "created": 1785054609,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":null,\"gloss_en\":\"Partial changes are made to 1442/Pr.No.35/R. and Ka.-2 dated 13-09-2024, in the following table.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"१४२४/प्र.क्र.३५/र. व का.-२, दि.१३.०९.२०२४, यामध्ये अंशत: बदल करुन, पुढील तक्त्यातील\"\n\nTranslation: \"1442/Pr. No.35/R. and Ka.-2, dated 13.09.2024, by making partial changes, in the following table\". It says \"अंशत: बदल करुन\" meaning \"by making partial changes\". This indicates an amendment (AMENDS) to prior order. It is not superseding the whole order, just partial changes. So type AMENDS.\n\nTarget index: the prior GR is candidate 1, so target_index = 1.\n\nEvidence_span: need exact substring that shows the operative phrase. Could be \"अंशत: बदल करुन\". That indicates amendment. So evidence_span = \"अंशत: बदल करुन\".\n\nCancelled_object: what is being cancelled/amended? The sentence says \"अंशत: बदल करुन\" but not specify object. Could be the prior order itself partially changed. The object is the prior order? For AMENDS, we need the Marathi noun that is cancelled/amended. Could be \"अंशत: बदल\". But that's not a noun. Maybe \"तक्त्यातील\" refers to table entries. However we need a noun that is being amended. The sentence says \"अंशत: बदल करुन, पुढील तक्त्यातील\". So the amendment is to the table. The object could be \"तक्त्यातील\". But that's not a noun being cancelled. The instruction: \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. Since it's amendment, we could put \"तक्त्यातील\". But maybe better null because not explicit. However we have to provide something. The noun being amended is the prior order (GR). But that's not a noun in sentence. The phrase \"अंशत: बदल करुन\" indicates amendment to the prior order. Could set cancelled_object = null. The spec says for AMENDS, cancelled_object is the noun that is cancelled/amended. If not clear, null.\n\nGloss_en: \"Partial changes are made to 1442/Pr.No.35/R. and Ka.-2 dated 13-09-2024, in the following table.\"\n\nConfidence high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287555346,
+   "prompt_tokens": 830,
+   "prompt_time": 0.016650899,
+   "completion_tokens": 588,
+   "completion_time": 1.2903680290000001,
+   "total_tokens": 1418,
+   "total_time": 1.307018928,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 507
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f73454f048",
+  "x_groq": {
+   "id": "req_01kyerqeawfeftkznf1mqkzqyg",
+   "seed": 1099805684
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b647753c3ed0dfb1f5e6565b",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"समितीच्या संरचनेत सुधारणा करुन\",\"cancelled_object\":\"समितीची संरचना\",\"gloss_en\":\"By amending the committee structure in the referenced Government Decision dated 29-04-2022, a committee is being formed as follows.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-b0c1e5b0-ec58-4621-bc85-b23096b566be",
+  "object": "chat.completion",
+  "created": 1785054898,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"समितीच्या संरचनेत सुधारणा करुन\",\"cancelled_object\":\"समितीची संरचना\",\"gloss_en\":\"By amending the committee structure in the referenced Government Decision dated 29-04-2022, a committee is being formed as follows.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"संदर्भाधीन दि.२९.०४.२०२२ रोजीच्या शासन निर्णयातील समितीच्या संरचनेत सुधारणा करुन खालीलप्रमाणे समिती गठीत करण्यात येत आहे.\"\n\nTranslation: \"By improving the committee structure in the referenced Government Decision dated 29-04-2022, a committee is being formed as follows.\"\n\nWe have prior GR: dated 2022-04-29.\n\nThe sentence says \"संदर्भाधीन ... समितीच्या संरचनेत सुधारणा करुन ... समिती गठीत करण्यात येत आहे.\" It modifies the committee structure of the prior decision, i.e., amends the prior order's committee structure. It does not cancel the entire prior order; it amends part (committee structure). So type = AMENDS.\n\ntarget_index = 1 (since only one candidate).\n\nevidence_span: need exact substring that shows the operative change. Likely \"समितीच्या संरचनेत सुधारणा करुन\". That phrase indicates amendment. Or \"समितीच्या संरचनेत सुधारणा करुन\". We'll pick that.\n\ncancelled_object: Since it's amendment, not cancellation. The object being amended is \"समितीची संरचना\" (committee structure). For cancelled_object field, we need the Marathi noun that is cancelled/amended. Since it's AMENDS, we should provide the object being amended: \"समितीची संरचना\". The instruction says \"the Marathi noun that is cancelled/amended, or null\". So we give \"समितीची संरचना\". Might be \"समितीच्या संरचना\". Use same case as in sentence: \"समितीच्या संरचनेत\". The noun is \"समितीची संरचना\". We'll output that.\n\ngloss_en: literal English translation: \"By amending the committee structure in the referenced Government Decision dated 29-04-2022, a committee is being formed as follows.\"\n\nconfidence: high, maybe 0.97.\n\nReturn JSON compact.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282716792,
+   "prompt_tokens": 808,
+   "prompt_time": 0.015808346,
+   "completion_tokens": 515,
+   "completion_time": 1.075924898,
+   "total_tokens": 1323,
+   "total_time": 1.091733244,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 429
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f73454f048",
+  "x_groq": {
+   "id": "req_01kyes08y5ep7s2w2ftp9djm4t",
+   "seed": 1230400833
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "4e3c04e547ba6d4bfc8959ba",
+ "role": "reasoning"
+}

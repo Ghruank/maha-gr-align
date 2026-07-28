@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करुन\",\"cancelled_object\":\"सेवा\",\"gloss_en\":\"However, by amending this Government Decision, under the Government Decision dated 6-6-2018, among the same 12 selected services\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-34c19108-9b4c-481f-a8f0-15f5faab3ec9",
+  "object": "chat.completion",
+  "created": 1785054062,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करुन\",\"cancelled_object\":\"सेवा\",\"gloss_en\":\"However, by amending this Government Decision, under the Government Decision dated 6-6-2018, among the same 12 selected services\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"तथापि, या शासन निर्णयात सुधारणा करुन दि.६.६.२०१८ च्या शासन निर्णयान्वये त्याच १२ निवडक सेवांमधील\"\n\nTranslation: \"However, by amending this Government Decision, under the Government Decision dated 6-6-2018, among the same 12 selected services...\"\n\nWe have candidate prior GR: GR dated 2018-06-06, number ...\n\nWe need to see relationship: The sentence says \"या शासन निर्णयात सुधारणा करुन दि.६.६.२०१८ च्या शासन निर्णयान्वये\". It says \"by amending this decision, under the decision of 6-6-2018\". It seems to be amending the prior decision? Actually phrase: \"या शासन निर्णयात सुधारणा करुन दि.६.६.२०१८ च्या शासन निर्णयान्वये\" Means \"by amending this decision, under the decision of 6-6-2018\". It indicates that this current decision amends the prior decision dated 6-6-2018. So relationship is AMENDS (modifies part of prior order). Not supersedes because it's not cancelling the whole order, just amending.\n\nCancelled object? It amends something, maybe \"सेवा\" (services) but the sentence says \"त्याच १२ निवडक सेवांमधील\". It doesn't explicitly cancel; it's amending. So cancelled_object likely null because it's not canceling, but we could put the noun being amended: \"सेवा\" maybe. But spec: \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. For AMENDS, we can provide the object being amended. The sentence says \"या शासन निर्णयात सुधारणा करुन ... त्याच १२ निवडक सेवांमधील\". So the object is \"सेवा\". Could be \"सेवा\". We'll set cancelled_object to \"सेवा\". Evidence_span: need exact substring that justifies type. Could be \"सुधारणा करुन\". That indicates amendment. So evidence_span = \"सुधारणा करुन\". Or maybe \"या शासन निर्णयात सुधारणा करुन\". Use exact substring from sentence: \"सुधारणा करुन\". That appears.\n\ntarget_index: the prior GR is index 1.\n\ngloss_en: literal translation: \"However, by amending this Government Decision, under the Government Decision dated 6-6-2018, among the same 12 selected services\". Provide.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck traps: cue words inside file numbers not relevant. Not present. Granularity: we are amending, not cancelling whole order. Good. Deliberative mood not present.\n\nThus output."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287439303,
+   "prompt_tokens": 819,
+   "prompt_time": 0.037277504,
+   "completion_tokens": 661,
+   "completion_time": 1.368772938,
+   "total_tokens": 1480,
+   "total_time": 1.406050442,
+   "completion_tokens_details": {
+    "reasoning_tokens": 583
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01kyer6rqkekc8hm9vf8rargcr",
+   "seed": 214028602
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b3867b9e49fe48bc91dacb2f",
+ "role": "reasoning"
+}

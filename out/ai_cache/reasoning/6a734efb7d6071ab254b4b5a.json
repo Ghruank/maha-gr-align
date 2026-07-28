@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"बदली प्रशासकीय कारणास्तव रद्द करण्यात येऊन\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of Mr. Patil made under the order dated 02-11-2020 is being cancelled for administrative reasons, and his posting is being made again to the Finance Department under this order.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-87f34a8e-532f-49c3-9e7e-a945592115c5",
+  "object": "chat.completion",
+  "created": 1785054298,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"बदली प्रशासकीय कारणास्तव रद्द करण्यात येऊन\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of Mr. Patil made under the order dated 02-11-2020 is being cancelled for administrative reasons, and his posting is being made again to the Finance Department under this order.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"२. श्री. पाटील यांची दिनांक ०२-११-२०२० च्या आदेशान्वये करण्यात आलेली बदली प्रशासकीय कारणास्तव रद्द करण्यात येऊन त्यांची पदस्थापना या आदेशान्वये पुन्हा वित्त विभागात करण्यात येत आहे.\"\n\nTranslation: \"2. The transfer of Mr. Patil made under the order dated 02-11-2020 is being cancelled for administrative reasons, and his posting is being made again to the Finance Department under this order.\"\n\nWe have prior GR: dated 2020-11-02 (the same order). The sentence cancels the transfer (बदली) that was made under that prior order. It does not cancel the prior order itself; it cancels the action (transfer) made under it. According to trap 2, that is AMENDS, not SUPERSEDES. The cancelled object is \"बदली\" (transfer). The sentence also reappoints him, but the relationship is amendment to prior order.\n\nThus type: AMENDS. target_index: 1 (since only one candidate). evidence_span: need exact substring that shows cancellation: \"बदली प्रशासकीय कारणास्तव रद्द करण्यात येऊन\". Or maybe \"बदली ... रद्द करण्यात येऊन\". Must be exact substring from input. Let's locate: The sentence: \"२. श्री. पाटील यांची दिनांक ०२-११-२०२० च्या आदेशान्वये करण्यात आलेली बदली प्रशासकीय कारणास्तव रद्द करण्यात येऊन त्यांची पदस्थापना या आदेशान्वये पुन्हा वित्त विभागात करण्यात येत आहे.\"\n\nExact substring: \"बदली प्रशासकीय कारणास्तव रद्द करण्यात येऊन\". That includes the cancellation phrase.\n\nCancelled_object: \"बदली\". Could also be \"बदली\" as noun. Provide that.\n\nGloss_en: \"The transfer of Mr. Patil made under the order dated 02-11-2020 is being cancelled for administrative reasons, and his posting is being made again to the Finance Department under this order.\"\n\nConfidence high, say 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28559772,
+   "prompt_tokens": 823,
+   "prompt_time": 0.032777315,
+   "completion_tokens": 562,
+   "completion_time": 1.166407326,
+   "total_tokens": 1385,
+   "total_time": 1.199184641,
+   "completion_tokens_details": {
+    "reasoning_tokens": 464
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_96d96a151c",
+  "x_groq": {
+   "id": "req_01kyerdytnek0s231zfwxbygjq",
+   "seed": 1514293805
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6a734efb7d6071ab254b4b5a",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करुन सुधारित नव्याने आदेश निर्गमित करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By invoking the earlier decision, a revised new order is issued\",\"confidence\":0.92}",
+ "raw": {
+  "id": "chatcmpl-98ae98f3-cff2-4449-8992-e2e6bb0f4cf9",
+  "object": "chat.completion",
+  "created": 1785054879,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करुन सुधारित नव्याने आदेश निर्गमित करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By invoking the earlier decision, a revised new order is issued\",\"confidence\":0.92}",
+     "reasoning": "We need to determine relationship. Sentence: It mentions \"संदर्भ क्र.३ ... दि.०३.०८.२०२१ ... शासन निर्णय अधिक्रमित करुन सुधारित नव्याने आदेश निर्गमित करुन ...\". Then \"संदर्भ क्र.४ ... दि.०८.१२.२०२१ ... मान्यता दिल्यानुसार दि.०३.०८.२०२१ रोजीच्या शासन निर्णय अधिक्रमित करुन संदर्भ क्र.५ येथील दि.१७.१२.२०२१ रोजी नव्याने शासन निर्णय निर्गमित करण्यात आला आहे.\"\n\nThus they are issuing a new order superseding previous? They say \"morekr̥t karun sudharit navyane aadesh nirgamit karun\" meaning \"by invoking the earlier decision, a revised new order is issued\". That sounds like they are amending the prior order? The prior order is being \"morekr̥t\" (invoked) and \"sudharit navyane\" (revised new order). The prior order is not being cancelled entirely; they are issuing a revised order, which modifies the earlier decision. According to trap 2, if they are canceling appointments etc, it's AMENDS. Here they are revising the order itself? The phrase \"सुधारणा करुन\" could be considered amendment to the prior order, not superseding? The difference: SUPERSEDES when the order itself is cancelled or replaced. Here they are issuing a new order that replaces the earlier decision? They say \"संदर्भ क्र.५ ... नव्याने शासन निर्णय निर्गमित करण्यात आला आहे.\" That suggests a new order is issued, possibly superseding the earlier one. However they also say \"संदर्भ क्र.३ ... अधिक्रमित करुन सुधारित नव्याने आदेश निर्गमित करुन\". That is \"by invoking the decision of reference 3, a revised new order is issued\". That sounds like amendment to prior order (reference 3). The target prior GR list only includes one: dated 2021-12-17, which is likely reference 5 (since that date matches 17-12-2021). So they are issuing a new order on that date, referencing earlier decisions. The relationship: they are issuing a new order that supersedes the prior? The phrase \"नव्याने शासन निर्णय निर्गमित करण्यात आला आहे\" means a new decision has been issued, which likely replaces the earlier one. That is superseding. But is it canceling the prior order? It says \"morekr̥t karun\" (by invoking) the earlier decision, they issue a new one. That is typical of amendment: you amend the earlier order, not cancel it. However \"नव्याने\" suggests new order, but could be amendment. The instruction: SUPERSEDES only when the ORDER itself is cancelled or replaced. Here they are not explicitly saying the earlier order is cancelled; they are issuing a new order \"morekr̥t karun\" the earlier one. That is amendment. So type AMENDS.\n\ntarget_index: 1 (the only prior GR). evidence_span: need exact substring that shows amendment. Could be \"संदर्भ क्र.५ येथील दि.१७.१२.२०२१ रोजी नव्याने शासन निर्णय निर्गमित करण्यात आला आहे\". That indicates new order issued, but also \"अधिक्रमित करुन सुधारित\". The phrase \"अधिक्रमित करुन सुधारित\" indicates amendment. Choose that as evidence.\n\ncancelled_object: what is being cancelled/amended? The prior order itself? Since it's amendment, the object is \"शासन निर्णय\". So cancelled_object maybe null? For AMENDS, we need the noun that is amended. Could be \"शासन निर्णय\". Provide that.\n\ngloss_en: literal translation.\n\nLet's craft JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314212907,
+   "prompt_tokens": 1064,
+   "prompt_time": 0.077954347,
+   "completion_tokens": 889,
+   "completion_time": 1.8311604799999999,
+   "total_tokens": 1953,
+   "total_time": 1.909114827,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 815
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6c36ac20de",
+  "x_groq": {
+   "id": "req_01kyerzn56e7jsf7btbvtaqc6z",
+   "seed": 827243598
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "41c1918432ea49f442a155df",
+ "role": "reasoning"
+}

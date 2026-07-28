@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"The matter of amendment was under consideration by the government.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-734b36c8-991f-401d-a6ee-5ae233ae57cf",
+  "object": "chat.completion",
+  "created": 1785091621,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"The matter of amendment was under consideration by the government.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence: \"सुधारणा करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nTranslation: \"The matter of amendment was under consideration by the government.\"\n\nWe have candidate prior GR: #1.\n\nWe need to decide relationship.\n\nThe sentence says \"विचाराधीन होती\" which is deliberative mood, not a decision. According to trap 3, such sentences are not operative change, they are references. So type = REFERENCES.\n\nTarget_index: which prior GR is referenced? The sentence does not explicitly mention the prior GR number; but the candidate list is given. The sentence does not cite it, but the resolver has already matched it inside it. However, the sentence does not contain any explicit reference to that GR. The instruction: \"You are given the sentence and a numbered list of prior GRs that a deterministic resolver has ALREADY matched inside it.\" So the resolver matched prior GR inside the sentence. But the sentence we see does not contain any number. Possibly the prior GR is referenced implicitly? The resolver may have matched because the phrase \"सुधारणा\" appears, but not the number. However, we must still output target_index referencing the matched prior GR. Since the list is given, we assume the match is there. So target_index = 1.\n\nEvidence_span: need exact substring that justifies the type. For REFERENCES, we need a substring that shows it's just a reference, i.e., \"विचाराधीन होती\". That indicates deliberative. So evidence_span = \"विचाराधीन होती.\"\n\nCancelled_object: null because not cancelling.\n\nGloss_en: \"The matter of amendment was under consideration by the government.\"\n\nConfidence: high, maybe 0.98.\n\nReturn JSON.\n\nCheck JSON: {\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"The matter of amendment was under consideration by the government.\",\"confidence\":0.98}\n\nMake sure null is not quoted.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.158237198,
+   "prompt_tokens": 794,
+   "prompt_time": 0.03443344,
+   "completion_tokens": 472,
+   "completion_time": 0.986981905,
+   "total_tokens": 1266,
+   "total_time": 1.021415345,
+   "completion_tokens_details": {
+    "reasoning_tokens": 414
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_84bf0227ec",
+  "x_groq": {
+   "id": "req_01kyfw0zydf2rbgsn1tth23qev",
+   "seed": 2007522211
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a5c9bdfd73ae12202ef624fa",
+ "role": "reasoning"
+}

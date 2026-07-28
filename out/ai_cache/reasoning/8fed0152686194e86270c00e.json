@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द\",\"cancelled_object\":\"एकतर्फी कार्यमुक्ततेचे आदेश\",\"gloss_en\":\"The unilateral release order of Mr. Ni.Sh... Ksheersagar, Office Officer (File No. 29) is cancelled for administrative reasons.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-58197980-0411-49c6-b881-41d1e47d8e6d",
+  "object": "chat.completion",
+  "created": 1785091909,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द\",\"cancelled_object\":\"एकतर्फी कार्यमुक्ततेचे आदेश\",\"gloss_en\":\"The unilateral release order of Mr. Ni.Sh... Ksheersagar, Office Officer (File No. 29) is cancelled for administrative reasons.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"श्री.नि.शं.क्षीरसागर, कक्ष अधिकारी (अ.क्र. २९) यांचे एकतर्फी कार्यमुक्ततेचे आदेश प्रशासकीय कारणास्तव रद्द\"\n\nTranslation: \"Mr. Ni.Sh... Ksheersagar, Office Officer (File No. 29) his unilateral release from duty order is cancelled for administrative reasons.\"\n\nSo it cancels an order (the \"एकतर्फी कार्यमुक्ततेचे आदेश\") that was presumably issued earlier. This is a cancellation of an order itself, not just appointments etc. So type is SUPERSEDES? Actually it's cancelling the order, not superseding a prior GR? The prior GR is \"GR dated 2019-07-22\". The sentence says the order is cancelled. That means the prior GR (the one from 2019-07-22) is being cancelled? The prior GR likely contains that order. So the sentence cancels the order, i.e., supersedes the prior GR? According to trap 2: If the sentence cancels appointments, approvals, etc made under a prior GR, that GR is NOT superseded — it's AMENDS. But here it's cancelling the order itself, not just something made under it. So it's SUPERSEDES.\n\nWe need target_index: 1 (since only one candidate). evidence_span: the phrase that indicates cancellation: \"रद्द\". But need a substring that shows cancellation. Could be \"रद्द\". Or \"एकतर्फी कार्यमुक्ततेचे आदेश ... रद्द\". The exact substring: \"रद्द\". That is the operative word.\n\ncancelled_object: the noun being cancelled: \"एकतर्फी कार्यमुक्ततेचे आदेश\". So we put that.\n\ngloss_en: \"The unilateral release order of Mr. Ni.Sh... Ksheersagar, Office Officer (File No. 29) is cancelled for administrative reasons.\"\n\nconfidence: high, maybe 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.158237048,
+   "prompt_tokens": 805,
+   "prompt_time": 0.01449944,
+   "completion_tokens": 501,
+   "completion_time": 1.16628649,
+   "total_tokens": 1306,
+   "total_time": 1.18078593,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 418
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01kyfw9s18ew3brj6rhz2abjht",
+   "seed": 259967438
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "8fed0152686194e86270c00e",
+ "role": "reasoning"
+}

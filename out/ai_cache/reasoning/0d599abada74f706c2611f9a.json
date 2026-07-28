@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, the General Administration Department, the Government Decision dated 08.09.2023, the matter of amending the Government Decision for greater clarity was under consideration of the government.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-4ecaebd0-4175-47d6-a506-a140a1974e82",
+  "object": "chat.completion",
+  "created": 1785054589,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, the General Administration Department, the Government Decision dated 08.09.2023, the matter of amending the Government Decision for greater clarity was under consideration of the government.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"३. यास्तव, सामान्य प्रशासन विभाग, शासन निर्णय दि. ०८.०९.२०२३ निर्णयात अधिक स्पष्टता येण्यासाठी शासन निर्णयात सुधारणा करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nTranslation: \"Therefore, the General Administration Department, the Government Decision dated 08.09.2023, the matter of making amendments to the Government Decision for greater clarity was under consideration of the government.\"\n\nKey: It says \"शासनाच्या विचाराधीन होती\" (was under consideration). That's deliberative mood, not operative. So it's not a decision, it's just referencing that amendment was under consideration. So classification: REFERENCES.\n\nWe have one candidate prior GR: index 1.\n\nWe need evidence_span: a substring that justifies the type. For REFERENCES, we need a phrase that shows it's just citing, not operative. The phrase \"शासनाच्या विचाराधीन होती\" indicates it's under consideration. Also \"शासन निर्णय दि. ०८.०९.२०२३\" is a reference. Choose a span that includes \"शासन निर्णय दि. ०८.०९.२०२३\" maybe. But we need exact substring from input. Let's pick \"शासन निर्णय दि. ०८.०९.२०२३\". That shows reference. Or \"शासनाच्या विचाराधीन होती\". That indicates deliberative. Either works. Use \"शासनाच्या विचाराधीन होती\" as evidence that it's not operative.\n\ncancelled_object: null because no cancellation.\n\ngloss_en: literal translation: \"Therefore, the General Administration Department, the Government Decision dated 08.09.2023, the matter of amending the Government Decision for greater clarity was under consideration of the government.\"\n\ntype: REFERENCES\n\ntarget_index: 1\n\nconfidence: high, maybe 0.98.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.321340953,
+   "prompt_tokens": 830,
+   "prompt_time": 0.155926327,
+   "completion_tokens": 479,
+   "completion_time": 0.997363737,
+   "total_tokens": 1309,
+   "total_time": 1.1532900640000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 394
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dd854ee2d7",
+  "x_groq": {
+   "id": "req_01kyerpvdxev1vh2qwr6rbevzn",
+   "seed": 2143176283
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0d599abada74f706c2611f9a",
+ "role": "reasoning"
+}

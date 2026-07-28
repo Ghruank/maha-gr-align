@@ -1,0 +1,86 @@
+{
+ "generated_at": "2026-07-27T00:27:09",
+ "graph_built_at": "2026-07-26T13:18:12",
+ "accuracy": {
+  "value": null,
+  "status": "UNMEASURED — requires hand-labelled tests/resolver_truth.json",
+  "note": "Do not quote an accuracy figure. Quote ablation, cross-language agreement (a lower bound) and invariant violations instead."
+ },
+ "scale": {
+  "departments": 4,
+  "grs_indexed": 17283,
+  "documents_scanned": 17253,
+  "citations_extracted": 27948,
+  "documents_with_citations": 9563,
+  "edges": 4815,
+  "cross_department_edges": 1538,
+  "cross_department_pct": 31.9,
+  "nodes_touched_by_an_edge": 3798,
+  "index_covers": [
+   "2017-10-12",
+   "2026-07-22"
+  ],
+  "skipped_malformed_uid": 19
+ },
+ "ablation": {
+  "edges": 4815,
+  "date_only": {
+   "unique": 0,
+   "unique_pct": 0.0,
+   "ambiguous": 4815,
+   "ambiguous_pct": 100.0,
+   "unique_but_wrong": 0,
+   "mean_candidates": 44.2,
+   "max_candidates": 380
+  },
+  "number_only": {
+   "unique": 1400,
+   "unique_pct": 29.1,
+   "ambiguous": 2900,
+   "ambiguous_pct": 60.2,
+   "unique_but_wrong": 0,
+   "no_match": 515
+  },
+  "both_keys": {
+   "unique": 4815,
+   "ambiguous": 0,
+   "note": "ambiguity abstains by design; abstentions counted in unresolved[]"
+  }
+ },
+ "invariants": {
+  "violations": {
+   "self_edges": 0,
+   "endpoint_not_a_node": 0,
+   "forward_in_time": 0,
+   "type_out_of_vocabulary": 0,
+   "empty_evidence": 0,
+   "typed_without_cue": 2,
+   "confidence_out_of_range": 0,
+   "citations_lost": 0
+  },
+  "total_violations": 2,
+  "edges_checked": 4815
+ },
+ "groundedness": {
+  "sampled": 600,
+  "checked": 600,
+  "verbatim": 600,
+  "not_verbatim": 0,
+  "unreadable_source": 0,
+  "groundedness_pct": 100.0,
+  "failures": []
+ },
+ "refusals": {
+  "unresolved": 23133,
+  "by_reason": {
+   "date_only_insufficient": 7072,
+   "no_number": 6775,
+   "number_absent": 4013,
+   "series_gap": 2824,
+   "other_dept": 2012,
+   "ambiguous": 437
+  },
+  "resolution_rate_pct_DO_NOT_QUOTE_ALONE": 17.2,
+  "note": "resolution rate is not an accuracy metric. Most unresolved citations cannot resolve for structural reasons (not a GR, outside the crawl, another department). Quote the breakdown, never the bare rate."
+ }
+}

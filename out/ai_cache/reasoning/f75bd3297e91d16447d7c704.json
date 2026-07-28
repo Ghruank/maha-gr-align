@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"The matter of making amendments in the limit was under consideration of the government.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-d4a769b2-9a25-4ce7-b19a-b28e4fa20e6d",
+  "object": "chat.completion",
+  "created": 1785053972,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"The matter of making amendments in the limit was under consideration of the government.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"मर्यादेत सुधारणा करण्याची बाब शासनाच्या विचाराधीन होती. सबब, दि.२.२.२०२१ च्या शासन\"\n\nTranslation: \"The matter of making amendments in the limit was under consideration of the government. Reason, of the government dated 2.2.2021.\"\n\nKey: It says \"विचाराधीन होती\" which is deliberative mood, not a decision. So it's not operative change. So classification: REFERENCES (since it mentions prior GR but no operative change). Also note that it mentions prior GR? The candidate list includes a prior GR. The sentence does not cancel or amend; it's just stating it was under consideration. So type = REFERENCES, target_index = 1 (since it mentions that prior GR). evidence_span: need exact substring that justifies type. Could be \"विचाराधीन होती\". That indicates deliberative. Also maybe \"सुबब, दि.२.२.२०२१ च्या शासन\" but the operative phrase is \"विचाराधीन होती\". So evidence_span = \"विचाराधीन होती\". cancelled_object = null. gloss_en: \"The matter of making amendments in the limit was under consideration of the government.\" confidence high, say 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286019477,
+   "prompt_tokens": 814,
+   "prompt_time": 0.033336886,
+   "completion_tokens": 339,
+   "completion_time": 0.709362075,
+   "total_tokens": 1153,
+   "total_time": 0.742698961,
+   "completion_tokens_details": {
+    "reasoning_tokens": 277
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_87b3c396db",
+  "x_groq": {
+   "id": "req_01kyer40y8f66bx7k2bk4tnnqw",
+   "seed": 1513738103
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "f75bd3297e91d16447d7c704",
+ "role": "reasoning"
+}

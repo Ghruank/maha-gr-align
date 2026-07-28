@@ -1,0 +1,44 @@
+{
+ "text": "OK",
+ "raw": {
+  "id": "chatcmpl-df697a08-3510-4d34-8ad2-42cda8232742",
+  "object": "chat.completion",
+  "created": 1785050989,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "OK",
+     "reasoning": "The user says: \"Reply with exactly: OK\". So we must output exactly \"OK\". No extra whitespace, no punctuation beyond that. Should be exactly \"OK\"."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.279763405,
+   "prompt_tokens": 76,
+   "prompt_time": 0.002882011,
+   "completion_tokens": 45,
+   "completion_time": 0.0928437,
+   "total_tokens": 121,
+   "total_time": 0.095725711,
+   "completion_tokens_details": {
+    "reasoning_tokens": 35
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_bb691ea66b",
+  "x_groq": {
+   "id": "req_01kyen9107fa2ra45veq507qx5",
+   "seed": 1836169476
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "c56b3f8d67fb47d6f052a771",
+ "role": "reasoning"
+}

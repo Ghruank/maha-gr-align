@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The amendment to Annexure A of Government Decision No. TEEM-2020/Pr. No.102/Tanshi-4 dated 13/08/2020 was under the government's consideration.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-3642faa1-842d-4305-964a-633c4628c746",
+  "object": "chat.completion",
+  "created": 1785054787,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The amendment to Annexure A of Government Decision No. TEEM-2020/Pr. No.102/Tanshi-4 dated 13/08/2020 was under the government's consideration.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi, appears to be a \"प्रस्तावना\" (introductory) section. It says: \"प्रस्तावना : ... शासनाच्या विचाराधीन होती.\" It mentions that the matter is under consideration (\"विचाराधीन होती\") – that's deliberative mood, not a decision. According to trap 3, such sentences are classified as REFERENCES. It does not cancel or amend anything; it's just stating that the amendment to Annexure A was under consideration. So type = REFERENCES. target_index: which prior GR is referenced? It mentions GR dated 2020-08-13, number टीईएम-२०२०/प्र.क्र.१०२/तांशि-४. So target_index = 1 (1-based). evidence_span: need exact substring that justifies type. Could be \"विचाराधीन होती\" or maybe the phrase indicating it's under consideration. The sentence: \"... शासनाच्या विचाराधीन होती.\" That indicates deliberative. So evidence_span = \"विचाराधीन होती\". cancelled_object = null (since none). gloss_en: literal English translation. Provide translation: \"Introduction: ... the amendment to Annexure A of Government Decision No. ... dated 13/08/2020 was under consideration of the government.\" Something like that. Provide confidence maybe 0.99.\n\nMake JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314627324,
+   "prompt_tokens": 947,
+   "prompt_time": 0.04777188,
+   "completion_tokens": 380,
+   "completion_time": 0.790392065,
+   "total_tokens": 1327,
+   "total_time": 0.838163945,
+   "completion_tokens_details": {
+    "reasoning_tokens": 290
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_60e4b492db",
+  "x_groq": {
+   "id": "req_01kyerwwwxfy980nm0pttwa8ar",
+   "seed": 1552943962
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "7b9c7f53b8897d2730d6cda4",
+ "role": "reasoning"
+}

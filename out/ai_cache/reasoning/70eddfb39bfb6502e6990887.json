@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ:\",\"cancelled_object\":null,\"gloss_en\":\"Reference: 1) Government decision, General Administration Department No. TRN 2013/Pr.No.84/13/12-A, dated 20.01.2014 2) Government decision, Finance Department No. Padni 2016/Pr.No.7/16/Financial Reform-1, dated 20.02.2016 3) Government circular, General Administration Department No. TRN 2021/Pr.No.37/CPTP, dated 24.12.2021 4) Government letter General Administration Department No. TRN 2021/Pr.No.37/CPTP, dated 29.12.2021 5) Simultaneous date 11.01.2022 Government decision.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-8a49f41b-6ad4-4fad-b3b8-65ca300b18b6",
+  "object": "chat.completion",
+  "created": 1785054380,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ:\",\"cancelled_object\":null,\"gloss_en\":\"Reference: 1) Government decision, General Administration Department No. TRN 2013/Pr.No.84/13/12-A, dated 20.01.2014 2) Government decision, Finance Department No. Padni 2016/Pr.No.7/16/Financial Reform-1, dated 20.02.2016 3) Government circular, General Administration Department No. TRN 2021/Pr.No.37/CPTP, dated 24.12.2021 4) Government letter General Administration Department No. TRN 2021/Pr.No.37/CPTP, dated 29.12.2021 5) Simultaneous date 11.01.2022 Government decision.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is a \"संदर्भ:\" list of prior GRs. It just references prior orders, no operative change. So type = REFERENCES. target_index: which prior GR is being referenced? The candidate list has one: index 1. So target_index = 1. evidence_span: need exact substring that justifies type. Could be \"संदर्भ:\" or maybe the whole list? Choose a substring that shows referencing. Use \"संदर्भ:\" as evidence. cancelled_object null. gloss_en literal translation: \"Reference: 1) Government decision, ...\". Provide translation. confidence high, say 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281470064,
+   "prompt_tokens": 965,
+   "prompt_time": 0.023209892,
+   "completion_tokens": 340,
+   "completion_time": 0.837034296,
+   "total_tokens": 1305,
+   "total_time": 0.860244188,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 140
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e1a78f200e",
+  "x_groq": {
+   "id": "req_01kyergf21esfrzrhqe7enp5ky",
+   "seed": 145858229
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "70eddfb39bfb6502e6990887",
+ "role": "reasoning"
+}

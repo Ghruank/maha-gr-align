@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र. ४ येथील दि. १९-०७-२०२२ च्या पत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the provisions of the above government decision, under reference No. 4 dated 19-07-2022, an expression of interest was sought from clerical‑typist staff of the ministry department for filling one vacant post of clerk‑typist in the Office of the Registrar, Land Acquisition, Rehabilitation and Resettlement Authority, Aurangabad, by deputation. Accordingly, from the received expressions of interest, Mr. K.K. Kuklare, clerk‑typist, Home Department, is being appointed on deputation for an initial period of three years.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-4b70d4b9-c5e0-426c-b6f8-aec83e2f22c3",
+  "object": "chat.completion",
+  "created": 1785054416,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र. ४ येथील दि. १९-०७-२०२२ च्या पत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the provisions of the above government decision, under reference No. 4 dated 19-07-2022, an expression of interest was sought from clerical‑typist staff of the ministry department for filling one vacant post of clerk‑typist in the Office of the Registrar, Land Acquisition, Rehabilitation and Resettlement Authority, Aurangabad, by deputation. Accordingly, from the received expressions of interest, Mr. K.K. Kuklare, clerk‑typist, Home Department, is being appointed on deputation for an initial period of three years.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence references multiple prior GRs (क्र. १, ३, २, ४). It describes policies, improvements, procedures, and then mentions a specific appointment: \"श्री. कृ.क. कुकलारे ... प्रथमतः ३ वर्षाच्या कालावधीसाठी प्रतिनियुक्तीने नियुक्ती करण्यात येत आहेत.\"\n\nWe have candidate prior GR list only includes one: GR dated 2022-07-19, number प्रतिनि-२५२२/प्र.क्र.१३४/१४-अ. That likely corresponds to \"संदर्भाधिन क्र. ४ येथील दि. १९-०७-२०२२ च्या पत्रान्वये\". So the sentence is about appointing a person under that prior GR. Does it cancel or amend? It says \"प्रथमतः ३ वर्षाच्या कालावधीसाठी प्रतिनियुक्तीने नियुक्ती करण्यात येत आहेत.\" That's an appointment, not a cancellation. It does not cancel the prior order; it is implementing it. So relationship is REFERENCES (citing prior GR) or maybe AMENDS if it modifies something under prior GR. It says \"उपरोक्त शासन निर्णयातील तरतुदीनुसार ... निबंधक... १ रिक्त पद प्रतिनियुक्तीने भरण्याकरीता इच्छुकता मागविण्यात आली होती. त्यानुसार ... कुकलारे ... प्रथमतः ३ वर्षाच्या कालावधीसाठी प्रतिनियुक्तीने नियुक्ती करण्यात येत आहेत.\" This is an execution of prior decision, not amendment. So classification: REFERENCES.\n\ntarget_index: which candidate prior GR is referenced? The sentence mentions \"संदर्भाधिन क्र. ४ ... १९-०७-२०२२ च्या पत्रान्वये\". That likely matches the candidate GR dated 2022-07-19. So target_index = 1.\n\nevidence_span: need exact substring that shows the relationship. Something like \"संदर्भाधिन क्र. ४ येथील दि. १९-०७-२०२२ च्या पत्रान्वये\". That is the citation. Or maybe \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\". But better to pick the phrase that references the prior GR. So evidence_span = \"संदर्भाधिन क्र. ४ येथील दि. १९-०७-२०२२ च्या पत्रान्वये\".\n\ncancelled_object: null because not cancelling.\n\ngloss_en: literal translation: \"According to the provisions of the above government decision, under reference No. 4 dated 19-07-2022, an expression of interest was sought from clerical-typist staff of the ministry department for filling one vacant post of clerk-typist in the Office of the Registrar, Land Acquisition, Rehabilitation and Resettlement Authority, Aurangabad, by deputation. Accordingly, from the received expressions of interest, Mr. K.K. Kuklare, clerk-typist, Home Department, is being appointed on deputation for an initial period of three years.\"\n\nconfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28427402,
+   "prompt_tokens": 1165,
+   "prompt_time": 0.043460975,
+   "completion_tokens": 861,
+   "completion_time": 1.784419362,
+   "total_tokens": 2026,
+   "total_time": 1.8278803369999999,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 673
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_acbbc9c4c3",
+  "x_groq": {
+   "id": "req_01kyerhhdnevs8abq8pjbxp3ny",
+   "seed": 377138701
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0a2b582e0c7dab8951f81aa8",
+ "role": "reasoning"
+}

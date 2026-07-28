@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":null,\"gloss_en\":\"1442/Pr.Kr.35/Ravaka-2, dated 13.09.2024, by making partial changes, in the following table\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-a132c4b2-d735-466f-8b56-b60813244f7b",
+  "object": "chat.completion",
+  "created": 1785054627,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":null,\"gloss_en\":\"1442/Pr.Kr.35/Ravaka-2, dated 13.09.2024, by making partial changes, in the following table\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"१४२४/प्र.क्र.३५/रवका-२, दि.१३.०९.२०२४, यामध्ये अंशत: बदल करुन, पुढील तक्त्यातील\"\n\nTranslation: \"1442/pr.kra.35/Ravaka-2, dated 13.09.2024, by making partial changes, in the following table\". It says \"अंशत: बदल करुन\" meaning \"by making partial changes\". This indicates an amendment to something, not a supersede. It references prior GR number. The sentence says \"अंशत: बदल करुन\" which is an amendment. So type AMENDS.\n\nTarget_index: which prior GR? There's only one candidate, index 1.\n\nEvidence_span: need exact substring that justifies type. Could be \"अंशत: बदल करुन\". That indicates amendment.\n\nCancelled_object: what is being amended? The sentence says \"अंशत: बदल करुन, पुढील तक्त्यातील\". It doesn't specify object, but likely \"तक्त्यातील\" (the table). However cancelled_object expects the Marathi noun that is cancelled/amended. Since it's amendment, not cancellation, but we still need to fill cancelled_object with the noun being amended. Could be \"तक्त्यातील\". But that's not a noun, it's a phrase. Maybe we set null because not explicit. The guidelines: \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. Since it's amendment, we could still provide the noun being amended. The sentence says \"अंशत: बदल करुन, पुढील तक्त्यातील\". The object is the \"तक्त्यातील\" (the table). But maybe better to set null as not clear.\n\nI'll set cancelled_object: null.\n\nGloss_en: literal translation: \"1442/Pr.Kr.35/Ravaka-2, dated 13.09.2024, by making partial changes, in the following table\". Provide.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.31343907,
+   "prompt_tokens": 829,
+   "prompt_time": 0.04294123,
+   "completion_tokens": 516,
+   "completion_time": 1.070817419,
+   "total_tokens": 1345,
+   "total_time": 1.113758649,
+   "completion_tokens_details": {
+    "reasoning_tokens": 435
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_0708ac49a5",
+  "x_groq": {
+   "id": "req_01kyerr0c2ez9s8y29yd0s4z2p",
+   "seed": 922850871
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "c20f4bdaaa877daa0f8738a5",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"बदली रद्द करण्यात येत आहे\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of the mentioned officers is being cancelled for administrative reasons.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-5cdd8c44-ba3b-42a6-b67f-71a7beb10c8b",
+  "object": "chat.completion",
+  "created": 1785091831,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"बदली रद्द करण्यात येत आहे\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of the mentioned officers is being cancelled for administrative reasons.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"२. आता प्रशासकीय कारणास्तव श्री. म.सा. ठोंबरे सह सचिव, सार्वजनिक आरोग्य विभाग यांची कौशल्य विकास व उद्योजकता विभाग व श्री.ता.मा.कोळेकर, सह सचिव, सार्वजनिक आरोग्य विभाग यांची अन्न, नागरी पुरवठा व ग्राहक संरक्षण विभागातील बदली रद्द करण्यात येत आहे.\"\n\nInterpretation: It says: \"Now, for administrative reasons, the transfer (बदली) of Mr. M.Sa. Thombare, Joint Secretary, Public Health Department, to the Skill Development and Entrepreneurship Department, and of Ms. T.Ma. Kolkar, Joint Secretary, Public Health Department, to the Food, Civil Supply and Consumer Protection Department is being cancelled.\"\n\nThus it cancels the transfer (बदली) of two officers. It references prior GR? The candidate list includes one prior GR dated 2018-07-27. The sentence says \"रद्द करण्यात येत आहे\" (is being cancelled). It cancels the transfer (बदली) that presumably was made under that prior GR. According to trap 2: If the sentence cancels appointments, approvals, sanctions, posts, funds, or committee memberships made under a prior GR, that GR is NOT superseded — it's AMENDS. Here it's cancelling a \"बदली\" (transfer). Transfer is a posting change, akin to a post appointment. So it's AMENDS, not SUPERSEDES. The target_index should be 1 (since only one candidate). Cancelled_object: \"बदली\". Evidence_span: need exact substring that shows cancellation. The phrase \"बदली रद्द करण्यात येत आहे\" is the operative part. So evidence_span could be \"बदली रद्द करण्यात येत आहे\". Provide gloss_en: \"The transfer of ... is being cancelled.\" Provide confidence high, say 0.98.\n\nCheck JSON fields: type \"AMENDS\", target_index 1, evidence_span as above, cancelled_object \"बदली\", gloss_en translation, confidence.\n\nMake sure JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.319828398,
+   "prompt_tokens": 844,
+   "prompt_time": 0.037402148,
+   "completion_tokens": 513,
+   "completion_time": 1.063936357,
+   "total_tokens": 1357,
+   "total_time": 1.101338505,
+   "completion_tokens_details": {
+    "reasoning_tokens": 448
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01kyfw7bysfgev08tgth2yd9y6",
+   "seed": 976898629
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "1beb3f33903fda28a1662d04",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"वाचा क्र.१ येथील दि.२५.११.२०२१ रोजीचा शासन निर्णय अधिक्रमित करुन नव्याने प्रशासकीय मान्यता देण्यात आली आहे\",\"cancelled_object\":\"प्रशासकीय मान्यता\",\"gloss_en\":\"The government decision dated 25-11-2021 (ref. No.1) has been overridden and new administrative approval has been given\",\"confidence\":0.88}",
+ "raw": {
+  "id": "chatcmpl-98eec7dc-201f-4796-adc1-39c91f5f09ea",
+  "object": "chat.completion",
+  "created": 1785054996,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"वाचा क्र.१ येथील दि.२५.११.२०२१ रोजीचा शासन निर्णय अधिक्रमित करुन नव्याने प्रशासकीय मान्यता देण्यात आली आहे\",\"cancelled_object\":\"प्रशासकीय मान्यता\",\"gloss_en\":\"The government decision dated 25-11-2021 (ref. No.1) has been overridden and new administrative approval has been given\",\"confidence\":0.88}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly:\n\n\"3. In the meantime, for the purpose of increasing/modifying the said construction and to give new administrative approval, a request was made via letter reference no.2. The proposal was placed in the meeting of the Higher Secretary Committee on 06.05.2022. In that meeting, after discussion, the estimated amount is Rs.23.50 crore, and if administrative approval is to be given for that amount, the previous administrative approval of Rs.9.6 crore is to be cancelled and a new administrative approval order for Rs.23.50 crore is to be issued by the Department of Higher and Technical Education, subject to conditions, and Rs.23.50 crore is agreed. Accordingly, as per vacha (order) no.4 dated 26.05.2022 and vacha no.1 dated 25.11.2021, the earlier order is superseded (more precisely \"अधिक्रमित करुन नव्याने प्रशासकीय मान्यता देण्यात आली आहे.\")\"\n\nThe sentence says: \"वाचा क्र.१ येथील दि.२५.११.२०२१ रोजीचा शासन निर्णय अधिक्रमित करुन नव्याने प्रशासकीय मान्यता देण्यात आली आहे.\"\n\n\"अधिक्रमित करुन\" means \"overriding\" i.e., superseding. So they are giving new administrative approval by superseding the prior order dated 25-11-2021. So the relationship is that the prior GR (candidate 1) is superseded. However, we must consider trap 2: \"If the sentence cancels appointments, approvals, sanctions, posts, funds or committee memberships made under a prior GR, that GR is NOT superseded — it stands, and its arrangements change. That is AMENDS, never SUPERSEDES. Only say SUPERSEDES when the ORDER itself is cancelled or replaced.\"\n\nHere, the prior GR is a \"शासन निर्णय\" (government decision) that gave administrative approval for Rs.9.6 crore. The new sentence says that the previous administrative approval is cancelled and new approval is given. The prior GR is a decision that gave approval (a fund amount). The new sentence cancels that approval. According to trap 2, if the sentence cancels an approval made under a prior GR, that GR is not superseded; it's amended. The prior order itself is not being cancelled; rather, its effect (approval) is being cancelled. The sentence says \"अधिक्रमित करुन नव्याने प्रशासकीय मान्यता देण्यात आली आहे.\" That could be interpreted as superseding the prior order. But trap says: \"Only say SUPERSEDES when the ORDER itself is cancelled or replaced.\" Is the order itself being cancelled? The phrase \"अधिक्रमित करुन\" means \"overriding\". That suggests the prior order is being overridden, i.e., superseded. However, the trap says that if it's about cancelling approvals, it's AMENDS. The prior order is a \"शासन निर्णय\" that gave approval for Rs.9.6 crore. The new order cancels that approval and gives new approval. That is effectively amending the prior order's effect, not cancelling the order itself? The order itself is a decision; if you override it, you are superseding it. But the trap says that if you cancel an approval made under a prior GR, you should label as AMENDS. The prior GR's purpose was to give approval; the new order cancels that approval. So it's amending the prior GR.\n\nThus classification: AMENDS.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows the operative change. The phrase \"वाचा क्र.१ येथील दि.२५.११.२०२१ रोजीचा शासन निर्णय अधिक्रमित करुन नव्याने प्रशासकीय मान्यता देण्यात आली आहे.\" That's the key. So evidence_span = that exact substring.\n\ncancelled_object: the object being cancelled is \"प्रशासकीय मान्यता\" (administrative approval) or \"रु.९.६ कोटी ची प्रशासकीय मान्यता\". The sentence says previous Rs.9.6 crore approval is cancelled. So cancelled_object could be \"प्रशासकीय मान्यता\". We'll put that.\n\ngloss_en: literal translation: \"The government decision dated 25-11-2021 (reference No.1) has been overridden and new administrative approval has been given.\" Or \"The government decision of 25-11-2021 is superseded and new administrative approval is granted.\" But we need literal English translation of the sentence. Provide something like: \"The government decision dated 25-11-2021 (ref. No.1) has been overridden and new administrative approval has been given.\"\n\nconfidence: maybe 0.88.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283918476,
+   "prompt_tokens": 1055,
+   "prompt_time": 0.032009171,
+   "completion_tokens": 1125,
+   "completion_time": 2.516221026,
+   "total_tokens": 2180,
+   "total_time": 2.548230197,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1010
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_acbbc9c4c3",
+  "x_groq": {
+   "id": "req_01kyes3774ezh808sw0s2rae5v",
+   "seed": 2046468355
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "618b2c864b847520ff8bdffa",
+ "role": "reasoning"
+}

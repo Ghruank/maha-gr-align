@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील काही तरतूदी वगळण्यात येऊन नव्याने तरतूदी समाविष्ट करण्यात आलेल्या आहेत\",\"cancelled_object\":\"काही तरतूदी\",\"gloss_en\":\"According to the referenced decision No.2, some provisions of the Government decision dated 07-02-2019 are being omitted and new provisions are being included.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-bfbbf3bf-ee90-4fa4-9934-317cc8cdadfc",
+  "object": "chat.completion",
+  "created": 1785055338,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील काही तरतूदी वगळण्यात येऊन नव्याने तरतूदी समाविष्ट करण्यात आलेल्या आहेत\",\"cancelled_object\":\"काही तरतूदी\",\"gloss_en\":\"According to the referenced decision No.2, some provisions of the Government decision dated 07-02-2019 are being omitted and new provisions are being included.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GRs listed. The sentence mentions \"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील काही तरतूदी वगळण्यात येऊन नव्याने तरतूदी समाविष्ट करण्यात आलेल्या आहेत.\" It says that based on the earlier decision (reference 2? Actually \"उक्त संदर्भ क्र. २\" likely refers to candidate 2? Wait candidate list: 1 is GR dated 2019-02-07, number ...; 2 is GR dated 2022-11-10. The sentence mentions \"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील काही तरतूदी वगळण्यात येऊन नव्याने तरतूदी समाविष्ट करण्यात आलेल्या आहेत.\" It says \"some provisions of the 07-02-2019 decision are omitted and new provisions are included\". That sounds like amendment to the 2019 decision, not superseding the whole order. It modifies some provisions, i.e., AMENDS. The cancelled_object would be \"तरतूदी\" (provisions) maybe \"काही तरतूदी\". So cancelled_object: \"तरतूदी\". The target_index: which prior GR is being referenced? It says \"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील\". The reference to \"उक्त संदर्भ क्र. २\" likely points to candidate 2? But candidate 2 is dated 2022-11-10, not 2019. However the sentence says \"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील\". Could be that candidate 1 is the 2019 decision. The phrase \"उक्त संदर्भ क्र. २\" maybe refers to the second reference in the document, which could be candidate 1? Hard to know. The sentence mentions both: \"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील\". It seems they are referencing a prior decision (maybe candidate 1) dated 07-02-2019. So target_index = 1 (the 2019 GR). The second candidate (2022) not referenced? The sentence does not mention 2022 date. So target is 1.\n\nThus type = AMENDS, target_index 1, evidence_span maybe \"उक्त संदर्भ क्र. २ येथील शासन निर्णयान्वये दि.०७.०२.२०१९ च्या शासन निर्णयामधील काही तरतूदी वगळण्यात येऊन नव्याने तरतूदी समाविष्ट करण्यात आलेल्या आहेत\". Cancelled_object: \"काही तरतूदी\". Gloss_en: literal translation: \"Accordingly, some provisions of the Government decision dated 07-02-2019, as per the referenced decision No.2, are being omitted and new provisions are being included.\" Confidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282091698,
+   "prompt_tokens": 1260,
+   "prompt_time": 0.792900137,
+   "completion_tokens": 840,
+   "completion_time": 1.731745456,
+   "total_tokens": 2100,
+   "total_time": 2.524645593,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 703
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01kyesdneqfyfvphyjdzde8d5v",
+   "seed": 21932535
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "08425dde02f08deb99de4b60",
+ "role": "reasoning"
+}

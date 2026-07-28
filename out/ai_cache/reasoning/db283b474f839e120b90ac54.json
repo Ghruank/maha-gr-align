@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दिनांक ०१.०४.२०२१ मधील तरतूदींचे पालन न करता\",\"cancelled_object\":null,\"gloss_en\":\"During the ban on recruitment of teachers and non‑teaching staff in private schools, it was observed that a vacant post in a partially or fully funded school was being filled by transfer from a non‑funded or partially funded school without complying with the provisions of the Government Decision dated 01.04.2021, and therefore the following instructions are issued.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-74b90c70-f519-4c84-85bf-d63fc06a2aba",
+  "object": "chat.completion",
+  "created": 1785055279,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दिनांक ०१.०४.२०२१ मधील तरतूदींचे पालन न करता\",\"cancelled_object\":null,\"gloss_en\":\"During the ban on recruitment of teachers and non‑teaching staff in private schools, it was observed that a vacant post in a partially or fully funded school was being filled by transfer from a non‑funded or partially funded school without complying with the provisions of the Government Decision dated 01.04.2021, and therefore the following instructions are issued.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is a government circular (शासन परिपत्रक) that says: during the ban on recruitment of teachers and non-teaching staff in private schools, etc., after noticing that a position is being filled by transfer from partially funded or fully funded schools without following the provisions of a prior decision dated 01.04.2021 (the prior GR). It says \"पुढीलप्रमाणे सूचना निर्गमित करण्यात येत आहेत:\" i.e., \"the following instructions are being issued\". This is not cancelling the prior order; it's issuing instructions because prior order not followed. It references prior GR (the decision dated 01.04.2021). It does not amend or supersede it. So type = REFERENCES.\n\ntarget_index: the prior GR list is 1 item, so index 1.\n\nevidence_span: need exact substring that shows reference. The sentence includes \"दिनांक ०१.०४.२०२१ मधील तरतूदींचे पालन न करता\". That references the prior GR. So evidence_span could be \"दिनांक ०१.०४.२०२१ मधील तरतूदींचे पालन न करता\". That is exact.\n\ncancelled_object: null because not cancelling.\n\ngloss_en: literal translation: \"During the period of ban on recruitment of teachers and non-teaching staff in private schools in the state, it has been observed that a vacant post in a partially funded or fully funded school or group is being filled by transfer from a non-funded or partially funded school or group without complying with the provisions of the Government Decision dated 01.04.2021, and therefore the following instructions are being issued.\"\n\nconfidence: high, maybe 0.97.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.319985707,
+   "prompt_tokens": 1005,
+   "prompt_time": 0.080862709,
+   "completion_tokens": 503,
+   "completion_time": 1.045373302,
+   "total_tokens": 1508,
+   "total_time": 1.126236011,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 367
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dd854ee2d7",
+  "x_groq": {
+   "id": "req_01kyesbwgrf0hb6h90edftn6tj",
+   "seed": 1099556929
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "db283b474f839e120b90ac54",
+ "role": "reasoning"
+}

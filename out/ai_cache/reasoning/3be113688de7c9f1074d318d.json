@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र. १\",\"cancelled_object\":null,\"gloss_en\":\"According to reference No. 1, a request has been made to provide the university with Rs 1,50,89,654/- on the basis of the increased document to avoid the seizure order; reference No. 2, per the Finance Department circular dated 12‑04‑2023, gave instructions on fund release for FY 2023‑24, and under those conditions the provision of funds to Swami Ramanand Teerth Marathwada University for payment of the increased document to cancel the seizure warrant was under government consideration.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-fd4427bb-0643-4ea4-a43c-47a1384d1ade",
+  "object": "chat.completion",
+  "created": 1785055082,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र. १\",\"cancelled_object\":null,\"gloss_en\":\"According to reference No. 1, a request has been made to provide the university with Rs 1,50,89,654/- on the basis of the increased document to avoid the seizure order; reference No. 2, per the Finance Department circular dated 12‑04‑2023, gave instructions on fund release for FY 2023‑24, and under those conditions the provision of funds to Swami Ramanand Teerth Marathwada University for payment of the increased document to cancel the seizure warrant was under government consideration.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if the sentence supersedes, amends, references, or none.\n\nRead sentence: It's Marathi. It mentions \"संदर्भ क्र. १ येथील पत्रान्वये विनंती केली आहे. संदर्भ क्र. २ यथील वित्त विभागाच्या दि.१२.०४.२०२३ च्या परिपत्रकान्वये...\" So it references prior orders. It does not cancel or amend them. It is describing that a request is made, and that a prior circular gave instructions. So relationship is REFERENCES.\n\nCheck traps: No cue words inside file numbers. No cancellation of order itself. No deliberative mood? It says \"शासनाच्या विचाराधीन होती\" (was under consideration). That's deliberative, but overall sentence is not a decision; it's describing that the matter was under consideration. That part is deliberative, but overall the sentence is not operative. So classification: REFERENCES.\n\ntarget_index: 1 (since only candidate). evidence_span: need exact substring that shows reference. Could be \"संदर्भ क्र. १\" or \"संदर्भ क्र. २\". Choose one that indicates reference. Use \"संदर्भ क्र. १\". Must be exact substring from input. The input contains \"संदर्भ क्र. १\". Yes.\n\ncancelled_object: null.\n\ngloss_en: Provide literal English translation. Let's translate: \"Accordingly, as per the letter referred to as reference No. 1, a request has been made to make available to the university the amount of Rs. 1,50,89,654/- on the basis of the increased document to avoid the seizure order. Reference No. 2, according to the Finance Department circular dated 12.04.2023, instructions were given regarding the release of funds for FY 2023-24. Subject to the conditions of that instruction, the matter of providing funds to Swami Ramanand Teerth Marathwada University for payment of the increased document to cancel the seizure warrant on the edited land was under consideration of the government.\"\n\nWe'll produce concise literal translation.\n\nconfidence: high, maybe 0.96.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.285220752,
+   "prompt_tokens": 1118,
+   "prompt_time": 0.059722119,
+   "completion_tokens": 622,
+   "completion_time": 1.292900432,
+   "total_tokens": 1740,
+   "total_time": 1.352622551,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 463
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_53dd116a39",
+  "x_groq": {
+   "id": "req_01kyes5vzkeb4vbqj4n9jevz1m",
+   "seed": 224675854
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "3be113688de7c9f1074d318d",
+ "role": "reasoning"
+}

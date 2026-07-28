@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"evidence_span\":\"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\",\"gloss_en\":\"2. Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(ii)/2020 NSS, dated 17.09.2020\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-3f468f8c-8e43-4cfa-a8eb-20ef81b3beb5",
+  "object": "chat.completion",
+  "created": 1785051042,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"evidence_span\":\"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\",\"gloss_en\":\"2. Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(ii)/2020 NSS, dated 17.09.2020\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence: \"२. भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र.\"\n\nIt references a letter from the Government of India, Youth Affairs and Sports Department, with a file number. It does not indicate superseding, amending, or referencing a prior order? It is just a citation of a letter. It mentions a prior order? It is a reference to a letter, not a GR. So relationship: REFERENCES? It mentions another document but not operative change. So type: REFERENCES.\n\nEvidence span: maybe \"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र.\"\n\nGloss_en: \"2. Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(ii)/2020 NSS, dated 17.09.2020.\"\n\nConfidence high, say 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.313778804,
+   "prompt_tokens": 403,
+   "prompt_time": 0.019109488,
+   "completion_tokens": 364,
+   "completion_time": 0.760482549,
+   "total_tokens": 767,
+   "total_time": 0.779592037,
+   "completion_tokens_details": {
+    "reasoning_tokens": 249
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6c36ac20de",
+  "x_groq": {
+   "id": "req_01kyenake2ek6bcx9e1pm1kcch",
+   "seed": 53580007
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d17d0a73a5145d4ced9d98c9",
+ "role": "reasoning"
+}

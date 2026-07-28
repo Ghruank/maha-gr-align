@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र. ४ येथील दि. ०२-०३-२०२३\",\"cancelled_object\":null,\"gloss_en\":\"Reference No. 4 dated 02-03-2023, by which a vacancy for a clerk‑typist in the Maharashtra State Lokseva Hak Commission, Konkan Revenue Department, Konkan Bhavan, Navi Mumbai was to be filled by deputation; accordingly, Mrs. S.V. Sarkarwal, clerk‑typist, Home Department, is being appointed on deputation for an initial period of three years.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-fab26b0a-1469-4761-b528-7f8c9607e7de",
+  "object": "chat.completion",
+  "created": 1785054469,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र. ४ येथील दि. ०२-०३-२०२३\",\"cancelled_object\":null,\"gloss_en\":\"Reference No. 4 dated 02-03-2023, by which a vacancy for a clerk‑typist in the Maharashtra State Lokseva Hak Commission, Konkan Revenue Department, Konkan Bhavan, Navi Mumbai was to be filled by deputation; accordingly, Mrs. S.V. Sarkarwal, clerk‑typist, Home Department, is being appointed on deputation for an initial period of three years.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence mentions prior GRs (reference numbers). It says: \"संदर्भाधिन क्र. १ ... प्रतिनियुक्तीचे धोरण निश्चित ...\", \"संदर्भाधिन क्र. ३ ... प्रतिनियुक्तीने नियुक्तीसाठी अटी व शर्ती ... सुधारणा करण्यात आली आहे.\", \"संदर्भाधिन क्र. २ ... कार्यपध्दती ... विहित ...\", \"उपरोक्त शासन निर्णयातील तरतुदीनुसार संदर्भाधीन क्र. ४ ... पत्रान्वये ... १ रिक्त पद प्रतिनियुक्तीने भरण्याकरीता इच्छुकता मागविण्यात आली होती. त्यानुसार ... श्रीमती ... प्रथमतः ३ वर्षाच्या कालावधीसाठी प्रतिनियुक्तीने नियुक्ती करण्यात येत आहे.\"\n\nSo the sentence is describing that based on prior decisions, they are appointing a person on deputation (प्रतिनियुक्ती). It does not cancel or amend any prior order; it references them. So type = REFERENCES. target_index: which prior GR is being referenced? The sentence references multiple prior GRs (1,2,3,4). The candidate list only has one GR: index 1 (dated 2023-03-02). Which of those corresponds? The sentence mentions \"संदर्भाधीन क्र. ४ ... दि. ०२-०३-२०२३\". That date matches 2023-03-02 (02-03-2023). So the referenced prior GR is #4, which is the candidate. So target_index = 1 (since only one candidate). evidence_span: need exact substring that shows the reference to that prior GR. Could be \"संदर्भाधीन क्र. ४ येथील दि. ०२-०३-२०२३\". That exact substring appears. Let's copy exactly: \"संदर्भाधीन क्र. ४ येथील दि. ०२-०३-२०२३\". That is in the sentence. That indicates reference. Cancelled_object: null (since not cancelling). Gloss_en: Provide literal English translation. Let's translate: \"Reference No. 4 dated 02-03-2023 letter ...\". But need literal translation of whole sentence? Probably a concise translation: \"Reference No. 4 dated 02-03-2023, by which a vacancy for a clerk-typist in the Maharashtra State Lokseva Hak Commission, Konkan Revenue Department, Konkan Bhavan, Navi Mumbai was sought to be filled by deputation, and accordingly, Mrs. S.V. Sarkarwal, clerk-typist, Home Department, is being appointed on deputation for an initial period of three years.\" That's okay.\n\nConfidence high, say 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.321002571,
+   "prompt_tokens": 1156,
+   "prompt_time": 0.056994376,
+   "completion_tokens": 753,
+   "completion_time": 1.5844330800000002,
+   "total_tokens": 1909,
+   "total_time": 1.641427456,
+   "completion_tokens_details": {
+    "reasoning_tokens": 600
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dd854ee2d7",
+  "x_groq": {
+   "id": "req_01kyerk5atfj0bcwxthzz8y6y8",
+   "seed": 300414995
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e17a14af11c1c4b63b66a389",
+ "role": "reasoning"
+}

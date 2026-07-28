@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"evidence_span\":\"पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/२०१८/०३१\",\"gloss_en\":\"Letter No.5(3)/Temporary Posts/Continuing/2018/031, dated 06‑02‑2018, from the Director, Technical Education Directorate, Mumbai.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-ea89fec0-475a-4a32-8e17-2f14f847bce5",
+  "object": "chat.completion",
+  "created": 1785051035,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"evidence_span\":\"पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/२०१८/०३१\",\"gloss_en\":\"Letter No.5(3)/Temporary Posts/Continuing/2018/031, dated 06‑02‑2018, from the Director, Technical Education Directorate, Mumbai.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence. The sentence: \"३) संचालक, तंत्र शिक्षण संचालनालय, मुंबई यांचे पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/२०१८/०३१, दिनांक ६.०२.२०१८.\"\n\nIt mentions a letter (पत्र) with a number that includes \"पुढे चालू\". That's part of the file number, not an operative verb. The sentence is just citing a letter. No operative change, supersedes, amends. So relationship: REFERENCES (it merely cites). Evidence span: maybe \"पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/२०१८/०३१\". Gloss: \"Letter No.5(3)/Temporary Posts/Continuing/2018/031, dated 06.02.2018, from Director, Technical Education Directorate, Mumbai.\" Confidence high, say 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320119515,
+   "prompt_tokens": 409,
+   "prompt_time": 0.020067906,
+   "completion_tokens": 297,
+   "completion_time": 0.620430764,
+   "total_tokens": 706,
+   "total_time": 0.64049867,
+   "completion_tokens_details": {
+    "reasoning_tokens": 205
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_77b12279f9",
+  "x_groq": {
+   "id": "req_01kyenach2ejhvn4z0vxvh39g7",
+   "seed": 1554566944
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d2e0e9645ec5e5275f380125",
+ "role": "reasoning"
+}

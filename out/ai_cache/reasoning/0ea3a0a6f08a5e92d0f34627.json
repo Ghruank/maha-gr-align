@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"सातव्या वेतन आयोगानुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the Seventh Pay Commission, regarding the benefit of revised partial pension for retired pensioners for the period from 1 January 2016 to 31 December 2018, a revision...\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-07a2e683-d95c-4c37-99ca-b10fc9006c52",
+  "object": "chat.completion",
+  "created": 1785092679,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"सातव्या वेतन आयोगानुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the Seventh Pay Commission, regarding the benefit of revised partial pension for retired pensioners for the period from 1 January 2016 to 31 December 2018, a revision...\",\"confidence\":0.97}",
+     "reasoning": "We need to decide relationship. Sentence talks about \"सातव्या वेतन आयोगानुसार ... सुधारित अंशराशीकरणाचा लाभ देण्याबाबत सुधारणा...\" It's a proposal? Likely references prior GR? It mentions improvement but not cancelling. Probably REFERENCES. target_index 1. evidence_span maybe \"सातव्या वेतन आयोगानुसार\". cancelled_object null. gloss_en translation. confidence high."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.051561684,
+   "prompt_tokens": 824,
+   "prompt_time": 0.040814268,
+   "completion_tokens": 178,
+   "completion_time": 0.383075008,
+   "total_tokens": 1002,
+   "total_time": 0.423889276,
+   "completion_tokens_details": {
+    "reasoning_tokens": 88
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_626f3fc5e0",
+  "x_groq": {
+   "id": "req_01kyfx18wsf7btzn8q3fqbnrez",
+   "seed": 1178669913
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0ea3a0a6f08a5e92d0f34627",
+ "role": "reasoning"
+}

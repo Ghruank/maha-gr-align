@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन दि.१५.०३.२०२१ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Also, as per the referenced Government Decision dated 15-03-2021, a high-level study committee was formed under the chairmanship of the Upper Chief Secretary (Service) to improve training for state government officers and employees.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-3e9b9609-e5eb-4460-aa48-df2b14e9a34e",
+  "object": "chat.completion",
+  "created": 1785054426,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन दि.१५.०३.२०२१ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Also, as per the referenced Government Decision dated 15-03-2021, a high-level study committee was formed under the chairmanship of the Upper Chief Secretary (Service) to improve training for state government officers and employees.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). The sentence: \"तसेच संदर्भाधीन दि.१५.०३.२०२१ च्या शासन निर्णयान्वये राज्य शासकीय अधिकारी आणि कर्मचारी यांना द्यावयाच्या प्रशिक्षणामध्ये सुधारणा करण्यासाठी अप्पर मुख्य सचिव (सेवा) सा.प्र.वि. यांच्या अध्यक्षतेखाली उच्चस्तरीय अभ्यास समिती गठीत केली होती. महासंचालक यशदा यांच्या अध्यक्षतेखाली गठीत समितीच्या बैठकीतील निर्णयानुषंगाने प्राप्त झालेला यशदाचा संदर्भाधीन प्रस्ताव आणि अ.मु.स.\"\n\nInterpretation: It says \"Also, as per the referenced decision dated 15-03-2021, a high-level study committee was formed under the chairmanship of Upper Chief Secretary (Service) ...\". This is referencing a prior decision. No operative change, just stating that earlier decision formed a committee. So relationship is REFERENCES. target_index = 1 (since candidate list index 1). evidence_span: need exact substring that shows reference. Could be \"संदर्भाधीन दि.१५.०३.२०२१ च्या शासन निर्णयान्वये\". That phrase indicates reference. Or \"संदर्भाधीन दि.१५.०३.२०२१ च्या शासन निर्णयान्वये\". We'll pick that.\n\ncancelled_object: null (since not cancelling). gloss_en: literal translation: \"Also, as per the referenced Government Decision dated 15-03-2021, a high-level study committee was formed under the chairmanship of the Upper Chief Secretary (Service) to improve the training to be given to state government officers and employees. According to the decision of the committee formed under the chairmanship of Director General Yashda, the referenced proposal of Yashda and A.M.S. was received.\" Something like that.\n\nConfidence maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280664608,
+   "prompt_tokens": 903,
+   "prompt_time": 1.473647214,
+   "completion_tokens": 520,
+   "completion_time": 1.080481274,
+   "total_tokens": 1423,
+   "total_time": 2.554128488,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 410
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f73454f048",
+  "x_groq": {
+   "id": "req_01kyerhtfceckra986qyr2gkna",
+   "seed": 1747906049
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "5c2375ff8ee4f3834373ca48",
+ "role": "reasoning"
+}

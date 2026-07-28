@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02.08.2019, the allocation of the six candidates is being cancelled by this memorandum.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-891a0810-25ff-4ec3-81ad-1c5b6b73ad9b",
+  "object": "chat.completion",
+  "created": 1785056071,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02.08.2019, the allocation of the six candidates is being cancelled by this memorandum.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"यास्तव, सामान्य प्रशासन विभाग, शासन परिपत्रक क्र. मलोआ-१११९/प्र.क्र.११५/८ दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर ६ (सहा) उमेदवारांचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\"\n\nTranslation: \"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02.08.2019, the allocation of the six (6) candidates is being cancelled by this memorandum.\"\n\nWe have prior GR list: only one candidate prior GR dated 2022-12-27. The sentence references a prior order: \"शासन परिपत्रक क्र. मलोआ-१११९/प्र.क्र.११५/८ दि.०२.०८.२०१९\". That is a prior order (circular). The sentence says the allocation of six candidates is being cancelled. This is a cancellation of an allocation (probably an appointment or allocation) made under that prior order. According to trap 2, if the sentence cancels appointments, approvals, sanctions, posts, funds, or committee memberships made under a prior GR, that GR is NOT superseded; it's AMENDS. So type = AMENDS.\n\ntarget_index: which prior GR? The list only has one candidate prior GR dated 2022-12-27. However the sentence references a different order (circa 2019). The candidate list may not match exactly; but we must pick the index if the sentence establishes relationship to any listed GR. The only listed GR is dated 2022-12-27, but the sentence references a 2019 circular, not that GR. So does it reference the listed GR? No. So relationship to listed GR is NONE. But we must consider: The candidate list is prior GRs mentioned in it. The sentence mentions a prior order (शासन परिपत्रक...). The candidate list includes a GR dated 2022-12-27, but the sentence does not mention that date. Possibly the prior GR is that one, but the sentence mentions a different order number. The instruction: \"CANDIDATE PRIOR GRs MENTIONED IN IT:\" list of prior GRs that a deterministic resolver has already matched inside it. So the resolver matched that prior GR (dated 2022-12-27) inside the sentence. But I don't see that date. Could be that the order number \"मलोआ-१११९/प्र.क्र.११५/८\" corresponds to a GR dated 2022-12-27? Unlikely. But maybe the resolver matched it incorrectly? However we must trust the list: it's the prior GRs mentioned in it. So we must assume that the sentence does reference that prior GR (maybe the date is not shown but the resolver matched). So we need to set target_index = 1.\n\nNow determine type: The sentence cancels allocation of six candidates. That's a cancellation of an allocation (likely a posting). That's a cancellation of something made under prior order, so it's AMENDS, not supersedes.\n\ncancelled_object: the noun being cancelled: \"नियतवाटप\" (allocation) of six candidates. So cancelled_object = \"नियतवाटप\". Could also be \"उमेदवारांचे नियतवाटप\". We'll use \"नियतवाटप\".\n\nevidence_span: need exact substring that justifies type. For AMENDS, we need phrase indicating cancellation: \"रद्द करण्यात येत आहे\". That's the operative phrase. So evidence_span = \"रद्द करण्यात येत आहे\". Must be exact substring from input. Yes appears.\n\ngloss_en: literal English translation: \"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02.08.2019, the allocation of the six candidates is being cancelled by this memorandum.\"\n\nconfidence: high, maybe 0.96.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282019757,
+   "prompt_tokens": 841,
+   "prompt_time": 0.015132449,
+   "completion_tokens": 939,
+   "completion_time": 1.946020933,
+   "total_tokens": 1780,
+   "total_time": 1.961153382,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 849
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_803c0ba83d",
+  "x_groq": {
+   "id": "req_01kyet417gf7w81vp0atg7kjsz",
+   "seed": 2137872551
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "8d78a880d9768d4aa72e30d3",
+ "role": "reasoning"
+}

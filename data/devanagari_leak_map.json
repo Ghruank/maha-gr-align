@@ -1,0 +1,541 @@
+{
+  "_meta": {
+    "source": "data/mahGRs/GRs/Higher_and_Technical_Education_Department",
+    "note": "Closed vocabulary of Devanagari surviving into the machine-translated .en side. Enumerated exhaustively in one pass; not grown incrementally.",
+    "leaked_grs": 441,
+    "token_types": 75,
+    "total_instances": 2109,
+    "classes": {
+      "marathi_word": "Untranslated Marathi. The English follows the token, so it is redundant; replacement is \"\" unless load-bearing.",
+      "latin_translit": "Latin letters written in Devanagari, inside names, degrees, institutions and decision numbers. Never strip."
+    },
+    "matching": "Match whole [ऀ-ॿ]+ runs, never substrings. `सदरच` must not be matched as `सदर` + stranded `च`."
+  },
+  "tokens": {
+    "सदर": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सदर — 'the said'",
+      "instances": 1529,
+      "files": 319
+    },
+    "अभ": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "अभ्यास… — 'study/course', truncated",
+      "instances": 168,
+      "files": 168
+    },
+    "र": {
+      "class": "latin_translit",
+      "replacement": "Kra",
+      "gloss": "क्र (क्रमांक = 'number'); `PR र.14/22` → `Pra.Kra.14/22`",
+      "instances": 47,
+      "files": 37
+    },
+    "एस": {
+      "class": "latin_translit",
+      "replacement": "S",
+      "gloss": "एस.एस.स → S.S.C",
+      "instances": 42,
+      "files": 12
+    },
+    "एम": {
+      "class": "latin_translit",
+      "replacement": "M",
+      "gloss": "एम.ई. → M.E. ; एम.एसस → M.Sc",
+      "instances": 41,
+      "files": 15
+    },
+    "य": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "या — 'this/on', stranded after a URL: `…gov.inय website`",
+      "instances": 23,
+      "files": 22
+    },
+    "स": {
+      "class": "latin_translit",
+      "replacement": "C",
+      "gloss": "सी → C; एम.एस.स IIT → MS-CIT",
+      "instances": 20,
+      "files": 5
+    },
+    "एल": {
+      "class": "latin_translit",
+      "replacement": "L",
+      "gloss": "एल.एल.ब → LL.B",
+      "instances": 19,
+      "files": 7
+    },
+    "आय": {
+      "class": "latin_translit",
+      "replacement": "I",
+      "gloss": "आय.आय.ट → I.I.T",
+      "instances": 18,
+      "files": 7
+    },
+    "ई": {
+      "class": "latin_translit",
+      "replacement": "E",
+      "gloss": "एम.ई.ड → M.E.D",
+      "instances": 17,
+      "files": 1
+    },
+    "सर": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सर्व — 'all'",
+      "instances": 11,
+      "files": 6
+    },
+    "सदरह": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सदरहू — 'the aforesaid'",
+      "instances": 10,
+      "files": 10
+    },
+    "म": {
+      "class": "latin_translit",
+      "replacement": "M",
+      "gloss": "य.च.म.म → Y.C.M.M (YCMOU)",
+      "instances": 9,
+      "files": 4
+    },
+    "एच": {
+      "class": "latin_translit",
+      "replacement": "H",
+      "gloss": "एम.एच.ब → M.H.B Colony",
+      "instances": 8,
+      "files": 5
+    },
+    "ए": {
+      "class": "latin_translit",
+      "replacement": "A",
+      "gloss": "ए.आय.एस.एस.एम.एस → A.I.S.S.M.S College",
+      "instances": 7,
+      "files": 5
+    },
+    "मह": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "महा… — 'Maha…' (Maharashtra / Mahalekhapal), truncated",
+      "instances": 7,
+      "files": 4
+    },
+    "ब": {
+      "class": "latin_translit",
+      "replacement": "B",
+      "gloss": "एल.एल.ब → LL.B",
+      "instances": 7,
+      "files": 4
+    },
+    "क": {
+      "class": "latin_translit",
+      "replacement": "C",
+      "gloss": "एम.ई.क Computer networks → M.E.C",
+      "instances": 7,
+      "files": 3
+    },
+    "च": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "-चा/-च — Marathi genitive suffix stranded after a date",
+      "instances": 6,
+      "files": 5
+    },
+    "उप": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "उप — 'Deputy'",
+      "instances": 5,
+      "files": 4
+    },
+    "आर": {
+      "class": "latin_translit",
+      "replacement": "R",
+      "gloss": "आय.आर.ट → I.R.T",
+      "instances": 5,
+      "files": 5
+    },
+    "ट": {
+      "class": "latin_translit",
+      "replacement": "T",
+      "gloss": "आय.आय.ट Guwahati → I.I.T Guwahati",
+      "instances": 5,
+      "files": 3
+    },
+    "ड": {
+      "class": "latin_translit",
+      "replacement": "D",
+      "gloss": "एम.ई.ड Digital systems → M.E.D",
+      "instances": 5,
+      "files": 3
+    },
+    "अपर": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "अपर — 'Additional' (अपर मुख्य सचिव = Addl. Chief Secretary)",
+      "instances": 5,
+      "files": 4
+    },
+    "सच": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सचिव — 'Secretary'",
+      "instances": 5,
+      "files": 1
+    },
+    "त": {
+      "class": "latin_translit",
+      "replacement": "Ta",
+      "gloss": "तांशि — TANSHI section code; `र.56/15/त No.2`",
+      "instances": 4,
+      "files": 4
+    },
+    "सहस": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सहसंचालक — 'Joint Director'",
+      "instances": 4,
+      "files": 3
+    },
+    "अध": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "अधीक्षक — 'Superintendent'",
+      "instances": 3,
+      "files": 3
+    },
+    "आपत": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "आपत्ती — 'disaster/emergency'",
+      "instances": 3,
+      "files": 1
+    },
+    "अन": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "अन्वये — 'in accordance with'",
+      "instances": 3,
+      "files": 2
+    },
+    "उपर": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "उपरोक्त — 'the above-mentioned'",
+      "instances": 3,
+      "files": 3
+    },
+    "व": {
+      "class": "latin_translit",
+      "replacement": "V",
+      "gloss": "एम.ई.व 'HLSI and Embedded Systems' → M.E.V (VLSI)",
+      "instances": 3,
+      "files": 2
+    },
+    "एन": {
+      "class": "latin_translit",
+      "replacement": "N",
+      "gloss": "एच.एल.एन. Marg",
+      "instances": 3,
+      "files": 2
+    },
+    "कल": {
+      "class": "marathi_word",
+      "replacement": "Kalyan",
+      "gloss": "कल्याण — place name, in `कल. Karjat Road`",
+      "instances": 3,
+      "files": 2
+    },
+    "ठ": {
+      "class": "latin_translit",
+      "replacement": "Rs",
+      "gloss": "रु. → Rs; `ठ.50.00 Target` = Rs. 50.00",
+      "instances": 3,
+      "files": 1
+    },
+    "समन": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "समन्वय — 'coordination'",
+      "instances": 2,
+      "files": 1
+    },
+    "सदरच": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सदरच — 'the said' + emphatic -च suffix",
+      "instances": 2,
+      "files": 2
+    },
+    "प": {
+      "class": "latin_translit",
+      "replacement": "P",
+      "gloss": "initial in addresses and decision numbers",
+      "instances": 2,
+      "files": 2
+    },
+    "अवर": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "अवर सचिव — 'Under Secretary'",
+      "instances": 2,
+      "files": 2
+    },
+    "एफ": {
+      "class": "latin_translit",
+      "replacement": "F",
+      "gloss": "एम.एफ.ए → M.F.A",
+      "instances": 2,
+      "files": 2
+    },
+    "आस": {
+      "class": "latin_translit",
+      "replacement": "Astha",
+      "gloss": "आस्थापना — 'establishment' section; `PRQ र.79/आस Tha-1`",
+      "instances": 2,
+      "files": 2
+    },
+    "इन": {
+      "class": "latin_translit",
+      "replacement": "In",
+      "gloss": "एम.ई.इन Information technology → M.E.In",
+      "instances": 2,
+      "files": 1
+    },
+    "न": {
+      "class": "latin_translit",
+      "replacement": "N",
+      "gloss": "initial in addresses",
+      "instances": 2,
+      "files": 2
+    },
+    "श": {
+      "class": "latin_translit",
+      "replacement": "Sh",
+      "gloss": "initial, institution names",
+      "instances": 2,
+      "files": 1
+    },
+    "खर": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "खरेदी — 'purchase'",
+      "instances": 2,
+      "files": 1
+    },
+    "आदर": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "आदर्श — 'model/ideal'",
+      "instances": 2,
+      "files": 1
+    },
+    "लिए": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "Hindi लिए — 'for'; stray Hindi, not Marathi",
+      "instances": 1,
+      "files": 1
+    },
+    "है": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "Hindi है — 'is'; stray Hindi, not Marathi",
+      "instances": 1,
+      "files": 1
+    },
+    "लेते": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "Hindi लेते — 'taking'; stray Hindi, not Marathi",
+      "instances": 1,
+      "files": 1
+    },
+    "एकस": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "एकत्रित — 'combined'",
+      "instances": 1,
+      "files": 1
+    },
+    "उपस": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "उपस्थित — 'present/attending'",
+      "instances": 1,
+      "files": 1
+    },
+    "पदव": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "पदवी — 'degree'",
+      "instances": 1,
+      "files": 1
+    },
+    "अहव": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "अहवाल — 'report'",
+      "instances": 1,
+      "files": 1
+    },
+    "सह": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सह… — 'joint/assistant', truncated",
+      "instances": 1,
+      "files": 1
+    },
+    "अ": {
+      "class": "latin_translit",
+      "replacement": "A",
+      "gloss": "Mr. Sunil अ.जगत → A. Jagat",
+      "instances": 1,
+      "files": 1
+    },
+    "जगत": {
+      "class": "latin_translit",
+      "replacement": "Jagat",
+      "gloss": "surname",
+      "instances": 1,
+      "files": 1
+    },
+    "ज": {
+      "class": "latin_translit",
+      "replacement": "J",
+      "gloss": "initial",
+      "instances": 1,
+      "files": 1
+    },
+    "वनस": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "वनस्पती — 'vegetation/botany'",
+      "instances": 1,
+      "files": 1
+    },
+    "ध": {
+      "class": "latin_translit",
+      "replacement": "Dh",
+      "gloss": "in Central Govt letter no. `F ध0.24-2/2024-ए`",
+      "instances": 1,
+      "files": 1
+    },
+    "छफ": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "OCR garbage inside a mangled URL",
+      "instances": 1,
+      "files": 1
+    },
+    "रम": {
+      "class": "latin_translit",
+      "replacement": "Ram",
+      "gloss": "रम-एल.एल.ब — degree/name fragment",
+      "instances": 1,
+      "files": 1
+    },
+    "आकस": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "आकस्मिक — 'contingency'",
+      "instances": 1,
+      "files": 1
+    },
+    "आम": {
+      "class": "latin_translit",
+      "replacement": "M",
+      "gloss": "आय.आम.एस, Mumbai (NMIMS)",
+      "instances": 1,
+      "files": 1
+    },
+    "कम": {
+      "class": "latin_translit",
+      "replacement": "Com",
+      "gloss": "एम.ई.कम Communication networks → M.E.Com",
+      "instances": 1,
+      "files": 1
+    },
+    "ऑट": {
+      "class": "latin_translit",
+      "replacement": "Aut",
+      "gloss": "एम.ई.ऑट automotive engineering → M.E.Aut",
+      "instances": 1,
+      "files": 1
+    },
+    "वसत": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "वसतिगृह — 'hostel'",
+      "instances": 1,
+      "files": 1
+    },
+    "उपलब": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "उपलब्ध — 'available'",
+      "instances": 1,
+      "files": 1
+    },
+    "इम": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "इमारत — 'building'",
+      "instances": 1,
+      "files": 1
+    },
+    "ण": {
+      "class": "latin_translit",
+      "replacement": "n",
+      "gloss": "tail of संकीर्ण; `Sankeer ण20-22` → `Sankeern20-22`",
+      "instances": 1,
+      "files": 1
+    },
+    "उच": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "उच्च — 'higher'",
+      "instances": 1,
+      "files": 1
+    },
+    "शक्रिमुली": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "OCR garbage in a table cell",
+      "instances": 1,
+      "files": 1
+    },
+    "सब": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "सब… — truncated",
+      "instances": 1,
+      "files": 1
+    },
+    "एख": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "एखाद — 'any/some'",
+      "instances": 1,
+      "files": 1
+    },
+    "एसस": {
+      "class": "latin_translit",
+      "replacement": "Sc",
+      "gloss": "एम.एसस → M.Sc",
+      "instances": 1,
+      "files": 1
+    },
+    "कक": {
+      "class": "marathi_word",
+      "replacement": "",
+      "gloss": "कक्ष — 'section/cell' (कक्ष अधिकारी = Section Officer)",
+      "instances": 1,
+      "files": 1
+    }
+  }
+}

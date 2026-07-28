@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या शासन निर्णयातील मंजूर केलेल्या परिच्छेद २ मधील एकूण खर्च यामध्ये खालीलप्रमाणे सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"एकूण खर्च\",\"gloss_en\":\"However, due to the actual increase in air travel, visa, hotel and taxi expenses approved under the government decision and savings in daily allowance, the total expense in paragraph 2 of this government decision is being amended as follows.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-94bd279a-5684-4609-89d0-4a286b00c8cd",
+  "object": "chat.completion",
+  "created": 1785091917,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या शासन निर्णयातील मंजूर केलेल्या परिच्छेद २ मधील एकूण खर्च यामध्ये खालीलप्रमाणे सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"एकूण खर्च\",\"gloss_en\":\"However, due to the actual increase in air travel, visa, hotel and taxi expenses approved under the government decision and savings in daily allowance, the total expense in paragraph 2 of this government decision is being amended as follows.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence: \"तथापि शासन निर्णयानुसार मंजूर करण्यात आलेल्या विमानप्रवास खर्च, व्हिसा खर्च, हॉटेल, टॅक्सी भाडे यामध्ये प्रत्यक्षात वाढ झाल्याने व दैनंदिन भत्त्याच्या खर्चात बचत झाल्याने या शासन निर्णयातील मंजूर केलेल्या परिच्छेद २ मधील एकूण खर्च यामध्ये खालीलप्रमाणे सुधारणा करण्यात येत आहे.\"\n\nTranslation: \"However, due to actual increase in air travel expenses, visa expenses, hotel, taxi fare approved as per the government decision, and saving in daily allowance expenses, the total expense in paragraph 2 of this government decision approved is being amended as follows.\"\n\nIt mentions \"या शासन निर्णयातील ... सुधारणा करण्यात येत आहे\" i.e., \"amendments are being made\". It refers to a prior GR (candidate 1). The sentence is amending the total expense in paragraph 2 of that prior decision. It is not cancelling the entire prior order, just amending a part (the expense). So type = AMENDS.\n\ntarget_index = 1 (since only one candidate). evidence_span: need exact substring that shows amendment. The phrase \"सुधारणा करण्यात येत आहे\" indicates amendment. Also \"या शासन निर्णयातील ... एकूण खर्च ... सुधारणा\". Choose a substring: \"या शासन निर्णयातील मंजूर केलेल्या परिच्छेद २ मधील एकूण खर्च यामध्ये खालीलप्रमाणे सुधारणा करण्यात येत आहे\". That is exact from sentence. Must copy exactly. Let's verify the sentence: \"तथापि शासन निर्णयानुसार मंजूर करण्यात आलेल्या विमानप्रवास खर्च, व्हिसा खर्च, हॉटेल, टॅक्सी भाडे यामध्ये प्रत्यक्षात वाढ झाल्याने व दैनंदिन भत्त्याच्या खर्चात बचत झाल्याने या शासन निर्णयातील मंजूर केलेल्या परिच्छेद २ मधील एकूण खर्च यामध्ये खालीलप्रमाणे सुधारणा करण्यात येत आहे.\"\n\nSo evidence_span: \"या शासन निर्णयातील मंजूर केलेल्या परिच्छेद २ मधील एकूण खर्च यामध्ये खालीलप्रमाणे सुधारणा करण्यात येत आहे\". That matches.\n\ncancelled_object: Since it's amendment, not cancellation. The object being amended is \"एकूण खर्च\". But cancelled_object field expects the noun that is cancelled/amended. For AMENDS, we can put the object being amended: \"एकूण खर्च\". Or maybe \"परिच्छेद २ मधील एकूण खर्च\". The spec says \"the Marathi noun that is cancelled/amended\". So we can put \"एकूण खर्च\". We'll set that.\n\ngloss_en: literal translation: \"However, due to the actual increase in air travel expenses, visa expenses, hotel, taxi fare approved under the government decision and savings in daily allowance expenses, the total expense in paragraph 2 of this government decision approved is being amended as follows.\"\n\nconfidence: high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.334464388,
+   "prompt_tokens": 872,
+   "prompt_time": 0.180422225,
+   "completion_tokens": 770,
+   "completion_time": 1.603602556,
+   "total_tokens": 1642,
+   "total_time": 1.7840247809999998,
+   "completion_tokens_details": {
+    "reasoning_tokens": 647
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_ca5edfaab2",
+  "x_groq": {
+   "id": "req_01kyfw9z5rewg8c6j4pgfvwnfs",
+   "seed": 1704012964
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "f8391025cc90945aa28d8faf",
+ "role": "reasoning"
+}

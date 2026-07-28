@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र.१\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The cabinet has approved the establishment of law universities in Mumbai, Nagpur and Aurangabad, and under that approval, administrative approval was given for construction funds as per Government Decision reference No.1, and also approval for inclusion of a Centre of Excellence as per reference No.2; the sentence merely cites these prior decisions.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-d41c1bc9-a14f-45fe-9751-72223ec04745",
+  "object": "chat.completion",
+  "created": 1785055026,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र.१\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The cabinet has approved the establishment of law universities in Mumbai, Nagpur and Aurangabad, and under that approval, administrative approval was given for construction funds as per Government Decision reference No.1, and also approval for inclusion of a Centre of Excellence as per reference No.2; the sentence merely cites these prior decisions.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is a proposal/introduction: \"प्रस्तावना :- महाराष्ट्र राज्यात ... ...\". It mentions prior decisions (संदर्भ क्र.१, संदर्भ क्र.२) and mentions that \"दरम्यान या बांधकामात विद्यापीठाने सुधारणा प्रस्तावित केली होती. त्यास अनुलक्षुन दि.२३.०८.२०१९ व दि.१४.०१.२०२१ रोजीचे शासन निर्णय दि.०८.०७.२०२२ रोजीच्या शासन निर्णयान्वये अधिक्रमित करण्यास मान्यता देण्यात आली असून, नव्याने ... मान्यता देण्यात आली आहे.\"\n\nThis seems to be a proposal/introduction, not an operative change. It references prior GRs (the candidate list). It does not cancel or amend anything. So type = REFERENCES. target_index? Which prior GR is referenced? It mentions \"संदर्भ क्र.१\" and \"संदर्भ क्र.२\". The candidate list includes two GRs dated 2021-01-14 and 2022-07-08. Likely those correspond to reference 1 and 2. The sentence references both. Which one to pick? The instruction: \"target_index: <1-based index into the candidate list, or null>\" So we need to pick which prior GR the sentence establishes relationship with. Since it references both, maybe we choose the first referenced? The sentence references both, but we need a single target. Possibly choose the first referenced (संदर्भ क्र.१) which likely corresponds to GR dated 2021-01-14. So target_index = 1.\n\nEvidence_span: need exact substring that justifies the type. For REFERENCES, we need a phrase that shows citation. Could be \"संदर्भ क्र.१\" or \"संदर्भ क्र.२\". Choose one. Use \"संदर्भ क्र.१\". Cancelled_object null.\n\nGloss_en: literal English translation. Provide translation.\n\nConfidence maybe 0.97.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287612536,
+   "prompt_tokens": 1122,
+   "prompt_time": 0.02593052,
+   "completion_tokens": 542,
+   "completion_time": 1.431210815,
+   "total_tokens": 1664,
+   "total_time": 1.457141335,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 428
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_87b3c396db",
+  "x_groq": {
+   "id": "req_01kyes45fzep1tj51b2yfetpx3",
+   "seed": 718021462
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "7661d60469f775214472ed56",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा)\",\"cancelled_object\":\"सचिव (वित्तीय सुधारणा)\",\"gloss_en\":\"4 | Mrs. Shaila E., Secretary (Financial Reforms) | Additional Chief Secretary/Principal Secretary/Secretary (Financial Reforms)\",\"confidence\":0.85}",
+ "raw": {
+  "id": "chatcmpl-8c09fc9e-b7f7-440a-b222-c1c74594f1ea",
+  "object": "chat.completion",
+  "created": 1785091678,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा)\",\"cancelled_object\":\"सचिव (वित्तीय सुधारणा)\",\"gloss_en\":\"4 | Mrs. Shaila E., Secretary (Financial Reforms) | Additional Chief Secretary/Principal Secretary/Secretary (Financial Reforms)\",\"confidence\":0.85}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"| ४ | श्रीमती शैला ए., सचिव (वित्तीय सुधारणा) | अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा) |\"\n\nLooks like a table row indicating a change of designation? It lists \"श्रीमती शैला ए., सचिव (वित्तीय सुधारणा)\" and then \"अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा)\". Possibly indicating that the position is being changed? Could be an amendment to prior order? The prior GR is \"शासाउ २०२२/प्र.क्र.१०/सा.उ.\" The sentence seems to be about appointment or designation. It says \"श्रीमती शैला ए., सचिव (वित्तीय सुधारणा)\" then \"अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा)\". Might be indicating that the person is being appointed to a higher post? The phrase \"अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा)\" could be the new designation. This is likely an amendment to prior order that appointed her as \"सचिव (वित्तीय सुधारणा)\". Now they are upgrading to \"अपर मुख्य सचिव/प्रधान सचिव/सचिव\". So it's modifying a prior appointment. According to trap 2, if it's canceling an appointment made under prior GR, that's AMENDS, not SUPERSEDES. The sentence is effecting a change in designation, i.e., amending the prior order's appointment. So type = AMENDS.\n\ntarget_index: 1 (since only one prior GR listed).\n\nevidence_span: need exact substring that shows the operative change. The sentence itself: \"| ४ | श्रीमती शैला ए., सचिव (वित्तीय सुधारणा) | अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा) |\". The operative part is the change from \"सचिव (वित्तीय सुधारणा)\" to \"अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा)\". Which substring? Could pick \"अपर मुख्य सचिव/प्रधान सचिव/सचिव (वित्तीय सुधारणा)\". That indicates the new designation. Or the whole row? Probably the phrase indicating the new designation is evidence. Use that.\n\ncancelled_object: The object being cancelled/amended is the prior designation \"सचिव (वित्तीय सुधारणा)\". So cancelled_object = \"सचिव (वित्तीय सुधारणा)\". Or maybe \"पद\" (post). But we need Marathi noun that is cancelled/amended. The sentence changes the post, so the cancelled object is the previous post \"सचिव (वित्तीय सुधारणा)\". Provide that.\n\ngloss_en: literal translation: \"Mrs. Shaila E., Secretary (Financial Reforms) | Additional Chief Secretary/Principal Secretary/Secretary (Financial Reforms)\". But need literal English translation of the sentence. Could be: \"4 | Mrs. Shaila E., Secretary (Financial Reforms) | Additional Chief Secretary/Principal Secretary/Secretary (Financial Reforms)\". Provide that.\n\nconfidence: maybe 0.85.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28280646,
+   "prompt_tokens": 817,
+   "prompt_time": 0.017166595,
+   "completion_tokens": 770,
+   "completion_time": 1.9354028859999999,
+   "total_tokens": 1587,
+   "total_time": 1.952569481,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 673
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8655ddce88",
+  "x_groq": {
+   "id": "req_01kyfw2nqgemm9y2tt0stwce58",
+   "seed": 1200740927
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0a363d019b860f67ba8930b0",
+ "role": "reasoning"
+}

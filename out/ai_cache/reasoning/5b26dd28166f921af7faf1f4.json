@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहेत\",\"cancelled_object\":\"परिशिष्ट\",\"gloss_en\":\"Circular: Amendments are being made in annexes B to D of the Government circular dated 25.02.2019 as follows.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-b303d9a0-8958-45f2-94a0-38530732ada5",
+  "object": "chat.completion",
+  "created": 1785055183,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहेत\",\"cancelled_object\":\"परिशिष्ट\",\"gloss_en\":\"Circular: Amendments are being made in annexes B to D of the Government circular dated 25.02.2019 as follows.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"शुद्धिपत्रक : वाचा येथील शासन शुध्दिपत्रक दि.२५.०२.२०१९ मधील परिशिष्ट \"ब\" ते \"ड\" मध्ये पुढील प्रमाणे सुधारणा करण्यात येत आहेत:\"\n\nTranslation: \"Circular: In the Government circular dated 25.02.2019, amendments are being made in annexes B to D as follows.\"\n\nWe have candidate prior GR: GR dated 2019-02-25 (the same date). The sentence says \"शुध्दिपत्रक ... मधील परिशिष्ट \"ब\" ते \"ड\" मध्ये पुढील प्रमाणे सुधारणा करण्यात येत आहेत\". This is an amendment (सुधारणा) to annexes B to D of that prior circular. It is not cancelling the whole order, just amending parts. So type = AMENDS.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows amendment. The phrase \"सुधारणा करण्यात येत आहेत\" indicates amendment. Also \"परिशिष्ट \"ब\" ते \"ड\" मध्ये\". Choose a span that includes \"सुधारणा\". Let's pick \"सुधारणा करण्यात येत आहेत\". That is exact.\n\ncancelled_object: Since it's amendment, not cancellation. The object being amended is \"परिशिष्ट \"ब\" ते \"ड\"\" maybe \"परिशिष्ट\". But cancelled_object field expects the Marathi noun that is cancelled/amended. For AMENDS, we can put the object being amended. The noun is \"परिशिष्ट\". Could also be \"शुध्दिपत्रक\". But the amendment is to annexes. So \"परिशिष्ट\". We'll set \"परिशिष्ट\". If null is allowed? It says \"the Marathi noun that is cancelled/amended, or null\". So we provide \"परिशिष्ट\". Gloss_en: literal translation: \"Circular: Amendments are being made in annexes B to D of the Government circular dated 25.02.2019 as follows.\"\n\nConfidence high, say 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286398651,
+   "prompt_tokens": 811,
+   "prompt_time": 0.068473698,
+   "completion_tokens": 520,
+   "completion_time": 1.386532315,
+   "total_tokens": 1331,
+   "total_time": 1.455006013,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 441
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_854fa9be4c",
+  "x_groq": {
+   "id": "req_01kyes8yydemgt9nph9gzdwgkc",
+   "seed": 177784599
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "5b26dd28166f921af7faf1f4",
+ "role": "reasoning"
+}

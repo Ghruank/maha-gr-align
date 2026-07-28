@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्यात येत आहे\",\"cancelled_object\":\"स्थानापन्न नियुक्ती\",\"gloss_en\":\"Government decision: Under the reference government decision dated 18.12.2018, a temporary appointment has been made for the awardee candidates of Maharashtra Public Service Commission as Assistant Professor (Botany) in Maharashtra Education Service Group 'A' from the date they assume charge, for a probation period of two years. A partial change is being made as follows.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-f932c3b2-53f3-4e9a-8925-9a81d665729d",
+  "object": "chat.completion",
+  "created": 1785054695,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्यात येत आहे\",\"cancelled_object\":\"स्थानापन्न नियुक्ती\",\"gloss_en\":\"Government decision: Under the reference government decision dated 18.12.2018, a temporary appointment has been made for the awardee candidates of Maharashtra Public Service Commission as Assistant Professor (Botany) in Maharashtra Education Service Group 'A' from the date they assume charge, for a probation period of two years. A partial change is being made as follows.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence: \"शासन निर्णय: संदर्भाधिन शासन निर्णय दिनांक १८.१२.२०१८ अन्वये महाराष्ट्र लोकसेवा आयोग पुरस्कृत उमेदवारांची सहयोगी प्राध्यापक (वनस्पतीशास्त्र), महाराष्ट्र शिक्षण सेवा गट 'अ' या पदावर ते ज्या दिनांकापासून त्यांच्या पदाचा कार्यभार स्वीकृत करतील त्या दिनांकापासून दोन वर्षाच्या परिविक्षा कालावधीसाठी स्थानापन्न नियुक्ती करण्यात आली आहे. यामध्ये खालीलप्रमाणे अंशत: बदल करण्यात येत आहे.\"\n\nInterpretation: It says \"Under the reference Government Decision dated 18.12.2018, ... a temporary appointment has been made ... A partial change is being made.\" So it references prior GR (the one dated 18-12-2018). It says \"अंशत: बदल करण्यात येत आहे\" meaning \"partial changes are being made\". That indicates AMENDS (modifies part of prior order). The prior order is being partially changed, not cancelled entirely. So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows the operative change. Could be \"अंशत: बदल करण्यात येत आहे\". That phrase indicates amendment. Also \"संदर्भाधिन शासन निर्णय दिनांक १८.१२.२०१८ अन्वये\" references prior. But the operative is \"अंशत: बदल करण्यात येत आहे\". So evidence_span = \"अंशत: बदल करण्यात येत आहे\". Cancelled_object: what is being amended? It says \"स्थानापन्न नियुक्ती\". The amendment is to the appointment? The sentence says \"अंशत: बदल करण्यात येत आहे.\" It doesn't specify what is being changed, but the context is about \"स्थानापन्न नियुक्ती\". So cancelled_object maybe \"स्थानापन्न नियुक्ती\". However it's not cancelled, it's being partially changed. So cancelled_object should be the noun that is being amended. Could be \"स्थानापन्न नियुक्ती\". We'll set that.\n\nGloss_en: literal translation: \"Government decision: Under the reference government decision dated 18.12.2018, a temporary appointment has been made for the awardee candidates of Maharashtra Public Service Commission as Assistant Professor (Botany) in Maharashtra Education Service Group 'A' from the date they assume charge, for a probation period of two years. A partial change is being made as follows.\"\n\nConfidence high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283067169,
+   "prompt_tokens": 902,
+   "prompt_time": 0.074525896,
+   "completion_tokens": 656,
+   "completion_time": 1.361687327,
+   "total_tokens": 1558,
+   "total_time": 1.436213223,
+   "completion_tokens_details": {
+    "reasoning_tokens": 530
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8655ddce88",
+  "x_groq": {
+   "id": "req_01kyert26vfpjbqg8rkzra2cjn",
+   "seed": 40994332
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a138315b4172506e752e2ec4",
+ "role": "reasoning"
+}

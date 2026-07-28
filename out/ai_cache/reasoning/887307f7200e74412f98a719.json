@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहेत\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"Due to administrative reasons, the orders dated 08.01.2020 are being cancelled.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-885123de-fab3-4834-8540-d9a3774e462e",
+  "object": "chat.completion",
+  "created": 1785054067,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहेत\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"Due to administrative reasons, the orders dated 08.01.2020 are being cancelled.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"प्रशासकीय कारणास्तव संदर्भाधीन दिनांक ०८.०१.२०२० रोजीचे आदेश रद्द करण्यात येत आहेत.\"\n\nTranslation: \"Due to administrative reasons, the orders dated 08.01.2020, which are referenced, are being cancelled.\"\n\nWe have candidate prior GR: #1 is GR dated 2020-01-08.\n\nWe need to decide relationship. The sentence says the orders dated that date are being cancelled. That is cancelling the prior order itself. So that is SUPERSEDES? Actually per definitions: SUPERSEDES - the sentence cancels / annuls / supersedes a prior ORDER ITSELF. Yes, this cancels the prior order itself. So type = SUPERSEDES.\n\ntarget_index = 1 (1-based index).\n\nevidence_span: need exact substring that justifies type. Could be \"रद्द करण्यात येत आहेत\". Or \"दिनांक ०८.०१.२०२० रोजीचे आदेश\". The phrase indicating cancellation: \"रद्द करण्यात येत आहेत\". Use that.\n\ncancelled_object: the noun being cancelled: \"आदेश\". So cancelled_object = \"आदेश\".\n\ngloss_en: literal English translation: \"Due to administrative reasons, the orders dated 08.01.2020 are being cancelled.\"\n\nconfidence: high, maybe 0.99.\n\nReturn JSON compact.\n\nCheck traps: No cue words inside file numbers; not relevant. Granularity: we are cancelling the order itself, not appointments etc. So SUPERSEDES correct.\n\nThus produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280780386,
+   "prompt_tokens": 793,
+   "prompt_time": 0.038019922,
+   "completion_tokens": 400,
+   "completion_time": 0.827073297,
+   "total_tokens": 1193,
+   "total_time": 0.865093219,
+   "completion_tokens_details": {
+    "reasoning_tokens": 332
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_bb691ea66b",
+  "x_groq": {
+   "id": "req_01kyer6xyqeksbedh31x34qayj",
+   "seed": 940966411
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "887307f7200e74412f98a719",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"डॉ. आठवले यांच्या पदस्थापनेत अंशत: बदल करुन\",\"cancelled_object\":\"पदस्थापना\",\"gloss_en\":\"Thereafter, as per the referenced government decision No.2, Dr. Athawle's posting was partially changed and his revised posting was made to Government Engineering College, Nagpur.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-623ee933-6989-49ec-a30e-a0a11ab86cca",
+  "object": "chat.completion",
+  "created": 1785054838,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"डॉ. आठवले यांच्या पदस्थापनेत अंशत: बदल करुन\",\"cancelled_object\":\"पदस्थापना\",\"gloss_en\":\"Thereafter, as per the referenced government decision No.2, Dr. Athawle's posting was partially changed and his revised posting was made to Government Engineering College, Nagpur.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly:\n\n\"3. Director, Technical Education's letter No. 4/... proposal: Under the above reference, as per Government Decision No.1, Dr. Vijay Manikrao Athawle and Dr. Uday Suresh Vankhede were appointed as Assistant Professors, Mechanical Engineering, Government Engineering College, Maharashtra Engineering College Teacher Service, Group-A for a two-year probation period at Government Engineering College, Jalgaon and Government Engineering College, Chandrapur respectively. After that, as per Government Decision reference No.2, Dr. Athawle's posting was partially changed and his revised posting was made to Government Engineering College, Nagpur.\"\n\nSo the sentence mentions prior GRs: reference to \"क्र. १ येथील शासन निर्णय\" and \"संदर्भाधीन क्र.२ येथील शासन निर्णय\". The candidate list only includes one prior GR: GR dated 2017-12-11, number बदली-२०१७/प्र.क्र.(२३६/१७)/तांशि-१.\n\nWe need to decide relationship: The sentence is describing appointments and a partial change (अंशत: बदल) to a posting. That is an amendment to prior order? The sentence says \"तदनंतर संदर्भाधीन क्र.२ येथील शासन निर्णयान्वये डॉ. आठवले यांच्या पदस्थापनेत अंशत: बदल करुन त्यांची सुधारीत पदस्थापना ... करण्यात आली.\"\n\nSo it is amending the prior order (making a partial change to posting). That is AMENDS, not supersedes, because it's a partial change to a prior order's appointment. The prior GR is likely the one referenced as \"क्र. १\". The sentence also references \"क्र.२\". But candidate list only includes one prior GR (the 2017-12-11). Which one matches? Probably the \"क्र. १\" is that prior GR. So target_index = 1.\n\nWe need evidence_span: a substring that shows the operative change. Something like \"अंशत: बदल करुन\". Or \"डॉ. आठवले यांच्या पदस्थापनेत अंशत: बदल करुन\". That indicates amendment.\n\nCancelled_object: the noun that is cancelled/amended. Here it's the posting (पदस्थापना) of Dr. Athawle. So cancelled_object could be \"पदस्थापना\". Or \"पदस्थापनेत\". The object being changed is the posting. So we can set \"पदस्थापना\".\n\nGloss_en: literal English translation: \"Thereafter, as per the government decision referred to in No.2, Dr. Athawle's posting was partially changed and his revised posting was made to Government Engineering College, Nagpur.\"\n\nConfidence: high, maybe 0.96.\n\nCheck traps: Not a cue inside file numbers. Not deliberative mood. It's operative. It's not cancelling the whole order, just partial change, so AMENDS.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280504755,
+   "prompt_tokens": 1043,
+   "prompt_time": 0.023897622,
+   "completion_tokens": 732,
+   "completion_time": 1.792324071,
+   "total_tokens": 1775,
+   "total_time": 1.8162216930000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 631
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c868cf1eaa",
+  "x_groq": {
+   "id": "req_01kyeryd6qegas94jm6ztnzaf4",
+   "seed": 1749060749
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "7d9280cba98599c1574cd069",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"It has arrived. In the referenced order No.3, now the following amendments are being made.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-c68960f3-9ef9-4659-ab29-39fb1c4739ee",
+  "object": "chat.completion",
+  "created": 1785053947,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"It has arrived. In the referenced order No.3, now the following amendments are being made.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"आला आहे. संदर्भाधीन क्र.३ च्या शासन निर्णयात आता खालीलप्रमाणे सुधारणा करण्यात येत आहे.\"\n\nTranslation: \"It has arrived. In the referenced order No.3, now the following improvements/amendments are being made.\"\n\nKey: It says \"सुधारणा करण्यात येत आहे\" which is amendment (modification) to prior order. Not superseding the whole order, just amending parts. So type = AMENDS.\n\nTarget index: which prior GR? The list has one candidate: index 1. The sentence references \"क्र.३\". That matches candidate? The candidate is \"GR dated 2021-02-05, number सेनिवे-२०१९/प्र.क्र.३४८/सेवा-४\". The sentence says \"संदर्भाधीन क्र.३\". Might refer to that order. So target_index = 1.\n\nEvidence_span: need exact substring that justifies type. Could be \"सुधारणा करण्यात येत आहे\". That's the phrase indicating amendment. So evidence_span = \"सुधारणा करण्यात येत आहे\". Must be exact substring from input. The input sentence: \"आला आहे. संदर्भाधीन क्र.३ च्या शासन निर्णयात आता खालीलप्रमाणे सुधारणा करण्यात येत आहे.\" Yes that substring appears.\n\nCancelled_object: what is being cancelled/amended? It's \"सुधारणा\" is the action, but the object being amended is the prior order's provisions. The noun being amended is perhaps \"शासन निर्णय\". But we need the Marathi noun that is cancelled/amended. Since it's amendment, not cancellation. The object is \"शासन निर्णय\". However the phrase \"सुधारणा\" is the action. The object being amended is the prior order's provisions. Could put \"शासन निर्णय\". The spec: \"the Marathi noun that is cancelled/amended\". So we can put \"शासन निर्णय\". Or maybe \"सुधारणा\" is not noun. I'd choose \"शासन निर्णय\". Or maybe \"प्रावधान\". Not present. So \"शासन निर्णय\". Provide that.\n\nGloss_en: literal English translation: \"It has arrived. In the referenced order No.3, now the following amendments are being made.\"\n\nConfidence: high, 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280071282,
+   "prompt_tokens": 810,
+   "prompt_time": 0.038545751,
+   "completion_tokens": 563,
+   "completion_time": 1.173061148,
+   "total_tokens": 1373,
+   "total_time": 1.211606899,
+   "completion_tokens_details": {
+    "reasoning_tokens": 492
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_803c0ba83d",
+  "x_groq": {
+   "id": "req_01kyer388rf42byxhb2xqhmrnd",
+   "seed": 902705183
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "80ef70859d6933cecad41050",
+ "role": "reasoning"
+}

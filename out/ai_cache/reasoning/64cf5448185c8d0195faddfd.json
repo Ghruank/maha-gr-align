@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र.२ येथील दि.०४.०६.२०१९ च्या शासन निर्णयान्वये सुधारणा करण्यात आलेली आहे\",\"cancelled_object\":\"प्रवेश नियम\",\"gloss_en\":\"The entry rules made under the Government decision dated 25.04.2017 have been amended under the referenced No.2 Government decision dated 04.06.2019\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-1b273d53-5ab1-4341-ae80-56b54dee87a6",
+  "object": "chat.completion",
+  "created": 1785054967,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र.२ येथील दि.०४.०६.२०१९ च्या शासन निर्णयान्वये सुधारणा करण्यात आलेली आहे\",\"cancelled_object\":\"प्रवेश नियम\",\"gloss_en\":\"The entry rules made under the Government decision dated 25.04.2017 have been amended under the referenced No.2 Government decision dated 04.06.2019\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence describes: \"दि.२५.४.२०१७ च्या शासन निर्णयान्वये प्रवेश नियम करण्यात आलेले आहेत. तद्नंतर सदर प्रवेश नियमांमध्ये संदर्भाधीन क्र.२ येथील दि.०४.०६.२०१९ च्या शासन निर्णयान्वये सुधारणा करण्यात आलेली आहे. आता, संदर्भाधीन क्र.३ येथील दि.१०.०५.२०२२ रोजीच्या अधिनियमान्वये सदर अभियांत्रिकी महाविद्यालय, पुणे या संस्थेचे रुपांतर हे शासनाच्या एकल तंत्रज्ञान विद्यापीठात करण्यात आलेले आहे. ... संचालक ... यांनी संदर्भाधीन क्र. ४ येथील दि.११.०८.२०२२ च्या पत्रान्वये शासनास प्रस्ताव सादर केला असून त्यानुसार सुधारणा करण्याची बाब शासनाच्या विचाराधिन होती.\"\n\nWe have candidate prior GR: #1 is \"GR dated 2019-06-04, number टीईएम-२०१९/ प्र.क्र.४६/तांशि-४\". The sentence mentions \"संदर्भाधीन क्र.२ येथील दि.०४.०६.२०१९ च्या शासन निर्णयान्वये सुधारणा\". That seems to refer to a prior GR dated 04-06-2019. That matches candidate #1? The candidate is dated 2019-06-04, yes. So the sentence references that prior GR and says \"सुधारणा करण्यात आलेली आहे\" i.e., improvements have been made under that prior GR. This is a modification (amend) of something under that prior GR? The sentence says \"संदर्भाधीन क्र.२ येथील दि.०४.०६.२०१९ च्या शासन निर्णयान्वये सुधारणा करण्यात आलेली आहे.\" That indicates that under that prior GR, improvements have been made. That is not cancelling the prior GR itself, but making amendments to the rules under it. So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows the relationship. Could be \"संदर्भाधीन क्र.२ येथील दि.०४.०६.२०१९ च्या शासन निर्णयान्वये सुधारणा करण्यात आलेली आहे\". That is the phrase. cancelled_object: what is being cancelled/amended? It's \"प्रवेश नियम\" maybe? The sentence says \"संदर्भाधीन क्र.२ ... सुधारणा करण्यात आलेली आहे.\" The object being amended is \"प्रवेश नियम\". So cancelled_object (or amended_object) should be \"प्रवेश नियम\". The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. So we put \"प्रवेश नियम\". Gloss_en: literal translation: \"According to the Government decision dated 25.04.2017, entry rules were made. Subsequently, amendments have been made to those entry rules under the referenced No.2 Government decision dated 04.06.2019. Now, ...\". But we need a literal translation of the whole sentence? Probably a concise translation: \"The entry rules made under the Government decision dated 25.04.2017 have been amended under the referenced No.2 Government decision dated 04.06.2019.\" That captures the key. Provide confidence maybe 0.95.\n\nCheck traps: Cue words inside file numbers not verbs: not relevant. Granularity: we are amending entry rules, not cancelling the prior GR. So AMENDS correct. Deliberative mood: later part says \"शासनाच्या विचाराधिन होती\" which is deliberative, but that refers to a later proposal, not the prior GR. However the operative part is the amendment of entry rules under prior GR. So classification is AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.27970655,
+   "prompt_tokens": 1052,
+   "prompt_time": 0.029698785,
+   "completion_tokens": 936,
+   "completion_time": 1.9357653959999999,
+   "total_tokens": 1988,
+   "total_time": 1.965464181,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 821
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8655ddce88",
+  "x_groq": {
+   "id": "req_01kyes2b4wegmaxg43wwkf7m45",
+   "seed": 1512056667
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "64cf5448185c8d0195faddfd",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"“६०” ऐवजी “१००\\\" अशी सुधारणा\",\"cancelled_object\":\"प्रवेश क्षमता\",\"gloss_en\":\"For the academic year 2019-20, with reference No.2 and Annexure “A”, the government is giving approval to amend the entry capacity of Shri Sai Institute of Pharmacy and Research, Aurangabad at line number 13 from “60” to “100”.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-3621c03b-528f-4ee2-91c6-8acd92d7ba2e",
+  "object": "chat.completion",
+  "created": 1785054707,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"“६०” ऐवजी “१००\\\" अशी सुधारणा\",\"cancelled_object\":\"प्रवेश क्षमता\",\"gloss_en\":\"For the academic year 2019-20, with reference No.2 and Annexure “A”, the government is giving approval to amend the entry capacity of Shri Sai Institute of Pharmacy and Research, Aurangabad at line number 13 from “60” to “100”.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. Sentence in Marathi: \"शैक्षणिक वर्ष २०१९-२० मध्ये संदर्भ क्र.२ सोबतच्या Annexure “A” मधील श्री.साई इन्स्टिटयुट ऑफ फार्मसी अॅण्ड रिसर्च, औरंगाबाद या संस्थेच्या नावासमोरील रकाना क्रमांक १३ समोरील प्रवेश क्षमतेमध्ये “६०” ऐवजी “१००\" अशी सुधारणा करण्यास शासन मान्यता देण्यात येत आहे.\"\n\nInterpretation: It says that for academic year 2019-20, with reference No.2 and Annexure A, the institution \"Shri Sai Institute of Pharmacy and Research, Aurangabad\" the entry capacity at line number 13 is being changed from \"60\" to \"100\". The government gives approval for this amendment. So it's an amendment (improvement) to a prior order? It says \"सुधारणा\" (improvement) to the entry capacity. This is a modification of a prior order's details (capacity). The prior GR is listed: GR dated 2019-06-10, number TEEM-2019/ Pr.kr.131/Tanshi-4. The sentence is granting approval to amend the capacity. This is not superseding the entire order, just amending a part (the capacity). So type = AMENDS.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows amendment. The phrase \"“६०” ऐवजी “१००\" अशी सुधारणा\" indicates amendment. Also \"सुधारणा करण्यास शासन मान्यता देण्यात येत आहे\". So evidence_span could be \"“६०” ऐवजी “१००\\\" अशी सुधारणा\". Must copy exactly from input. Input includes quotes: “६०” ऐवजी “१००\" अशी सुधारणा. Note the closing quote after १०० is a double quote (maybe mismatched). We'll copy exactly as appears: “६०” ऐवजी “१००\" अशी सुधारणा. Ensure correct characters.\n\ncancelled_object: what is being cancelled? Not cancelled, it's being amended. The object being amended is \"प्रवेश क्षमतेमध्ये\". So cancelled_object should be null? For AMENDS, we can provide the object being amended? The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. For AMENDS, we can give the noun that is amended. So \"प्रवेश क्षमतेमध्ये\". Or maybe \"प्रवेश क्षमता\". We'll use \"प्रवेश क्षमता\". Provide as string.\n\ngloss_en: literal English translation: \"For the academic year 2019-20, with reference No.2 and Annexure “A”, the government is giving approval to amend the entry capacity of Shri Sai Institute of Pharmacy and Research, Aurangabad at line number 13 from “60” to “100”.\"\n\nconfidence: high, maybe 0.97.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.316771934,
+   "prompt_tokens": 878,
+   "prompt_time": 0.090317613,
+   "completion_tokens": 744,
+   "completion_time": 1.548622487,
+   "total_tokens": 1622,
+   "total_time": 1.6389401000000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 629
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_47082602e2",
+  "x_groq": {
+   "id": "req_01kyertdd8e69t5y30v7gdf0f4",
+   "seed": 2108320684
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "79daaaeee01944abcaf0c9e6",
+ "role": "reasoning"
+}

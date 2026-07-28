@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात आली आहे\",\"cancelled_object\":null,\"gloss_en\":\"An amendment has been made. According to the provision of the above government decision, reference No. 3 here.\",\"confidence\":0.9}",
+ "raw": {
+  "id": "chatcmpl-2dcf0ecd-66e7-448e-8d0b-9175121f2ba2",
+  "object": "chat.completion",
+  "created": 1785054662,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात आली आहे\",\"cancelled_object\":null,\"gloss_en\":\"An amendment has been made. According to the provision of the above government decision, reference No. 3 here.\",\"confidence\":0.9}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"सुधारणा करण्यात आली आहे. उपरोक्त शासन निर्णयातील तरतुदीनुसार संदर्भाधीन क्र. ३ येथील\"\n\nTranslation: \"Amendment has been made. According to the provision of the above government decision, reference No.3 here.\"\n\nWe have a prior GR listed: #1.\n\nWe need to decide relationship.\n\nThe sentence says \"सुधारणा करण्यात आली आहे.\" which means \"An amendment has been made.\" It indicates that something is being amended. It references \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\" i.e., \"as per the provision of the above government decision\". So it is amending something from that prior decision. It is not cancelling the entire order, just amending a provision. So type = AMENDS.\n\nTarget_index: 1 (since only one candidate). evidence_span: need exact substring that justifies type. Could be \"सुधारणा करण्यात आली आहे\" or \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\". The phrase indicating amendment is \"सुधारणा करण्यात आली आहे\". Use that.\n\ncancelled_object: Since it's an amendment, not cancellation. The field \"cancelled_object\" should be the Marathi noun that is cancelled/amended. For AMENDS, we can put the object being amended. The sentence doesn't specify what object; just says amendment made. Could be \"सुधारणा\". But maybe we set null because not explicit. The spec says \"the Marathi noun that is cancelled/amended, or null\". Here the noun is \"सुधारणा\" but that's the action. Could be \"तरतुदी\" (provision). The sentence: \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\" refers to \"provision\". So the amendment is to that provision. So cancelled_object could be \"तरतुदी\". But ambiguous. Safer to set null if not clear.\n\nGloss_en: literal translation: \"An amendment has been made. According to the provision of the above government decision, reference No. 3 here.\"\n\nConfidence: maybe 0.9.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283191967,
+   "prompt_tokens": 807,
+   "prompt_time": 0.025503979,
+   "completion_tokens": 519,
+   "completion_time": 1.400139533,
+   "total_tokens": 1326,
+   "total_time": 1.425643512,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 448
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01kyers2b2fkqa1b4p8e5kymew",
+   "seed": 411689341
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d92e5d67e5503fe5c66c6b04",
+ "role": "reasoning"
+}

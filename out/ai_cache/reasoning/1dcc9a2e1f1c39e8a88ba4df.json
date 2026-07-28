@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The issued reference No.8 dated 29.08.2025 government decision is superseded\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-46933756-29d2-42cf-8642-e3cd068bf9b6",
+  "object": "chat.completion",
+  "created": 1785055396,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The issued reference No.8 dated 29.08.2025 government decision is superseded\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"निर्गमित करण्यात आलेला संदर्भ क्र. ८ येथील दिनांक २९.०८.२०२५ रोजीचा शासन निर्णय अधिक्रमित\"\n\nTranslation: \"The issued reference No.8 dated 29.08.2025 government decision is superseded\" (अधिक्रमित = superseded/overridden). So it says that a prior government decision (the one dated 29-08-2025, reference No.8) is superseded. That is a cancellation of the prior order itself. So type = SUPERSEDES.\n\nTarget_index: the prior GR list has one entry, index 1.\n\nEvidence_span: need exact substring that shows the operative verb. The phrase \"अधिक्रमित\" indicates supersede. Also maybe \"निर्गमित करण्यात आलेला संदर्भ क्र. ८ येथील दिनांक २९.०८.२०२५ रोजीचा शासन निर्णय अधिक्रमित\". The operative part is \"अधिक्रमित\". So evidence_span could be \"अधिक्रमित\". Must be exact substring from input. Yes.\n\nCancelled_object: what is being cancelled? The prior order itself: \"शासन निर्णय\". Could be \"शासन निर्णय\". The noun being cancelled is \"शासन निर्णय\". So we put \"शासन निर्णय\". Or maybe \"संदर्भ\". But the sentence says \"शासन निर्णय अधिक्रमित\". So cancelled_object = \"शासन निर्णय\". Provide Marathi noun.\n\nGloss_en: literal English translation: \"The issued reference No.8 dated 29.08.2025 government decision is superseded.\"\n\nConfidence: high, maybe 0.99.\n\nReturn JSON.\n\nCheck traps: Not inside file numbers. Not about appointments. Not deliberative. So SUPERSEDES.\n\nMake sure JSON compact.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283659027,
+   "prompt_tokens": 796,
+   "prompt_time": 0.013167531,
+   "completion_tokens": 448,
+   "completion_time": 1.088456763,
+   "total_tokens": 1244,
+   "total_time": 1.101624294,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 380
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01kyesffdge439pewrzmk5jj3k",
+   "seed": 826659308
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "1dcc9a2e1f1c39e8a88ba4df",
+ "role": "reasoning"
+}

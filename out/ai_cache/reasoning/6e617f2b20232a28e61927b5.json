@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"Amendments are being made to the department's government decision dated 06.12.2019.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-e8ae6cd3-ed23-410b-b113-2a8db76ed350",
+  "object": "chat.completion",
+  "created": 1785055203,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"Amendments are being made to the department's government decision dated 06.12.2019.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"तदतूदीतून करणेबाबत विभागाच्या दिनांक ०६.१२.२०१९ च्या शासन निर्णयास शुद्धीपत्रक काढणेची बाब शासनाच्या विचाराधीन होती. सबब विभागाच्या दिनांक ०६.१२.२०१९ च्या शासन निर्णयात खालीलप्रमाणे सुधारणा करण्यात येत आहे.\"\n\nInterpretation: First clause: \"तदतूदीतून करणेबाबत विभागाच्या दिनांक ०६.१२.२०१९ च्या शासन निर्णयास शुद्धीपत्रक काढणेची बाब शासनाच्या विचाराधीन होती.\" Means \"The matter of withdrawing the certification (shuddhipatrak) from the department's government decision dated 06.12.2019 was under consideration of the government.\" That's deliberative mood, not operative. So it's a reference, not a decision.\n\nSecond clause: \"सबब विभागाच्या दिनांक ०६.१२.२०१९ च्या शासन निर्णयात खालीलप्रमाणे सुधारणा करण्यात येत आहे.\" Means \"Therefore, the department's government decision dated 06.12.2019 is being amended as follows.\" This indicates an amendment (सुधारणा) to the prior order. It modifies part of prior order, not cancel entire order. So relationship is AMENDS.\n\nWe need to pick target_index: the prior GR list has one entry (index 1). So target_index = 1.\n\nEvidence_span: need exact substring that justifies type. For AMENDS, we need phrase indicating amendment: \"सुधारणा करण्यात येत आहे\". The sentence includes \"सुधारणा करण्यात येत आहे\". So evidence_span = \"सुधारणा करण्यात येत आहे\". Must be exact substring from input. Let's verify: The input sentence: \"... सबब विभागाच्या दिनांक ०६.१२.२०१९ च्या शासन निर्णयात खालीलप्रमाणे सुधारणा करण्यात येत आहे.\" Yes that substring appears.\n\nCancelled_object: Since it's amendment, not cancellation. Cancelled_object should be null. But maybe we need to specify what is being amended? The object is \"शासन निर्णय\". But cancelled_object is for cancelled/amended object? The spec: \"cancelled_object\": \"<the Marathi noun that is cancelled/amended, or null>\". For AMENDS, we can put the noun being amended. Could be \"शासन निर्णय\". However spec says \"cancelled_object\" for cancelled/amended. So we can put \"शासन निर्णय\". But maybe they expect null for AMENDS? The description: \"cancelled_object\": \"<the Marathi noun that is cancelled/amended, or null>\". So we can provide the noun. Let's put \"शासन निर्णय\". Or maybe \"निर्णय\". Use exact phrase? I'd use \"शासन निर्णय\". Provide.\n\nGloss_en: literal English translation: \"Amendments are being made to the department's government decision dated 06.12.2019.\" Or \"The department's government decision dated 06.12.2019 is being amended as follows.\" Provide.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284176036,
+   "prompt_tokens": 861,
+   "prompt_time": 0.015921344,
+   "completion_tokens": 732,
+   "completion_time": 1.664139251,
+   "total_tokens": 1593,
+   "total_time": 1.680060595,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 660
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyes9jnpfhj8xba4c4mvwceg",
+   "seed": 1392961749
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6e617f2b20232a28e61927b5",
+ "role": "reasoning"
+}

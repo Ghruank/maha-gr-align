@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"Annexure A मधील अ.क्र. १४८ व १४९ रद्द करण्यात येत आहे\",\"cancelled_object\":\"मान्यता\",\"gloss_en\":\"The approval given for closing the courses listed as items 148 and 149 in Annexure A of the Government Decision dated 23/07/2020 is being cancelled and the approval for those courses is being extended.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-fc0c6527-b531-47fc-aee7-d0d62917dcfa",
+  "object": "chat.completion",
+  "created": 1785054772,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"Annexure A मधील अ.क्र. १४८ व १४९ रद्द करण्यात येत आहे\",\"cancelled_object\":\"मान्यता\",\"gloss_en\":\"The approval given for closing the courses listed as items 148 and 149 in Annexure A of the Government Decision dated 23/07/2020 is being cancelled and the approval for those courses is being extended.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence: \"शासन निर्णय : “ दिनांक २३/०७/२०२० च्या शासन निर्णयासोबतच्या Annexure A मधील अ.क्र. १४८ व १४९ समारील अभ्यासक्रम बंद करण्यास दिलेली मान्यता रद्द करून सदर अभ्यासक्रमाच्या मान्यतेस मुदतवाढ दिली आहे. यास्तव सदर शासन निर्णयातील Annexure A मधील अ.क्र. १४८ व १४९ रद्द करण्यात येत आहे.” तसेच, “अखिल भारतीय तंत्र शिक्षण परिषद, नवी दिल्ली यांच्या दिनांक ३१/०७/२०२० रोजीच्या मान्यता यादीनुसार सोबतच्या Annexure B मधील अ.क्र.१ येथील नॅशनल इन्स्टिट्यूट ऑफ सिक्युरिटीज मार्केट्स, वासंबे, जि. राययड संस्थेच्या नावासमोरील पी. जी. डी. एम. या अभ्यासक्रमाची प्रवेशक्षमता कमी करण्यास व अ.क्र. २ येथील डॉन बॉस्को इन्स्टिट्यूट ऑफ टेक्नॉलॉजी, कुर्ला, मुंबई समोरील एमएमएस अभ्यासक्रम बंद करण्यास शासन मान्यता देण्यात येत आहे.\"\n\nWe have prior GR dated 2020-07-23, number TEEM-2020/... The sentence says: \"दिनांक 23/07/2020 च्या शासन निर्णयासोबतच्या Annexure A मधील अ.क्र. 148 व 149 ... मान्यता रद्द करून ... Annexure A मधील अ.क्र. 148 व 149 रद्द करण्यात येत आहे.\" So it cancels the approval (मान्यता) given for closing certain courses? Actually \"समारील अभ्यासक्रम बंद करण्यास दिलेली मान्यता रद्द करून\" means the approval to close the courses is being cancelled, and they are extending the approval for the courses. So they are cancelling the prior approval (the decision) regarding closure. That is a cancellation of a specific approval (मान्यता) under the prior GR. According to trap 2, if the sentence cancels approvals made under prior GR, that prior GR is not superseded; it's AMENDS. So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows the operative change. Could be \"मान्यता रद्द करून\" or \"Annexure A मधील अ.क्र. १४८ व १४९ रद्द करण्यात येत आहे\". Choose a span that includes the cancellation. Let's pick \"Annexure A मधील अ.क्र. १४८ व १४९ रद्द करण्यात येत आहे\". That is exact from sentence. Cancelled_object: the noun being cancelled is \"मान्यता\" (approval) or \"Annexure A मधील अ.क्र. १४८ व १४९\". The object cancelled is the approval (मान्यता) given earlier. The sentence says \"मान्यता रद्द करून\". So cancelled_object = \"मान्यता\". Gloss_en: literal translation: \"The approval given for closing the courses listed as items 148 and 149 in Annexure A of the Government Decision dated 23/07/2020 is being cancelled and the approval for those courses is being extended. Accordingly, items 148 and 149 in Annexure A of that decision are being cancelled.\" Provide translation. Confidence maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314558879,
+   "prompt_tokens": 1048,
+   "prompt_time": 0.16418334,
+   "completion_tokens": 842,
+   "completion_time": 1.957900477,
+   "total_tokens": 1890,
+   "total_time": 2.122083817,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 733
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01kyerwd3zfcs9ns2n3nmt2w1h",
+   "seed": 803904695
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "45fcfb5da8b3d37f0460ae4d",
+ "role": "reasoning"
+}

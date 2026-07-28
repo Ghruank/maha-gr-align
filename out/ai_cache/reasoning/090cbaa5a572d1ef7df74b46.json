@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"आलेल्या सुधारणांन्वये\",\"cancelled_object\":null,\"gloss_en\":\"Under the amendments made, provision of the accumulated amount deposited in the employee's PRAN account Exit Withdrawal\",\"confidence\":0.78}",
+ "raw": {
+  "id": "chatcmpl-e30f1f6c-a78e-4f3c-ac60-0887a153670f",
+  "object": "chat.completion",
+  "created": 1785091543,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"आलेल्या सुधारणांन्वये\",\"cancelled_object\":null,\"gloss_en\":\"Under the amendments made, provision of the accumulated amount deposited in the employee's PRAN account Exit Withdrawal\",\"confidence\":0.78}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"आलेल्या सुधारणांन्वये कर्मचाऱ्याच्या PRAN खात्यामध्ये जमा संचित रकमेचे प्रदान Exit Withdrawal\"\n\nTranslation: \"Under the amendments made, provision of the accumulated amount deposited in the employee's PRAN account Exit Withdrawal\". Something like that.\n\nWe have one candidate prior GR: \"GR dated 2024-02-02, number - संकीर्ण-२०२३/प्र.क्र.४६/ सेवा ४\"\n\nWe need to decide relationship. The sentence says \"आलेल्या सुधारणांन्वये\" meaning \"by the amendments that have come\". It seems to be stating that under the amendments, something is provided (the provision of accumulated amount). It does not explicitly cancel or amend the prior GR. It just references the prior GR? Actually it doesn't mention the prior GR explicitly in the sentence; the candidate list is just given to us. The sentence does not contain any cue like \"रद्द\", \"रद्द करण्यात येत आहे\", \"सुधारणा\", \"बदल\", etc. It says \"आलेल्या सुधारणांन्वये\" which is \"by the amendments that have come\". That could be a reference to amendments, but not necessarily to the prior GR. It could be that the prior GR is being amended? The phrase \"आलेल्या सुधारणांन्वये\" could be considered as \"under the amendments\" i.e., the current order is an amendment to something. But does it cancel something? It says \"प्रदान Exit Withdrawal\" which is like \"provision of exit withdrawal\". It seems to be an operative instruction: providing the accumulated amount. That could be an amendment to prior GR? The prior GR maybe concerned with service 4. But we have no explicit mention of cancellation. So likely it's either AMENDS (if it modifies part of prior order) or REFERENCES (if just cites). Since the sentence does not explicitly say \"as per\" or \"in reference to\", but says \"आलेल्या सुधारणांन्वये\" which indicates that there have been amendments, maybe it's an amendment to prior order. However, the sentence does not mention the prior GR number; it's just a generic statement. The candidate list is provided externally; we must decide if the sentence establishes a relationship to any listed GR. If the sentence does not mention the prior GR, we should output NONE? The instruction: \"You are given the sentence and a numbered list of prior GRs that a deterministic resolver has ALREADY matched inside it.\" So the resolver already matched prior GRs inside the sentence. That means the sentence contains some reference to that prior GR (maybe the number appears). But the sentence we see does not contain that number. Possibly the number is hidden? The candidate prior GR is \"संकीर्ण-२०२३/प्र.क्र.४६/ सेवा ४\". The sentence does not contain that string. So maybe the deterministic resolver matched it incorrectly? But we must decide relationship. If the prior GR is matched inside it, maybe there is a hidden reference like \"सेवा ४\"? The sentence does not have \"सेवा\". So maybe it's a false match. In that case we should output NONE with target_index null.\n\nGiven the traps: we must not misinterpret \"आलेल्या सुधारणांन्वये\" as a cue for supersede. It's not a verb like \"रद्द\". It's just indicating amendments. Could be AMENDS if it modifies something. But we need to specify cancelled_object if AMENDS or SUPERSEDES. Here it's providing \"प्रदान Exit Withdrawal\" which is a provision, not a cancellation. So maybe it's AMENDS (modifies part of prior order) but not cancel. However, the sentence does not explicitly say it's amending prior order; it's just stating a provision under the amendments. Could be considered as \"References\" (cites prior order). The instruction: \"REFERENCES - it merely cites or lists a prior order, with no operative change\". This sentence does have operative change (providing withdrawal). So it's not just reference; it's an operative instruction. But does it modify prior order? Possibly it's an amendment to prior order's provision about PRAN account. So AMENDS.\n\nWe need to provide cancelled_object: the noun that is cancelled/amended. Here it's not cancelling anything, it's providing something. So maybe cancelled_object is null. For AMENDS, we could still provide the object being amended, maybe \"प्रदान\" is the action, not object. The object being amended could be \"कर्मचाऱ्याच्या PRAN खात्यामध्ये जमा संचित रकमेचे\". That's the amount. But that's not being cancelled. It's being provided. So maybe we set cancelled_object null.\n\nBut the schema expects cancelled_object for AMENDS as \"the Marathi noun that is cancelled/amended\". If it's an amendment, we could put the noun being amended, maybe \"रकमेचे\". But ambiguous.\n\nGiven uncertainty, maybe safest is NONE because we cannot be sure of relationship. The instruction: \"Decide what relationship, if any, the sentence establishes.\" If we are not confident it's a relationship, choose NONE.\n\nThus output type NONE, target_index null, evidence_span maybe the whole sentence? But evidence_span must be substring justifying type. For NONE, we can give a span that shows no operative change? Could give \"आलेल्या सुधारणांन्वये\". That indicates it's just a statement, not a relationship. But we need evidence that it's NONE. Could use any part that shows no cue. Use \"आलेल्या सुधारणांन्वये\". Provide cancelled_object null, gloss_en translation.\n\nLet's produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.291469605,
+   "prompt_tokens": 809,
+   "prompt_time": 0.016593651,
+   "completion_tokens": 1233,
+   "completion_time": 2.662964328,
+   "total_tokens": 2042,
+   "total_time": 2.679557979,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1164
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyfvyhtme4yv2hx7b1hna7h9",
+   "seed": 885997244
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "090cbaa5a572d1ef7df74b46",
+ "role": "reasoning"
+}

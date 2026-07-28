@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"आदेश रद्द करण्यात येत आहे.\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"The order given by the referenced Government Decision dated 19-12-2018 is being cancelled.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-cb49d06c-24bc-46c3-b06a-4f1021f045dc",
+  "object": "chat.completion",
+  "created": 1785053996,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"आदेश रद्द करण्यात येत आहे.\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"The order given by the referenced Government Decision dated 19-12-2018 is being cancelled.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence in Marathi:\n\n\"संदर्भ :- शासन निर्णय, क्र.शाकाजा-१११८/प्र.क्र.१०९/भाग-१/२०१८/२२, दिनांक १९.१२.२०१८ शासन निर्णय : ग्राम विकास विभागाची मंत्रालय विस्तार इमारतीमधील पोटमाळा, दालन क्र. एम-८ व एम-९ येथे कार्यरत असलेली कार्यासने बांधकाम भवन, मर्झबान पथ, मुंबई येथे स्थलांतरीत करुन रिक्त होणारी ९९१.५० चौ.फूट जागा मृद व जलसंधारण विभागास वाटप करण्याबाबत संदर्भाधीन दिनांक १९.१२.२०१८ च्या शासन निर्णयाद्वारे देण्यात आलेले आदेश रद्द करण्यात येत आहे.\"\n\nInterpretation: It says that the order given on 19-12-2018 (the prior GR) is being cancelled. The phrase \"रद्द करण्यात येत आहे\" means \"is being cancelled\". So the sentence cancels the prior order itself. That is SUPERSEDES (cancels the order itself). According to trap 2, if it cancels the order itself, it's SUPERSEDES, not AMENDS. Cancelled object: \"आदेश\" (order) or \"शासन निर्णय\". The sentence says \"आदेश रद्द करण्यात येत आहे\". So cancelled_object could be \"आदेश\". Provide evidence_span: the exact substring that shows cancellation: \"आदेश रद्द करण्यात येत आहे\". Must copy exactly from input. Let's locate: The input ends with \"...आदेश रद्द करण्यात येत आहे.\" Yes.\n\nTarget_index: the prior GR is candidate 1, so index 1.\n\nGloss_en: literal translation: \"The order given by the referenced Government Decision dated 19-12-2018 is being cancelled.\"\n\nConfidence high, maybe 0.99.\n\nReturn JSON.\n\nCheck JSON fields: type, target_index, evidence_span, cancelled_object, gloss_en, confidence.\n\nMake sure evidence_span exactly matches substring: \"आदेश रद्द करण्यात येत आहे\". Include maybe trailing period? The substring includes period? The instruction says exact substring of the input sentence justifying the type. The period is part of the sentence. The substring \"आदेश रद्द करण्यात येत आहे.\" includes period. Should we include period? The substring includes period in the input. The phrase \"आदेश रद्द करण्यात येत आहे.\" appears at end. So include period.\n\nCancelled_object: \"आदेश\". Could also be \"शासन निर्णय\". But the phrase \"आदेश रद्द\" indicates order. We'll put \"आदेश\".\n\nNow produce JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.279553859,
+   "prompt_tokens": 953,
+   "prompt_time": 0.047474323,
+   "completion_tokens": 638,
+   "completion_time": 1.537104232,
+   "total_tokens": 1591,
+   "total_time": 1.584578555,
+   "completion_tokens_details": {
+    "reasoning_tokens": 567
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_ca5edfaab2",
+  "x_groq": {
+   "id": "req_01kyer4q4tf8kvnn7g8mq4f87e",
+   "seed": 419059036
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b0b28ce0b82f2a8d92d4d058",
+ "role": "reasoning"
+}

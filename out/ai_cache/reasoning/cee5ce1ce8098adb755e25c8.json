@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"स्थगिती प्रशासकीय कारणास्तव रद्द करुन\",\"cancelled_object\":\"स्थगिती\",\"gloss_en\":\"The suspension granted to the following assistant class officers until 31-05-2019 is being cancelled for administrative reasons, and a partial change is being made in their post after their previous transfer. The said assistant class officers are being placed in revised posting as mentioned in rank-6.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-c92c564d-4b51-4fea-bf82-352e086d2d99",
+  "object": "chat.completion",
+  "created": 1785091872,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"स्थगिती प्रशासकीय कारणास्तव रद्द करुन\",\"cancelled_object\":\"स्थगिती\",\"gloss_en\":\"The suspension granted to the following assistant class officers until 31-05-2019 is being cancelled for administrative reasons, and a partial change is being made in their post after their previous transfer. The said assistant class officers are being placed in revised posting as mentioned in rank-6.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GR #1.\n\nSentence in Marathi: \"२. खालील सहायक कक्ष अधिकाऱ्यांना दिनांक ३१-०५-२०१९ पर्यंत देण्यात आलेली स्थगिती प्रशासकीय कारणास्तव रद्द करुन त्यांच्या पूर्वीच्या बदली नंतरच्या पदस्थापनेमध्ये अंशत बदल करण्यात येत आहे. सदरहू सहायक कक्ष अधिकाऱ्यांची रकाना-६ मध्ये नमूद केल्याप्रमाणे सुधारित पदस्थापना करण्यात येत आहे.\"\n\nInterpretation: It says: \"The suspension given to the following assistant class officers until 31-05-2019 is being cancelled for administrative reasons, and a partial change is being made in their post after their previous transfer. The said assistant class officers are being placed in revised posting as mentioned in rank-6.\"\n\nThus, it cancels a suspension (स्थगिती) that was given under prior GR? The prior GR likely gave a suspension. The sentence cancels that suspension and makes a partial change in posting. This is not superseding the entire prior order; it's amending (cancelling the suspension, which is a component). According to trap 2, if it cancels a suspension made under prior GR, that's AMENDS, not SUPERSEDES. So type = AMENDS.\n\ntarget_index: 1 (since only one prior GR listed).\n\nevidence_span: need exact substring that shows the operative change. Could be \"स्थगिती ... रद्द करुन\". The phrase \"स्थगिती ... रद्द करुन\" indicates cancellation. Let's capture \"स्थगिती प्रशासकीय कारणास्तव रद्द करुन\". That is exact substring? The sentence: \"... देण्यात आलेली स्थगिती प्रशासकीय कारणास्तव रद्द करुन ...\" So evidence_span = \"स्थगिती प्रशासकीय कारणास्तव रद्द करुन\". Must be exact characters.\n\ncancelled_object: the noun being cancelled is \"स्थगिती\" (suspension). Could also be \"स्थगिती\" as object. So \"स्थगिती\".\n\ngloss_en: literal translation: \"The suspension granted to the following assistant class officers until 31-05-2019 is being cancelled for administrative reasons, and a partial change is being made in their post after their previous transfer. The said assistant class officers are being placed in revised posting as mentioned in rank-6.\"\n\nconfidence: high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281957206,
+   "prompt_tokens": 862,
+   "prompt_time": 0.036418949,
+   "completion_tokens": 643,
+   "completion_time": 1.493106651,
+   "total_tokens": 1505,
+   "total_time": 1.5295256,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 528
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_803c0ba83d",
+  "x_groq": {
+   "id": "req_01kyfw8kzyet3svea70wnb6nwg",
+   "seed": 242213716
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "cee5ce1ce8098adb755e25c8",
+ "role": "reasoning"
+}

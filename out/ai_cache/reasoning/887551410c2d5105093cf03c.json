@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"उमेदवाराची नियुक्ती करण्यात येणार नाही\",\"cancelled_object\":null,\"gloss_en\":\"(3) Since the commission as well as this department have not verified the original certificates regarding candidates' qualifications such as education, age, athlete status, physical disability, caste certificates, etc., the appointing authorities need to verify all these matters. The original certificates regarding education, age, athlete status, physical disability, etc., of the presented candidates are as per the eligibility mentioned in the notification, or how? The appointing authorities should first check these when making a temporary appointment of the candidates. If the appointing authorities cannot submit the necessary and appropriate certificates to the commission for verification of the claims made in the application, the candidate's appointment will not be made and the candidate's recommendation will be automatically considered cancelled and will be communicated to the commission.\",\"confidence\":0.92}",
+ "raw": {
+  "id": "chatcmpl-6fff320c-1ed3-48cd-9b69-24c8caafb28f",
+  "object": "chat.completion",
+  "created": 1785091855,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"उमेदवाराची नियुक्ती करण्यात येणार नाही\",\"cancelled_object\":null,\"gloss_en\":\"(3) Since the commission as well as this department have not verified the original certificates regarding candidates' qualifications such as education, age, athlete status, physical disability, caste certificates, etc., the appointing authorities need to verify all these matters. The original certificates regarding education, age, athlete status, physical disability, etc., of the presented candidates are as per the eligibility mentioned in the notification, or how? The appointing authorities should first check these when making a temporary appointment of the candidates. If the appointing authorities cannot submit the necessary and appropriate certificates to the commission for verification of the claims made in the application, the candidate's appointment will not be made and the candidate's recommendation will be automatically considered cancelled and will be communicated to the commission.\",\"confidence\":0.92}",
+     "reasoning": "We need to classify the sentence relative to prior GRs list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence is about verification of original certificates for candidates, and says that if verification not done, appointment won't be made and recommendation considered automatically cancelled, and will be communicated to commission. It mentions \"presented candidates\" etc. It does not explicitly refer to prior GR by number, but the prior GR is listed as candidate. The sentence does not cite it explicitly (no mention of its number). It just gives procedural instruction. The prior GR is not referenced by name, but maybe the sentence is part of a new order that references prior GR? The instruction says \"CANDIDATE PRIOR GRs MENTIONED IN IT:\" list includes GR dated 2018-10-24. That suggests the sentence mentions that prior GR (maybe implicitly). However the sentence does not contain any explicit reference like \"२०१८-१०-२४ च्या आदेशानुसार\". So maybe the system flagged it as candidate but we need to decide relationship. Since there is no explicit mention, we likely classify as NONE (no operative relationship). However could be REFERENCES if the sentence is just citing prior GR (but not operative). But there is no citation. The list is just candidate prior GRs that a deterministic resolver matched inside it. It may have matched the date string \"2018-10-24\"? Not present. So maybe the resolver matched something else like \"उमेदवारांची तात्पुरती नियुक्ती\" etc. But not sure.\n\nGiven the sentence does not cancel, amend, or reference any prior order explicitly, we choose NONE.\n\nWe need to fill fields: type \"NONE\", target_index null, evidence_span maybe empty? Must provide exact substring justifying type. For NONE, we can give empty string? Probably need a span that shows lack of operative language. Could give a phrase like \"उमेदवाराची नियुक्ती करण्यात येणार नाही\" but that's not evidence for NONE. The evidence should justify classification. For NONE, we could give a phrase that shows no reference to prior GR, maybe the whole sentence? But must be exact substring. Could give the whole sentence as evidence that there is no reference. But that seems odd. Usually evidence_span is the part that indicates the type. For NONE, we could give a phrase that indicates no relationship, maybe \"उमेदवाराची नियुक्ती करण्यात येणार नाही\". But that doesn't show relationship. However guidelines: evidence_span must be copied from input. Provide something that justifies classification. For NONE, we can give any part that shows it's not referencing prior GR. Maybe \"उमेदवाराची नियुक्ती करण्यात येणार नाही\". We'll use that.\n\ncancelled_object: null because none.\n\ngloss_en: Provide literal English translation. Let's translate: \"(3) Since the commission as well as this department have not verified the original certificates regarding candidates' qualifications such as education, age, athlete status, physical disability, caste certificates, etc., the appointing authorities need to verify all these matters. The original certificates regarding education, age, athlete status, physical disability, etc., of the presented candidates are as per the eligibility mentioned in the notification, or how? The appointing authorities should first check these when making a temporary appointment of the candidates. If the appointing authorities cannot submit the necessary and appropriate certificates to the commission for verification of the claims made in the application, the candidate's appointment will not be made and the candidate's recommendation will be automatically considered cancelled and will be communicated to the commission.\"\n\nWe'll produce that.\n\nConfidence maybe 0.9.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.288250941,
+   "prompt_tokens": 1033,
+   "prompt_time": 0.032629232,
+   "completion_tokens": 945,
+   "completion_time": 2.19426398,
+   "total_tokens": 1978,
+   "total_time": 2.2268932120000002,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 744
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "x_groq": {
+   "id": "req_01kyfw82w4f2csr8m5p1smf90m",
+   "seed": 634389706
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "887551410c2d5105093cf03c",
+ "role": "reasoning"
+}

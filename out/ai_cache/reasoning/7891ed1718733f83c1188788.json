@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"वेळोवेळी करण्यात येणाऱ्या सुधारणांनुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the periodic improvements) “X”, “Y” and the remaining besides that\",\"confidence\":0.9}",
+ "raw": {
+  "id": "chatcmpl-245456a5-bff0-4bca-aba2-b6d4c9fd3bea",
+  "object": "chat.completion",
+  "created": 1785091491,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"वेळोवेळी करण्यात येणाऱ्या सुधारणांनुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the periodic improvements) “X”, “Y” and the remaining besides that\",\"confidence\":0.9}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"वेळोवेळी करण्यात येणाऱ्या सुधारणांनुसार) “एक्स”, “वाय” व त्या व्यतिरिक्त उर्वरीत\"\n\nIt seems incomplete, maybe part of a list. It says \"according to periodic improvements, 'X', 'Y' and the remaining besides that\". No operative verb like cancel, amend, etc. It just references prior GR? It mentions prior GR list: candidate prior GR is \"GR dated 2021-02-02, number -घबांअ-२०१९/प्र.क्र.१४/२०१९/ विनियम\". Does the sentence refer to it? There's no explicit mention of that GR in the sentence. The sentence does not contain any verb indicating cancellation or amendment. So likely NONE or REFERENCES? Since no explicit citation, it's not referencing. So type NONE.\n\ntarget_index null.\n\nevidence_span: need a substring that justifies type. Could pick something like \"वेळोवेळी करण्यात येणाऱ्या सुधारणांनुसार\". That shows no operative change.\n\ncancelled_object null.\n\ngloss_en: literal translation: \"According to the periodic improvements) “X”, “Y” and the remaining besides that\". Provide.\n\nconfidence maybe 0.9.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280597045,
+   "prompt_tokens": 814,
+   "prompt_time": 0.036154781,
+   "completion_tokens": 339,
+   "completion_time": 0.710395869,
+   "total_tokens": 1153,
+   "total_time": 0.74655065,
+   "completion_tokens_details": {
+    "reasoning_tokens": 267
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyfvx0gjerwb7js7q4q6bn2f",
+   "seed": 1020804633
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "7891ed1718733f83c1188788",
+ "role": "reasoning"
+}

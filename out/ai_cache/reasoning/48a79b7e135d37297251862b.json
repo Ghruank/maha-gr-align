@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"वित्त विभागाच्या संदर्भ क्र.१\",\"cancelled_object\":null,\"gloss_en\":\"By the Finance Department's reference No.1 government decision, the State Salary Revision Committee, 2017 report\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-3d67643f-1764-496c-87db-95759f42f946",
+  "object": "chat.completion",
+  "created": 1785054557,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"वित्त विभागाच्या संदर्भ क्र.१\",\"cancelled_object\":null,\"gloss_en\":\"By the Finance Department's reference No.1 government decision, the State Salary Revision Committee, 2017 report\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"वित्त विभागाच्या संदर्भ क्र.१ येथील शासन निर्णयान्वये, राज्य वेतन सुधारणा समिती, २०१७ च्या अहवाल\"\n\nInterpretation: It says \"According to the government decision reference No.1 of the Finance Department, the State Salary Revision Committee, 2017 report\". This seems like a reference to a prior decision, not an operative change. No verb indicating cancellation, amendment, etc. It's just citing a prior decision. So type = REFERENCES.\n\nTarget_index: which prior GR is referenced? The candidate list has one GR: index 1. The sentence mentions \"वित्त विभागाच्या संदर्भ क्र.१ येथील शासन निर्णयान्वये\". That seems to refer to a decision, but not necessarily the listed GR (which is \"GR dated 2023-02-13, number वेपुर ११२१/प्र.क्र.४/सेवा-९\"). The sentence mentions \"वित्त विभागाच्या संदर्भ क्र.१\". That is a reference number, not necessarily matching the candidate. However we have only one candidate; we need to decide if it's referencing that GR. The candidate GR is \"वेपुर ११२१/प्र.क्र.४/सेवा-९\". The sentence does not mention that number. So maybe it's not referencing the candidate. The instruction: \"CANDIDATE PRIOR GRs MENTIONED IN IT\" list are prior GRs that a deterministic resolver has already matched inside it. So they think that the sentence mentions that GR. But we need to decide relationship. If the sentence references that GR, we set target_index = 1.\n\nThus type = REFERENCES, target_index = 1, evidence_span: need a substring that shows reference. Could be \"वित्त विभागाच्या संदर्भ क्र.१\". That is the reference phrase. Or \"शासन निर्णयान्वये\". The phrase \"वित्त विभागाच्या संदर्भ क्र.१ येथील शासन निर्णयान्वये\" is the reference. Choose a substring: \"वित्त विभागाच्या संदर्भ क्र.१\". That is exact.\n\nCancelled_object: null.\n\nGloss_en: literal translation: \"By the government decision of the Finance Department reference No.1, the State Salary Revision Committee, 2017 report\". Provide.\n\nConfidence: high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284344681,
+   "prompt_tokens": 812,
+   "prompt_time": 0.014752137,
+   "completion_tokens": 564,
+   "completion_time": 1.219884354,
+   "total_tokens": 1376,
+   "total_time": 1.234636491,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 491
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01kyernw7tfs980saf2xs2gnvc",
+   "seed": 130291114
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "48a79b7e135d37297251862b",
+ "role": "reasoning"
+}

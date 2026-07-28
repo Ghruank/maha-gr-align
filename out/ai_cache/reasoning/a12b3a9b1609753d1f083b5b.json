@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात आली आहे\",\"cancelled_object\":\"तरतुदी\",\"gloss_en\":\"An amendment has been made. According to the provision of the above government decision, reference No. 3 here.\",\"confidence\":0.93}",
+ "raw": {
+  "id": "chatcmpl-ad03343d-5172-4751-8c6b-ec6f58b5a93a",
+  "object": "chat.completion",
+  "created": 1785054669,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात आली आहे\",\"cancelled_object\":\"तरतुदी\",\"gloss_en\":\"An amendment has been made. According to the provision of the above government decision, reference No. 3 here.\",\"confidence\":0.93}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"सुधारणा करण्यात आली आहे. उपरोक्त शासन निर्णयातील तरतुदीनुसार संदर्भाधीन क्र. ३ येथील\"\n\nTranslation: \"Amendment has been made. According to the provision of the above government decision, reference number 3 here.\"\n\nWe have a prior GR listed: #1.\n\nWe need to decide relationship.\n\nThe sentence says \"सुधारणा करण्यात आली आहे.\" which means \"An amendment has been made.\" It indicates that something is being amended. It references \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\" i.e., \"as per the provision of the above government decision\". So it is amending something under that prior decision. It is not cancelling the entire prior order, just amending a provision. So type = AMENDS.\n\nTarget_index: 1 (since only one candidate). evidence_span: need exact substring that justifies type. Could be \"सुधारणा करण्यात आली आहे\" indicates amendment. Also \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\" indicates referencing prior. But the operative phrase is \"सुधारणा करण्यात आली आहे\". So evidence_span = \"सुधारणा करण्यात आली आहे\". Cancelled_object: what is being cancelled/amended? The sentence says amendment made, but not specify object. Could be \"सुधारणा\" is the action, not object. The object is maybe \"तरतुदी\" (provision). But not explicit. The phrase \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\" suggests amendment to provision. The noun \"तरतुदी\" is in the sentence: \"उपरोक्त शासन निर्णयातील तरतुदीनुसार\". That is \"according to the provision\". The amendment is to that provision. So cancelled_object maybe \"तरतुदी\" or \"प्रावधान\". However the instruction: \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. Since it's amendment, not cancellation, but still we need the object being amended. Could be \"तरतुदी\". The phrase \"सुधारणा करण्यात आली आहे\" doesn't include noun. The next phrase includes \"तरतुदीनुसार\". So I'd set cancelled_object to \"तरतुदी\". Or maybe null if ambiguous. I'd choose \"तरतुदी\". Gloss_en: \"An amendment has been made. According to the provision of the above government decision, reference No. 3 here.\"\n\nConfidence high, maybe 0.93.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.328492696,
+   "prompt_tokens": 805,
+   "prompt_time": 0.147677684,
+   "completion_tokens": 601,
+   "completion_time": 1.2584789330000001,
+   "total_tokens": 1406,
+   "total_time": 1.406156617,
+   "completion_tokens_details": {
+    "reasoning_tokens": 527
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6fb4303df4",
+  "x_groq": {
+   "id": "req_01kyers90nf3a8kz58nrs8jvtm",
+   "seed": 1664370760
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a12b3a9b1609753d1f083b5b",
+ "role": "reasoning"
+}

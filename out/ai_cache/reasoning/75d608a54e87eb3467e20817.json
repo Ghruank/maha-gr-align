@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक १५.०७.२०२२\",\"cancelled_object\":null,\"gloss_en\":\"The matter of cancelling the intent letter provided under reference No.01 as per the government decision dated 15-07-2022 and the final approval provided under reference No.02 as per the government order dated 15-06-2023 for the college was under consideration of the government.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-adf10e1f-6d1b-4099-95f9-5cc4fd710b66",
+  "object": "chat.completion",
+  "created": 1785055125,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक १५.०७.२०२२\",\"cancelled_object\":null,\"gloss_en\":\"The matter of cancelling the intent letter provided under reference No.01 as per the government decision dated 15-07-2022 and the final approval provided under reference No.02 as per the government order dated 15-06-2023 for the college was under consideration of the government.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly:\n\n\"मा. उच्च न्यायालय, मुंबई, खंडपीठ औरंगाबाद येथे दाखल याचिका क्र. ८७३४/२०२२ मधील मा. उच्च न्यायालयाने दिनांक २७.०७.२०२४ रोजी पारित केलेले आदेश विचारात घेवून, विद्याशक्‍ती शिक्षण प्रसारक मंडळ, संचलित कै. शंकरराव चिलगर, बी. ए. ब बी.एस्सी महाविद्यालय, रिसोडरोड, ता. सेनगांव, जि. हिंगोली या महाविद्यालयास शैक्षणिक वर्ष २०२२-२३ करिता संदर्भाधीन क्र.०१ येथील शासन निर्णय दिनांक १५.०७.२०२२अनुसार प्रदान करण्यात आलेले इरादापत्र तसेच संदर्भाधीन क्र.०२ येथील शासन आदेश दिनांक १५.०६.२०२३ अन्वये प्रदान करण्यात आलेली अंतिम मान्यता रद्द करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nSo they are saying: \"Considering the order passed by the High Court on 27.07.2024, the matter of cancelling the intent letter provided under reference No.01 (government decision dated 15.07.2022) and the final approval provided under reference No.02 (government order dated 15.06.2023) for the college was under consideration of the government.\"\n\nThus the sentence says the cancellation of the intent letter and final approval is under consideration. This is deliberative mood, not a decision. According to trap 3, such sentences are classified as REFERENCES (they just mention prior orders, not operative change). So type = REFERENCES.\n\nTarget_index: which prior GR is mentioned? The candidate list includes one: GR dated 2022-07-15, number मान्यता-२०२२/(११४/२२)(१)/मशि-४. The sentence mentions \"शासन निर्णय दिनांक १५.०७.२०२२\" which matches that GR. So target_index = 1.\n\nEvidence_span: need exact substring that justifies the type. For REFERENCES, we need a phrase that shows it's just citing. Could be \"शासन निर्णय दिनांक १५.०७.२०२२\" or \"शासन आदेश दिनांक १५.०६.२०२३\". Choose one that appears. Let's pick \"शासन निर्णय दिनांक १५.०७.२०२२\". Must be exact as in sentence. The sentence includes \"शासन निर्णय दिनांक १५.०७.२०२२अन्बये\". There's a typo \"अन्बये\". The exact substring: \"शासन निर्णय दिनांक १५.०७.२०२२\". That appears before \"अन्बये\". So evidence_span = \"शासन निर्णय दिनांक १५.०७.२०२२\".\n\nCancelled_object: Since it's not actually cancelled, it's under consideration, so cancelled_object = null.\n\nGloss_en: Provide literal English translation: \"The matter of cancelling the intent letter provided under reference No.01 as per the government decision dated 15-07-2022 and the final approval provided under reference No.02 as per the government order dated 15-06-2023 for the college was under consideration of the government.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282970971,
+   "prompt_tokens": 1012,
+   "prompt_time": 0.025507094,
+   "completion_tokens": 846,
+   "completion_time": 2.17598968,
+   "total_tokens": 1858,
+   "total_time": 2.2014967739999998,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 732
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyes756peyy9sqr907fzp972",
+   "seed": 2062694278
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "75d608a54e87eb3467e20817",
+ "role": "reasoning"
+}

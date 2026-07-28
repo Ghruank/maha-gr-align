@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र.२ येथील शासन शुद्धीपत्रक अधिक्रमित\",\"cancelled_object\":\"शासन शुद्धीपत्रक\",\"gloss_en\":\"Accordingly, the previously issued reference No.2, the government clearance, is superseded.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-bfaacdc0-6569-497f-8e5a-b36c589dfd0d",
+  "object": "chat.completion",
+  "created": 1785055384,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र.२ येथील शासन शुद्धीपत्रक अधिक्रमित\",\"cancelled_object\":\"शासन शुद्धीपत्रक\",\"gloss_en\":\"Accordingly, the previously issued reference No.2, the government clearance, is superseded.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"त्याअनुषंगाने यापुर्वी निर्गमित करण्यात आलेले संदर्भ क्र.२ येथील शासन शुद्धीपत्रक अधिक्रमित\"\n\nTranslation: \"Accordingly, the previously issued reference No.2, the government clearance (शासन शुद्धीपत्रक) is superseded/overruled.\" The word \"अधिक्रमित\" means \"overruled\", \"canceled\", \"superseded\". So it says that the previously issued reference No.2 (which is a prior GR) is \"अधिक्रमित\" i.e., superseded. That is cancelling the prior order itself. So type = SUPERSEDES. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows the operative phrase. The phrase \"अधिक्रमित\" is the operative verb. Also \"संदर्भ क्र.२\" refers to prior. The whole phrase \"संदर्भ क्र.२ येथील शासन शुद्धीपत्रक अधिक्रमित\". The exact substring: maybe \"संदर्भ क्र.२ येथील शासन शुद्धीपत्रक अधिक्रमित\". Must be exact from sentence. The sentence: \"त्याअनुषंगाने यापुर्वी निर्गमित करण्यात आलेले संदर्भ क्र.२ येथील शासन शुद्धीपत्रक अधिक्रमित\". So evidence_span could be \"संदर्भ क्र.२ येथील शासन शुद्धीपत्रक अधिक्रमित\". Cancelled_object: what is being cancelled? The \"शासन शुद्धीपत्रक\" (government clearance) or the prior reference? The sentence says the prior reference's \"शासन शुद्धीपत्रक\" is superseded. So cancelled_object = \"शासन शुद्धीपत्रक\". Gloss_en: \"Accordingly, the previously issued reference No.2, the government clearance, is superseded.\" Confidence high 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.316123261,
+   "prompt_tokens": 813,
+   "prompt_time": 0.043656243,
+   "completion_tokens": 499,
+   "completion_time": 1.106292373,
+   "total_tokens": 1312,
+   "total_time": 1.149948616,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 414
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6b677c2caf",
+  "x_groq": {
+   "id": "req_01kyesf3g4fn8twxcd8e8njfaa",
+   "seed": 2012241184
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "4233ab7e2a13d71ee2f065d3",
+ "role": "reasoning"
+}

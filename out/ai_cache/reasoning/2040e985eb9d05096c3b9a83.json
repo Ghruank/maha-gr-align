@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आवश्यक सुधारणा करण्याकरिता\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"For making necessary amendments to the government decision dated 04-10-2018 on 06-08-2024\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-81b22467-a85f-47df-b464-216087a6a30c",
+  "object": "chat.completion",
+  "created": 1785055159,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आवश्यक सुधारणा करण्याकरिता\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"For making necessary amendments to the government decision dated 04-10-2018 on 06-08-2024\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence: \"दि.०४.१०.२०१८ रोजीच्या शासन निर्णयामध्ये आवश्यक सुधारणा करण्याकरिता दि.०६.०८.२०२४ रोजी\"\n\nIt seems incomplete? It says: \"For making necessary amendments in the government decision dated 04-10-2018, on 06-08-2024\". Likely it's a reference to prior GRs, indicating that on 06-08-2024 they are making necessary amendments to the 04-10-2018 decision. This is an amendment (AMENDS) because it says \"आवश्यक सुधारणा करण्याकरिता\" i.e., to make necessary amendments. It is not cancelling the whole order, just amending. So type AMENDS.\n\nTarget index: which prior GR is being amended? The sentence mentions the 2018 decision, and also mentions the date 06-08-2024 (the new order). The candidate list includes both: #1 is the 2018 GR, #2 is the 2024 GR. The sentence says \"दि.०४.१०.२०१८ रोजीच्या शासन निर्णयामध्ये आवश्यक सुधारणा करण्याकरिता दि.०६.०८.२०२४ रोजी\". It seems the new order (dated 06-08-2024) is to make amendments to the 2018 decision. So the relationship is that the 2024 order amends the 2018 order. So target is the prior GR being amended: #1 (the 2018). So target_index = 1.\n\nEvidence_span: need exact substring that shows amendment. The phrase \"आवश्यक सुधारणा करण्याकरिता\" indicates amendment. Also \"दि.०४.१०.२०१८ रोजीच्या शासन निर्णयामध्ये\". The phrase \"आवश्यक सुधारणा\" is the operative. So evidence_span could be \"आवश्यक सुधारणा करण्याकरिता\". Must be exact substring from input. The input sentence: \"दि.०४.१०.२०१८ रोजीच्या शासन निर्णयामध्ये आवश्यक सुधारणा करण्याकरिता दि.०६.०८.२०२४ रोजी\". So we can pick \"आवश्यक सुधारणा करण्याकरिता\". That is present.\n\nCancelled_object: Since it's amendment, not cancellation. So cancelled_object null. But maybe we need the object being amended? The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. For AMENDS, we should provide the noun that is amended? The spec says \"the Marathi noun that is cancelled/amended\". So for AMENDS, we should give the noun being amended. Here it's \"शासन निर्णय\". Or \"निर्णय\". The phrase \"शासन निर्णयामध्ये\" indicates the decision. So maybe \"शासन निर्णय\". Provide that.\n\nGloss_en: literal English translation: \"For making necessary amendments to the government decision dated 04-10-2018 on 06-08-2024\". Provide.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck traps: Not a cue inside file numbers. Not supersedes because not cancel whole order. Not deliberative. So AMENDS.\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314155364,
+   "prompt_tokens": 853,
+   "prompt_time": 0.364292216,
+   "completion_tokens": 743,
+   "completion_time": 1.5610325889999999,
+   "total_tokens": 1596,
+   "total_time": 1.925324805,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 667
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6b677c2caf",
+  "x_groq": {
+   "id": "req_01kyes86x8f1eryq05zwwfjs9v",
+   "seed": 1551332095
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2040e985eb9d05096c3b9a83",
+ "role": "reasoning"
+}

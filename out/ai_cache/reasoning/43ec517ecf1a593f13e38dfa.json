@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"दिनांक ०८.०१.२०२१ चे आदेश व दिनांक १३.०१.२०२१ चे पत्र अधिक्रमित करून\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"By overriding the order dated 08-01-2021 and the letter dated 13-01-2021, approval is being given under this circular.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-c1e5a9bf-101c-43d1-85db-a4c2736a417a",
+  "object": "chat.completion",
+  "created": 1785054832,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"दिनांक ०८.०१.२०२१ चे आदेश व दिनांक १३.०१.२०२१ चे पत्र अधिक्रमित करून\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"By overriding the order dated 08-01-2021 and the letter dated 13-01-2021, approval is being given under this circular.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence describes that the Department of Finance's decision dated 04.5.2020 had relaxed recruitment condition, and that 260 vacant positions were approved via a circular dated 08.01.2021. However, based on a letter from Higher Education Directorate dated 01.03.2021, a revised proposal says that the order dated 08.01.2021 and letter dated 13.01.2021 are being superseded (अधिक्रमित) to give approval under this circular.\n\nKey phrase: \"दिनांक ०३.५.२०२० रोजी रिक्त असलेल्या ... पदभरतीस संदर्भाधीन दिनांक ०८.०१.२०२१ चे आदेश व दिनांक १३.०१.२०१... अधिक्रमित करून\". \"अधिक्रमित\" means \"overriding\" i.e., supersede? In Marathi, \"अधिक्रमित\" means \"to override, to supersede\". The sentence says they are superseding the earlier order and letter. So the current sentence is superseding prior order (the order dated 08.01.2021) and letter dated 13.01.2021. The candidate list includes only GR dated 2021-01-08, number ... So that matches.\n\nThus type: SUPERSEDES. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows superseding. The phrase: \"दिनांक ०८.०१.२०२१ चे आदेश ... अधिक्रमित करून\". Let's capture: \"दिनांक ०८.०१.२०२१ चे आदेश व दिनांक १३.०१.२०२१ चे पत्र अधिक्रमित करून\". That is exact.\n\ncancelled_object: the object being cancelled is \"आदेश\" (order) maybe also \"पत्र\". But we need a Marathi noun that is cancelled/amended. Since superseding the order, the cancelled object is \"आदेश\". Could also include \"पत्र\". But likely we choose \"आदेश\". Provide one.\n\ngloss_en: literal translation: \"By overriding the order dated 08-01-2021 and the letter dated 13-01-2021, approval is being given under this circular.\" Provide full translation.\n\nconfidence high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283610699,
+   "prompt_tokens": 1096,
+   "prompt_time": 0.032096736,
+   "completion_tokens": 596,
+   "completion_time": 1.5308558749999999,
+   "total_tokens": 1692,
+   "total_time": 1.562952611,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 489
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8655ddce88",
+  "x_groq": {
+   "id": "req_01kyery80xe2bag7rs4wfv9mf6",
+   "seed": 1881153401
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "43ec517ecf1a593f13e38dfa",
+ "role": "reasoning"
+}

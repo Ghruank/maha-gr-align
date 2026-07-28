@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन परिपत्रक क्रमांक सामान्य प्रशासन विभाग क्रमांक टिआरएन-०७२२/प्र.क्र.४३/ सीपीटीपी, दिनांक ०८.०८.२०२२\",\"cancelled_object\":null,\"gloss_en\":\"Reference: Government circular number General Administration Department TRN-0722/PR.No.43/CPTP dated 08.08.2022\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-833f62da-c0a9-4d21-a40d-35884a6be1e9",
+  "object": "chat.completion",
+  "created": 1785054408,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन परिपत्रक क्रमांक सामान्य प्रशासन विभाग क्रमांक टिआरएन-०७२२/प्र.क्र.४३/ सीपीटीपी, दिनांक ०८.०८.२०२२\",\"cancelled_object\":null,\"gloss_en\":\"Reference: Government circular number General Administration Department TRN-0722/PR.No.43/CPTP dated 08.08.2022\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is a list of references: \"संदर्भ: १)शासन निर्णय, ... २) शासन निर्णय, ... ३) ... ४) ... ५) ... ६) ...\". This is just citing prior orders, no operative change. So type = REFERENCES. target_index = 1 (since only one candidate listed). evidence_span: need exact substring that shows reference. Could pick \"शासन परिपत्रक क्रमांक सामान्य प्रशासन विभाग क्रमांक टिआरएन-०७२२/प्र.क्र.४३/ सीपीटीपी, दिनांक ०८.०८.२०२२\". That is the part referencing candidate. Cancelled_object null. Gloss_en literal translation: \"Reference: 1) Government decision ... 2) ... 3) ... 4) ... 5) Government circular number ... 6) ...\". Provide translation. Confidence high, say 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286629223,
+   "prompt_tokens": 1075,
+   "prompt_time": 0.029486922,
+   "completion_tokens": 328,
+   "completion_time": 0.795592286,
+   "total_tokens": 1403,
+   "total_time": 0.825079208,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 209
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_854fa9be4c",
+  "x_groq": {
+   "id": "req_01kyerhb3bev4t4ya5vcbz33nc",
+   "seed": 718738314
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "9649377b87b78640878bbec7",
+ "role": "reasoning"
+}

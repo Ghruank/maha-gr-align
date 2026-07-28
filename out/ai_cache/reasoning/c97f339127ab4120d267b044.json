@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"३.संचालक, लेखा व कोषागारे यांचे पत्र क्र.संलेको/सुधारणा/नस्ती क्र.५२(५)/२०२५/५०२,\",\"cancelled_object\":null,\"gloss_en\":\"3. Director, Accounts and Treasury's letter No. संलेको/सुधारणा/नस्ती No.52(5)/2025/502,\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-abb783d3-f2f4-4ce5-bdff-c0ec07819cb7",
+  "object": "chat.completion",
+  "created": 1785091680,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"३.संचालक, लेखा व कोषागारे यांचे पत्र क्र.संलेको/सुधारणा/नस्ती क्र.५२(५)/२०२५/५०२,\",\"cancelled_object\":null,\"gloss_en\":\"3. Director, Accounts and Treasury's letter No. संलेको/सुधारणा/नस्ती No.52(5)/2025/502,\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"३.संचालक, लेखा व कोषागारे यांचे पत्र क्र.संलेको/सुधारणा/नस्ती क्र.५२(५)/२०२५/५०२,\"\n\nIt seems to be a reference to a letter (पत्र) with a number. It includes \"सुधारणा\" inside the file number, but that's part of the file name, not operative. The sentence is just citing a letter, not making a decision. No verb like रद्द, रद्दीकरण, निरस्तीकरण, etc. So likely it's just a reference. No cancellation.\n\nThus type: REFERENCES. target_index: 1 (since only one candidate). evidence_span: need exact substring that shows reference. Could be \"पत्र क्र.संलेको/सुधारणा/नस्ती क्र.५२(५)/२०२५/५०२\". That is the part referencing prior GR? Actually prior GR is \"GR dated 2025-04-23, number संकीर्ण-२०२४/प्र.क्र.५४/कोषा प्रशा-४\". The sentence does not mention that number. It just mentions a letter number. So maybe there is no relationship to the listed prior GR. The candidate list is prior GRs that a deterministic resolver matched inside it. But the sentence does not contain that prior GR's number. So maybe the deterministic resolver incorrectly matched? The instruction: \"You are given the sentence and a numbered list of prior GRs that a deterministic resolver has ALREADY matched inside it.\" So we must decide relationship, if any, the sentence establishes. If the sentence does not actually reference that prior GR, then type NONE, target_index null.\n\nBut the deterministic resolver matched prior GR #1 inside it. Does the sentence contain any part of that GR? The prior GR number is \"संकीर्ण-२०२४/प्र.क्र.५४/कोषा प्रशा-४\". The sentence has \"संलेको/सुधारणा/नस्ती\". Not same. So maybe it's a false positive. We should output NONE.\n\nThus type NONE, target_index null, evidence_span maybe empty? But need a substring justifying type. For NONE, maybe we can give empty string? Probably we need some evidence_span; could be the whole sentence? But evidence_span should be substring justifying the type. For NONE, maybe we can give the whole sentence as evidence that no relationship. But guidelines: evidence_span is exact substring of input sentence justifying the type. For NONE, we can give the whole sentence.\n\ncancelled_object null. gloss_en: literal translation: \"3. Director, Accounts and Treasury's letter No. ...\". Let's translate: \"3. Director, Accounts and Treasury's letter No. संलेको/सुधारणा/नस्ती No.52(5)/2025/502,\".\n\nConfidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.158236656,
+   "prompt_tokens": 827,
+   "prompt_time": 0.038590517,
+   "completion_tokens": 728,
+   "completion_time": 1.512261396,
+   "total_tokens": 1555,
+   "total_time": 1.550851913,
+   "completion_tokens_details": {
+    "reasoning_tokens": 610
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01kyfw2r2temta9vnd7nyc2gmn",
+   "seed": 1868941196
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "c97f339127ab4120d267b044",
+ "role": "reasoning"
+}

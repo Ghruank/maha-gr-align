@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र.३ येथील दि.२/८/२०१९ च्या शासन परिपत्रकानुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the government circular No.3 dated 2/8/2019, the appointment order provides that if the candidate does not join within the stipulated 30 days, or does not request an extension, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-e7719644-1175-467e-bf45-eec9c71ec1a3",
+  "object": "chat.completion",
+  "created": 1785054510,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र.३ येथील दि.२/८/२०१९ च्या शासन परिपत्रकानुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the government circular No.3 dated 2/8/2019, the appointment order provides that if the candidate does not join within the stipulated 30 days, or does not request an extension, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly:\n\n\"2. According to the reference order No.3 dated 2/8/2019 (i.e., 2 August 2019) government circular, in the appointment order, it is provided that if the candidate does not join within the 30 days mentioned, or does not request an extension of time to join within the stipulated period, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\"\n\nSo the sentence is describing a provision that allows cancellation of a candidate's appointment under certain conditions. It references a prior GR (candidate 1). It does not itself cancel that prior GR; it just states a provision within that prior GR? Actually the sentence says \"संदर्भाधिन क्र.३ येथील दि.२/८/२०१९ च्या शासन परिपत्रकानुसार नियुक्ती आदेशात ... नियुक्ती प्राधिकारी यांनी संबंधित उमेदवाराची नियुक्ती रद्द करण्याचे आदेश निर्गमित करण्याची तरतूद करण्यात आलेली आहे.\"\n\nIt says \"According to reference order No.3 dated 2/8/2019, the appointment order includes a provision that ... the appointing authority shall issue an order to cancel the appointment of the candidate.\" So this sentence is referencing that prior GR and describing its content. It does not itself cancel anything; it's just referencing. So type = REFERENCES.\n\ntarget_index = 1 (since only one candidate). evidence_span: need exact substring that shows the relationship. Something like \"संदर्भाधिन क्र.३ येथील दि.२/८/२०१९ च्या शासन परिपत्रकानुसार\". That phrase indicates reference. Or \"संदर्भाधिन क्र.३\". The sentence includes \"संदर्भाधिन क्र.३ येथील दि.२/८/२०१९ च्या शासन परिपत्रकानुसार\". That is the reference.\n\ncancelled_object: null because not cancelling.\n\ngloss_en: Provide literal English translation: \"According to the government circular No.3 dated 2/8/2019, the appointment order provides that if the candidate does not join within the stipulated 30 days, or does not request an extension, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\"\n\nconfidence: high, maybe 0.98.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28476068,
+   "prompt_tokens": 906,
+   "prompt_time": 0.212495413,
+   "completion_tokens": 653,
+   "completion_time": 1.351846009,
+   "total_tokens": 1559,
+   "total_time": 1.564341422,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 515
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01kyermdmtf429c3jch5etk90a",
+   "seed": 915076578
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "33f594f80b9b3312386b0f59",
+ "role": "reasoning"
+}

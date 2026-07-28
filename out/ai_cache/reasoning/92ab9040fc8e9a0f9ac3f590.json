@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहेत\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made as follows in accordance with the request.\",\"confidence\":0.93}",
+ "raw": {
+  "id": "chatcmpl-eda7c8af-76b1-4827-b8fb-76c18362013c",
+  "object": "chat.completion",
+  "created": 1785091697,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहेत\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made as follows in accordance with the request.\",\"confidence\":0.93}",
+     "reasoning": "We need to classify the sentence: \"विनंतीस अनुसरुन पुढीलप्रमाणे सुधारणा करण्यात येत आहेत.\"\n\nTranslation: \"Following the request, the following improvements/amendments are being made.\"\n\nWe have candidate prior GR: #1 \"GR dated 2025-04-23, number संकीर्ण-२०२४/प्र.क्र.५४/कोषा प्रशा-४\"\n\nWe need to decide relationship. The sentence says \"सुधारणा करण्यात येत आहेत\" which means \"amendments are being made\". It references a prior GR? It says \"विनंतीस अनुसरुन\" (following the request). It does not explicitly mention the prior GR, but the candidate list indicates that the prior GR is mentioned in the sentence? However the sentence does not contain any explicit reference to that GR number. The instruction: \"CANDIDATE PRIOR GRs MENTIONED IN IT\" means the resolver has already matched inside it. So perhaps the prior GR is referenced implicitly? But the sentence does not contain any explicit mention of the prior GR number. Could be that the prior GR is referenced elsewhere in the document, but not in this sentence. The list is of prior GRs that a deterministic resolver has already matched inside it. So we assume that the sentence includes a reference to that prior GR (maybe via a phrase like \"कोषा प्रशा-४\" but not present). The given sentence does not contain that phrase. So maybe the resolver incorrectly matched? But we must decide relationship based on the sentence content.\n\nThe sentence says \"सुधारणा\" which is amendment. It could be AMENDS if it modifies part of prior order. However we need to see if it cancels something under prior GR. It says \"सुधारणा करण्यात येत आहेत\" - improvements are being made. That is an amendment. It likely amends the prior GR. Not supersedes because not canceling the order itself. Not references only because it indicates operative change (amendments). So type = AMENDS.\n\ntarget_index: which prior GR is being amended? Since only one candidate, index 1.\n\nevidence_span: need exact substring that justifies type. Could be \"सुधारणा करण्यात येत आहेत\". That indicates amendment.\n\ncancelled_object: what is being cancelled/amended? The noun \"सुधारणा\" is the amendment itself, but we need the object being amended. The sentence says \"सुधारणा\" (amendments) are being made, not canceling something. For AMENDS, cancelled_object maybe null? The schema says \"the Marathi noun that is cancelled/amended, or null\". Since it's amendment, the object being amended is perhaps the prior order itself? But per trap 2, only if the order itself is cancelled is SUPERSEDES. For AMENDS, we should specify what is being amended. Could be \"सुधारणा\" is the action, not object. Could be \"कोषा प्रशा-४\" but not in sentence. So maybe null.\n\ngloss_en: literal English translation: \"Amendments are being made as follows in accordance with the request.\"\n\nconfidence: high, maybe 0.93.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283385879,
+   "prompt_tokens": 804,
+   "prompt_time": 0.043707816,
+   "completion_tokens": 732,
+   "completion_time": 1.513609258,
+   "total_tokens": 1536,
+   "total_time": 1.557317074,
+   "completion_tokens_details": {
+    "reasoning_tokens": 669
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_017482bd7f",
+  "x_groq": {
+   "id": "req_01kyfw38xkf76re7gbwzatn2p7",
+   "seed": 269307448
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "92ab9040fc8e9a0f9ac3f590",
+ "role": "reasoning"
+}

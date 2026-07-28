@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रोजीचे पुरवठा आदेश दिनांक १३/०६/२०२५ रोजी रद्द करण्यात आले\",\"cancelled_object\":\"रोजीचे पुरवठा आदेश\",\"gloss_en\":\"The daily supply order dated 13/06/2025 has been cancelled.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-10c67aec-ff3b-453c-aea7-24c7540beec1",
+  "object": "chat.completion",
+  "created": 1785054621,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रोजीचे पुरवठा आदेश दिनांक १३/०६/२०२५ रोजी रद्द करण्यात आले\",\"cancelled_object\":\"रोजीचे पुरवठा आदेश\",\"gloss_en\":\"The daily supply order dated 13/06/2025 has been cancelled.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"रोजीचे पुरवठा आदेश दिनांक १३/०६/२०२५ रोजी रद्द करण्यात आले.\"\n\nTranslation: \"The daily supply order dated 13/06/2025 has been cancelled.\"\n\nWe have a prior GR listed: \"GR dated 2025-06-13, number - एसटीवाय-२०२५/ प्र.क्र.१९/ मंआस्था-२ (२१-अ)\". The sentence cancels a \"रोजीचे पुरवठा आदेश\" (daily supply order) dated 13/06/2025. The prior GR is dated same date, likely the order itself. The sentence cancels the order itself, not just appointments etc. So this is SUPERSEDES? Actually, per definition: SUPERSEDES - the sentence cancels / annuls / supersedes a prior ORDER ITSELF (रद्द करण्यात येत आहे, अधिक्रमित करुन, व्यपगत). Yes, this matches. So type SUPERSEDES.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात आले.\" is the operative. Could also include \"रोजीचे पुरवठा आदेश दिनांक १३/०६/२०२५ रोजी\". The evidence should be a substring that justifies type. Probably \"रद्द करण्यात आले.\" indicates cancellation. Or \"रोजीचे पुरवठा आदेश दिनांक १३/०६/२०२५ रोजी रद्द करण्यात आले.\" The whole sentence is fine. We'll pick the phrase \"रोजीचे पुरवठा आदेश दिनांक १३/०६/२०२५ रोजी रद्द करण्यात आले.\"\n\ncancelled_object: the noun being cancelled: \"रोजीचे पुरवठा आदेश\". Could be \"पुरवठा आदेश\". We'll output \"रोजीचे पुरवठा आदेश\". Provide as Marathi noun.\n\ngloss_en: \"The daily supply order dated 13/06/2025 has been cancelled.\"\n\nconfidence: high, 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280608988,
+   "prompt_tokens": 815,
+   "prompt_time": 0.01467176,
+   "completion_tokens": 541,
+   "completion_time": 1.150220704,
+   "total_tokens": 1356,
+   "total_time": 1.164892464,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 449
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01kyerqt37fz8st7xesysy6myh",
+   "seed": 2146285742
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "88ee9bfd7264b1f2fbb16873",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ:\",\"cancelled_object\":null,\"gloss_en\":\"Reference: 1) Government Decision, General Administration Department number TRN 2013/Pr.No.84/13/12-A, dated 20.01.2014 2) Government Decision, Finance Department number Padni 2016/Pr.No.7/16/Financial Reform-1, dated 20.02.2016 3) Government Circular, General Administration Department number TRN 2018/Pr.No.35/CPTP, dated 25.09.2019 4) Government Circular, General Administration Department number TRN 2018/Pr.No.35/CPTP, dated 31.10.2019\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-e8e1b160-bca2-417f-8e17-900592304a3a",
+  "object": "chat.completion",
+  "created": 1785054014,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ:\",\"cancelled_object\":null,\"gloss_en\":\"Reference: 1) Government Decision, General Administration Department number TRN 2013/Pr.No.84/13/12-A, dated 20.01.2014 2) Government Decision, Finance Department number Padni 2016/Pr.No.7/16/Financial Reform-1, dated 20.02.2016 3) Government Circular, General Administration Department number TRN 2018/Pr.No.35/CPTP, dated 25.09.2019 4) Government Circular, General Administration Department number TRN 2018/Pr.No.35/CPTP, dated 31.10.2019\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is:\n\n\"संदर्भ: १) शासन निर्णय, सामान्य प्रशासन विभाग क्रमांक टिआरएन २०१३/प्र.क्र.८४/१३/१२-अ, दिनांक २०.०१.२०१४ २) शासन निर्णय, वित्त विभाग क्रमांक पदनि २०१६/प्र.क्र.७/१६/वित्तीय सुधारणा-१, दिनांक २०.०२.२०१६ ३) शासन परिपत्रक, सामान्य प्रशासन विभाग क्रमांक टिआरएन २०१८/प्र.क्र.३५/सीपीटीपी, दिनांक २५.०९.२०१९ ४) शासन परिपत्रक, सामान्य प्रशासन विभाग क्रमांक टिआरएन २०१८/प्र.क्र.३५/सीपीटीपी, दिनांक ३१.१०.२०१९\"\n\nThis is a \"संदर्भ:\" (reference) list of prior orders. No operative language like \"रद्द\", \"रद्द करण्यात येत आहे\", \"सुधारणा\", etc. So it's just citing prior orders. According to trap 3, deliberative mood is not a decision, but here it's just a reference list. So classification: REFERENCES.\n\nTarget index: which prior GR is being referenced? It mentions two GRs: the one dated 2019-09-25 and the one dated 2019-10-31, both same number. The sentence lists both. Which one is the target? The instruction: \"target_index: <1-based index into the candidate list, or null>\" So we need to pick which prior GR is being referenced. Since both are referenced, maybe we need to pick the first? Usually we pick the one that is being referenced in the operative part. But there is no operative part. For REFERENCES, we still need a target_index? The spec says target_index is the index into candidate list, or null. If multiple, maybe choose the first? The sentence references both. Could we set null? But likely they expect a single target. In similar tasks, if multiple, they might pick the first. Let's choose 1 (the first candidate). Evidence_span: we need exact substring that justifies the type. For REFERENCES, any part showing \"संदर्भ:\" maybe. The phrase \"संदर्भ:\" indicates reference. So evidence_span could be \"संदर्भ:\" or the whole list. Use \"संदर्भ:\" as it's exact.\n\nCancelled_object: null because not cancelling.\n\nGloss_en: literal English translation: \"Reference: 1) Government Decision, General Administration Department number TRN 2013/Pr.No.84/13/12-A, dated 20.01.2014 2) Government Decision, Finance Department number Padni 2016/Pr.No.7/16/Financial Reform-1, dated 20.02.2016 3) Government Circular, General Administration Department number TRN 2018/Pr.No.35/CPTP, dated 25.09.2019 4) Government Circular, General Administration Department number TRN 2018/Pr.No.35/CPTP, dated 31.10.2019\"\n\nConfidence high, say 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.285905186,
+   "prompt_tokens": 994,
+   "prompt_time": 0.027016287,
+   "completion_tokens": 863,
+   "completion_time": 1.942362229,
+   "total_tokens": 1857,
+   "total_time": 1.969378516,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 682
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_803c0ba83d",
+  "x_groq": {
+   "id": "req_01kyer58r0fa6bkhr9vwamnet4",
+   "seed": 424250776
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "18311b0126fe8fe0a5667e79",
+ "role": "reasoning"
+}

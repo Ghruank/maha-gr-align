@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारित स्वरुपात वाचण्यात यावा\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By incorporating the said three amendments, the Government Decision dated 31-07-2017 and the Government Decision dated 07-12-2018 should be read in the amended form.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-310c6c84-4e32-44fa-8219-1f5f1bc081d6",
+  "object": "chat.completion",
+  "created": 1785055309,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारित स्वरुपात वाचण्यात यावा\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By incorporating the said three amendments, the Government Decision dated 31-07-2017 and the Government Decision dated 07-12-2018 should be read in the amended form.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"उक्त तीनही सुधारणांचा अंतर्भाव करुन, शासन निर्णय दि.३१.७.२०१७ व शासन निर्णय दि.७.१२.२०१८ सुधारित स्वरुपात वाचण्यात यावा.\"\n\nTranslation: \"By incorporating the said three amendments, the Government Decision dated 31-07-2017 and the Government Decision dated 07-12-2018 should be read in the amended form.\"\n\nSo it references two prior decisions (dates). It says they should be read in amended form, i.e., the prior decisions are to be read as amended (i.e., incorporating the three amendments). This is not cancelling the orders themselves, but modifying how they are to be interpreted. That is an amendment to prior orders, not superseding them. The sentence modifies the prior orders (they are to be read in amended form). So type = AMENDS.\n\nTarget_index: which candidate prior GR? There is only one candidate listed: \"GR dated 2018-12-07, number ीडा विभाग, शासन निर्णय क्र.आबंध-२०१७/प्र.क्र.४१/१७/प्रशा-५\". The sentence mentions two decisions: one dated 31.7.2017 and one dated 7.12.2018. The candidate list includes the 7 Dec 2018 decision. So target_index = 1 (since it's the only one). It also mentions the 31.7.2017 decision, but not in candidate list. So we pick the listed one.\n\nEvidence_span: need exact substring that justifies type. For AMENDS, we need phrase indicating amendment: \"सुधारित स्वरुपात वाचण्यात यावा.\" That's the operative phrase. Also \"उक्त तीनही सुधारणांचा अंतर्भाव करुन\". So evidence_span could be \"सुधारित स्वरुपात वाचण्यात यावा\". Must be exact substring. Let's copy: \"सुधारित स्वरुपात वाचण्यात यावा\". That appears in sentence.\n\nCancelled_object: Since it's amendment, we need the object being amended. The object is \"शासन निर्णय\". The noun being amended is \"शासन निर्णय\". Could be \"शासन निर्णय\". So cancelled_object is null? Actually for AMENDS we need the object being amended, not cancelled. The field is \"cancelled_object\" but spec says \"the Marathi noun that is cancelled/amended, or null\". So we can put \"शासन निर्णय\". That is the object being amended.\n\nGloss_en: literal translation: \"By incorporating the said three amendments, the Government Decision dated 31-07-2017 and the Government Decision dated 07-12-2018 should be read in the amended form.\"\n\nConfidence: high, maybe 0.97.\n\nReturn JSON.\n\nCheck JSON format: compact.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280934839,
+   "prompt_tokens": 838,
+   "prompt_time": 0.019730036,
+   "completion_tokens": 680,
+   "completion_time": 1.745571207,
+   "total_tokens": 1518,
+   "total_time": 1.7653012430000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 588
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyescsjaf438wxpscvy3c53k",
+   "seed": 694366121
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "87bea3c39fa3ce2468189070",
+ "role": "reasoning"
+}

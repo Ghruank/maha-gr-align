@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र. ४ येथील दि. ०२-०३-२०२३ रोजीच्या पत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to reference No.1 dated 17-12-2016 the deputation policy was fixed, reference No.3 dated 16-02-2018 made improvements to the policy, reference No.2 dated 31-08-2017 prescribed the procedure, and by letter dated 02-03-2023 (reference No.4) interest was sought for a vacant assistant post, leading to the appointment of Mrs. ... on deputation for three years.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-69ecbda2-9bb0-4378-af93-a63fb6615514",
+  "object": "chat.completion",
+  "created": 1785054483,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र. ४ येथील दि. ०२-०३-२०२३ रोजीच्या पत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to reference No.1 dated 17-12-2016 the deputation policy was fixed, reference No.3 dated 16-02-2018 made improvements to the policy, reference No.2 dated 31-08-2017 prescribed the procedure, and by letter dated 02-03-2023 (reference No.4) interest was sought for a vacant assistant post, leading to the appointment of Mrs. ... on deputation for three years.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence relative to prior GRs list (only one candidate: index 1). Determine if the sentence supersedes, amends, references, or none.\n\nRead sentence: It's long, describing that reference decisions (GR) set policies for deputation (प्रतिनियुक्ती). It mentions prior decisions: reference 1 (date 17-12-2016) set policy; reference 3 (16-02-2018) made improvements; reference 2 (31-08-2017) set procedure; reference 4 (02-03-2023) letter invited interest for a vacant post; then they appoint Ms. ... for 3 years deputation.\n\nThus the sentence is describing the appointment under prior policies. It does not cancel or amend any prior order. It merely references them. So type = REFERENCES. target_index = 1? Actually which prior GR is being referenced? The sentence references multiple prior GRs: 1,2,3,4. The candidate list only includes GR dated 2023-03-02, which likely corresponds to reference 4 (dated 02-03-2023). So the relationship to that GR is that it references it (the letter). No operative change. So type = REFERENCES, target_index = 1 (since only one candidate). evidence_span: need exact substring that shows reference. Could be \"संदर्भाधीन क्र. ४ येथील दि. ०२-०३-२०२३ रोजीच्या पत्रान्वये\". That is the phrase referencing the prior GR. Provide that as evidence_span.\n\ncancelled_object: null (since not cancelled). gloss_en: translate sentence literally: \"According to reference No.1 dated 17-12-2016, the policy for deputation was fixed, and according to reference No.3 dated 16-02-2018, improvements were made in the policy regarding conditions and procedure for deputation appointments. The procedure for deputation of officers/employees of the Ministry cadre was prescribed in reference No.2 dated 31-08-2017. According to the provisions of the above government decision, by letter dated 02-03-2023 (reference No.4), interest was sought from employees of the Assistant Section Officer cadre of the Ministry department for filling one vacant post of Assistant Section Officer in the Maharashtra State Rural Development Campaign, State Campaign Management Section, Belapur, Navi Mumbai. Accordingly, from the received interest, Mrs. ... is being appointed on deputation for an initial period of three years.\"\n\nConfidence high, maybe 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281197473,
+   "prompt_tokens": 1151,
+   "prompt_time": 0.354455674,
+   "completion_tokens": 709,
+   "completion_time": 1.820309375,
+   "total_tokens": 1860,
+   "total_time": 2.174765049,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 540
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "x_groq": {
+   "id": "req_01kyerkjmjegvvbzc3h4pkt0xm",
+   "seed": 2147226507
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "4e420bc5674d1388417c15b5",
+ "role": "reasoning"
+}

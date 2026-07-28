@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"It is being cancelled for reasons. Also, as per reference No.2 of the order dated 22.07.2019\",\"confidence\":0.78}",
+ "raw": {
+  "id": "chatcmpl-a2dd529b-2a46-4c7a-9f74-67fd621686e8",
+  "object": "chat.completion",
+  "created": 1785054284,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"It is being cancelled for reasons. Also, as per reference No.2 of the order dated 22.07.2019\",\"confidence\":0.78}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"कारणास्तव रद्द करण्यात येत आहे. तसेच, संदर्भाधीन क्र.२ येथील दिनांक २२.०७.२०१९ रोजीच्या आदेशातील\"\n\nTranslation: \"It is being cancelled due to reasons. Also, as per reference No.2 of the order dated 22.07.2019\". The sentence says \"कारणास्तव रद्द करण्यात येत आहे.\" That's a cancellation. It says something is being cancelled, but what object? The sentence does not specify the object explicitly; maybe the object is implied from context (the order itself?). The phrase \"रद्द करण्यात येत आहे\" could refer to the current order being cancelled? Usually \"रद्द करण्यात येत आहे\" means \"is being cancelled\". If the sentence is part of a resolution that cancels something, we need to see if it cancels a prior order itself (SUPERSEDES) or cancels something made under it (AMENDS). The sentence says \"संदर्भाधीन क्र.२ येथील दिनांक २२.०७.२०१९ रोजीच्या आदेशातील\". That seems to reference prior order. It says \"as per reference No.2 of the order dated 22.07.2019\". But the operative part is \"कारणास्तव रद्द करण्यात येत आहे.\" It doesn't specify what is being cancelled. Could be the order itself? The phrase \"संदर्भाधीन\" means \"referenced\". So maybe they are cancelling something referenced in that prior order. The sentence is ambiguous.\n\nGiven the instruction: If the sentence cancels something made under prior GR, that's AMENDS. If it cancels the order itself, SUPERSEDES. Here, \"रद्द करण्यात येत आहे\" likely refers to the current order being cancelled? But the sentence is part of a resolution; maybe they are cancelling a previous order. The phrase \"संदर्भाधीन क्र.२ येथील दिनांक २२.०७.२०१९ रोजीच्या आदेशातील\" seems incomplete; maybe they intend to cancel something within that order. Since they say \"रद्द करण्यात येत आहे\" and then \"संदर्भाधीन ... आदेशातील\". Could be \"the order dated 22.07.2019 is being cancelled\". That would be SUPERSEDES (cancelling the prior order itself). However, they say \"संदर्भाधीन क्र.२ येथील दिनांक २२.०७.२०१९ रोजीच्या आदेशातील\" which is referencing the prior order, but not explicitly stating \"order is cancelled\". The phrase \"रद्द करण्यात येत आहे\" is generic.\n\nGiven the pattern, likely they are cancelling the prior order (the order dated 22.07.2019). That would be SUPERSEDES, target index 1. Cancelled object: \"आदेश\" (order) or maybe \"आदेशातील\" something. The noun is \"आदेश\". So cancelled_object: \"आदेश\". Evidence span: we need exact substring that justifies type. Could be \"रद्द करण्यात येत आहे\". That indicates cancellation. Also \"दिनांक २२.०७.२०१९ रोजीच्या आदेशातील\" indicates which order.\n\nThus JSON:\n\ntype: \"SUPERSEDES\"\ntarget_index: 1\nevidence_span: \"रद्द करण्यात येत आहे\"\ncancelled_object: \"आदेश\"\ngloss_en: \"It is being cancelled for reasons. Also, as per reference No.2 of the order dated 22.07.2019\"\nconfidence: maybe 0.78.\n\nCheck traps: No cue words inside file numbers. No deliberative mood. Granularity: we are cancelling the order itself, not something under it. So SUPERSEDES is correct.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.316072328,
+   "prompt_tokens": 799,
+   "prompt_time": 0.016625538,
+   "completion_tokens": 865,
+   "completion_time": 1.947507505,
+   "total_tokens": 1664,
+   "total_time": 1.964133043,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 789
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_77b12279f9",
+  "x_groq": {
+   "id": "req_01kyerdgckej0812n1rytn9942",
+   "seed": 1703289752
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "aa5e6e9b740c4b437925fe90",
+ "role": "reasoning"
+}

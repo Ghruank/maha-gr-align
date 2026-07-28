@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"क्र. बीसीसी२०१३/प्र.क्र.३५४(अ)/१६-ब, दि.११.७.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Read: ... Government decision, General Administration Department, No. BCC2013/Pr.Kr.354(A)/16-B, dated 11-7-2019\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-b9d6bd1c-4d0b-4813-8f8c-f5450370a275",
+  "object": "chat.completion",
+  "created": 1785054155,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"क्र. बीसीसी२०१३/प्र.क्र.३५४(अ)/१६-ब, दि.११.७.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Read: ... Government decision, General Administration Department, No. BCC2013/Pr.Kr.354(A)/16-B, dated 11-7-2019\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is a list of references: \"वाचा : १) ... २) ... ३) ...\". It lists many prior orders, acts, judgments. The candidate prior GR is one of them: number 9) \"शासन निर्णय, सामान्य प्रशासन विभाग, क्र. बीसीसी२०१३/प्र.क्र.३५४(अ)/१६-ब, दि.११.७.२०१९\". That's a prior GR dated 2019-07-11. The sentence is just a \"वाचा :\" (Read:) list of references. No operative change. So type is REFERENCES. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows reference to that prior GR. Could be \"क्र. बीसीसी२०१३/प्र.क्र.३५४(अ)/१६-ब, दि.११.७.२०१९\". That appears in the sentence. Provide that as evidence_span.\n\ncancelled_object: null.\n\ngloss_en: literal English translation: \"Read: 1) ... 2) ... 3) ... 9) Government decision, General Administration Department, No. BCC2013/Pr.Kr.354(A)/16-B, dated 11-7-2019\". But we need a literal translation of the sentence. Could be long; but we can give a concise translation: \"Read: 1) ... 9) Government decision, General Administration Department, No. BCC2013/Pr.Kr.354(A)/16-B, dated 11-7-2019\". That's okay.\n\nconfidence: high, 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284942867,
+   "prompt_tokens": 1344,
+   "prompt_time": 0.039370781,
+   "completion_tokens": 458,
+   "completion_time": 1.370460665,
+   "total_tokens": 1802,
+   "total_time": 1.409831446,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 351
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01kyer9kdbet980btbmcn01kq3",
+   "seed": 2115052151
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "94ab6efa750d8b4b7c6e6848",
+ "role": "reasoning"
+}

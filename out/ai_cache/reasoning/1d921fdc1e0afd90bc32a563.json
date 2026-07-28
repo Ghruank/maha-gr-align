@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\",\"cancelled_object\":null,\"gloss_en\":\"The government has decided to make the following amendments.\",\"confidence\":0.92}",
+ "raw": {
+  "id": "chatcmpl-6a0cada7-0e03-4780-ae30-58669680ce26",
+  "object": "chat.completion",
+  "created": 1785091490,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\",\"cancelled_object\":null,\"gloss_en\":\"The government has decided to make the following amendments.\",\"confidence\":0.92}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"निर्णयात पुढीलप्रमाणे सुधारणा करण्याचा शासनाने निर्णय घेतला आहे.\"\n\nTranslation: \"The government has decided to make the following amendments in the decision.\"\n\nIt says the government decided to make amendments. It does not reference a specific prior GR? The candidate list includes one prior GR, but the sentence does not explicitly mention it. It just says \"निर्णयात\" (in the decision) but not referencing the prior GR number. So likely NONE or REFERENCES? Since it doesn't cite the prior GR, it's not referencing. It's just stating a decision to amend something, but not specifying what is being amended. It says \"सुधारणा\" (amendments) but not what object. Also no operative change to prior GR. So classification: NONE.\n\ntarget_index: null.\n\nevidence_span: need exact substring that justifies type. For NONE, we can pick something like \"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\". That indicates it's a decision to amend, but not referencing prior GR. Use that.\n\ncancelled_object: null (since none).\n\ngloss_en: \"The government has decided to make the following amendments.\"\n\nconfidence: maybe 0.92.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.278803373,
+   "prompt_tokens": 802,
+   "prompt_time": 0.023016173,
+   "completion_tokens": 324,
+   "completion_time": 0.677454931,
+   "total_tokens": 1126,
+   "total_time": 0.700471104,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 262
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01kyfvwzcpertty0er13kfb12p",
+   "seed": 2038392644
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "1d921fdc1e0afd90bc32a563",
+ "role": "reasoning"
+}

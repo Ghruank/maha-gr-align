@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"प्रसंगानुरूप आवश्यकता निर्माण झाल्यास नोंदणी रद्द करण्याची आणि राज्य संलग्नित योजनेपासून\",\"cancelled_object\":null,\"gloss_en\":\"If a need arises as per the context, to cancel registration and from the state-linked scheme\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-2ba17642-c725-403f-b14d-17f632b74abe",
+  "object": "chat.completion",
+  "created": 1785091657,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"प्रसंगानुरूप आवश्यकता निर्माण झाल्यास नोंदणी रद्द करण्याची आणि राज्य संलग्नित योजनेपासून\",\"cancelled_object\":null,\"gloss_en\":\"If a need arises as per the context, to cancel registration and from the state-linked scheme\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"प्रसंगानुरूप आवश्यकता निर्माण झाल्यास नोंदणी रद्द करण्याची आणि राज्य संलग्नित योजनेपासून\"\n\nIt seems incomplete? It says: \"If a need arises as per context, to cancel registration and from the state-linked scheme...\" It seems like a clause about cancelling registration. It mentions \"नोंदणी रद्द करण्याची\" (to cancel registration). It does not explicitly refer to prior GR? The candidate prior GR is listed: \"GR dated 2025-04-23, number संकीर्ण-२०२४/प्र.क्र.५४/कोषा.प्रशा.-४\". The sentence does not mention that GR explicitly. No reference words like \"संदर्भात\" etc. So likely NONE.\n\nCheck traps: No cue words inside file numbers. Not relevant. Granularity: It mentions cancelling registration, but that's not necessarily a prior GR's object. It's not cancelling something made under prior GR; it's just a statement of possible action. No operative change. So classification: NONE.\n\ntarget_index: null.\n\nevidence_span: need exact substring that justifies type. For NONE, we can give a span that shows no reference? Probably the whole sentence? But evidence_span should be substring that justifies the type. For NONE, maybe we can give the whole sentence as evidence that there is no reference. Use the whole sentence.\n\ncancelled_object: null (since not cancelling a prior GR object). Gloss_en: literal translation: \"If a need arises as per the context, to cancel registration and from the state-linked scheme\". Provide translation.\n\nConfidence: high, say 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.313570252,
+   "prompt_tokens": 815,
+   "prompt_time": 0.029417493,
+   "completion_tokens": 441,
+   "completion_time": 1.013938254,
+   "total_tokens": 1256,
+   "total_time": 1.0433557470000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 353
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_0708ac49a5",
+  "x_groq": {
+   "id": "req_01kyfw22q0ec2sq5xsqnysb1s5",
+   "seed": 1704436838
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e65521348cef1e79270e094b",
+ "role": "reasoning"
+}

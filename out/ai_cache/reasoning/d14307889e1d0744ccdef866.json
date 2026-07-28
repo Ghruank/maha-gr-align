@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात यावी\",\"cancelled_object\":\"मासिक पारिश्रमिक\",\"gloss_en\":\"However, as per the Government Decision dated 17.12.2016, the monthly salary fixed for the appointment of retired officers/employees shall be amended from the date of issuance of the Government Decision dated 08.09.2023, or an inquiry is being made as to how.\",\"confidence\":0.93}",
+ "raw": {
+  "id": "chatcmpl-7026efc4-04b7-4e32-87e7-f8ff43e65ff4",
+  "object": "chat.completion",
+  "created": 1785054583,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात यावी\",\"cancelled_object\":\"मासिक पारिश्रमिक\",\"gloss_en\":\"However, as per the Government Decision dated 17.12.2016, the monthly salary fixed for the appointment of retired officers/employees shall be amended from the date of issuance of the Government Decision dated 08.09.2023, or an inquiry is being made as to how.\",\"confidence\":0.93}",
+     "reasoning": "We need to classify the sentence. Sentence in Marathi: \"२. तथापि, मंत्रालयीन प्रशासकोय विभाग तसेच क्षेत्रीय कार्यालयाकडून, सामान्य प्रशासन विभाग, शासन निर्णय दि. १७.१२.२०१६ नुसार सेवानिवृत्त अधिकारी/कर्मचाऱ्यांची नियुक्ती करुन निश्‍चित केलेले मासिक पारिश्रमिक हे दि. ०८.०९.२०२३ चा शासन निर्णय निर्गमित केल्याच्या दिनांकापासून सुधारणा करण्यात यावी किंवा कसे विचारणा होत आहे.\"\n\nInterpretation: It says: \"However, ... as per Government Decision dated 17.12.2016, the monthly salary fixed for appointment of retired officers/employees ... should be amended from the date of issuance of Government Decision dated 08.09.2023, or is being inquired how.\" So it's asking to amend the monthly salary from that date. It references prior GR dated 2023-09-08 (candidate). It says \"सुधारणा करण्यात यावी\" i.e., should be amended. That's an amendment to the prior order's provision (the salary). It is not cancelling the prior order itself, just amending a part (the salary). So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows amendment. Could be \"सुधारणा करण्यात यावी\". That phrase appears. So evidence_span = \"सुधारणा करण्यात यावी\". Cancelled_object: what is being amended? The monthly salary (मासिक पारिश्रमिक). So cancelled_object? Actually it's being amended, not cancelled. The field expects the Marathi noun that is cancelled/amended. For AMENDS, we can put the object being amended: \"मासिक पारिश्रमिक\". So cancelled_object = \"मासिक पारिश्रमिक\". Gloss_en: literal translation: \"However, ... as per the Government Decision dated 17.12.2016, the monthly salary fixed for the appointment of retired officers/employees shall be amended from the date of issuance of the Government Decision dated 08.09.2023, or inquiry is being made as to how.\" Confidence maybe 0.93.\n\nCheck traps: Not a deliberative mood; it's operative \"सुधारणा करण्यात यावी\". Not inside file number. It's amending a specific object, not superseding the whole order. So AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28518211,
+   "prompt_tokens": 895,
+   "prompt_time": 0.016398304,
+   "completion_tokens": 629,
+   "completion_time": 1.482232746,
+   "total_tokens": 1524,
+   "total_time": 1.49863105,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 516
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01kyerpmgget7ab9fmsz7mw8r0",
+   "seed": 878634244
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d14307889e1d0744ccdef866",
+ "role": "reasoning"
+}

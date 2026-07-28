@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of the clerk-typist made under the order is being cancelled for administrative reasons.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-9c9d6a0c-cce4-4c0b-a754-6adf21d8432b",
+  "object": "chat.completion",
+  "created": 1785091791,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of the clerk-typist made under the order is being cancelled for administrative reasons.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"आदेशान्वये करण्यात आलेली खालील लिपिक-टंकलेखकाची बदली प्रशासकीय कारणास्तव रद्द करण्यात\"\n\nTranslation: \"The transfer of the following clerk-typist made under the order is being cancelled for administrative reasons.\"\n\nWe have prior GR list: 1. GR dated 2018-05-07.\n\nWe need to decide relationship. The sentence says a transfer (बदली) of a clerk-typist made under the order is cancelled. This is cancelling an action (transfer) that was made under a prior order. According to trap 2: If the sentence cancels appointments, approvals, sanctions, posts, funds, or committee memberships made under a prior GR, that GR is NOT superseded — it's AMENDS, not SUPERSEDES. Here it's cancelling a transfer (baddali) which is a posting change. That's similar to a post. So it's AMENDS.\n\nThus type: AMENDS.\n\ntarget_index: 1 (since only one candidate).\n\nevidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात\" indicates cancellation. The phrase \"आदेशान्वये करण्यात आलेली ... बदली ... रद्द करण्यात\". The exact substring that justifies type: maybe \"रद्द करण्यात\". Or \"बदली ... रद्द करण्यात\". Must be exact substring from input. Let's pick \"रद्द करण्यात\". That appears at end.\n\ncancelled_object: the noun being cancelled: \"बदली\". Could be \"लिपिक-टंकलेखकाची बदली\". The object cancelled is \"बदली\". So we put \"बदली\". Or \"लिपिक-टंकलेखकाची बदली\". The spec: \"the Marathi noun that is cancelled/amended\". So \"बदली\". We'll use that.\n\ngloss_en: literal English translation: \"The transfer of the clerk-typist made under the order is being cancelled for administrative reasons.\"\n\nconfidence: high, 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.157339292,
+   "prompt_tokens": 791,
+   "prompt_time": 0.014275573,
+   "completion_tokens": 493,
+   "completion_time": 1.108114297,
+   "total_tokens": 1284,
+   "total_time": 1.12238987,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 428
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_84bf0227ec",
+  "x_groq": {
+   "id": "req_01kyfw65ptexh8a4hmnpqf4s2x",
+   "seed": 1658116938
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "22d284288bfa5164796f8187",
+ "role": "reasoning"
+}

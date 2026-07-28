@@ -1,0 +1,140 @@
+[
+ {
+  "edge_index": 37,
+  "src": "202210031103191705",
+  "dst": "202204121800353105",
+  "link": "date",
+  "sentence": "शासन निर्णय : वरील संदर्भ क्र. १० येथील दि.१२.०४.२०२२ चा शासन निर्णय अधिक्रमित करुन पदभरतीबाबत खालीलप्रमाणे सुधारित सूचना देण्यात येत आहेत.",
+  "evidence_span": "अधिकरणित करुन",
+  "cancelled_object": "शासन निर्णय",
+  "gloss_en": "Government decision: By superseding the above reference No.10 dated 12.04.2022 government decision, revised instructions regarding recruitment are being issued.",
+  "confidence": 0.98,
+  "cache_key": "71923506a6cd1a262b2ea21b",
+  "verdict": "FLAGGED",
+  "type": "SUPERSEDES",
+  "proposed_type": "SUPERSEDES",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'अधिकरणित करुन'"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'अधिकरणित करुन'"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 167,
+  "src": "202507301203326505",
+  "dst": "202504231650456005",
+  "link": "sole_citation",
+  "sentence": "(१५) संचालक, लेखा व कोषागारे, महाराष्ट्र राज्य यांचे पत्र क्रमांक: संलेको-२०२४/सुधारणा/न.क्र.५२/IT",
+  "evidence_span": "संक...",
+  "cancelled_object": null,
+  "gloss_en": "(15) Letter number of the Director, Accounts and Treasury, Government of Maharashtra: संलेको-2024/सुधारणा/No.52/IT",
+  "confidence": 0.98,
+  "cache_key": "831898da8e7ef5cb928a7107",
+  "verdict": "FLAGGED",
+  "type": "REFERENCES",
+  "proposed_type": "REFERENCES",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'संक...'"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'संक...'"
+  ],
+  "notes": []
+ },
+ {
+  "edge_index": 2313,
+  "src": "202008191216377008",
+  "dst": "202007231533314808",
+  "link": "date",
+  "sentence": "शासननिर्णय : शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९८/तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व १३ मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे.",
+  "evidence_span": "अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे",
+  "cancelled_object": "रकाना क्रमांक १२ व 13",
+  "gloss_en": "In annexure “A” of Government Decision No. TEEM-2020/Pr.No.98/Tanshi-4 dated 23/07/2020, entry No.120, the numbers opposite the name of Mr. Babnarav Pachpute Vichardhara Trust’s Group of Institutions (Integrated Campus), Kasti, Shri Gonda, Ahmadnagar district, in rows 12 and 13 are being corrected from “12” and “-6” to “15” and “-3” respectively.",
+  "confidence": 0.97,
+  "cache_key": "50b4c29ae64ac461da3ac125",
+  "verdict": "FLAGGED",
+  "type": "AMENDS",
+  "proposed_type": "AMENDS",
+  "gates": {
+   "G2_referential": {
+    "pass": true,
+    "why": ""
+   },
+   "G3_vocabulary": {
+    "pass": true,
+    "why": ""
+   },
+   "G5_temporal": {
+    "pass": true,
+    "why": ""
+   },
+   "G1_grounding": {
+    "pass": false,
+    "why": "span not verbatim in source: 'अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ '"
+   },
+   "G4_numeric": {
+    "pass": true,
+    "why": ""
+   },
+   "G7_scope": {
+    "pass": true,
+    "why": ""
+   }
+  },
+  "failed_hard": [],
+  "failed_soft": [
+   "G1_grounding: span not verbatim in source: 'अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ '"
+  ],
+  "notes": []
+ }
+]

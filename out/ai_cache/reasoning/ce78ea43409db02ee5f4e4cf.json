@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"प्रशासकीय मान्यता, नकाशामध्ये बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये रद्द करण्यात येत आहे\",\"cancelled_object\":\"प्रशासकीय मान्यता\",\"gloss_en\":\"The administrative approval given under reference 2, based on the request under reference 3, is being cancelled by this government decision due to changes in the map.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-9d9faacd-d2c6-4f0e-b620-8f09d3dbe251",
+  "object": "chat.completion",
+  "created": 1785054386,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"प्रशासकीय मान्यता, नकाशामध्ये बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये रद्द करण्यात येत आहे\",\"cancelled_object\":\"प्रशासकीय मान्यता\",\"gloss_en\":\"The administrative approval given under reference 2, based on the request under reference 3, is being cancelled by this government decision due to changes in the map.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"शासन निर्णय : जिल्हाधिकारी व जिल्हा निवडणूक अधिकारी, सिंधुदुर्ग कार्यालयाकडून ईव्हीएम व्हीव्हीपॅट साठवणूकीसाठी नव्याने गोदाम बांधकामासाठी संदर्भाधीन क्र.३ अन्वये केलेल्या विनंतीनुसार संदर्भ क्र.२ अन्वये देण्यात आलेली प्रशासकीय मान्यता, नकाशामध्ये बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये रद्द करण्यात येत आहे.\"\n\nInterpretation: The administrative approval given under reference 2, based on request under reference 3, is being cancelled because of map changes, via this present government decision.\n\nThus it cancels an administrative approval (prashasnik manyata) that was given earlier under prior GR. The prior GR is candidate 1: GR dated 2020-01-17, number ईव्हीएम-२०१७/प्र.क्र.३५२/१७/३३.\n\nWe need to decide type: Is it SUPERSEDES or AMENDS? The sentence cancels the administrative approval, which is an object (approval) made under prior GR. According to trap 2, if the sentence cancels an approval made under prior GR, that GR is NOT superseded; it's AMENDS. So type = AMENDS.\n\ntarget_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात येत आहे\" indicates cancellation. Also \"प्रशासकीय मान्यता ... रद्द करण्यात येत आहे\". So evidence_span could be \"प्रशासकीय मान्यता, नकाशामध्ये बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये रद्द करण्यात येत आहे\". Must be exact substring from input. Let's copy that part exactly.\n\nInput sentence: \"शासन निर्णय : जिल्हाधिकारी व जिल्हा निवडणूक अधिकारी, सिंधुदुर्ग कार्यालयाकडून ईव्हीएम व्हीव्हीपॅट साठवणूकीसाठी नव्याने गोदाम बांधकामासाठी संदर्भाधीन क्र.३ अन्वये केलेल्या विनंतीनुसार संदर्भ क्र.२ अन्वये देण्यात आलेली प्रशासकीय मान्यता, नकाशामध्ये बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये रद्द करण्यात येत आहे.\"\n\nThus evidence_span = \"प्रशासकीय मान्यता, नकाशामध्ये बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये रद्द करण्यात येत आहे\"\n\nCancelled_object: the noun being cancelled: \"प्रशासकीय मान्यता\" (administrative approval). So cancelled_object = \"प्रशासकीय मान्यता\".\n\ngloss_en: literal English translation: \"Administrative approval ... is being cancelled under the present government decision because of changes in the map.\" Let's produce: \"The administrative approval given under reference 2, based on the request under reference 3, is being cancelled by this government decision due to changes in the map.\"\n\nConfidence high, maybe 0.97.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.317571316,
+   "prompt_tokens": 892,
+   "prompt_time": 0.040016411,
+   "completion_tokens": 750,
+   "completion_time": 1.56397357,
+   "total_tokens": 1642,
+   "total_time": 1.603989981,
+   "completion_tokens_details": {
+    "reasoning_tokens": 645
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_47082602e2",
+  "x_groq": {
+   "id": "req_01kyergmr8fb9847dhbr8jx93z",
+   "seed": 542198366
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "ce78ea43409db02ee5f4e4cf",
+ "role": "reasoning"
+}

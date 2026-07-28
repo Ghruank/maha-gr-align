@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\",\"cancelled_object\":\"सेवाशर्ती व अन्य अटी शर्ती\",\"gloss_en\":\"The government has decided to make the following amendments.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-52ce6285-6a97-4d8a-a960-8084faa17faf",
+  "object": "chat.completion",
+  "created": 1785091818,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\",\"cancelled_object\":\"सेवाशर्ती व अन्य अटी शर्ती\",\"gloss_en\":\"The government has decided to make the following amendments.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence in Marathi:\n\n\"संदर्भाधीन दिनांक ०२/११/२०१८ च्या शासन निर्णयान्वये महाराष्ट्र माजी सैनिक महामंडळाच्या (मेस्को), व्यवस्थापकीय संचालक पदाच्या सेवाशर्ती व अन्य अटी शर्ती निश्चित करण्यात आलेल्या आहेत. तथापि यामध्ये खालीलप्रमाणे सुधारणा करण्याचा शासनाने निर्णय घेतला आहे.\"\n\nTranslation: \"Reference is made to the Government decision dated 02/11/2018 under which the service conditions and other terms for the post of Managing Director of Maharashtra Ex-Servicemen's Association (MESCO) have been determined. However, the government has decided to make the following amendments.\"\n\nThus the sentence says that there were prior conditions set, but now the government decides to make amendments (\"सुधारणा\"). This is an amendment to prior order, not superseding the entire order. So type = AMENDS.\n\nTarget index: the prior GR listed is #1, so target_index = 1.\n\nEvidence span: need exact substring that shows amendment. The phrase \"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\" indicates amendment. Could also include \"तथापि यामध्ये खालीलप्रमाणे सुधारणा\". Use that exact substring: \"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\". Must be exact from input. The input contains \"सुधारणा करण्याचा शासनाने निर्णय घेतला आहे\". Yes.\n\nCancelled_object: what is being amended? The service conditions (सेवाशर्ती) and other terms (इतर अटी शर्ती) for the post. The noun being amended is \"सेवाशर्ती व अन्य अटी शर्ती\". Could choose \"सेवाशर्ती\". Probably \"सेवाशर्ती व अन्य अटी शर्ती\". Provide as string.\n\nGloss_en: literal translation: \"The government has decided to make the following amendments.\"\n\nConfidence: high, say 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.291304141,
+   "prompt_tokens": 859,
+   "prompt_time": 0.040337615,
+   "completion_tokens": 490,
+   "completion_time": 1.041419377,
+   "total_tokens": 1349,
+   "total_time": 1.081756992,
+   "completion_tokens_details": {
+    "reasoning_tokens": 418
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5781dfb07c",
+  "x_groq": {
+   "id": "req_01kyfw6zpkffqss3snb4pjrzjr",
+   "seed": 690841011
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0a08b711563422fb7130823c",
+ "role": "reasoning"
+}

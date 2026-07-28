@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दि. १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली\",\"cancelled_object\":null,\"gloss_en\":\"The appointment was made by the order dated 14-09-2023.\",\"confidence\":0.95}",
+ "raw": {
+  "id": "chatcmpl-458fde1f-9278-476d-a058-17e47967c1a7",
+  "object": "chat.completion",
+  "created": 1785054539,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दि. १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली\",\"cancelled_object\":null,\"gloss_en\":\"The appointment was made by the order dated 14-09-2023.\",\"confidence\":0.95}",
+     "reasoning": "We need to classify the sentence. The sentence describes background: Supreme Court interim stay, then Maharashtra Lokseva Commission etc. It mentions that after that, the original act was amended, and a new act (Maharashtra Majority Posts Creation and Selection of Candidates Appointment (Amendment) Act, 2022) was passed and published on 13 Jan 2023. Then in the schedule, 1553 posts, of which 6 in a certain class, and Ms. Shraddha Anand Magar is the sole candidate, and after verification, she was appointed as a \"कक्ष अधिकारी (अधिसंख्य) पदावर\" by order dated 14 Sep 2023.\n\nWe have a prior GR listed: GR dated 2023-09-14, number कअनि-११२२/प्र.क्र.७२/१४-ब. The sentence mentions \"दि. १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली\". That seems to refer to an order dated 14 Sep 2023, which likely is the GR listed. The sentence is stating that appointment was made under that order. It is not cancelling, amending, or superseding that prior GR. It's just referencing it (citing the order). So type = REFERENCES. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows reference. The phrase \"दि. १४.०९.२०२३ च्या आदेशान्वये नियुक्ती करण्यात आली\". That includes the date. The prior GR number is not explicitly mentioned, but the date matches. The sentence does not mention the GR number, but the date matches the GR. The instruction: \"CANDIDATE PRIOR GRs MENTIONED IN IT\" includes that GR. The sentence references it via date. So we treat as REFERENCES.\n\ncancelled_object = null.\n\ngloss_en: Provide literal English translation. Let's translate roughly: \"By order dated 14-09-2023, the appointment was made.\" Could be \"Appointment was made by the order dated 14.09.2023\". We'll write that.\n\nconfidence maybe 0.95.\n\nNow produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287352028,
+   "prompt_tokens": 1242,
+   "prompt_time": 0.059422559,
+   "completion_tokens": 531,
+   "completion_time": 1.102983602,
+   "total_tokens": 1773,
+   "total_time": 1.162406161,
+   "completion_tokens_details": {
+    "reasoning_tokens": 453
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_2005c896b2",
+  "x_groq": {
+   "id": "req_01kyernapnfqft08f1556014f0",
+   "seed": 1606769691
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0e56ffceae6e899a1dad44b3",
+ "role": "reasoning"
+}

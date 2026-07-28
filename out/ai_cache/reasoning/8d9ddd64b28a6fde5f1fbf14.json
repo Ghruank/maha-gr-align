@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\",\"cancelled_object\":null,\"gloss_en\":\"If the candidate cannot submit the required certificates to the appointing authority, the candidate's appointment will not be made and the candidate's recommendation will be considered automatically cancelled and communicated to the commission.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-f4260197-d74c-4d72-ac23-65092a5cb74d",
+  "object": "chat.completion",
+  "created": 1785091421,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\",\"cancelled_object\":null,\"gloss_en\":\"If the candidate cannot submit the required certificates to the appointing authority, the candidate's appointment will not be made and the candidate's recommendation will be considered automatically cancelled and communicated to the commission.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence is about verification of certificates for candidates, and says if verification not provided, appointment will not be made and recommendation will be considered automatically cancelled and communicated to commission. It mentions \"GR dated 2022-12-27, number आस्थाप-२०१९/प्र.क्र.११ / विमा प्रशासन\". The sentence does not explicitly cancel that prior order; it just says \"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\". That's about recommendation, not about the prior GR. It references the prior GR? Actually the sentence does not explicitly mention the prior GR by name; the prior GR is just listed as candidate prior GRs mentioned in it. The sentence may be part of a new order that references that prior GR. Does it say \"as per that GR\"? Not explicitly. The only mention is that the prior GR is listed as candidate, but the sentence itself does not contain any phrase like \"आस्थाप-२०१९/प्र.क्र.११\" etc. The sentence does not contain that string. So the prior GR is not actually mentioned in the sentence. The instruction: \"CANDIDATE PRIOR GRs MENTIONED IN IT\" list may include GRs that are possibly referenced, but we need to decide if the sentence establishes a relationship. Since the sentence does not contain any reference to that GR, we should output NONE with target_index null.\n\nBut we must check if there is any operative change that cancels something. It says \"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\". That's a cancellation of recommendation, but that's not a prior GR. It's a procedural rule. Not about prior GR. So classification: NONE.\n\nWe need evidence_span: a substring that justifies type. For NONE, we can pick something that shows no reference to prior GR, maybe the phrase \"उमेदवाराची नियुक्ती करण्यात येणार नाही\". But we need evidence that indicates no relationship. Could use any part that shows it's not referencing prior GR. Maybe \"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\". That indicates cancellation but not of prior GR. For NONE, evidence_span could be the phrase that shows it's not referencing prior GR. The instruction: evidence_span is exact substring justifying the type. For NONE, we can give a substring that shows no reference to prior GR, like \"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\". That indicates it's a procedural rule, not referencing prior GR.\n\ncancelled_object: null because not cancelling prior GR. gloss_en: translate sentence.\n\nWe need confidence maybe 0.95.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.049009749,
+   "prompt_tokens": 1046,
+   "prompt_time": 0.055048193,
+   "completion_tokens": 686,
+   "completion_time": 1.450867752,
+   "total_tokens": 1732,
+   "total_time": 1.505915945,
+   "completion_tokens_details": {
+    "reasoning_tokens": 589
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8db49de948",
+  "x_groq": {
+   "id": "req_01kyfvtvr0e17bydrk355p6vr7",
+   "seed": 1604174884
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "8d9ddd64b28a6fde5f1fbf14",
+ "role": "reasoning"
+}

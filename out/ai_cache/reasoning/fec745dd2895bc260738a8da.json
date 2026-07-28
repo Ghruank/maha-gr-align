@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The above reference No. 5 dated 27/10/2017 government decision is being superseded.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-46f37660-84a5-4500-99c7-55949f9efba5",
+  "object": "chat.completion",
+  "created": 1785054687,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The above reference No. 5 dated 27/10/2017 government decision is being superseded.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"उपरोक्त संदर्भ क्र. ५ येथिल दि.२७/१०/२०१७ येथिल शासन निर्णय अधिकृत करण्यात येत आहे.\"\n\nActually the sentence says \"अधिक्रमित करण्यात येत आहे.\" Wait the word is \"अधिक्रमित\". In Marathi, \"अधिक्रमित\" means \"overridden\" or \"superseded\"? The instruction: SUPERSEDES - the sentence cancels / annuls / supersedes a prior ORDER ITSELF (रद्द करण्यात येत आहे, अधिक्रमित करुन, व्यपगत). So \"अधिक्रमित\" is a cue for supersede. So this sentence says the prior order (the one referenced) is being \"अधिक्रमित\". That means the prior order is being superseded (cancelled). So type = SUPERSEDES.\n\nTarget_index: which candidate? There's only one candidate prior GR: index 1. So target_index = 1.\n\nEvidence_span: need exact substring from input sentence that justifies type. The phrase \"अधिक्रमित करण्यात येत आहे\" is the operative phrase. So evidence_span = \"अधिक्रमित करण्यात येत आहे\". Must match exactly as in sentence. The sentence: \"उपरोक्त संदर्भ क्र. ५ येथिल दि.२७/१०/२०१७ येथिल शासन निर्णय अधिक्रमित करण्यात येत आहे.\" So the substring \"अधिक्रमित करण्यात येत आहे\" appears. Use that.\n\nCancelled_object: what is being cancelled? The prior order itself (the \"शासन निर्णय\"). So the noun is \"शासन निर्णय\". Could also be \"निर्णय\". The instruction: cancelled_object is the Marathi noun that is cancelled/amended. So we can put \"शासन निर्णय\". That seems appropriate.\n\nGloss_en: literal English translation: \"The above reference No.5 dated 27/10/2017 government decision is being superseded.\" Or \"The above reference No.5 dated 27/10/2017 government decision is being overridden.\" Provide literal translation.\n\nConfidence: high, maybe 0.99.\n\nReturn JSON compact.\n\nCheck for traps: The cue word \"अधिक्रमित\" is inside the sentence, not inside file number. It's operative. So it's supersede.\n\nGranularity: It's cancelling the order itself, not appointments etc. So SUPERSEDES.\n\nThus produce JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320331482,
+   "prompt_tokens": 821,
+   "prompt_time": 0.0153703,
+   "completion_tokens": 578,
+   "completion_time": 1.211350844,
+   "total_tokens": 1399,
+   "total_time": 1.226721144,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 504
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4b2f03d631",
+  "x_groq": {
+   "id": "req_01kyerstb6f54bvtg9djd25g34",
+   "seed": 1105756734
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "fec745dd2895bc260738a8da",
+ "role": "reasoning"
+}

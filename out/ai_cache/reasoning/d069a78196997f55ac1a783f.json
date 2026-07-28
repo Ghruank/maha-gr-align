@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय, क्रमांक- ससप्रे-४४१९/प्र.क्र.१८९/प्रशा-२ दिनांक ०६.१२.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Reference: Government decision, number ससप्रे-4419/प्र.क्र.189/प्रशा-2 dated 06-12-2019\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-1e598cdd-5705-413c-a925-06d81e7e5ffb",
+  "object": "chat.completion",
+  "created": 1785055196,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय, क्रमांक- ससप्रे-४४१९/प्र.क्र.१८९/प्रशा-२ दिनांक ०६.१२.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Reference: Government decision, number ससप्रे-4419/प्र.क्र.189/प्रशा-2 dated 06-12-2019\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is a \"संदर्भ :\" list of prior GRs. It just references prior orders, no operative change. So type = REFERENCES. target_index = 1 (since only one candidate matches). evidence_span: need exact substring that shows reference. Could be \"शासन निर्णय, क्रमांक- ससप्रे-४४१९/प्र.क्र.१८९/प्रशा-२ दिनांक ०६.१२.२०१९\". That is the part referencing the candidate. cancelled_object null. gloss_en literal translation: \"Reference: 1) Government decision, General Administration Department number ... 5) Government decision, number - ससप्रे-४४१९/प्र.क्र.१८९/प्रशा-२ dated 06.12.2019\". Provide translation. confidence high 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314230023,
+   "prompt_tokens": 1024,
+   "prompt_time": 0.024712228,
+   "completion_tokens": 300,
+   "completion_time": 0.649449495,
+   "total_tokens": 1324,
+   "total_time": 0.674161723,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 186
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01kyes9bx9ep18nw165dcgggv0",
+   "seed": 1576342720
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d069a78196997f55ac1a783f",
+ "role": "reasoning"
+}

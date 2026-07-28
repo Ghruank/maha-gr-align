@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र.१ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the government decision referred to as reference No.1, administrative approval was given for the construction...\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-4223c75e-3dc4-4788-a908-3b4f9be00ad0",
+  "object": "chat.completion",
+  "created": 1785055055,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र.१ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the government decision referred to as reference No.1, administrative approval was given for the construction...\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GRs listed. The sentence describes approvals for establishing law university, funding, etc. It mentions \"संदर्भ क्र.१ येथील शासन निर्णयान्वये\" and \"संदर्भ क्र.२ येथील शासन निर्णयान्वये\". Those correspond to prior GRs (maybe the candidate list). The sentence is granting new approval, not cancelling or amending. It references prior decisions for administrative approval and inclusion of Centre of Excellence. It also mentions that earlier the university had proposed improvements, and those were approved by decisions dated 23.08.2019 and 14.01.2021, and then on 08.07.2022 further decision. So the sentence is giving new approval for budget. This is not a supersede or amend; it's just referencing prior decisions. So type = REFERENCES. target_index: which prior GR is being referenced? It mentions two prior decisions: reference 1 and reference 2. The candidate list has two GRs: 2021-01-14 and 2022-07-08. Likely reference 1 corresponds to 2021-01-14? Actually the sentence says \"संदर्भ क्र.१ येथील शासन निर्णयान्वये\" and \"संदर्भ क्र.२ येथील शासन निर्णयान्वये\". The candidate list is just two GRs, no numbers. We need to pick which one is being referenced. Could be both, but we must choose one target_index. The instruction: \"target_index: <1-based index into the candidate list, or null>\" So we need to pick which prior GR the sentence establishes relationship with. Since it references both, ambiguous. Might choose null? But we need to decide. The sentence references both prior GRs, but the relationship is REFERENCES. Could we set target_index null because multiple? The spec expects a single index. If multiple, maybe choose null. But maybe we can pick the first referenced (reference 1) which likely corresponds to GR dated 2021-01-14 (since that is earlier). The second reference likely 2022-07-08. The sentence includes both. Might be considered referencing both, but we need one. Could choose null to indicate not a specific single target. However \"target_index\" expects index or null. If we set null, we lose linking. But maybe acceptable.\n\nGiven ambiguous, I'd set target_index null and type REFERENCES. evidence_span: need exact substring that shows reference. Could use \"संदर्भ क्र.१ येथील शासन निर्णयान्वये\" as evidence. cancelled_object null. gloss_en: translate. Provide confidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283797114,
+   "prompt_tokens": 1122,
+   "prompt_time": 0.050580347,
+   "completion_tokens": 629,
+   "completion_time": 1.3517900520000001,
+   "total_tokens": 1751,
+   "total_time": 1.402370399,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 552
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_acbbc9c4c3",
+  "x_groq": {
+   "id": "req_01kyes51yte92rbjqqsx84mz95",
+   "seed": 115296437
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "43630dcd14d3cf0631b94968",
+ "role": "reasoning"
+}

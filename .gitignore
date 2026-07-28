@@ -1,0 +1,30 @@
+# Corpus — pulled via sparse clone, never committed (see CHECKLIST.md step 0)
+data/mahGRs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Caches / scratch
+.cache/
+*.log
+
+# Secrets — NEVER commit. Copy .env.example to .env and fill it in.
+.env
+.env.local
+*.key
+
+# NOTE: out/ai_cache/ is deliberately NOT ignored. Cached model responses are
+# committed artefacts so the demo runs offline and reproduces exactly. See
+# AI_ARCHITECTURE.md §5.
+
+# Node
+web/node_modules/
+web/dist/
+
+# Logs from batch runs (the artefacts they produce ARE committed)
+out/*.log

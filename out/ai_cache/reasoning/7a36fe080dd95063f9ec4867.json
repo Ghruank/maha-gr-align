@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"अधिसंख्य पद रद्द होईल\",\"cancelled_object\":\"पद\",\"gloss_en\":\"The majority of posts will be cancelled.\",\"confidence\":0.9}",
+ "raw": {
+  "id": "chatcmpl-dc051ac6-b33b-4ec4-a0c2-65f142c02aa9",
+  "object": "chat.completion",
+  "created": 1785056050,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"अधिसंख्य पद रद्द होईल\",\"cancelled_object\":\"पद\",\"gloss_en\":\"The majority of posts will be cancelled.\",\"confidence\":0.9}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"झाल्यानंतर अधिसंख्य पद रद्द होईल. सदर मृत संवर्गात वरील तक्ता \"ब\" मध्ये दर्शविलेल्या\"\n\nTranslation: \"After it happens, the majority of posts will be cancelled. In the said deceased category, as shown in the above table \"b\".\"\n\nWe have a prior GR: \"GR dated 2021-08-23, number पदनि २०२१/प्र.क्र.५१/आपुक\". The sentence mentions \"अधिसंख्य पद रद्द होईल\" - it says many posts will be cancelled. Does it refer to cancelling posts made under prior GR? It says \"अधिसंख्य पद रद्द होईल\" (the majority of posts will be cancelled). It does not explicitly say \"under prior GR\". It just says posts will be cancelled. The prior GR is about something (maybe appointments). The sentence does not explicitly reference the prior GR; it's just a statement about posts being cancelled. The candidate list includes that prior GR, but the sentence does not mention it explicitly. There's no mention of the prior GR number or name. So relationship is NONE? Or maybe it's referencing? The sentence does not cite the prior GR. So type NONE, target_index null.\n\nBut we must consider if the sentence is operative: It says \"अधिसंख्य पद रद्द होईल\" - that's a decision to cancel posts. However, we need to see if it cancels a prior order itself (SUPERSEDES) or modifies part (AMENDS). It cancels posts, which could be appointments made under prior GR. But we don't know if those posts were made under that prior GR. The sentence does not specify. The instruction: \"If the sentence cancels APPOINTMENTS, APPROVALS, SANCTIONS, POSTS, FUNDS or COMMITTEE MEMBERSHIPS made under a prior GR, that GR is NOT superseded — it stands, and its arrangements change. That is AMENDS, never SUPERSEDES.\" So if it cancels posts that were made under prior GR, then it's AMENDS. But we need evidence that it's under that prior GR. There's no mention. So we cannot link.\n\nThus classification: NONE.\n\nWe need evidence_span: a substring that justifies type NONE. Could be \"अधिसंख्य पद रद्द होईल\". That shows it's a cancellation but not referencing prior GR. For NONE, we need evidence that there is no relationship. The evidence could be the whole sentence, but we need a substring that indicates no reference to prior GR. Maybe \"अधिसंख्य पद रद्द होईल\". That shows it's a cancellation but not referencing prior GR. That supports NONE because no reference.\n\ncancelled_object: \"पद\" (posts). Provide noun.\n\ngloss_en: \"The majority of posts will be cancelled.\"\n\nconfidence: maybe 0.9.\n\ntarget_index null.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286624272,
+   "prompt_tokens": 812,
+   "prompt_time": 0.063032368,
+   "completion_tokens": 672,
+   "completion_time": 1.4261697770000001,
+   "total_tokens": 1484,
+   "total_time": 1.489202145,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 613
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e0f1c0e04a",
+  "x_groq": {
+   "id": "req_01kyet3dv4fc6arw7p97bq4qgs",
+   "seed": 1997642381
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "7a36fe080dd95063f9ec4867",
+ "role": "reasoning"
+}

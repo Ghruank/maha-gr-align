@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सर्व यादया (पॅनल्स) रद्द करुन\",\"cancelled_object\":\"यादया\",\"gloss_en\":\"By doing so, all the lists (panels) that have been published so far are cancelled, ...\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-39b6c78a-1d86-482c-a9f5-e6467a4094c1",
+  "object": "chat.completion",
+  "created": 1785054638,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सर्व यादया (पॅनल्स) रद्द करुन\",\"cancelled_object\":\"यादया\",\"gloss_en\":\"By doing so, all the lists (panels) that have been published so far are cancelled, ...\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence (Marathi): \"असल्याने, आतापर्यंत प्रसिध्द करण्यात आलेल्या सर्व यादया (पॅनल्स) रद्द करुन, या विभागाच्या दि.१३.०३.२०२५ च्या शासन निर्णयान्वये विहित निकषांनुसार पात्र सेवानिवृत्त अधिकाऱ्यांच्या\"\n\nIt seems incomplete but contains operative phrase: \"रद्द करुन\" meaning \"by canceling\". It says: \"by being ... , cancel all lists (panels) that have been published so far, ...\". So it cancels prior panels (lists). The prior GR is \"GR dated 2025-03-13, number विचोअ १६२५/प्र.क्र.०५/विचो-२\". The sentence cancels \"सर्व यादया (पॅनल्स)\" i.e., all lists (panels). This is a cancellation of something made under prior GR? The prior GR likely established those panels. The sentence says \"रद्द करुन\" i.e., cancel them. Does that supersede the prior order itself? The prior GR is a specific order; if this sentence cancels the panels (objects) that were created under that order, but not the order itself, then it's AMENDS (modifies part of prior order). According to trap 2: If the sentence cancels appointments, approvals, sanctions, posts, funds, committee memberships made under a prior GR, that GR is NOT superseded — it's AMENDS. Here panels are likely committees/lists. So type = AMENDS.\n\ntarget_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करुन\" is the operative. Also \"सर्व यादया (पॅनल्स) रद्द करुन\". So evidence_span could be \"सर्व यादया (पॅनल्स) रद्द करुन\". Must be exact substring from input. The input sentence: \"असल्याने, आतापर्यंत प्रसिध्द करण्यात आलेल्या सर्व यादया (पॅनल्स) रद्द करुन, या विभागाच्या दि.१३.०३.२०२५ च्या शासन निर्णयान्वये विहित निकषांनुसार पात्र सेवानिवृत्त अधिकाऱ्यांच्या\". So substring \"सर्व यादया (पॅनल्स) रद्द करुन\" appears exactly. Yes.\n\ncancelled_object: the noun being cancelled: \"यादया (पॅनल्स)\" maybe \"यादया\". Use Marathi noun: \"यादया\". Could also be \"पॅनल्स\". We'll put \"यादया\". Or \"पॅनल्स\". The instruction: \"the Marathi noun that is cancelled/amended\". So \"यादया\". Provide as string.\n\ngloss_en: literal English translation: \"By doing so, all the lists (panels) that have been published so far are cancelled, ...\" Provide translation.\n\nconfidence: high, maybe 0.96.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314637956,
+   "prompt_tokens": 852,
+   "prompt_time": 0.042697344,
+   "completion_tokens": 730,
+   "completion_time": 1.517322101,
+   "total_tokens": 1582,
+   "total_time": 1.560019445,
+   "completion_tokens_details": {
+    "reasoning_tokens": 650
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01kyerrae6f0286jcktapknekf",
+   "seed": 1159099716
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "4676495338c4135544f21f8b",
+ "role": "reasoning"
+}

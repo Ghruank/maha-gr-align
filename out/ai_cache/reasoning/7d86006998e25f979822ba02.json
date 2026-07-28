@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"“जिल्हा ग्रंथपाल” (गट-क, अराजपत्रित) या संवर्गातील ७ पदे रद्द करुन\",\"cancelled_object\":\"जिल्हा ग्रंथपाल पदे\",\"gloss_en\":\"The seven positions of “District Librarian” (Group C, gazetted) have been cancelled and in their place seven positions of “District Library Officer” (Group B, gazetted) have been created.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-c98fedfb-717a-47c9-b695-07cbd298a083",
+  "object": "chat.completion",
+  "created": 1785055034,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"“जिल्हा ग्रंथपाल” (गट-क, अराजपत्रित) या संवर्गातील ७ पदे रद्द करुन\",\"cancelled_object\":\"जिल्हा ग्रंथपाल पदे\",\"gloss_en\":\"The seven positions of “District Librarian” (Group C, gazetted) have been cancelled and in their place seven positions of “District Library Officer” (Group B, gazetted) have been created.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). The sentence: It says that certain positions \"जिल्हा ग्रंथपाल\" (group C, gazetted) are cancelled and replaced with \"जिल्हा ग्रंथालय अधिकारी\" (group B, gazetted). This is a cancellation of positions created under prior GR? The prior GR is \"उच्च व तंत्र शिक्षण विभागाच्या संदर्भाधिन क्र. २ येथील दिनांक १६.१२.2022 रोजीच्या शासन निर्णयान्वये ग्रंथालय संचालनालयाच्या सुधारित आकृतीबंधातील “जिल्हा ग्रंथपाल” (गट-क, अराजपत्रित) या संवर्गातील ७ पदे रद्द करुन...\" So the prior GR is the decision that created those positions? Actually the prior GR is the decision dated 16-12-2022 (the same date). The sentence says \"रद्द करुन ... निर्माण करण्यात आली आहेत.\" So it cancels the 7 positions of \"जिल्हा ग्रंथपाल\" and creates new positions. This is a cancellation of positions, not the entire prior order. According to trap 2, if the sentence cancels appointments, posts, etc made under a prior GR, that GR is NOT superseded; it's AMENDS. So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. Could be \"७ पदे रद्द करुन\". The phrase \"७ पदे रद्द करुन\" indicates cancellation. Or \"“जिल्हा ग्रंथपाल” (गट-क, अराजपत्रित) या संवर्गातील ७ पदे रद्द करुन\". Use that exact substring. Let's copy: \"“जिल्हा ग्रंथपाल” (गट-क, अराजपत्रित) या संवर्गातील ७ पदे रद्द करुन\". That is in the sentence. Cancelled_object: the noun being cancelled is \"पदे\" (positions) or \"जिल्हा ग्रंथपाल\". Probably \"जिल्हा ग्रंथपाल\" positions. Use \"जिल्हा ग्रंथपाल पदे\". Provide Marathi noun: \"जिल्हा ग्रंथपाल पदे\". Gloss_en: literal translation: \"The positions of ‘District Librarian’ (Group C, gazetted) have been cancelled and in their place seven positions of ‘District Library Officer’ (Group B, gazetted) have been created.\" Confidence high 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.317289907,
+   "prompt_tokens": 1018,
+   "prompt_time": 0.18845149,
+   "completion_tokens": 654,
+   "completion_time": 1.3592396469999999,
+   "total_tokens": 1672,
+   "total_time": 1.5476911370000002,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 532
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_47082602e2",
+  "x_groq": {
+   "id": "req_01kyes4d5me73t9fjg706nzfgh",
+   "seed": 736247515
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "7d86006998e25f979822ba02",
+ "role": "reasoning"
+}

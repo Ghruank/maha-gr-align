@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"सामान्य प्रशासन विभागाचा संदर्भाधिन क्र.३ येथील शासन निर्णय,क्रमांक: बीसीसी २०१८/प्र.क्र.३६६/१६-ब,दि.१८.०२.२०२१\",\"cancelled_object\":null,\"gloss_en\":\"The government decision is being cancelled by the General Administration Department's letter No. BCC-2017/ Pr.No.312/16-B dated 29 December 2017 and the General Administration Department's decision No. BCC 2018/Pr.No.366/16-B dated 18.02.2021.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-a82ddddb-4693-4207-9fd0-3e6e77fdb9bd",
+  "object": "chat.completion",
+  "created": 1785054115,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"सामान्य प्रशासन विभागाचा संदर्भाधिन क्र.३ येथील शासन निर्णय,क्रमांक: बीसीसी २०१८/प्र.क्र.३६६/१६-ब,दि.१८.०२.२०२१\",\"cancelled_object\":null,\"gloss_en\":\"The government decision is being cancelled by the General Administration Department's letter No. BCC-2017/ Pr.No.312/16-B dated 29 December 2017 and the General Administration Department's decision No. BCC 2018/Pr.No.366/16-B dated 18.02.2021.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"शासन निर्णय सामान्य प्रशासन विभागाचे संदर्भाधिन क्र.२ येथील शासन पत्र, क्र. बीसीसी-२०१७/ प्र.क्र.३१२/१६-ब दि.२९ डिसेंबर, २०१७ व सामान्य प्रशासन विभागाचा संदर्भाधिन क्र.३ येथील शासन निर्णय,क्रमांक: बीसीसी २०१८/प्र.क्र.३६६/१६-ब,दि.१८.०२.२०२१ याद्वारे रद्द करण्यात येत आहे.\"\n\nInterpretation: It says that the government decision (शासन निर्णय) is being cancelled by the referenced letters/decisions. It says \"रद्द करण्यात येत आहे\" meaning \"is being cancelled\". It mentions two prior documents: a letter (शासन पत्र) and a decision (शासन निर्णय) with number बीसीसी २०१८/प्र.क्र.३६६/१६-ब dated 18-02-2021. The candidate list includes that GR (the 2021 one). The sentence cancels the current decision (the one being written) via those prior documents. The question: does it supersede or amend? The sentence says the current decision is being cancelled. That means the order itself (the current one) is being cancelled. But the prior GR is being used as authority to cancel this decision. The relationship to prior GR: It says \"by ... decision ... is being cancelled\". That suggests the prior decision is the instrument that cancels this decision. So the current decision is being cancelled, not the prior one. So the prior GR is not being cancelled; rather, the current decision is being cancelled by referencing prior GR. So the relationship is REFERENCES? Actually, the sentence says \"शासन निर्णय ... याद्वारे रद्द करण्यात येत आहे.\" Means \"the government decision ... is being cancelled by ...\". So the prior GR is being used to cancel the current decision. That is not a supersede of the prior GR; it's a cancellation of the current decision. The prior GR is being referenced as authority. So classification: REFERENCES (citing prior order, no operative change to it). The target_index should be 1 (the only candidate). evidence_span: need exact substring that shows the operative change. The phrase \"रद्द करण्यात येत आहे\" indicates cancellation. But we need evidence that indicates relationship type. For REFERENCES, we need evidence that it merely cites. The phrase \"सामान्य प्रशासन विभागाचा संदर्भाधिन ... याद्वारे रद्द करण्यात येत आहे.\" The part that shows referencing is \"सामान्य प्रशासन विभागाचा संदर्भाधिन ...\". The exact substring: maybe \"सामान्य प्रशासन विभागाचा संदर्भाधिन क्र.३ येथील शासन निर्णय,क्रमांक: बीसीसी २०१८/प्र.क्र.३६६/१६-ब,दि.१८.०२.२०२१\". That is the citation. So evidence_span could be that substring.\n\ncancelled_object: Since we are not cancelling anything from prior GR, set null.\n\ngloss_en: literal translation: \"The government decision is being cancelled by the General Administration Department's letter No. BCC-2017/ Pr.No.312/16-B dated 29 December 2017 and the General Administration Department's decision No. BCC 2018/Pr.No.366/16-B dated 18.02.2021.\"\n\nconfidence high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.315466029,
+   "prompt_tokens": 887,
+   "prompt_time": 0.04867167,
+   "completion_tokens": 886,
+   "completion_time": 1.852841465,
+   "total_tokens": 1773,
+   "total_time": 1.901513135,
+   "completion_tokens_details": {
+    "reasoning_tokens": 728
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_77b12279f9",
+  "x_groq": {
+   "id": "req_01kyer8b48fjrv3dfx4m5em4nh",
+   "seed": 1771402309
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0f8f818f8b79c7f3ef12d076",
+ "role": "reasoning"
+}

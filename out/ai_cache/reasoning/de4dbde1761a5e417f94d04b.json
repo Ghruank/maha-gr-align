@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र.१ येथील अध्यादेशाचे कायद्यात रूपांतर\",\"cancelled_object\":null,\"gloss_en\":\"Reference No.1's ordinance was converted into law, and the Reservation Act, 2014 came into existence, etc.\",\"confidence\":0.92}",
+ "raw": {
+  "id": "chatcmpl-c4d438ef-01b2-494c-beed-ba8d45767cda",
+  "object": "chat.completion",
+  "created": 1785054339,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र.१ येथील अध्यादेशाचे कायद्यात रूपांतर\",\"cancelled_object\":null,\"gloss_en\":\"Reference No.1's ordinance was converted into law, and the Reservation Act, 2014 came into existence, etc.\",\"confidence\":0.92}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if the sentence supersedes, amends, references, or none.\n\nSentence is long Marathi. Let's translate roughly: \"2. Reference No.1's ordinance was converted into law and reference No.4's Reservation Act, 2014 came into existence. The act was challenged by petitioners under writ petition No.3151/2014. In this case, according to the order dated 7.4.2015 of the Hon'ble High Court (reference 5), the Maharashtra Act No.1/2015 (reference 4) was stayed, and considering the order of the High Court, the order dated 21.2.2015 (reference 3) was amended (सुधारणा) to provide reservation for EBC etc. Accordingly, as per government circular reference 6 dated 2/12/2015, a revised order was issued.\"\n\nSo the sentence mentions prior GRs (reference numbers). It says \"सुधारणा करून ... सुधारित आदेश निर्गमित करण्यात आले होते\". It amends prior order (reference 3) by making improvements. It does not cancel the prior GR itself. It modifies a prior order. So relationship is AMENDS.\n\nTarget index: which prior GR is being amended? The sentence says \"संदर्भ क्र.३ येथील दिनांक २१.२.२०१५ च्या आदेशात सुधारणा करून ...\" So it amends the order referenced as reference 3, but that reference is not in the candidate list. The candidate list only includes GR dated 2019-07-11, number बीसीसी२०१३/प्र.क्र.३५४(अ)/१६-ब. That is reference maybe not mentioned in sentence. The sentence does not mention that GR. So there is no relationship to the listed candidate. So target_index should be null, type maybe NONE? But we have to decide: The sentence does not refer to the candidate GR, so classification relative to candidate list is NONE. The instruction: \"You are given the sentence and a numbered list of prior GRs that a deterministic resolver has ALREADY matched inside it. Decide what relationship, if any, the sentence establishes.\" So we need to see if the sentence establishes relationship to any of those prior GRs. Since only one candidate, and sentence does not mention it, we output NONE, target_index null.\n\nEvidence_span: need a substring that justifies type NONE? For NONE, maybe any part showing no operative change? Could be empty? But must be exact substring. Could pick a phrase that shows no reference to candidate, but we need evidence. Could use something like \"संदर्भ क्र.१ येथील अध्यादेशाचे कायद्यात रूपांतर\". But that is referencing reference 1, not candidate. That shows it's referencing other GRs, not the candidate. So evidence_span could be \"संदर्भ क्र.१ येथील अध्यादेशाचे कायद्यात रूपांतर\". That indicates referencing. But classification is NONE because not referencing candidate. However evidence should justify type NONE. Could use \"संदर्भ क्र.१ येथील अध्यादेशाचे कायद्यात रूपांतर\". That shows it's referencing but not the candidate. Might be acceptable.\n\nCancelled_object: null.\n\nGloss_en: Provide literal English translation.\n\nConfidence maybe 0.9.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284832344,
+   "prompt_tokens": 1062,
+   "prompt_time": 0.02469279,
+   "completion_tokens": 783,
+   "completion_time": 2.361081522,
+   "total_tokens": 1845,
+   "total_time": 2.385774312,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 700
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01kyerf5e6e68t2tdvtbkdm4v7",
+   "seed": 1584947821
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "de4dbde1761a5e417f94d04b",
+ "role": "reasoning"
+}

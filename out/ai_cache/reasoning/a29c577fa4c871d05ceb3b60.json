@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"evidence_span\":\"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J-१२०२६/१(i)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\",\"gloss_en\":\"Read: 1. Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(i)/2020 NSS, dated 17.09.2020\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-20ea1474-8d16-4d9f-94fb-815fc486c170",
+  "object": "chat.completion",
+  "created": 1785051040,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"evidence_span\":\"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J-१२०२६/१(i)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\",\"gloss_en\":\"Read: 1. Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(i)/2020 NSS, dated 17.09.2020\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence: \"वाचा : १. भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J-१२०२६/१(i)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र.\"\n\nIt says \"Read: 1. Government of India, Youth Affairs and Sports Department, ... letter dated ...\". This is just a reference to another document. No operative change. So type = REFERENCES. Evidence span: maybe \"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J-१२०२६/१(i)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\". Gloss: \"Read: 1. Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(i)/2020 NSS, dated 17.09.2020.\" Confidence high, say 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.285984779,
+   "prompt_tokens": 406,
+   "prompt_time": 0.015833719,
+   "completion_tokens": 328,
+   "completion_time": 0.680697003,
+   "total_tokens": 734,
+   "total_time": 0.696530722,
+   "completion_tokens_details": {
+    "reasoning_tokens": 211
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyenaj8afx4b2e4yn21gb2x0",
+   "seed": 1290663143
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a29c577fa4c871d05ceb3b60",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करणे आवश्यक असल्याने, साकेश्‍वर ग्रामीण विकास सेवा संस्था, अहिल्यानगर संस्थेस खालील विवरणपत्रात नमूद दुरूस्ती करण्यास शासनाची मान्यता देण्यात येत आहे\",\"cancelled_object\":\"विवरणपत्र\",\"gloss_en\":\"Accordingly, as the inspection found that an amendment is required in item 3.2 of the statement of Savitribai Phule Pune University, the government grants approval to Sakshwar Gramin Vikas Seva Sanstha, Ahilyanagar to make the correction mentioned in the statement.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-450063f1-c3f3-491c-9614-40e4083a6dce",
+  "object": "chat.completion",
+  "created": 1785055168,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करणे आवश्यक असल्याने, साकेश्‍वर ग्रामीण विकास सेवा संस्था, अहिल्यानगर संस्थेस खालील विवरणपत्रात नमूद दुरूस्ती करण्यास शासनाची मान्यता देण्यात येत आहे\",\"cancelled_object\":\"विवरणपत्र\",\"gloss_en\":\"Accordingly, as the inspection found that an amendment is required in item 3.2 of the statement of Savitribai Phule Pune University, the government grants approval to Sakshwar Gramin Vikas Seva Sanstha, Ahilyanagar to make the correction mentioned in the statement.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). The sentence: \"त्याअनुषंगाने विद्यापीठांच्या शिफारशी ब कागदपत्रांची तपासणी करण्यात आली. ... सदर तपासणीनुसार शासन निर्णय दिनांक ३०.०६.२०२६ च्या विवरणपत्र क मधील सावित्रीबाई फुले पुणे विद्यापीठ, पुणे अंतर्गत अनु.क्र. 3.2 मध्ये सुधारणा करणे आवश्यक असल्याने, साकेश्‍वर ग्रामीण विकास सेवा संस्था, अहिल्यानगर संस्थेस खालील विवरणपत्रात नमूद दुरूस्ती करण्यास शासनाची मान्यता देण्यात येत आहे.\"\n\nInterpretation: It says based on inspection, according to the government decision dated 30-06-2026, in the statement (details) of Savitribai Phule Pune University, under item 3.2, amendment is required, and the organization is given approval to make the correction mentioned in the statement. So it's granting approval for amendment to a prior decision. This is not superseding the prior order; it's amending (making correction) to a prior decision. The prior GR is \"GR dated 2026-06-30, number मान्यता-२०२६/ई-१६५९७९२/मशि-४\". The sentence says \"सुधारणा करणे आवश्यक असल्याने ... मान्यता देण्यात येत आहे.\" So it's amending (modifying) that prior order. The cancelled_object? It's \"सुधारणा\" (amendment) but the object being amended is \"विवरणपत्र\" or \"अनु.क्र. 3.2\". The cancelled_object field expects the Marathi noun that is cancelled/amended. Here it's not cancelling something, but amending a part of prior order. So cancelled_object could be \"विवरणपत्र\" or \"अनु.क्र. 3.2\". The instruction: \"cancelled_object: the Marathi noun that is cancelled/amended, or null\". Since it's amending, we should provide the noun being amended. The sentence says \"सुधारणा करणे आवश्यक असल्याने ... मान्यता देण्यात येत आहे.\" The noun \"सुधारणा\" is the action, not the object. The object is \"विवरणपत्र\". Could be \"विवरणपत्र\". Let's choose \"विवरणपत्र\". Provide evidence_span: a substring that shows the operative change. For example: \"सुधारणा करणे आवश्यक असल्याने, ... मान्यता देण्यात येत आहे\". That indicates amendment. We'll pick \"सुधारणा करणे आवश्यक असल्याने, ... मान्यता देण्यात येत आहे\". Must be exact substring from input. The input sentence includes: \"...सावित्रीबाई फुले पुणे विद्यापीठ, पुणे अंतर्गत अनु.क्र. 3.2 मध्ये सुधारणा करणे आवश्यक असल्याने, साकेश्‍वर ग्रामीण विकास सेवा संस्था, अहिल्यानगर संस्थेस खालील विवरणपत्रात नमूद दुरूस्ती करण्यास शासनाची मान्यता देण्यात येत आहे.\"\n\nWe can choose evidence_span: \"सुधारणा करणे आवश्यक असल्याने, साकेश्‍वर ग्रामीण विकास सेवा संस्था, अहिल्यानगर संस्थेस खालील विवरणपत्रात नमूद दुरूस्ती करण्यास शासनाची मान्यता देण्यात येत आहे\". That's exact.\n\nGloss_en: literal translation: \"Accordingly, as per the inspection of university recommendations and documents, it is necessary to make an amendment in item 3.2 of the statement of Savitribai Phule Pune University, and the government is granting approval to Sakshwar Gramin Vikas Seva Sanstha, Ahilyanagar to make the correction mentioned in the following statement.\"\n\nConfidence high, maybe 0.96.\n\ntarget_index: 1 (since only one candidate). type: AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314157715,
+   "prompt_tokens": 940,
+   "prompt_time": 0.03055561,
+   "completion_tokens": 982,
+   "completion_time": 2.231121326,
+   "total_tokens": 1922,
+   "total_time": 2.261676936,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 827
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01kyes8fjkf23sk5xs5s2n97kj",
+   "seed": 2124930332
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e5b3adf8ffd5d577521b6905",
+ "role": "reasoning"
+}

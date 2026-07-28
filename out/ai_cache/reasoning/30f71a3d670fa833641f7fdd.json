@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदला\",\"cancelled_object\":\"अधिकाऱ्यांचे नाव\",\"gloss_en\":\"Partial amendment thereafter of the officer's name, revenue, dated 07.08.2020\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-1af2bded-c224-4cd9-a7e9-f88d807a047a",
+  "object": "chat.completion",
+  "created": 1785055211,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदला\",\"cancelled_object\":\"अधिकाऱ्यांचे नाव\",\"gloss_en\":\"Partial amendment thereafter of the officer's name, revenue, dated 07.08.2020\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence appears to be a table row: \"अ. अधिकाऱ्यांचे नाव महसूली दिनांक ०७.०८.२०२० अंशत: बदला नंतरची\". It includes phrase \"अंशत: बदला नंतरची\" which means \"partial amendment thereafter\" or \"partial change later\". The candidate prior GR is listed. The sentence likely indicates an amendment (partial change) to that prior GR. So type AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that justifies type. The phrase \"अंशत: बदला\" indicates amendment. So evidence_span = \"अंशत: बदला\". Cancelled_object: what is being amended? Possibly \"अधिकाऱ्यांचे नाव\" (officer's name) or \"महसूली\". The sentence says \"अधिकाऱ्यांचे नाव ... महसूली ... अंशत: बदला\". The object being changed is \"अधिकाऱ्यांचे नाव\" (officer's name) or \"महसूली\". The phrase \"अंशत: बदला\" indicates partial amendment of something, likely the officer's name. So cancelled_object could be \"अधिकाऱ्यांचे नाव\". Provide that.\n\nGloss_en: literal translation: \"Partial amendment thereafter of the officer's name, revenue, dated 07.08.2020\". Something like that.\n\nConfidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.319144515,
+   "prompt_tokens": 837,
+   "prompt_time": 0.01508424,
+   "completion_tokens": 375,
+   "completion_time": 0.789520591,
+   "total_tokens": 1212,
+   "total_time": 0.804604831,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 303
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dd854ee2d7",
+  "x_groq": {
+   "id": "req_01kyes9tdef6dvt52wtgrxm6az",
+   "seed": 1752331377
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "30f71a3d670fa833641f7fdd",
+ "role": "reasoning"
+}

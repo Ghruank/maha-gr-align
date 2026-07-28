@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"तसेच यापूर्वीच्या शासन निर्णयातील\",\"cancelled_object\":null,\"gloss_en\":\"Necessary amendments will be made as and when required. Also in the provisions of the earlier government decision...\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-113cde99-0fba-49aa-b126-085587d4aca2",
+  "object": "chat.completion",
+  "created": 1785091512,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"तसेच यापूर्वीच्या शासन निर्णयातील\",\"cancelled_object\":null,\"gloss_en\":\"Necessary amendments will be made as and when required. Also in the provisions of the earlier government decision...\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"आवश्यक सुधारणा यथावकाश करण्यात येईल. तसेच यापूर्वीच्या शासन निर्णयातील ज्या तरतूदींमध्ये या\"\n\nIt seems incomplete but we have: \"आवश्यक सुधारणा यथावकाश करण्यात येईल.\" Means \"Necessary amendments will be made as and when required.\" That's a statement of future action, not a decision to cancel or amend existing order. It references prior decision: \"तसेच यापूर्वीच्या शासन निर्णयातील ज्या तरतूदींमध्ये या\" (also in the provisions of the earlier government decision...). This is just referencing prior decision, not cancelling or amending. So type = REFERENCES.\n\ntarget_index: which candidate? There's only one candidate prior GR. Since it references it, we set target_index = 1.\n\nevidence_span: need exact substring that justifies type. Could be \"तसेच यापूर्वीच्या शासन निर्णयातील\". That indicates reference. Or \"आवश्यक सुधारणा यथावकाश करण्यात येईल\" indicates future amendment but not operative. But referencing prior decision is the key. Use \"तसेच यापूर्वीच्या शासन निर्णयातील\". Must be exact substring from input. The sentence includes line break? Input: \"आवश्यक सुधारणा यथावकाश करण्यात येईल. तसेच यापूर्वीच्या शासन निर्णयातील ज्या तरतूदींमध्ये या\". So substring \"तसेच यापूर्वीच्या शासन निर्णयातील\" is present.\n\ncancelled_object: null because not cancelling.\n\ngloss_en: literal translation: \"Necessary amendments will be made as and when required. Also in the provisions of the earlier government decision...\" Provide translation.\n\nconfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.2861013,
+   "prompt_tokens": 815,
+   "prompt_time": 0.037941336,
+   "completion_tokens": 451,
+   "completion_time": 0.941890947,
+   "total_tokens": 1266,
+   "total_time": 0.979832283,
+   "completion_tokens_details": {
+    "reasoning_tokens": 377
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_854fa9be4c",
+  "x_groq": {
+   "id": "req_01kyfvxn3he2qtmeebxe0yxkqb",
+   "seed": 2131978702
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "72995b8d69988eaf4c8276d0",
+ "role": "reasoning"
+}

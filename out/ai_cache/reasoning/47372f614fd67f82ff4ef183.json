@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये अल्पसंख्याक व प्रौढ शिक्षण संचालनालयाची तसेच शिक्षणाधिकारी (निरंतर शिक्षण) जि.प. कार्यालयांची पुनर्रचना करण्यात आल्यामुळे\",\"cancelled_object\":\"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत विभागीय प्रमुख\",\"gloss_en\":\"Government decision: Under the decision of 24‑06‑2022 the regional offices were appointed as departmental heads as per the 2015 amendments to the Financial Powers Rules 1978; now, by the decision of 22‑06‑2022, the reorganisation of the Directorate of Minorities and Adult Education and the Continuous Education district office alters those appointments.\",\"confidence\":0.78}",
+ "raw": {
+  "id": "chatcmpl-07146870-4786-4f88-a6b8-8ba73267601e",
+  "object": "chat.completion",
+  "created": 1785055292,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये अल्पसंख्याक व प्रौढ शिक्षण संचालनालयाची तसेच शिक्षणाधिकारी (निरंतर शिक्षण) जि.प. कार्यालयांची पुनर्रचना करण्यात आल्यामुळे\",\"cancelled_object\":\"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत विभागीय प्रमुख\",\"gloss_en\":\"Government decision: Under the decision of 24‑06‑2022 the regional offices were appointed as departmental heads as per the 2015 amendments to the Financial Powers Rules 1978; now, by the decision of 22‑06‑2022, the reorganisation of the Directorate of Minorities and Adult Education and the Continuous Education district office alters those appointments.\",\"confidence\":0.78}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly:\n\n\"शासन निर्णय : शालेय शिक्षण व क्रीडा विभागाच्या दिनाक २४.०६.२०२२ रोजीच्या शासन निर्णयान्वये शालेय शिक्षण व क्रीडा विभागाच्या अखत्यारीतील क्षेत्रिय स्तरावरील कार्यालयांना प्रमुखाना वित्तीय अधिकार नियम पुस्तिका १९७८, भाग- पहिला, उप विभाग एक ते पाच मध्ये दिनांक १७.०४.२०१५ रोजी करण्यात आलेल्या सुधारणांच्या अनुषंगाने विभागीय प्रमुख, प्रादेशिक कार्यालय प्रमख व कार्यालय प्रमुख म्हणून घोषित करण्यात आले आहे. आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये अल्पसंख्याक व प्रौढ शिक्षण संचालनालयाची तसेच शिक्षणाधिकारी (निरंतर शिक्षण) जि.प. कार्यालयांची पुनर्रचना करण्यात आल्यामुळे सदर\"\n\nIt seems to be describing that under a prior decision dated 24.06.2022, certain offices were declared as departmental heads, etc. Now, under a decision dated 22.06.2022, due to reorganization of some directorates, ... (sentence incomplete). The sentence seems to be referencing prior decision (the 24.06.2022 decision) and then stating a new decision (22.06.2022) that reorganizes something. It does not explicitly cancel the prior decision; it mentions that due to reorganization, \"सदर\" (the rest likely continues). The snippet we have ends abruptly. The operative part: \"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये ... पुनर्रचना करण्यात आल्यामुळे सदर\". This suggests that the new decision is causing reorganization, possibly affecting the earlier appointment. But does it cancel the earlier appointment? The sentence says \"आता ... पुनर्रचना करण्यात आल्यामुळे सदर\". It likely means that due to reorganization, the earlier designation is being changed? However, we don't have explicit cancellation language like \"रद्द\", \"रद्द करण्यात येत आहे\", \"विरुद्ध\". It just says \"पुनर्रचना\". That could be an amendment (AMENDS) to the earlier decision, modifying the appointments. The prior GR is about appointing departmental heads. The new decision reorganizes directorates, which may affect those appointments. The sentence does not say the earlier order is superseded entirely. So likely AMENDS.\n\nWe need to identify target_index: the prior GR list has one candidate: index 1.\n\nWe need evidence_span: a substring that shows the relationship. Which part indicates amendment? Possibly \"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये ... पुनर्रचना करण्यात आल्यामुळे\". That indicates a new decision causing reorganization, which modifies earlier arrangement. So evidence_span could be \"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये ... पुनर्रचना करण्यात आल्यामुळे\". Must be exact substring from input. The input sentence includes that phrase: \"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये अल्पसंख्याक व प्रौढ शिक्षण संचालनालयाची तसेच शिक्षणाधिकारी (निरंतर शिक्षण) जि.प. कार्यालयांची पुनर्रचना करण्यात आल्यामुळे सदर\". So we can use \"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये ... पुनर्रचना करण्यात आल्यामुळे\". But we need exact characters; we can include the whole phrase up to \"सदर\". Let's copy: \"आता दिनांक २२.०६.२०२२ रोजीच्या शासन निर्णयान्वये अल्पसंख्याक व प्रौढ शिक्षण संचालनालयाची तसेच शिक्षणाधिकारी (निरंतर शिक्षण) जि.प. कार्यालयांची पुनर्रचना करण्यात आल्यामुळे\". That is exact.\n\nCancelled_object: what is being cancelled/amended? Likely \"वित्तीय अधिकार नियम पुस्तिका १९७८, भाग- पहिला, उप विभाग एक ते पाच मध्ये ... विभागीय प्रमुख, प्रादेशिक कार्यालय प्रमख व कार्यालय प्रमुख\". That's the appointment. So the object is \"वित्तीय अधिकार नियम पुस्तिका १९७८, भाग- पहिला, उप विभाग एक ते पाच मध्ये ... विभागीय प्रमुख, प्रादेशिक कार्यालय प्रमख व कार्यालय प्रमुख\". But we need a concise Marathi noun. Could be \"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत विभागीय प्रमुख\". Or simply \"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत विभागीय प्रमुख\". The sentence says \"वित्तीय अधिकार नियम पुस्तिका १९७८, भाग- पहिला, उप विभाग एक ते पाच मध्ये ... विभागीय प्रमुख, प्रादेशिक कार्यालय प्रमख व कार्यालय प्रमुख म्हणून घोषित\". So the object being amended is the \"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत विभागीय प्रमुख\". We'll set cancelled_object to \"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत विभागीय प्रमुख\". Or maybe \"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत पद\". We'll choose \"वित्तीय अधिकार नियम पुस्तिका १९७८ अंतर्गत विभागीय प्रमुख\". That indicates the appointment.\n\nGloss_en: literal English translation: \"Government decision: Under the government decision dated 24.06.2022 of the School Education and Sports Department, the regional level offices under the department were declared as departmental heads, regional office heads and office heads as per the amendments made on 17.04.2015 to Financial Powers Rules 1978, Part I, Sub‑section 1 to 5. Now, by the government decision dated 22.06.2022, due to the reorganisation of the Directorate of Minorities and Adult Education as well as the Education Officer (Continuous Education) district office, the said ...\". We'll produce a concise translation.\n\nConfidence: maybe 0.78.\n\nNow produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280670405,
+   "prompt_tokens": 981,
+   "prompt_time": 0.664192401,
+   "completion_tokens": 1476,
+   "completion_time": 3.131338362,
+   "total_tokens": 2457,
+   "total_time": 3.795530763,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1284
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5082008e34",
+  "x_groq": {
+   "id": "req_01kyesc6tdfdea6fv0s95hzj40",
+   "seed": 2004780289
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "47372f614fd67f82ff4ef183",
+ "role": "reasoning"
+}

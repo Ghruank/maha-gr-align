@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भाधीन क्र.७ च्या पत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"The proposal for approval of 1,293 additional teacher posts was submitted to the government through a letter referred to as No.7; it does not supersede or amend the listed prior GR.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-270b4415-1fbc-4a81-8164-ce3b92bf0187",
+  "object": "chat.completion",
+  "created": 1785055362,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भाधीन क्र.७ च्या पत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"The proposal for approval of 1,293 additional teacher posts was submitted to the government through a letter referred to as No.7; it does not supersede or amend the listed prior GR.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR(s). The sentence is in Marathi. Let's translate roughly: \"राज्यातील उच्च माध्यमिक शाळा/कनिष्ठ महाविद्यालयातील सन 2003-04 ते सन 2018-19 मधील एकूण 1293 शिक्षकांच्या वाढीव पदांना मंजूरी देण्याबाबतचा प्रस्ताव शिक्षण संचालक (माध्यमिक व उच्च माध्यमिक) यांनी संदर्भाधीन क्र.7 च्या पत्रान्वये शासनाकडे मंजूरीसाठी सादर करण्यात आला होता. सदर 1293 पदांपैकी यापूर्वीच्या वित्त विभागाच्या शासन निर्णयान्वये व्यपगत करण्यात आलेल्या 428 पदांपैकी एकूण 211 पदे पुनर्जिवित करण्यास संदर्भाधीन क्र. 8 च्या शासन निर्णयान्वये मान्यता देण्यात आली आहे. त्यानंतर उर्वरित वाढीव पदांना मान्यता देण्याच्या विषयाच्या अनुषंगाने राज्यातील वाढीव पदांवर विहीत कार्यपध्दतीने नियुक्त आणि कार्यभार उपलब्ध असलेल्या शिक्षकांचे त्याच किंवा\"\n\nIt mentions \"संदर्भाधीन क्र.7 च्या पत्रान्वये\" and \"संदर्भाधीन क्र.8 च्या शासन निर्णयान्वये\". These are references to prior orders (GRs). The candidate list only includes one prior GR: \"GR dated 2023-07-11, number एसएसएन २०१७/(प्र.क्र.१५/१७)/टीएनटी-२\". The sentence does not explicitly say it supersedes, amends, or cancels that prior GR. It just references \"संदर्भाधीन क्र.7\" and \"संदर्भाधीन क्र.8\". Those are likely other GRs, not necessarily the candidate. The candidate is \"एसएसएन 2017/(प्र.क्र.15/17)/टीएनटी-2\". The sentence does not mention that number. So there is no relationship to the listed prior GR. Therefore type = NONE, target_index = null.\n\nWe need evidence_span: a substring that justifies NONE. Could be any part that shows no operative change. Perhaps \"संदर्भाधीन क्र.७ च्या पत्रान्वये\" is a reference, but not to the candidate. However we need evidence that it's not referencing the candidate. Could use \"संदर्भाधीन क्र.७ च्या पत्रान्वये\" as evidence of reference but not to candidate. But classification is NONE because no relationship to listed GR. The evidence_span can be any part of sentence that shows it's just a proposal, not a decision. For NONE, we can pick \"संदर्भाधीन क्र.७ च्या पत्रान्वये\". That indicates reference but not to candidate. However the instruction: evidence_span must be exact substring justifying the type. For NONE, we need to justify that there is no relationship. Could use \"संदर्भाधीन क्र.७ च्या पत्रान्वये\" as evidence that it's a reference, but since candidate not matched, it's NONE. Might be okay.\n\nCancelled_object: null.\n\nGloss_en: Provide literal English translation.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.285809358,
+   "prompt_tokens": 1011,
+   "prompt_time": 0.028022385,
+   "completion_tokens": 778,
+   "completion_time": 1.877606143,
+   "total_tokens": 1789,
+   "total_time": 1.905628528,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 685
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyesedb6f9waeh1mcs9ht9h8",
+   "seed": 522120667
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "25aaeb663f5a8a802e5040b1",
+ "role": "reasoning"
+}

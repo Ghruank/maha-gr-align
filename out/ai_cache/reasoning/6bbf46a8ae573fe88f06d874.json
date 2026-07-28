@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"निवड समितीमध्ये सुधारणा करुन\",\"cancelled_object\":\"निवड समिती\",\"gloss_en\":\"Pursuant to Government Decision dated 23.02.2021 under reference number 4, the selection committee formed for fixing the position of associate professor/professor is being amended, and a selection committee is being formed as follows.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-fe236ba2-14b3-43cc-b66f-d16970e09295",
+  "object": "chat.completion",
+  "created": 1785054849,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"निवड समितीमध्ये सुधारणा करुन\",\"cancelled_object\":\"निवड समिती\",\"gloss_en\":\"Pursuant to Government Decision dated 23.02.2021 under reference number 4, the selection committee formed for fixing the position of associate professor/professor is being amended, and a selection committee is being formed as follows.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"संदर्भाधिन क्रमांक ४ येथील शासन निर्णय दिनांक २३.०२.२०२१ अन्वये सहयोगी प्राध्यापक/ प्राध्यापक या पदावर स्थान निश्चिती करण्यासाठी गठीत करण्यात आलेल्या निवड समितीमध्ये सुधारणा करुन, खालीलप्रमाणे निवड समिती गठीत करण्यात येत आहे:\"\n\nInterpretation: It says: \"Under reference number 4, the government decision dated 23.02.2021, for fixing positions of associate professor/professor, the selection committee that was formed is being amended, and a new selection committee is being formed as follows.\"\n\nThus it modifies the composition of a selection committee formed under prior GR. This is an amendment to the prior order (the prior GR formed a selection committee). It is not cancelling the entire prior order, just amending the committee. So type = AMENDS.\n\nTarget_index: The prior GR list has one entry, index 1.\n\nEvidence_span: need exact substring that shows amendment. The phrase \"निवड समितीमध्ये सुधारणा करुन\" indicates amendment. Also \"संदर्भाधिन क्रमांक ४ येथील शासन निर्णय दिनांक २३.०२.२०२१ अन्वये ... सुधारणा करुन\". So evidence_span could be \"निवड समितीमध्ये सुधारणा करुन\". Must be exact substring from input. Let's copy that.\n\nCancelled_object: The object being amended is \"निवड समिती\". Since it's amendment, cancelled_object maybe the object being changed? For AMENDS, we still provide cancelled_object? The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. So we can put \"निवड समिती\". Good.\n\nGloss_en: literal translation: \"Pursuant to Government Decision dated 23.02.2021 under reference number 4, the selection committee formed for fixing the position of associate professor/professor is being amended, and a selection committee is being formed as follows.\"\n\nConfidence: high, maybe 0.97.\n\nReturn JSON.\n\nCheck JSON formatting: compact, no spaces? It's okay to have spaces. Provide keys.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.279352113,
+   "prompt_tokens": 861,
+   "prompt_time": 0.020327665,
+   "completion_tokens": 568,
+   "completion_time": 1.749873864,
+   "total_tokens": 1429,
+   "total_time": 1.770201529,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 465
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01kyeryr7qehm9xx6wqsrg617c",
+   "seed": 409803199
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6bbf46a8ae573fe88f06d874",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शासन निर्णयात सुधारणा करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By amending the government decision dated 07-08-2023 referred to as reference No.1, Maharashtra National\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-493680b6-3101-4cf8-922e-447b755daad2",
+  "object": "chat.completion",
+  "created": 1785055102,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शासन निर्णयात सुधारणा करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By amending the government decision dated 07-08-2023 referred to as reference No.1, Maharashtra National\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"संदर्भ क्र.१ येथील दि.०७.०८.२०२३ रोजीच्या शासन निर्णयात सुधारणा करुन, महाराष्ट्र राष्ट्रीय\"\n\nIt says: \"संदर्भ क्र.१ येथील ... शासन निर्णयात सुधारणा करुन\" meaning \"by amending the government decision dated 07-08-2023 referenced as No.1\". So it is amending a prior order. Not superseding the whole order, just making amendment. So type = AMENDS.\n\nTarget_index: which prior GR? There's only one candidate, index 1.\n\nEvidence_span: need exact substring that shows the relationship. The phrase \"शासन निर्णयात सुधारणा करुन\" indicates amendment. So evidence_span could be \"शासन निर्णयात सुधारणा करुन\". Must be exact substring from input. The sentence includes \"शासन निर्णयात सुधारणा करुन\". Yes.\n\nCancelled_object: what is being cancelled/amended? It's the prior order itself? Actually it's amending the prior order, not cancelling a specific object. The object is the prior order? For AMENDS, we need the Marathi noun that is cancelled/amended. Could be \"शासन निर्णय\". The amendment is to the prior decision. So cancelled_object maybe \"शासन निर्णय\". But the sentence says \"शासन निर्णयात सुधारणा करुन\" meaning \"by amending the government decision\". The object being amended is \"शासन निर्णय\". So we can set cancelled_object to \"शासन निर्णय\". Or maybe null? The spec: \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. Since it's amendment, we can provide the noun. Let's put \"शासन निर्णय\".\n\nGloss_en: literal translation: \"By amending the government decision dated 07-08-2023 referred to as reference No.1, Maharashtra National\". Something like that. Provide literal.\n\nConfidence: high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28231277,
+   "prompt_tokens": 814,
+   "prompt_time": 0.01476008,
+   "completion_tokens": 485,
+   "completion_time": 1.16604829,
+   "total_tokens": 1299,
+   "total_time": 1.18080837,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 409
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f73454f048",
+  "x_groq": {
+   "id": "req_01kyes6fwjf9686fj84vwgfhw5",
+   "seed": 926510202
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "bfc41236a0c7a8e068bab92f",
+ "role": "reasoning"
+}

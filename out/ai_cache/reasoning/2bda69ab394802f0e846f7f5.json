@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक ११.१२.२०२० नुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the Government decision dated 11-12-2020 of the School Education and Sports Department, a decision has been taken regarding vacancy of the fourth‑grade post after retirement and the shipai allowance is applied to schools instead of the fourth‑grade post, etc.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-d75979bc-fd6f-4294-9b5f-49d1e730cdbe",
+  "object": "chat.completion",
+  "created": 1785055306,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक ११.१२.२०२० नुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to the Government decision dated 11-12-2020 of the School Education and Sports Department, a decision has been taken regarding vacancy of the fourth‑grade post after retirement and the shipai allowance is applied to schools instead of the fourth‑grade post, etc.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GR list. The sentence is about school education and sports department, decision dated 11.12.2020, about retirement and applying shipai allowance etc. It references a prior GR dated 2020-12-11, number ... It seems the sentence is describing a decision (governance) that \"शालेय शिक्षण व क्रीडा विभाग, शासन निर्णय दिनांक ११.१२.२०२० नुसार ...\" So it's referencing that prior decision. Does it modify or supersede? It says \"नुसार चतुर्थश्रेणी कर्मचारी नियत वयोमानानुसार सेवानिवृत्त झाल्यानंतर सदर पद व्यपगत करणेबाबत निर्णय घेण्यात आला आहे.\" It seems it's a new decision about vacancy after retirement. It also says \"सदर शासन निर्णयानुसार शाळांना चतुर्थश्रेणी पदाऐवजी शिपाई भत्ता लागू करण्यात आला आहे.\" So it's applying something based on that prior decision. It does not cancel the prior decision; it is using it as basis. So relationship is REFERENCES.\n\nCheck traps: Not deliberative mood. It's operative? It says \"निर्णय घेण्यात आला आहे\" (decision taken). But it's about a new decision, not canceling prior. So classification: REFERENCES.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows reference. The phrase \"शालेय शिक्षण व क्रीडा विभाग, शासन निर्णय दिनांक ११.१२.२०२० नुसार\" includes the date. That is the reference. So evidence_span = \"शासन निर्णय दिनांक ११.१२.२०२० नुसार\". Or include preceding \"शालेय शिक्षण व क्रीडा विभाग, शासन निर्णय दिनांक ११.१२.२०२० नुसार\". Must be exact substring. Choose \"शासन निर्णय दिनांक ११.१२.२०२० नुसार\". Cancelled_object null. Gloss_en: literal translation: \"According to the Government decision dated 11.12.2020 of the School Education and Sports Department, a decision has been taken regarding the vacancy of the fourth‑grade post after retirement as per the prescribed age, and the shipai allowance has been applied to schools instead of the fourth‑grade post, etc.\" Provide concise.\n\nConfidence high 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280397729,
+   "prompt_tokens": 1031,
+   "prompt_time": 0.024951495,
+   "completion_tokens": 606,
+   "completion_time": 1.319340013,
+   "total_tokens": 1637,
+   "total_time": 1.344291508,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 495
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c56a34c3f3",
+  "x_groq": {
+   "id": "req_01kyescqcdf3vr8vrawyz08370",
+   "seed": 1802726797
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2bda69ab394802f0e846f7f5",
+ "role": "reasoning"
+}

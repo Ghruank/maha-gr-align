@@ -1,0 +1,44 @@
+{
+ "text": "OK",
+ "raw": {
+  "id": "chatcmpl-b456bbe2-9efe-44da-8e41-6594285861e7",
+  "object": "chat.completion",
+  "created": 1785248234,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "OK",
+     "reasoning": "The user says \"Reply OK\". They want a simple response \"OK\". There's no disallowed content. So just respond \"OK\"."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284495587,
+   "prompt_tokens": 73,
+   "prompt_time": 0.002873569,
+   "completion_tokens": 38,
+   "completion_time": 0.078779616,
+   "total_tokens": 111,
+   "total_time": 0.081653185,
+   "completion_tokens_details": {
+    "reasoning_tokens": 28
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kymhcetjfr394snt7brkyqn7",
+   "seed": 705418957
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a2a99e4c5b2d4311b5c18ce8",
+ "role": "reasoning"
+}

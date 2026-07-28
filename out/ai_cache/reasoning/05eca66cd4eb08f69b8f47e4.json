@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९७/ तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अनुक्रमांक ८७ रद्द करण्याची व काही अभ्यासक्रमाची प्रवेश क्षमता कमी करण्याची बाब शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The matter of cancelling item 87 in Annexure “A” of Government Decision No. TE M-2020/No.97/Part-4 dated 23/07/2020 and reducing the entry capacity of some courses was under the government's consideration.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-59249683-b03c-4463-b5be-6b9acb93c12b",
+  "object": "chat.completion",
+  "created": 1785054818,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९७/ तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अनुक्रमांक ८७ रद्द करण्याची व काही अभ्यासक्रमाची प्रवेश क्षमता कमी करण्याची बाब शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The matter of cancelling item 87 in Annexure “A” of Government Decision No. TE M-2020/No.97/Part-4 dated 23/07/2020 and reducing the entry capacity of some courses was under the government's consideration.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi, appears to be part of प्रस्तावना (intro) and says: \"प्रस्तावना : ... शासनाच्या विचाराधीन होती.\" It mentions that the cancellation of Annexure “A” item 87 and reduction of some course capacity was under consideration (\"शासनाच्या विचाराधीन होती\"). This is deliberative mood, not operative. According to trap 3, such sentences are not decisions, classify as REFERENCES. Also it's just referencing prior GR (GR dated 2020-07-23). So type = REFERENCES, target_index = 1 (since only one candidate). evidence_span: need exact substring that shows relationship. Could be \"शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९७/ तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अनुक्रमांक ८७ रद्द करण्याची व काही अभ्यासक्रमाची प्रवेश क्षमता कमी करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nBut need exact substring from input. Let's copy a part: \"शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९७/ तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अनुक्रमांक ८७ रद्द करण्याची व काही अभ्यासक्रमाची प्रवेश क्षमता कमी करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nCancelled_object: Since it's not actually cancelled, null.\n\nGloss_en: Provide literal English translation: \"Introduction: ... the matter of cancelling item 87 in Annexure “A” of Government Decision No. TE M-2020/No.97/Part-4 dated 23/07/2020 and reducing the entry capacity of some courses was under the consideration of the government.\"\n\nConfidence maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281946763,
+   "prompt_tokens": 954,
+   "prompt_time": 0.029689611,
+   "completion_tokens": 568,
+   "completion_time": 1.2833758,
+   "total_tokens": 1522,
+   "total_time": 1.313065411,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 397
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyerxtg6fgza06ng2spqzqph",
+   "seed": 119989891
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "05eca66cd4eb08f69b8f47e4",
+ "role": "reasoning"
+}

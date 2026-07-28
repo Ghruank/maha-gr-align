@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अधिसंख्य पद रद्द होईल\",\"cancelled_object\":\"पद\",\"gloss_en\":\"The majority of posts will be cancelled after they become vacant due to resignation/death etc.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-70cb76af-768d-4e8a-be07-25f4d79d308b",
+  "object": "chat.completion",
+  "created": 1785056052,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अधिसंख्य पद रद्द होईल\",\"cancelled_object\":\"पद\",\"gloss_en\":\"The majority of posts will be cancelled after they become vacant due to resignation/death etc.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"राजीनामा/ मृत्यू इ. कारणामुळे ते रिक्त झाल्यानंतर अधिसंख्य पद रद्द होईल. तद्नंतर त्या सेवा\"\n\nTranslation: \"After vacancy due to resignation/death etc., the majority of posts will be cancelled. Afterwards that service...\"\n\nIt mentions prior GR: \"पदनि २०२१/प्र.क्र.५१/आपुक\". The sentence says that after vacancy due to resignation/death, the majority of posts will be cancelled. This is an amendment? It cancels posts that become vacant under that prior GR? The prior GR likely established some posts. The sentence says those posts will be cancelled after vacancy. That is cancelling posts (positions) that were created under prior GR. According to trap 2: If the sentence cancels posts made under a prior GR, that GR is NOT superseded — it's AMENDS. So type AMENDS.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"अधिसंख्य पद रद्द होईल\" indicates cancellation of posts. So evidence_span = \"अधिसंख्य पद रद्द होईल\". Cancelled_object: \"पद\". (Marathi noun). Could be \"पद\". Provide that.\n\ngloss_en: literal translation: \"The majority of posts will be cancelled after they become vacant due to resignation/death etc.\"\n\nconfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.31512322,
+   "prompt_tokens": 810,
+   "prompt_time": 0.015552775,
+   "completion_tokens": 383,
+   "completion_time": 0.919423937,
+   "total_tokens": 1193,
+   "total_time": 0.934976712,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 313
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_47082602e2",
+  "x_groq": {
+   "id": "req_01kyet3fshf6mab4ya32we6whb",
+   "seed": 872867773
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0f4b889e1395af630552b47d",
+ "role": "reasoning"
+}

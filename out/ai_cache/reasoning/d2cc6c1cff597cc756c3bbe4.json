@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदला\",\"cancelled_object\":\"अधिकाऱ्यांचे महसूली\",\"gloss_en\":\"Partial amendment of officers' revenue dated 27.01.2021\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-2a6a614a-7aab-4468-afcb-84c981f42b25",
+  "object": "chat.completion",
+  "created": 1785055227,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदला\",\"cancelled_object\":\"अधिकाऱ्यांचे महसूली\",\"gloss_en\":\"Partial amendment of officers' revenue dated 27.01.2021\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence appears: \"अ. अधिकाऱ्यांचे महसूली दिनांक २७.०१.२०२१ अंशत: बदला नंतरची\". It seems to say \"अंशत: बदला\" meaning \"partial amendment\". So it's an amendment (AMENDS) to prior GR. The prior GR is listed. The sentence indicates a partial change (अंशत: बदला). So type AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that justifies type. The phrase \"अंशत: बदला\" indicates amendment. So evidence_span = \"अंशत: बदला\". cancelled_object: what is being cancelled/amended? It says \"अधिकाऱ्यांचे महसूली\". Likely \"अधिकाऱ्यांचे महसूली\" (officers' revenue?). The noun being changed is \"अधिकाऱ्यांचे महसूली\". So cancelled_object maybe \"अधिकाऱ्यांचे महसूली\". Provide that. Gloss_en: literal translation: \"Partial amendment of officers' revenue dated 27.01.2021\". Confidence high 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286045486,
+   "prompt_tokens": 837,
+   "prompt_time": 0.090207822,
+   "completion_tokens": 318,
+   "completion_time": 0.671854704,
+   "total_tokens": 1155,
+   "total_time": 0.762062526,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 249
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5781dfb07c",
+  "x_groq": {
+   "id": "req_01kyesaab9fms8qs005d14jv2h",
+   "seed": 280049854
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d2cc6c1cff597cc756c3bbe4",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्याचा निर्णय\",\"cancelled_object\":\"पदस्थापनेत\",\"gloss_en\":\"Government decision: Officers of the Education Officer and similar, Group‑A cadre have been posted as per the selection list approved by the government under the decision dated 15‑12‑2022. A decision has been taken at the government level to make a partial change in the postings of some officers in the said promotion order. According to the competent authority's approval, the officers listed in the table below are being posted to the revised posting locations shown opposite their names.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-7e74a106-d967-42da-a66e-b48f53e9383a",
+  "object": "chat.completion",
+  "created": 1785055281,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्याचा निर्णय\",\"cancelled_object\":\"पदस्थापनेत\",\"gloss_en\":\"Government decision: Officers of the Education Officer and similar, Group‑A cadre have been posted as per the selection list approved by the government under the decision dated 15‑12‑2022. A decision has been taken at the government level to make a partial change in the postings of some officers in the said promotion order. According to the competent authority's approval, the officers listed in the table below are being posted to the revised posting locations shown opposite their names.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence in Marathi: \"शासन निर्णय: शिक्षणाधिकारी व तत्सम, गट-अ या संवर्गातील अधिकाऱ्यांना शासनाने मान्य केलेल्या निवडसूचीनुसार उपरोक्त दिनांक १५.१२.२०२२ रोजीच्या शासन निर्णयान्वये पदस्थापना देण्यात आली आहे. सदर पदोन्नतीच्या आदेशामधील काही अधिकाऱ्यांच्या पदस्थापनेत अंशत: बदल करण्याचा निर्णय शासन स्तरावर घेण्यात आला आहे. सक्षम प्राधिकाऱ्यांनी दिलेल्या मान्यतेनुसार खालील तक्त्यात नमूद अधिकाऱ्यांच्या बदलीच्या पदस्थापनेमध्ये त्यांच्या नावासमोर दर्शविलेल्या सुधारित पदस्थापनेच्या ठिकाणी पदस्थापना करण्यात येत आहे.\"\n\nInterpretation: It says that according to the earlier decision dated 15-12-2022, appointments were made. Now a decision has been taken at the government level to make partial changes (अंशत: बदल) in the postings of some officers in that promotion order. So this is an amendment (partial change) to the prior order, not superseding the whole order. So type = AMENDS.\n\nTarget_index: 1 (since only one candidate). evidence_span: need exact substring that indicates amendment. The phrase \"अंशत: बदल करण्याचा निर्णय\" indicates amendment. So evidence_span could be \"अंशत: बदल करण्याचा निर्णय\". Must be exact substring from sentence. Let's locate: The sentence contains \"... काही अधिकाऱ्यांच्या पदस्थापनेत अंशत: बदल करण्याचा निर्णय शासन स्तरावर घेण्यात आला आहे.\" So the substring \"अंशत: बदल करण्याचा निर्णय\" is present. We'll use that.\n\ncancelled_object: what is being cancelled/amended? It's \"पदस्थापनेत\" (postings) or \"पदोन्नतीच्या आदेशामधील काही अधिकाऱ्यांच्या पदस्थापनेत\". The object being changed is \"पदस्थापनेत\". Since it's amendment, we need the Marathi noun that is cancelled/amended. The sentence says \"अंशत: बदल\" i.e., partial change, not cancellation. But we can still provide the object: \"पदस्थापनेत\". The field expects the noun that is cancelled/amended. So \"पदस्थापनेत\". Could also be \"पदस्थापना\". We'll choose \"पदस्थापनेत\". Provide as string.\n\ngloss_en: literal English translation: \"Government decision: Officers of the Education Officer and similar, Group-A cadre have been posted as per the selection list approved by the government under the government decision dated 15.12.2022. A decision has been taken at the government level to make a partial change in the postings of some officers in the said promotion order. According to the approval given by the competent authority, the officers mentioned in the table below are being posted to the revised posting places shown opposite their names.\"\n\nWe'll produce concise translation.\n\nconfidence: high, maybe 0.96.\n\nReturn JSON compact.\n\nCheck traps: Not a file number cue. Not supersedes because only partial change. Not deliberative mood. So AMENDS.\n\nNow produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320645269,
+   "prompt_tokens": 946,
+   "prompt_time": 0.080350855,
+   "completion_tokens": 847,
+   "completion_time": 1.853354475,
+   "total_tokens": 1793,
+   "total_time": 1.93370533,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 700
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c652c0ffaa",
+  "x_groq": {
+   "id": "req_01kyesby5pfcarj5j0550rv50y",
+   "seed": 1241737266
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "db0b01df8d1f9bcc347a67f7",
+ "role": "reasoning"
+}

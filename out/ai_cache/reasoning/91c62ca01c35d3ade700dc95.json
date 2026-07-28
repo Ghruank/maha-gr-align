@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यांत आल्या होत्या\",\"cancelled_object\":\"नियुक्त्या\",\"gloss_en\":\"The appointments of six non-official members of the said committee had been cancelled under the government decision dated 08.07.2020. The matter of restructuring the Military Pre-Service Education Institute, Aurangabad regulatory board was under government consideration.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-9b1b501d-7783-452c-a6ab-3d9bc41f36b7",
+  "object": "chat.completion",
+  "created": 1785054132,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यांत आल्या होत्या\",\"cancelled_object\":\"नियुक्त्या\",\"gloss_en\":\"The appointments of six non-official members of the said committee had been cancelled under the government decision dated 08.07.2020. The matter of restructuring the Military Pre-Service Education Institute, Aurangabad regulatory board was under government consideration.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence in Marathi:\n\n\"सदर मंडळावरील ६ अशासकीय सदस्यांच्या नियुक्त्या संदर्भाधीन दिनांक ०८.०७.२०२० च्या शासन निर्णयान्वये रद्द करण्यांत आल्या होत्या. सैनिकी सेवापूर्व शिक्षण संस्था, औरंगाबाद नियामक मंडळाची पुनर्रचना करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nWe have candidate prior GR: #1 is GR dated 2020-07-08, number एसपीआय- २०२०/प्र.क्र.४४/का.२८\n\nWe need to see relationship.\n\nFirst clause: \"सदर मंडळावरील ६ अशासकीय सदस्यांच्या नियुक्त्या ... रद्द करण्यांत आल्या होत्या.\" Means \"The appointments of 6 non-official members of the said committee were cancelled under the reference to the government decision dated 08.07.2020.\" So this sentence says that appointments (नियुक्त्या) are being cancelled, referencing a prior decision (the prior GR). This is an amendment? The prior GR is a decision dated 08.07.2020. The current sentence says the appointments were cancelled under that decision. So the current sentence is stating that the appointments are cancelled, referencing the prior decision. Does it supersede the prior order? The prior order is a decision that presumably appointed them? The sentence says \"रद्द करण्यांत आल्या होत्या\" (were cancelled). That indicates that the prior order's appointments are being cancelled. The prior order is being partially cancelled (the appointments). According to trap 2: If the sentence cancels appointments made under a prior GR, that GR is NOT superseded — it stands, and its arrangements change. That's AMENDS, not SUPERSEDES. So type = AMENDS.\n\ntarget_index: the prior GR is #1, so target_index = 1.\n\nevidence_span: need exact substring that justifies type. Could be \"रद्द करण्यांत आल्या होत्या\" or \"दिनांक ०८.०७.२०२० च्या शासन निर्णयान्वये\". The phrase indicating cancellation is \"रद्द करण्यांत आल्या होत्या\". That shows cancellation. Also referencing prior decision: \"दिनांक ०८.०७.२०२० च्या शासन निर्णयान्वये\". Choose a span that includes both? Probably \"रद्द करण्यांत आल्या होत्या\" is enough to indicate cancellation. But also need to show reference to prior GR. The phrase \"दिनांक ०८.०७.२०२० च्या शासन निर्णयान्वये\" shows reference. Which is more appropriate? The type is AMENDS, evidence could be \"रद्द करण्यांत आल्या होत्या\". That indicates cancellation. We'll include that.\n\ncancelled_object: the noun being cancelled is \"नियुक्त्या\" (appointments). So cancelled_object = \"नियुक्त्या\".\n\ngloss_en: literal English translation: \"The appointments of six non-official members of the said committee had been cancelled under the government decision dated 08.07.2020. The matter of restructuring the Military Pre-Service Education Institute, Aurangabad regulatory board was under government consideration.\"\n\nconfidence: high, maybe 0.96.\n\nCheck traps: Not a deliberative mood. It's stating they were cancelled, not under consideration. So AMENDS.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.290951416,
+   "prompt_tokens": 863,
+   "prompt_time": 0.10592143,
+   "completion_tokens": 811,
+   "completion_time": 1.666259981,
+   "total_tokens": 1674,
+   "total_time": 1.772181411,
+   "completion_tokens_details": {
+    "reasoning_tokens": 710
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_acbbc9c4c3",
+  "x_groq": {
+   "id": "req_01kyer8wnberb82xgrca4jbj8e",
+   "seed": 1770636359
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "91c62ca01c35d3ade700dc95",
+ "role": "reasoning"
+}

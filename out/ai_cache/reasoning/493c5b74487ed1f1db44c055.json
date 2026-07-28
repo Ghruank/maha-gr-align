@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"evidence_span\":\"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\",\"gloss_en\":\"Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(ii)/2020 NSS, dated 17.09.2020\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-7a2f2c25-f27c-4916-9644-9ac7130d08c4",
+  "object": "chat.completion",
+  "created": 1785051045,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"evidence_span\":\"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\",\"gloss_en\":\"Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(ii)/2020 NSS, dated 17.09.2020\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence: \"३. भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र.\"\n\nIt mentions a letter from Government of India, Youth Affairs and Sports Department, with a reference number. It does not indicate superseding, amending, or referencing another resolution in operative sense. It's just a citation of a letter. So relationship: NONE? Or maybe REFERENCES? It mentions another order (letter) but does not modify it. The instruction: \"REFERENCES - it merely cites or lists a prior order, with no operative change\". This sentence is citing a prior letter. So it's a reference. So type: REFERENCES.\n\nEvidence span: maybe \"भारत सरकार, युवा कार्य व क्रीडा विभाग यांचे क्र.F.NO.J- १२०२६/१(ii)/२०२० NSS, दिनांक १७.०९.२०२० चे पत्र\". Provide that substring.\n\nGloss_en: \"3. Letter of the Government of India, Department of Youth Affairs and Sports, No. F.NO.J-12026/1(ii)/2020 NSS, dated 17.09.2020.\"\n\nConfidence: high, 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282903176,
+   "prompt_tokens": 403,
+   "prompt_time": 0.017772508,
+   "completion_tokens": 390,
+   "completion_time": 0.812801755,
+   "total_tokens": 793,
+   "total_time": 0.830574263,
+   "completion_tokens_details": {
+    "reasoning_tokens": 277
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01kyenapqkekesfk1snx78zv23",
+   "seed": 139133193
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "493c5b74487ed1f1db44c055",
+ "role": "reasoning"
+}

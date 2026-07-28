@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र.१ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Pursuant to Government Decision referred to as Reference No.1, ... from the academic year 2024-25 the government has approved granting ...\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-41b7e8ef-6800-457b-afc3-70a4793d5bf5",
+  "object": "chat.completion",
+  "created": 1785055153,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र.१ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Pursuant to Government Decision referred to as Reference No.1, ... from the academic year 2024-25 the government has approved granting ...\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence is long Marathi. It starts \"संदर्भ क्र.१ येथील शासन निर्णयान्वये ...\" It says \"reference number 1\" (संदर्भ क्र.१) meaning it references prior decision. It then describes eligibility criteria and says \"शैक्षणिक वर्ष २०२४-२५ पासून शासन मान्यता देण्यात आलेली आहे.\" It seems to be granting a new policy, not cancelling prior order. It references prior GR (candidate). No operative change to that prior GR; it's just referencing it. So type = REFERENCES. target_index = 1 (since candidate list index 1). evidence_span: need exact substring that shows relationship. Could be \"संदर्भ क्र.१ येथील शासन निर्णयान्वये\". That indicates referencing. So evidence_span = \"संदर्भ क्र.१ येथील शासन निर्णयान्वये\". cancelled_object = null. gloss_en: translate roughly: \"Pursuant to Government Decision referred to as Reference No.1, ... from the academic year 2024-25, the government has approved giving ...\". Provide literal translation. confidence high, maybe 0.97.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.313720259,
+   "prompt_tokens": 1229,
+   "prompt_time": 0.039782991,
+   "completion_tokens": 357,
+   "completion_time": 0.873651491,
+   "total_tokens": 1586,
+   "total_time": 0.913434482,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 271
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_0708ac49a5",
+  "x_groq": {
+   "id": "req_01kyes81v8ehxtz5gy4ssk7pg5",
+   "seed": 1227776852
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0ad7521de069bd5a16e3f193",
+ "role": "reasoning"
+}

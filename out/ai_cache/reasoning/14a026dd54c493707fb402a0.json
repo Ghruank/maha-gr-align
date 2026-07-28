@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"उच्च व तंत्र शिक्षण विभागाच्या दि.०४.१०.२०१८\",\"cancelled_object\":null,\"gloss_en\":\"In view of the amendments made in the criteria, the Department of Higher and Technical Education dated 04-10-2018\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-aea164d4-8690-419d-b6dd-4c37fee23276",
+  "object": "chat.completion",
+  "created": 1785055092,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"उच्च व तंत्र शिक्षण विभागाच्या दि.०४.१०.२०१८\",\"cancelled_object\":null,\"gloss_en\":\"In view of the amendments made in the criteria, the Department of Higher and Technical Education dated 04-10-2018\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"निकषामध्ये केलेल्या सुधारणांच्या अनुषंगाने, उच्च व तंत्र शिक्षण विभागाच्या दि.०४.१०.२०१८\"\n\nTranslation: \"In view of the amendments made in the criteria, (of) the Department of Higher and Technical Education dated 04.10.2018\". It seems like a reference to a prior order dated 04 Oct 2018. No operative verb like cancel, amend, supersede. It's just referencing. So type = REFERENCES. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows reference. The phrase \"उच्च व तंत्र शिक्षण विभागाच्या दि.०४.१०.२०१८\" includes the date. That is the reference. So evidence_span = \"उच्च व तंत्र शिक्षण विभागाच्या दि.०४.१०.२०१८\". Cancelled_object = null. Gloss_en: \"In view of the amendments made in the criteria, the Department of Higher and Technical Education dated 04-10-2018\". Confidence maybe 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287610078,
+   "prompt_tokens": 813,
+   "prompt_time": 0.017146436,
+   "completion_tokens": 323,
+   "completion_time": 2.211442919,
+   "total_tokens": 1136,
+   "total_time": 2.228589355,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 237
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyes654pebyrakgehqcxg1f9",
+   "seed": 2059653258
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "14a026dd54c493707fb402a0",
+ "role": "reasoning"
+}

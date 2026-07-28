@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय रद्द करण्यात\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The government decision referred to as No.1 issued for doing is being cancelled.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-415b09c2-0d42-4778-bca6-946c30052ef1",
+  "object": "chat.completion",
+  "created": 1785055138,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय रद्द करण्यात\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The government decision referred to as No.1 issued for doing is being cancelled.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"करण्याकरिता निर्गमित करण्यात आलेला संदर्भाधीन क्र.१ येथील शासन निर्णय रद्द करण्यात\"\n\nTranslation: \"The government decision referred to as No.1 issued for doing (something) is being cancelled.\"\n\nSo it says a prior order (the referenced decision number 1) is being cancelled. That is a cancellation of the prior order itself. So type = SUPERSEDES (cancels the order itself). Need target_index: which prior GR? The candidate list has one: index 1. So target_index = 1.\n\nEvidence_span: need exact substring that justifies type. The phrase \"शासन निर्णय रद्द करण्यात\" indicates cancellation. Could also include \"रद्द करण्यात\". The exact substring: \"शासन निर्णय रद्द करण्यात\". That appears in sentence: \"... शासन निर्णय रद्द करण्यात\". Yes.\n\nCancelled_object: the noun being cancelled is \"शासन निर्णय\". So cancelled_object = \"शासन निर्णय\". Could also be \"निर्णय\". We'll use \"शासन निर्णय\".\n\nGloss_en: literal translation: \"The government decision referred to as No.1 issued for doing is being cancelled.\"\n\nConfidence: high, maybe 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.322040289,
+   "prompt_tokens": 808,
+   "prompt_time": 0.160558019,
+   "completion_tokens": 324,
+   "completion_time": 0.835540336,
+   "total_tokens": 1132,
+   "total_time": 0.996098355,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 258
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6fb4303df4",
+  "x_groq": {
+   "id": "req_01kyes7k24egkvf0r9yhdnrxw1",
+   "seed": 1588330782
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "107edec28b866700235bc6b9",
+ "role": "reasoning"
+}

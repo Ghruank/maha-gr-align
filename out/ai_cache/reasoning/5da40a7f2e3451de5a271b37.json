@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"आदेश अधिक्रमित करुन\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"By superseding the previously issued orders regarding vehicle price limits\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-b30cc936-31e6-40cb-8598-799f465b627f",
+  "object": "chat.completion",
+  "created": 1785091488,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"आदेश अधिक्रमित करुन\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"By superseding the previously issued orders regarding vehicle price limits\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"७. यापूर्वी निर्गमित करण्यात आलेले वाहनांच्या किंमत मर्यादेबाबतचे आदेश अधिक्रमित करुन सदर\"\n\nTranslation: \"7. By superseding the previously issued orders regarding the price limits of vehicles, ...\"\n\nIt says \"आदेश अधिक्रमित करुन\" meaning \"by superseding the orders\". So it is cancelling/overriding prior orders. The prior GR listed is \"GR dated 2022-02-03, number वाहन-२०२१/प्र.क्र.२२/२०२१/विनियम\". The sentence says it supersedes the earlier orders regarding vehicle price limits. That is a SUPERSEDES relationship, because it cancels the prior order itself (the order about price limits). The cancelled object is \"आदेश\" (order) or \"वहनांच्या किंमत मर्यादेबाबतचे आदेश\". So cancelled_object: \"आदेश\". target_index: 1 (since only one candidate). evidence_span: need exact substring that shows the operative phrase: \"आदेश अधिक्रमित करुन\". The sentence includes that phrase. So evidence_span = \"आदेश अधिक्रमित करुन\". Gloss_en: \"By superseding the previously issued orders regarding vehicle price limits\". Confidence high, say 0.99.\n\nCheck traps: Not inside file numbers. It's not about appointments etc. It's superseding the order itself, so SUPERSEDES.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.322858,
+   "prompt_tokens": 814,
+   "prompt_time": 0.043802435,
+   "completion_tokens": 372,
+   "completion_time": 0.781849658,
+   "total_tokens": 1186,
+   "total_time": 0.825652093,
+   "completion_tokens_details": {
+    "reasoning_tokens": 310
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_47082602e2",
+  "x_groq": {
+   "id": "req_01kyfvwy2gerr82hm9cxm3qmag",
+   "seed": 661537867
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "5da40a7f2e3451de5a271b37",
+ "role": "reasoning"
+}

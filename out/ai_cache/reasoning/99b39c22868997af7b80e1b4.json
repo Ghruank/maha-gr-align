@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"दिनांक २६.२.२०२१ रोजीचा शासन निर्णय रद्द करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The government decision dated 26.2.2021, reference number 7, is being cancelled.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-85c0f839-f498-4360-b2fd-ca1fa5b01c03",
+  "object": "chat.completion",
+  "created": 1785054150,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"दिनांक २६.२.२०२१ रोजीचा शासन निर्णय रद्द करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The government decision dated 26.2.2021, reference number 7, is being cancelled.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"संदर्भीय क्रमांक ७ येथील दिनांक २६.२.2021 रोजीचा शासन निर्णय रद्द करण्यात येत आहे.\"\n\nTranslation: \"The government decision dated 26.2.2021, reference number 7, is being cancelled.\"\n\nWe have a prior GR listed: #1 is \"GR dated 2021-02-26, number राजभ-२०२१/प्र.क्र.४१/२०-अ\". The sentence says that the decision dated 26.2.2021 is being cancelled. That is cancelling the prior order itself. So type is SUPERSEDES (cancels the order itself). target_index = 1 (since 1-based). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात येत आहे\" indicates cancellation. Also \"दिनांक २६.२.२०२१ रोजीचा शासन निर्णय\". The exact substring that justifies type: maybe \"दिनांक २६.२.२०२१ रोजीचा शासन निर्णय रद्द करण्यात येत आहे\". Must be exact from input. The input sentence: \"संदर्भीय क्रमांक ७ येथील दिनांक २६.२.२०२१ रोजीचा शासन निर्णय रद्द करण्यात येत आहे.\"\n\nSo evidence_span could be \"दिनांक २६.२.२०२१ रोजीचा शासन निर्णय रद्द करण्यात येत आहे\". That is a substring.\n\nCancelled_object: the noun being cancelled is \"शासन निर्णय\". So \"शासन निर्णय\". Could also be \"GR\". We'll put \"शासन निर्णय\".\n\nGloss_en: \"The government decision dated 26.2.2021, reference number 7, is being cancelled.\"\n\nConfidence high, maybe 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.279203486,
+   "prompt_tokens": 811,
+   "prompt_time": 0.014854272,
+   "completion_tokens": 468,
+   "completion_time": 1.006459278,
+   "total_tokens": 1279,
+   "total_time": 1.02131355,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 381
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_803c0ba83d",
+  "x_groq": {
+   "id": "req_01kyer9edkesxtwaspzry9wrqe",
+   "seed": 432486449
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "99b39c22868997af7b80e1b4",
+ "role": "reasoning"
+}

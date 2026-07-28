@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्याची बाब शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"The matter of cancelling the government decision dated 11/02/2020 appointing Mr. Ravindra Vaykar as chief coordinator (minister rank) was under consideration of the government.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-5cfcbc93-c5ff-4329-8eb5-877bd33eeeb3",
+  "object": "chat.completion",
+  "created": 1785054045,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्याची बाब शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"The matter of cancelling the government decision dated 11/02/2020 appointing Mr. Ravindra Vaykar as chief coordinator (minister rank) was under consideration of the government.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. Let's parse.\n\nSentence in Marathi: It says that a decision dated 11/02/2020 appointed Mr. Ravindra Vaykar as chief coordinator (minister rank). He later expressed unwillingness to accept. Therefore, the decision appointing him is to be cancelled, and that cancellation is under consideration (\"शासनाच्या विचाराधीन होती\").\n\nKey: The sentence says \"रद्द करण्याची बाब शासनाच्या विचाराधीन होती.\" Means \"the matter of cancelling ... was under consideration of the government.\" This is deliberative mood, not a decision. According to trap 3, deliberative mood is not a decision, classify as REFERENCES. Even though it mentions cancellation, it's not actually cancelling; it's just stating that cancellation was under consideration. So type = REFERENCES.\n\nTarget index: The candidate prior GR is #1. Since it references that prior GR. So target_index = 1.\n\nEvidence_span: need exact substring that justifies type. For REFERENCES, we need a phrase showing it's just referencing, not operative. The phrase \"रद्द करण्याची बाब शासनाच्या विचाराधीन होती\" indicates deliberative. Or maybe \"रद्द करण्याची बाब\" indicates cancellation considered. The phrase \"शासनाच्या विचाराधीन होती\" is key. So evidence_span = \"रद्द करण्याची बाब शासनाच्या विचाराधीन होती\". Must be exact substring.\n\nCancelled_object: Since not actually cancelled, null.\n\nGloss_en: Provide literal English translation. Something like: \"The matter of cancelling the government decision dated 11/02/2020 which had approved Mr. Ravindra Vaykar as chief coordinator (minister rank) was under consideration of the government.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck JSON format: compact, no spaces? It's okay to have spaces. Ensure keys correct.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.313531846,
+   "prompt_tokens": 1030,
+   "prompt_time": 0.050793771,
+   "completion_tokens": 465,
+   "completion_time": 0.961347741,
+   "total_tokens": 1495,
+   "total_time": 1.012141512,
+   "completion_tokens_details": {
+    "reasoning_tokens": 375
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4140daa9c2",
+  "x_groq": {
+   "id": "req_01kyer67q0ehft0a3zmv2djmz2",
+   "seed": 987561056
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "92e00372e5e99ac481542855",
+ "role": "reasoning"
+}

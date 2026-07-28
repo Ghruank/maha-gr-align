@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करून\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By superseding the government decision dated 21.3.2025, now the amount is Rs. 2,04,36,905\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-acfaaa7c-f31a-42c8-a905-11cca6779b7d",
+  "object": "chat.completion",
+  "created": 1785054615,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिक्रमित करून\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"By superseding the government decision dated 21.3.2025, now the amount is Rs. 2,04,36,905\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"येथील दिनांक २१.३.२०२५ रोजीचा शासन निर्णय अधिकृत करून आता रु.२,०४,३६,९०५/- इतक्या\"\n\nActually the sentence: \"येथील दिनांक २१.३.२०२५ रोजीचा शासन निर्णय अधिक्रमित करून आता रु.२,०४,३६,९०५/- इतक्या\"\n\nIt says: \"Hereby the government decision dated 21.3.2025 is being superseded (अधिक्रमित) and now ... rupees 2,04,36,905\". The verb \"अधिक्रमित\" means supersede/cancel? In Marathi, \"अधिक्रमित\" means \"overriding\" i.e., supersede. So the sentence cancels the prior order itself. So type = SUPERSEDES. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows the relationship: \"अधिक्रमित करून\". The phrase \"अधिक्रमित करून\" indicates supersedes. So evidence_span = \"अधिक्रमित करून\". Cancelled_object: what is being cancelled? The prior order itself: \"शासन निर्णय\". So cancelled_object = \"शासन निर्णय\". Gloss_en: literal translation: \"By superseding the government decision dated 21.3.2025, now (amount) rupees 2,04,36,905\". Provide translation.\n\nConfidence high, maybe 0.97.\n\nCheck traps: The cue word \"अधिक्रमित\" is a verb, not inside file number. So okay. It's superseding the order itself, not just appointments. So SUPERSEDES.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284395884,
+   "prompt_tokens": 800,
+   "prompt_time": 0.038874751,
+   "completion_tokens": 442,
+   "completion_time": 0.931981237,
+   "total_tokens": 1242,
+   "total_time": 0.970855988,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 363
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyerqmh7ff8t7jrpnary27n2",
+   "seed": 1216551038
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "827a3c42f18a93eb4fa878dd",
+ "role": "reasoning"
+}

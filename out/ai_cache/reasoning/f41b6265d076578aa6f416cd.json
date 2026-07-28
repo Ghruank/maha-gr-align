@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"काही तरतूदी वगळणे/सुधारणा\",\"cancelled_object\":\"तरतूदी\",\"gloss_en\":\"Some provisions are to be omitted/amended\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-5248223b-8767-4f21-934b-3ceeea07f03f",
+  "object": "chat.completion",
+  "created": 1785055261,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"काही तरतूदी वगळणे/सुधारणा\",\"cancelled_object\":\"तरतूदी\",\"gloss_en\":\"Some provisions are to be omitted/amended\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence is a long introductory paragraph (प्रस्तावना) describing background, and then says \"दरम्यानच्या काळात... बदल/सुधारणा करणे व काही तरतूदी नव्याने समाविष्ट करण्याची आवश्यकता... आयुक्त... प्राप्त प्रस्तावाच्या आधारे शासन निर्णय क्र. ... दि.07.02.2019 यामधील काही तरतूदी वगळणे/सुधारणा करणेबाबतचा निर्णय घेण्याची व नव्याने तरतूदी समाविष्ट करण्याची बाब शासनाच्या विचाराधीन होती. त्यानुसार खालीलप्रमाणे शासन निर्णय निर्गमित करण्यात येत आहे.\"\n\nSo it references prior GR (the 2019 decision) and says some provisions are to be omitted/amended and new provisions added. This is an amendment to that prior order, not superseding the whole order. So type = AMENDS. target_index = 1 (since only one prior GR listed). evidence_span: need exact substring that shows amendment. Could be \"काही तरतूदी वगळणे/सुधारणा करणेबाबतचा निर्णय\". Or \"काही तरतूदी वगळणे/सुधारणा\". Must be exact from sentence. Let's locate: The sentence includes \"... शासन निर्णय क्र. सीईटी-२०१५/ प्र.क्र.१४९/टिएनटि-१, दि.०७.०२.२०१९ यामधील काही तरतूदी वगळणे/सुधारणा करणेबाबतचा निर्णय घेण्याची व नव्याने तरतूदी समाविष्ट करण्याची बाब...\". So evidence_span could be \"काही तरतूदी वगळणे/सुधारणा\". That is exact substring. Cancelled_object: what is being cancelled/amended? It says \"काही तरतूदी वगळणे/सुधारणा\". So the object is \"तरतूदी\". Could be \"तरतूदी\". We'll set cancelled_object as \"तरतूदी\". Gloss_en: Provide literal English translation. Summarize: \"Some provisions are to be omitted/amended\". Provide translation: \"Some provisions to be omitted/amended\". Confidence maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.162018893,
+   "prompt_tokens": 1216,
+   "prompt_time": 0.057201038,
+   "completion_tokens": 548,
+   "completion_time": 1.13724255,
+   "total_tokens": 1764,
+   "total_time": 1.194443588,
+   "completion_tokens_details": {
+    "reasoning_tokens": 481
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01kyesbb35ez1rsw5rekpzgtjx",
+   "seed": 1654333885
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "f41b6265d076578aa6f416cd",
+ "role": "reasoning"
+}

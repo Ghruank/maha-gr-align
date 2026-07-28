@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Regarding the cancellation of the allocation of the technical assistant, Group K post in the Insurance Directorate for candidates on the waiting list recommended by the Maharashtra Public Service Commission.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-3039f76b-cb97-4416-b523-e4b368f330a9",
+  "object": "chat.completion",
+  "created": 1785091437,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Regarding the cancellation of the allocation of the technical assistant, Group K post in the Insurance Directorate for candidates on the waiting list recommended by the Maharashtra Public Service Commission.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"महाराष्ट्र लोकसेवा आयोगाने शिफारस केलेल्या, प्रतीक्षायादीवरील उमेदवारांचे विमा संचालनालयातील तांत्रिक सहायक, गट-क पदावरील नियतवाटप रद्द करण्याबाबत..\"\n\nInterpretation: It says about cancellation of allocation (नियतवाटप) of technical assistant, group-K position in Insurance Directorate for candidates on waiting list recommended by Maharashtra Public Service Commission.\n\nThus it is cancelling a specific allocation (नियतवाटप) of posts. This is a cancellation of an allocation made under prior GR? The prior GR is dated 2022-12-27. The sentence says \"रद्द करण्याबाबत\" i.e., about cancelling the allocation. This is an operative change: cancelling the allocation. The prior GR is not being superseded entirely; only the allocation (post) is being cancelled. So it's AMENDS (modifies part of prior order, cancels something done under it). Cancelled object: \"नियतवाटप\" (allocation) or \"तांत्रिक सहायक, गट-क पदावरील नियतवाटप\". Probably \"नियतवाटप\". Provide evidence span: \"नियतवाटप रद्द\". The exact substring: \"नियतवाटप रद्द\". The sentence includes \"नियतवाटप रद्द करण्याबाबत\". So evidence_span could be \"नियतवाटप रद्द\". Must be exact substring. Let's copy \"नियतवाटप रद्द\". That appears.\n\nGloss_en: \"Regarding the cancellation of the allocation of the technical assistant, Group K post in the Insurance Directorate for candidates on the waiting list recommended by the Maharashtra Public Service Commission.\"\n\nConfidence high, maybe 0.96.\n\ntarget_index: 1 (since only one candidate). Provide JSON.\n\nCheck traps: Not a file number cue. Not deliberative. It's a cancellation of allocation, which is a specific object, not the whole order. So AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.293013607,
+   "prompt_tokens": 815,
+   "prompt_time": 0.038379969,
+   "completion_tokens": 515,
+   "completion_time": 1.079053504,
+   "total_tokens": 1330,
+   "total_time": 1.117433473,
+   "completion_tokens_details": {
+    "reasoning_tokens": 431
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_bb691ea66b",
+  "x_groq": {
+   "id": "req_01kyfvvbrdep5a2dm97qk34cx2",
+   "seed": 1227606240
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b01f9566ddb281f5e7ba18a7",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"सदरचे आदेश या शासन निर्णयान्वये रद्द करण्यात येत आहेत\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"The orders issued under the government decision dated 11/02/2020 appointing Mr. Ravindra Vaykar as chief coordinator (minister rank) are being cancelled under this decision because he is unable to accept them.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-9759ccb5-b7b4-40ee-b13a-d3d5b3066851",
+  "object": "chat.completion",
+  "created": 1785054288,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"सदरचे आदेश या शासन निर्णयान्वये रद्द करण्यात येत आहेत\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"The orders issued under the government decision dated 11/02/2020 appointing Mr. Ravindra Vaykar as chief coordinator (minister rank) are being cancelled under this decision because he is unable to accept them.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence says: ... \"मुख्यमंत्री कार्यालयात दिनांक ११/०२/२०२० रोजीच्या शासन निर्णयान्वये ... आदेश हे त्यांनी स्वीकारण्यास असमर्थता दर्शविल्यामुळे सदरचे आदेश या शासन निर्णयान्वये रद्द करण्यात येत आहेत.\"\n\nThus it cancels the order (the prior order) that appointed Ravindra Vaykar as chief coordinator (minister rank). So it cancels the prior order itself. That is SUPERSEDES? Actually per definition: SUPERSEDES - the sentence cancels / annuls / supersedes a prior ORDER ITSELF. Yes, this cancels the prior order. So type SUPERSEDES.\n\ntarget_index: the prior GR list index is 1.\n\nevidence_span: need exact substring that shows cancellation. The phrase \"सदरचे आदेश या शासन निर्णयान्वये रद्द करण्यात येत आहेत.\" That's the operative phrase. Must copy exactly from input. Let's locate: The sentence includes \"...सदरचे आदेश या शासन निर्णयान्वये रद्द करण्यात येत आहेत.\" Yes.\n\ncancelled_object: the noun being cancelled: \"आदेश\". Could also be \"आदेश\" (order). So \"आदेश\".\n\ngloss_en: literal English translation: \"The orders issued under the government decision dated 11/02/2020, appointing Mr. Ravindra Vaykar, MLA, as chief coordinator (minister rank), are being cancelled under this government decision because he has shown inability to accept them.\"\n\nWe need confidence maybe 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281402517,
+   "prompt_tokens": 939,
+   "prompt_time": 0.03859872,
+   "completion_tokens": 434,
+   "completion_time": 0.897219066,
+   "total_tokens": 1373,
+   "total_time": 0.935817786,
+   "completion_tokens_details": {
+    "reasoning_tokens": 330
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_017482bd7f",
+  "x_groq": {
+   "id": "req_01kyerdn0gf44964e81djdr5zb",
+   "seed": 1257103761
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "455d9edf9b04294c68eeba3b",
+ "role": "reasoning"
+}

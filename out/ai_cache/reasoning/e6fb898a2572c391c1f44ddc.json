@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत असून\",\"cancelled_object\":\"परिच्छेद\",\"gloss_en\":\"Paragraphs 8 to 11 in the annex attached to the referenced government decision are being cancelled.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-3bac6127-f68c-4f27-b0f2-dcfe5241e20d",
+  "object": "chat.completion",
+  "created": 1785091720,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत असून\",\"cancelled_object\":\"परिच्छेद\",\"gloss_en\":\"Paragraphs 8 to 11 in the annex attached to the referenced government decision are being cancelled.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"संदर्भाधिन नमूद शासन निर्णय सोबतच्या जोडपत्रामधील परिच्छेद क्र ८ ते ११ रद्द करण्यात येत असून\"\n\nTranslation: \"The paragraphs 8 to 11 in the annex attached to the referenced government decision are being cancelled.\"\n\nWe have one prior GR listed: \"GR dated 2024-08-16, number संकीर्ण २०२४/प्र.क्र.२०/२०२४/कोषा.प्रशा.-५\"\n\nThe sentence says that paragraphs (परिच्छेद) 8 to 11 in the annex of the referenced decision are being cancelled. This is cancelling parts of a prior order (the referenced decision). The prior order itself is not being cancelled; only specific paragraphs in its annex are being cancelled. According to trap 2, this is AMENDS, not SUPERSEDES. The cancelled_object is \"परिच्छेद\". Could also be \"परिच्छेद क्र ८ ते ११\". The noun is \"परिच्छेद\". So type AMENDS, target_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation: \"रद्द करण्यात येत असून\". Or maybe \"रद्द करण्यात येत असून\". That indicates cancellation. Provide that.\n\ngloss_en: \"Paragraphs 8 to 11 in the annex attached to the referenced government decision are being cancelled.\"\n\nconfidence high, say 0.99.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281798144,
+   "prompt_tokens": 821,
+   "prompt_time": 0.022118962,
+   "completion_tokens": 381,
+   "completion_time": 0.882731995,
+   "total_tokens": 1202,
+   "total_time": 0.904850957,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 311
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01kyfw402gefq93yffqac19k34",
+   "seed": 2036210299
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e6fb898a2572c391c1f44ddc",
+ "role": "reasoning"
+}

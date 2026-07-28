@@ -1,0 +1,9676 @@
+{
+ "parity": {
+  "sampled": 3000,
+  "naive_diff_flags": 2761,
+  "naive_diff_rate": 0.9203,
+  "with_significant_divergence": 1028,
+  "significant_divergence_rate": 0.3427,
+  "classes": {
+   "YEAR_ONLY_IN_MR": 896,
+   "MISSING_FROM_ENGLISH": 798,
+   "MAGNITUDE_ERROR": 335,
+   "TRUNCATED": 247,
+   "TABLE_MERGE": 32
+  },
+  "severity_of": {
+   "MAGNITUDE_ERROR": "ERROR",
+   "TRUNCATED": "WARN",
+   "MISSING_FROM_ENGLISH": "WARN",
+   "TABLE_MERGE": "INFO",
+   "YEAR_ONLY_IN_MR": "INFO"
+  },
+  "findings": [
+   {
+    "uid": "202501231750020205",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "17567000000",
+    "english_values": [
+     "175670"
+    ],
+    "factor": 100000
+   },
+   {
+    "uid": "202402211117127307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "12373000",
+    "english_values": [
+     "12373"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202301121314259108",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "12500000",
+    "english_values": [
+     "12500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202301121314259108",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "37500000",
+    "english_values": [
+     "37500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202502241515461408",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "44500000",
+    "english_values": [
+     "44500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903291703247407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "13600000",
+    "english_values": [
+     "13600"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "71922000",
+    "english_values": [
+     "71922"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "47948000",
+    "english_values": [
+     "47948"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "23782000",
+    "english_values": [
+     "23782"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "11863000",
+    "english_values": [
+     "11863"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10514000",
+    "english_values": [
+     "10514"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "125480000",
+    "english_values": [
+     "125480"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1414712000",
+    "english_values": [
+     "1414712"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "405000000",
+    "english_values": [
+     "405000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "244800000",
+    "english_values": [
+     "244800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "70200000",
+    "english_values": [
+     "70200"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "85200000",
+    "english_values": [
+     "85200"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "64800000",
+    "english_values": [
+     "64800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "900000000",
+    "english_values": [
+     "900000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "270000000",
+    "english_values": [
+     "270000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "163200000",
+    "english_values": [
+     "163200"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "46800000",
+    "english_values": [
+     "46800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "56800000",
+    "english_values": [
+     "56800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605291238364421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "43200000",
+    "english_values": [
+     "43200"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202402271438466108",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "345080000",
+    "english_values": [
+     "345080"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202209301230320708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "50000000",
+    "english_values": [
+     "50000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202209301230320708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501271556053708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "230000000",
+    "english_values": [
+     "230000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501271556053708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1150000000",
+    "english_values": [
+     "1150000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501271556053708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1035000000",
+    "english_values": [
+     "1035000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501271556053708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "805000000",
+    "english_values": [
+     "805000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202409131311558108",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202506091450110808",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "52500000",
+    "english_values": [
+     "52500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202208111456340708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "23592000",
+    "english_values": [
+     "23592"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202208111456340708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "30000000",
+    "english_values": [
+     "30000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202208111456340708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "53592000",
+    "english_values": [
+     "53592"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202208111456340708",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "40000000",
+    "english_values": [
+     "40000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202602111841483008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "320000000",
+    "english_values": [
+     "320000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302211527222007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "39109000",
+    "english_values": [
+     "39109"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202402091633458408",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "300000000",
+    "english_values": [
+     "300000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202112061247258907",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "22000000",
+    "english_values": [
+     "22000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202503291447337021",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "455120000",
+    "english_values": [
+     "455120"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903291733553521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "374100000",
+    "english_values": [
+     "374100"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903291733553521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "249400000",
+    "english_values": [
+     "249400"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903291733553521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "623500000",
+    "english_values": [
+     "623500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202010011802447508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "25000000",
+    "english_values": [
+     "25000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202010011802447508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "12500000",
+    "english_values": [
+     "12500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202010011802447508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "15000000",
+    "english_values": [
+     "15000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202010011802447508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202208241149002507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "591300000",
+    "english_values": [
+     "591300"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303311244411807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "150000000",
+    "english_values": [
+     "150000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202306091537404308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "110000000",
+    "english_values": [
+     "110000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311011035447321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "37318000",
+    "english_values": [
+     "37318"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201812061502481807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "435000000",
+    "english_values": [
+     "435000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202503171724180307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "18473000",
+    "english_values": [
+     "18473"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202401291456031008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "30000000",
+    "english_values": [
+     "30000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403311734357521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "211352000",
+    "english_values": [
+     "211352"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403311734357521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "211300000",
+    "english_values": [
+     "211300"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403311734357521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "634056000",
+    "english_values": [
+     "634056"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403311734357521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "634027000",
+    "english_values": [
+     "634027"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202111251638412007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "11600000",
+    "english_values": [
+     "11600"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201902131513057307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "42000000",
+    "english_values": [
+     "42000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201902131513057307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "68550000",
+    "english_values": [
+     "68550"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202402281451563508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "50000000",
+    "english_values": [
+     "50000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202402281451563508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "600000000",
+    "english_values": [
+     "600000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603131250354021",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10530000",
+    "english_values": [
+     "10530"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201805291616237607",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "435000000",
+    "english_values": [
+     "435000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202504091436333607",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "11665000",
+    "english_values": [
+     "11665"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202201271329220805",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "20000000",
+    "english_values": [
+     "20000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202201271329220805",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201902151213582807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "24000000",
+    "english_values": [
+     "24000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202503051115285408",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "314500000",
+    "english_values": [
+     "314500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202310111209077605",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "71415000",
+    "english_values": [
+     "71415"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202310111209077605",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "19174000",
+    "english_values": [
+     "19174"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202203161830533821",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "153800000",
+    "english_values": [
+     "153800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603301814493308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "11000000",
+    "english_values": [
+     "11000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202401301251301021",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "210080000",
+    "english_values": [
+     "210080"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202509241758591807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "200000000",
+    "english_values": [
+     "200000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202002151649124221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "213670000",
+    "english_values": [
+     "213670"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202002151649124221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "170936000",
+    "english_values": [
+     "170936"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302091813048908",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "7829500000",
+    "english_values": [
+     "7829500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302091813048908",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "35000000",
+    "english_values": [
+     "35000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302091813048908",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "17150000",
+    "english_values": [
+     "17150"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302091813048908",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "7864500000",
+    "english_values": [
+     "7864500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403141107465121",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "107800000",
+    "english_values": [
+     "107800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202205171612269521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "90636000",
+    "english_values": [
+     "90636"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605211846222607",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "555046000",
+    "english_values": [
+     "555046"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202605211846222607",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "61090000",
+    "english_values": [
+     "61090"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202301061813003608",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "258591000",
+    "english_values": [
+     "258591"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201901311311137407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "435000000",
+    "english_values": [
+     "435000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202205131801091121",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "539715000",
+    "english_values": [
+     "539715"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303311103541707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202507151444467721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "48100000",
+    "english_values": [
+     "48100"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403221555262308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "325599000",
+    "english_values": [
+     "325599"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202202011049124107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67921000",
+    "english_values": [
+     "67921"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202202011049124107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75512000",
+    "english_values": [
+     "75512"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201911131450480107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "50000000",
+    "english_values": [
+     "50000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201902281258072221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75000000",
+    "english_values": [
+     "75000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201902281258072221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "48837000",
+    "english_values": [
+     "48837"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202503211626231408",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "25700000",
+    "english_values": [
+     "25700"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012091627279707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "68607000",
+    "english_values": [
+     "68607"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012091627279707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75701000",
+    "english_values": [
+     "75701"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501221714441407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "964400000",
+    "english_values": [
+     "964400"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311011536341208",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "895135000",
+    "english_values": [
+     "895135"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311011536341208",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311011536341208",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "20000000",
+    "english_values": [
+     "20000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311011536341208",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "35800000",
+    "english_values": [
+     "35800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311011536341208",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10500000",
+    "english_values": [
+     "10500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012181446311821",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "32634000",
+    "english_values": [
+     "32634"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201907101131159707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10347000",
+    "english_values": [
+     "10347"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201907101131159707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "230000000",
+    "english_values": [
+     "230000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201907101131159707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "524475000",
+    "english_values": [
+     "524475"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908271513345007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "216666000",
+    "english_values": [
+     "216666"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908271513345007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "173334000",
+    "english_values": [
+     "173334"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908271513345007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "390000000",
+    "english_values": [
+     "390000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908271513345007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "100000000",
+    "english_values": [
+     "100000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908271513345007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "90000000",
+    "english_values": [
+     "90000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908271513345007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "116666000",
+    "english_values": [
+     "116666"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908271513345007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "83334000",
+    "english_values": [
+     "83334"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202203301241175707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67921000",
+    "english_values": [
+     "67921"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202203301241175707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75512000",
+    "english_values": [
+     "75512"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202203301241175707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "14155000",
+    "english_values": [
+     "14155"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202203301241175707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "13376000",
+    "english_values": [
+     "13376"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202009281337378507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1050077000",
+    "english_values": [
+     "1050077"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202009281337378507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "51257000",
+    "english_values": [
+     "51257"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302221513494407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10115000",
+    "english_values": [
+     "10115"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302221513494407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "46816000",
+    "english_values": [
+     "46816"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302221513494407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "12256000",
+    "english_values": [
+     "12256"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302221513494407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "59072000",
+    "english_values": [
+     "59072"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201811291524153008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "31800000",
+    "english_values": [
+     "31800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201811291524153008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "21200000",
+    "english_values": [
+     "21200"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201811291524153008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "53000000",
+    "english_values": [
+     "53000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201811291524153008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "14445000",
+    "english_values": [
+     "14445"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201811291524153008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10845000",
+    "english_values": [
+     "10845"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202101151609596507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "68607000",
+    "english_values": [
+     "68607"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202101151609596507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75701000",
+    "english_values": [
+     "75701"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "900000000",
+    "english_values": [
+     "900000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "149062000",
+    "english_values": [
+     "149062"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "200000000",
+    "english_values": [
+     "200000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "25420000",
+    "english_values": [
+     "25420"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "225000000",
+    "english_values": [
+     "225000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "22118000",
+    "english_values": [
+     "22118"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "550000000",
+    "english_values": [
+     "550000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "160000000",
+    "english_values": [
+     "160000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603291722496421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "150000000",
+    "english_values": [
+     "150000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303091512336008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1225125000",
+    "english_values": [
+     "1225125"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303291815229305",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1271227000",
+    "english_values": [
+     "1271227"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303291815229305",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "750000000",
+    "english_values": [
+     "750000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202207051225317307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67921000",
+    "english_values": [
+     "67921"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202207051225317307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "76195000",
+    "english_values": [
+     "76195"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202408161554209407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202401191655014421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "867300000",
+    "english_values": [
+     "867300"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202401191655014421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "90000000",
+    "english_values": [
+     "90000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603301705159621",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "48577000",
+    "english_values": [
+     "48577"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603301705159621",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "41985000",
+    "english_values": [
+     "41985"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202409231520083107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "25000000",
+    "english_values": [
+     "25000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202409231520083107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "15000000",
+    "english_values": [
+     "15000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202203241305507207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "30000000",
+    "english_values": [
+     "30000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202506261706217107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "106761000",
+    "english_values": [
+     "106761"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202206011446095221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "21300000",
+    "english_values": [
+     "21300"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201905061138347507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "435000000",
+    "english_values": [
+     "435000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201905061138347507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10436000",
+    "english_values": [
+     "10436"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311101616188207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "12373000",
+    "english_values": [
+     "12373"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202511271612582221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "283230000",
+    "english_values": [
+     "283230"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202009291613556321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "147691000",
+    "english_values": [
+     "147691"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202009291613556321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "149480000",
+    "english_values": [
+     "149480"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202009291613556321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "2678949000",
+    "english_values": [
+     "2678949"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202009291613556321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1172992000",
+    "english_values": [
+     "1172992"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303271515182821",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "95000000",
+    "english_values": [
+     "95000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908261145327008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202512081556498207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "400000000",
+    "english_values": [
+     "400000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202309131719141305",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1000000000",
+    "english_values": [
+     "1000000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903271845510421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "41940000",
+    "english_values": [
+     "41940"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903271845510421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "27960000",
+    "english_values": [
+     "27960"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903271845510421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "69900000",
+    "english_values": [
+     "69900"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202105061141288607",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67921000",
+    "english_values": [
+     "67921"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202105061141288607",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75512000",
+    "english_values": [
+     "75512"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202205261448055405",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1271227000",
+    "english_values": [
+     "1271227"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403111723431321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "867300000",
+    "english_values": [
+     "867300"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403111723431321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "777300000",
+    "english_values": [
+     "777300"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501161510094508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "275000000",
+    "english_values": [
+     "275000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501161510094508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1150000000",
+    "english_values": [
+     "1150000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501161510094508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "805000000",
+    "english_values": [
+     "805000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501161510094508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "530000000",
+    "english_values": [
+     "530000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201901251652490821",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "40764000",
+    "english_values": [
+     "40764"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201901251652490821",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "27176000",
+    "english_values": [
+     "27176"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201901251652490821",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67940000",
+    "english_values": [
+     "67940"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202404031142165807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "150000000",
+    "english_values": [
+     "150000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202404031142165807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "100000000",
+    "english_values": [
+     "100000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202404031142165807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "50000000",
+    "english_values": [
+     "50000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202202281129025007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67921000",
+    "english_values": [
+     "67921"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202202281129025007",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75512000",
+    "english_values": [
+     "75512"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910191712529421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "672712000",
+    "english_values": [
+     "672712"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910191712529421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "60000000",
+    "english_values": [
+     "60000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202001201706497021",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "433608000",
+    "english_values": [
+     "433608"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202001201706497021",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "289072000",
+    "english_values": [
+     "289072"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202001201706497021",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "722680000",
+    "english_values": [
+     "722680"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903271820343721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "76965000",
+    "english_values": [
+     "76965"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303281823552508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "83900000",
+    "english_values": [
+     "83900"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202107201203189521",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "26266000",
+    "english_values": [
+     "26266"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202401021515209721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "50000000",
+    "english_values": [
+     "50000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201908311644101907",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "19999000",
+    "english_values": [
+     "19999"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311291530440308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "200000000",
+    "english_values": [
+     "200000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201809101514062207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "86801000",
+    "english_values": [
+     "86801"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201809101514062207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "57435000",
+    "english_values": [
+     "57435"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201809101514062207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "57000000",
+    "english_values": [
+     "57000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202205201530560221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "90636000",
+    "english_values": [
+     "90636"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202201051554401621",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "11172000",
+    "english_values": [
+     "11172"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403152159428208",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "50000000",
+    "english_values": [
+     "50000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202509031615476207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "59000000",
+    "english_values": [
+     "59000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202509031615476207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "13000000",
+    "english_values": [
+     "13000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202509031615476207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "11500000",
+    "english_values": [
+     "11500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202503201250156308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "115000000",
+    "english_values": [
+     "115000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201902021154376008",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "275000000",
+    "english_values": [
+     "275000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202508041629149107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "20000000",
+    "english_values": [
+     "20000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202508041629149107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "12000000",
+    "english_values": [
+     "12000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202301191130486507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "351505000",
+    "english_values": [
+     "351505"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202301191130486507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "258495000",
+    "english_values": [
+     "258495"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202301191130486507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "2510750000",
+    "english_values": [
+     "2510750"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603311936057808",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "10000000",
+    "english_values": [
+     "10000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202302211328478508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "200000000",
+    "english_values": [
+     "200000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202207211315166908",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1225125000",
+    "english_values": [
+     "1225125"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202207211315166908",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "508218000",
+    "english_values": [
+     "508218"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202505161631306921",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "44840000",
+    "english_values": [
+     "44840"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202307141555437905",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1000000000",
+    "english_values": [
+     "1000000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202504301835571608",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "933719000",
+    "english_values": [
+     "933719"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202504301835571608",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "93371000",
+    "english_values": [
+     "93371"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202504301835571608",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "92371000",
+    "english_values": [
+     "92371"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202101141608242308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "39793000",
+    "english_values": [
+     "39793"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202310271506102421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "61950000",
+    "english_values": [
+     "61950"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202106101605256208",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "100000000",
+    "english_values": [
+     "100000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202209201132386107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67921000",
+    "english_values": [
+     "67921"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202209201132386107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "76195000",
+    "english_values": [
+     "76195"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202209201132386107",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "39109000",
+    "english_values": [
+     "39109"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603241135408507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67576000",
+    "english_values": [
+     "67576"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202507101709377407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "22110000",
+    "english_values": [
+     "22110"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202511261717254121",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "445576000",
+    "english_values": [
+     "445576"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202401291459552508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "21804000",
+    "english_values": [
+     "21804"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211251532311621",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "15365000",
+    "english_values": [
+     "15365"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603302103323707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "128195000",
+    "english_values": [
+     "128195"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603302103323707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "90000000",
+    "english_values": [
+     "90000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202403152148426508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "20000000",
+    "english_values": [
+     "20000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202209141508449508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "30000000",
+    "english_values": [
+     "30000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303131524180608",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "23850000",
+    "english_values": [
+     "23850"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202303131524180608",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "22850000",
+    "english_values": [
+     "22850"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202301121305021508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "52500000",
+    "english_values": [
+     "52500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202401081508198608",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "15000000",
+    "english_values": [
+     "15000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202506171606179221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "17836000",
+    "english_values": [
+     "17836"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202506171606179221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "14836000",
+    "english_values": [
+     "14836"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202410141937571421",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "74100000",
+    "english_values": [
+     "74100"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202306161641042821",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "37318000",
+    "english_values": [
+     "37318"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202509011437167807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "30000000",
+    "english_values": [
+     "30000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202311291532354308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "50000000",
+    "english_values": [
+     "50000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903071510426907",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "42000000",
+    "english_values": [
+     "42000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201903071510426907",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "13140000",
+    "english_values": [
+     "13140"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202503281230401108",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "858200000",
+    "english_values": [
+     "858200"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202510301802131921",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "383100000",
+    "english_values": [
+     "383100"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202111301652135021",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "32875000",
+    "english_values": [
+     "32875"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211041756342207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "453054000",
+    "english_values": [
+     "453054"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211041756342207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "103600000",
+    "english_values": [
+     "103600"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211041756342207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "460000000",
+    "english_values": [
+     "460000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211041756342207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "300000000",
+    "english_values": [
+     "300000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211041756342207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "100106000",
+    "english_values": [
+     "100106"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211041756342207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "53000000",
+    "english_values": [
+     "53000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202211041756342207",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "679581000",
+    "english_values": [
+     "679581"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501101803400308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "15000000",
+    "english_values": [
+     "15000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501101803400308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "52500000",
+    "english_values": [
+     "52500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202501101803400308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "82500000",
+    "english_values": [
+     "82500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202506021605324407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "22110000",
+    "english_values": [
+     "22110"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202603312323006508",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "41000000",
+    "english_values": [
+     "41000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201909231546501507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "434200000",
+    "english_values": [
+     "434200"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201909231546501507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "20871000",
+    "english_values": [
+     "20871"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202201271321553707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "67921000",
+    "english_values": [
+     "67921"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202201271321553707",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75512000",
+    "english_values": [
+     "75512"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202204111536373307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "798044000",
+    "english_values": [
+     "798044"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202204111536373307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "62290000",
+    "english_values": [
+     "62290"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202107221405282808",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1225125000",
+    "english_values": [
+     "1225125"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202107221405282808",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "463400000",
+    "english_values": [
+     "463400"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202310091606061221",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "20000000",
+    "english_values": [
+     "20000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202103091522527407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "68607000",
+    "english_values": [
+     "68607"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202103091522527407",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "75701000",
+    "english_values": [
+     "75701"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201912161220517321",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "14800000",
+    "english_values": [
+     "14800"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202607081243339308",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "52500000",
+    "english_values": [
+     "52500"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910301258096807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "546667000",
+    "english_values": [
+     "546667"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910301258096807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "437333000",
+    "english_values": [
+     "437333"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910301258096807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1640000000",
+    "english_values": [
+     "1640000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910301258096807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "984000000",
+    "english_values": [
+     "984000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910301258096807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "142933000",
+    "english_values": [
+     "142933"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910301258096807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "200000000",
+    "english_values": [
+     "200000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201910301258096807",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "94400000",
+    "english_values": [
+     "94400"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202502271652258307",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "24990000",
+    "english_values": [
+     "24990"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012281546480721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "212650000",
+    "english_values": [
+     "212650"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012281546480721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "2678949000",
+    "english_values": [
+     "2678949"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012281546480721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "1172992000",
+    "english_values": [
+     "1172992"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012281546480721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "134945000",
+    "english_values": [
+     "134945"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202012281546480721",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "347595000",
+    "english_values": [
+     "347595"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "201901031144075607",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "435000000",
+    "english_values": [
+     "435000"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202309151101059507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "26730000",
+    "english_values": [
+     "26730"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202309151101059507",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "26727000",
+    "english_values": [
+     "26727"
+    ],
+    "factor": 1000
+   },
+   {
+    "uid": "202309081134323907",
+    "kind": "MAGNITUDE_ERROR",
+    "severity": "ERROR",
+    "marathi_value": "12470000",
+    "english_values": [
+     "12470"
+    ],
+    "factor": 1000
+   }
+  ],
+  "caveat": "The English side is IndicTrans2 machine translation OF the Marathi, not the state's own English text. These are translation-fidelity defects in the working English view, NOT contradictions between two official documents."
+ },
+ "glossary": {
+  "sampled_pairs": 1200,
+  "marathi_vocabulary": 2734,
+  "english_vocabulary": 1878,
+  "min_documents": 12,
+  "min_lift": 6.0,
+  "max_marathi_partners_per_english_term": 3,
+  "topic_markers_dropped": {
+   "unutilized": 466,
+   "switch": 462,
+   "ngos": 461,
+   "unaccounted": 459,
+   "irregularity": 458,
+   "technically": 457,
+   "anuvi": 453,
+   "clearance": 450,
+   "electronic": 445,
+   "often": 444,
+   "linked": 443,
+   "aadhaar": 441,
+   "offline": 440,
+   "supplier": 439,
+   "properly": 437,
+   "unorganized": 434,
+   "spouses": 434,
+   "unorganised": 434,
+   "subordination": 434,
+   "exception": 434,
+   "embezzlement": 434,
+   "entirety": 434,
+   "unutilised": 434,
+   "athopai": 434,
+   "personalized": 434
+  },
+  "terms": [
+   {
+    "marathi": "२०१३",
+    "documents": 185,
+    "renderings": [
+     {
+      "english": "lapse",
+      "documents": 13,
+      "lift": 6.49,
+      "coverage": 0.07,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "ऑक्टोबर",
+    "documents": 182,
+    "renderings": [
+     {
+      "english": "october",
+      "documents": 179,
+      "lift": 6.02,
+      "coverage": 0.984,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "भाग",
+    "documents": 178,
+    "renderings": [
+     {
+      "english": "lapse",
+      "documents": 12,
+      "lift": 6.22,
+      "coverage": 0.067,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "लेखा",
+    "documents": 176,
+    "renderings": [
+     {
+      "english": "licensure",
+      "documents": 12,
+      "lift": 6.82,
+      "coverage": 0.068,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "विद्यापीठ",
+    "documents": 173,
+    "renderings": [
+     {
+      "english": "chancellor",
+      "documents": 15,
+      "lift": 6.94,
+      "coverage": 0.087,
+      "mr_partners": 2
+     },
+     {
+      "english": "vishy",
+      "documents": 17,
+      "lift": 6.55,
+      "coverage": 0.098,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "विहीत",
+    "documents": 171,
+    "renderings": [
+     {
+      "english": "lapse",
+      "documents": 12,
+      "lift": 6.48,
+      "coverage": 0.07,
+      "mr_partners": 3
+     },
+     {
+      "english": "enhanced",
+      "documents": 12,
+      "lift": 6.48,
+      "coverage": 0.07,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "हजार",
+    "documents": 171,
+    "renderings": [
+     {
+      "english": "eighty",
+      "documents": 36,
+      "lift": 6.83,
+      "coverage": 0.211,
+      "mr_partners": 3
+     },
+     {
+      "english": "ninety",
+      "documents": 34,
+      "lift": 6.63,
+      "coverage": 0.199,
+      "mr_partners": 3
+     },
+     {
+      "english": "seven",
+      "documents": 53,
+      "lift": 6.2,
+      "coverage": 0.31,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कक्ष",
+    "documents": 169,
+    "renderings": [
+     {
+      "english": "kaani",
+      "documents": 14,
+      "lift": 7.1,
+      "coverage": 0.083,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अर्थ",
+    "documents": 168,
+    "renderings": [
+     {
+      "english": "meaning",
+      "documents": 22,
+      "lift": 6.04,
+      "coverage": 0.131,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "त्यांची",
+    "documents": 166,
+    "renderings": [
+     {
+      "english": "leaving",
+      "documents": 12,
+      "lift": 7.23,
+      "coverage": 0.072,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "घोषित",
+    "documents": 164,
+    "renderings": [
+     {
+      "english": "declared",
+      "documents": 126,
+      "lift": 6.45,
+      "coverage": 0.768,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "०००",
+    "documents": 164,
+    "renderings": [
+     {
+      "english": "invested",
+      "documents": 12,
+      "lift": 7.32,
+      "coverage": 0.073,
+      "mr_partners": 1
+     },
+     {
+      "english": "border",
+      "documents": 12,
+      "lift": 7.32,
+      "coverage": 0.073,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "रद्द",
+    "documents": 163,
+    "renderings": [
+     {
+      "english": "cancellation",
+      "documents": 21,
+      "lift": 7.36,
+      "coverage": 0.129,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "तांशि",
+    "documents": 162,
+    "renderings": [
+     {
+      "english": "mechanical",
+      "documents": 12,
+      "lift": 7.41,
+      "coverage": 0.074,
+      "mr_partners": 2
+     },
+     {
+      "english": "technicians",
+      "documents": 12,
+      "lift": 6.84,
+      "coverage": 0.074,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "सुविधा",
+    "documents": 157,
+    "renderings": [
+     {
+      "english": "affidavit",
+      "documents": 12,
+      "lift": 7.06,
+      "coverage": 0.076,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अनुज्ञेय",
+    "documents": 157,
+    "renderings": [
+     {
+      "english": "allowable",
+      "documents": 13,
+      "lift": 7.64,
+      "coverage": 0.083,
+      "mr_partners": 1
+     },
+     {
+      "english": "holders",
+      "documents": 12,
+      "lift": 7.06,
+      "coverage": 0.076,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "खात्यात",
+    "documents": 155,
+    "renderings": [
+     {
+      "english": "enhanced",
+      "documents": 12,
+      "lift": 7.15,
+      "coverage": 0.077,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "इतका",
+    "documents": 153,
+    "renderings": [
+     {
+      "english": "tune",
+      "documents": 30,
+      "lift": 7.13,
+      "coverage": 0.196,
+      "mr_partners": 2
+     },
+     {
+      "english": "much",
+      "documents": 12,
+      "lift": 6.72,
+      "coverage": 0.078,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "मार्गदर्शक",
+    "documents": 152,
+    "renderings": [
+     {
+      "english": "discipline",
+      "documents": 13,
+      "lift": 6.41,
+      "coverage": 0.086,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "समिती",
+    "documents": 152,
+    "renderings": [
+     {
+      "english": "samitis",
+      "documents": 12,
+      "lift": 7.89,
+      "coverage": 0.079,
+      "mr_partners": 1
+     },
+     {
+      "english": "committees",
+      "documents": 16,
+      "lift": 7.02,
+      "coverage": 0.105,
+      "mr_partners": 2
+     },
+     {
+      "english": "constitute",
+      "documents": 13,
+      "lift": 6.84,
+      "coverage": 0.086,
+      "mr_partners": 2
+     },
+     {
+      "english": "formed",
+      "documents": 20,
+      "lift": 6.58,
+      "coverage": 0.132,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "सामाजिक",
+    "documents": 151,
+    "renderings": [
+     {
+      "english": "border",
+      "documents": 12,
+      "lift": 7.95,
+      "coverage": 0.079,
+      "mr_partners": 2
+     },
+     {
+      "english": "disability",
+      "documents": 14,
+      "lift": 6.18,
+      "coverage": 0.093,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "मंत्रालयीन",
+    "documents": 150,
+    "renderings": [
+     {
+      "english": "writers",
+      "documents": 12,
+      "lift": 8.0,
+      "coverage": 0.08,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "प्रमाणे",
+    "documents": 150,
+    "renderings": [
+     {
+      "english": "adult",
+      "documents": 12,
+      "lift": 6.86,
+      "coverage": 0.08,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "रुजू",
+    "documents": 147,
+    "renderings": [
+     {
+      "english": "sunil",
+      "documents": 12,
+      "lift": 6.12,
+      "coverage": 0.082,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "लक्ष",
+    "documents": 144,
+    "renderings": [
+     {
+      "english": "attention",
+      "documents": 20,
+      "lift": 6.67,
+      "coverage": 0.139,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "नियंत्रक",
+    "documents": 144,
+    "renderings": [
+     {
+      "english": "conditional",
+      "documents": 12,
+      "lift": 6.25,
+      "coverage": 0.083,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "नोव्हेंबर",
+    "documents": 144,
+    "renderings": [
+     {
+      "english": "november",
+      "documents": 143,
+      "lift": 8.16,
+      "coverage": 0.993,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "कोटी",
+    "documents": 143,
+    "renderings": [
+     {
+      "english": "crores",
+      "documents": 69,
+      "lift": 8.39,
+      "coverage": 0.483,
+      "mr_partners": 3
+     },
+     {
+      "english": "target",
+      "documents": 13,
+      "lift": 6.06,
+      "coverage": 0.091,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "पदे",
+    "documents": 143,
+    "renderings": [
+     {
+      "english": "driver",
+      "documents": 15,
+      "lift": 6.99,
+      "coverage": 0.105,
+      "mr_partners": 2
+     },
+     {
+      "english": "apuk",
+      "documents": 13,
+      "lift": 6.82,
+      "coverage": 0.091,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "प्रत्यक्ष",
+    "documents": 142,
+    "renderings": [
+     {
+      "english": "actual",
+      "documents": 44,
+      "lift": 6.76,
+      "coverage": 0.31,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "प्रशा",
+    "documents": 142,
+    "renderings": [
+     {
+      "english": "prash",
+      "documents": 32,
+      "lift": 8.45,
+      "coverage": 0.225,
+      "mr_partners": 1
+     },
+     {
+      "english": "prisa",
+      "documents": 23,
+      "lift": 8.45,
+      "coverage": 0.162,
+      "mr_partners": 2
+     },
+     {
+      "english": "prasa",
+      "documents": 18,
+      "lift": 8.45,
+      "coverage": 0.127,
+      "mr_partners": 1
+     },
+     {
+      "english": "ashika",
+      "documents": 12,
+      "lift": 6.34,
+      "coverage": 0.085,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "चालू",
+    "documents": 141,
+    "renderings": [
+     {
+      "english": "continued",
+      "documents": 20,
+      "lift": 7.74,
+      "coverage": 0.142,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "ठिकाणी",
+    "documents": 141,
+    "renderings": [
+     {
+      "english": "places",
+      "documents": 17,
+      "lift": 6.58,
+      "coverage": 0.121,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अभ्यासक्रम",
+    "documents": 139,
+    "renderings": [
+     {
+      "english": "syllabus",
+      "documents": 12,
+      "lift": 6.91,
+      "coverage": 0.086,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "करण्याच्या",
+    "documents": 135,
+    "renderings": [
+     {
+      "english": "termination",
+      "documents": 13,
+      "lift": 6.08,
+      "coverage": 0.096,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पदनाम",
+    "documents": 134,
+    "renderings": [
+     {
+      "english": "designation",
+      "documents": 87,
+      "lift": 7.15,
+      "coverage": 0.649,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "उपयोगिता",
+    "documents": 132,
+    "renderings": [
+     {
+      "english": "conditional",
+      "documents": 13,
+      "lift": 7.39,
+      "coverage": 0.098,
+      "mr_partners": 3
+     },
+     {
+      "english": "hostel",
+      "documents": 14,
+      "lift": 6.06,
+      "coverage": 0.106,
+      "mr_partners": 3
+     },
+     {
+      "english": "target",
+      "documents": 12,
+      "lift": 6.06,
+      "coverage": 0.091,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "परिच्छेद",
+    "documents": 131,
+    "renderings": [
+     {
+      "english": "para",
+      "documents": 14,
+      "lift": 7.54,
+      "coverage": 0.107,
+      "mr_partners": 1
+     },
+     {
+      "english": "paragraphs",
+      "documents": 21,
+      "lift": 6.21,
+      "coverage": 0.16,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "केल्यानुसार",
+    "documents": 127,
+    "renderings": [
+     {
+      "english": "disability",
+      "documents": 12,
+      "lift": 6.3,
+      "coverage": 0.094,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "रिक्त",
+    "documents": 127,
+    "renderings": [
+     {
+      "english": "vacancy",
+      "documents": 22,
+      "lift": 8.0,
+      "coverage": 0.173,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "परीक्षा",
+    "documents": 126,
+    "renderings": [
+     {
+      "english": "semester",
+      "documents": 13,
+      "lift": 9.52,
+      "coverage": 0.103,
+      "mr_partners": 1
+     },
+     {
+      "english": "syllabus",
+      "documents": 12,
+      "lift": 7.62,
+      "coverage": 0.095,
+      "mr_partners": 2
+     },
+     {
+      "english": "exam",
+      "documents": 13,
+      "lift": 7.28,
+      "coverage": 0.103,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "लेखाशिर्षाखाली",
+    "documents": 124,
+    "renderings": [
+     {
+      "english": "estimated",
+      "documents": 12,
+      "lift": 6.11,
+      "coverage": 0.097,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "केलेली",
+    "documents": 124,
+    "renderings": [
+     {
+      "english": "disabilities",
+      "documents": 12,
+      "lift": 6.11,
+      "coverage": 0.097,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "होईल",
+    "documents": 122,
+    "renderings": [
+     {
+      "english": "sending",
+      "documents": 14,
+      "lift": 7.25,
+      "coverage": 0.115,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "बांधकाम",
+    "documents": 121,
+    "renderings": [
+     {
+      "english": "renovation",
+      "documents": 13,
+      "lift": 7.58,
+      "coverage": 0.107,
+      "mr_partners": 1
+     },
+     {
+      "english": "hostel",
+      "documents": 16,
+      "lift": 7.56,
+      "coverage": 0.132,
+      "mr_partners": 3
+     },
+     {
+      "english": "space",
+      "documents": 13,
+      "lift": 6.45,
+      "coverage": 0.107,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "शाळा",
+    "documents": 121,
+    "renderings": [
+     {
+      "english": "financed",
+      "documents": 12,
+      "lift": 8.5,
+      "coverage": 0.099,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "तरतुदीनुसार",
+    "documents": 120,
+    "renderings": [
+     {
+      "english": "fails",
+      "documents": 12,
+      "lift": 8.0,
+      "coverage": 0.1,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पदस्थापना",
+    "documents": 118,
+    "renderings": [
+     {
+      "english": "vacancy",
+      "documents": 19,
+      "lift": 7.43,
+      "coverage": 0.161,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "नोंद",
+    "documents": 118,
+    "renderings": [
+     {
+      "english": "record",
+      "documents": 20,
+      "lift": 6.56,
+      "coverage": 0.169,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अनुक्रमांक",
+    "documents": 117,
+    "renderings": [
+     {
+      "english": "boys",
+      "documents": 13,
+      "lift": 6.67,
+      "coverage": 0.111,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "याशिवाय",
+    "documents": 117,
+    "renderings": [
+     {
+      "english": "enhanced",
+      "documents": 12,
+      "lift": 9.47,
+      "coverage": 0.103,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "विनंती",
+    "documents": 114,
+    "renderings": [
+     {
+      "english": "requested",
+      "documents": 60,
+      "lift": 8.2,
+      "coverage": 0.526,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "काही",
+    "documents": 113,
+    "renderings": [
+     {
+      "english": "some",
+      "documents": 54,
+      "lift": 9.72,
+      "coverage": 0.478,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अंतर्गत",
+    "documents": 112,
+    "renderings": [
+     {
+      "english": "internal",
+      "documents": 13,
+      "lift": 6.96,
+      "coverage": 0.116,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "जमा",
+    "documents": 112,
+    "renderings": [
+     {
+      "english": "credited",
+      "documents": 16,
+      "lift": 9.52,
+      "coverage": 0.143,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अनुदानाच्या",
+    "documents": 110,
+    "renderings": [
+     {
+      "english": "complied",
+      "documents": 13,
+      "lift": 6.17,
+      "coverage": 0.118,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "राष्ट्रीय",
+    "documents": 109,
+    "renderings": [
+     {
+      "english": "girls",
+      "documents": 15,
+      "lift": 6.12,
+      "coverage": 0.138,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कलम",
+    "documents": 109,
+    "renderings": [
+     {
+      "english": "proviso",
+      "documents": 13,
+      "lift": 7.16,
+      "coverage": 0.119,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "खर्ची",
+    "documents": 108,
+    "renderings": [
+     {
+      "english": "covered",
+      "documents": 23,
+      "lift": 6.08,
+      "coverage": 0.213,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "क्षेत्रिय",
+    "documents": 106,
+    "renderings": [
+     {
+      "english": "zonal",
+      "documents": 27,
+      "lift": 7.46,
+      "coverage": 0.255,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "देणे",
+    "documents": 104,
+    "renderings": [
+     {
+      "english": "learning",
+      "documents": 12,
+      "lift": 6.29,
+      "coverage": 0.115,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "विद्यार्थी",
+    "documents": 104,
+    "renderings": [
+     {
+      "english": "body",
+      "documents": 12,
+      "lift": 7.29,
+      "coverage": 0.115,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "सुधारणा",
+    "documents": 103,
+    "renderings": [
+     {
+      "english": "amendments",
+      "documents": 16,
+      "lift": 9.81,
+      "coverage": 0.155,
+      "mr_partners": 1
+     },
+     {
+      "english": "improved",
+      "documents": 12,
+      "lift": 8.22,
+      "coverage": 0.117,
+      "mr_partners": 1
+     },
+     {
+      "english": "amendment",
+      "documents": 12,
+      "lift": 7.77,
+      "coverage": 0.117,
+      "mr_partners": 1
+     },
+     {
+      "english": "amended",
+      "documents": 17,
+      "lift": 6.0,
+      "coverage": 0.165,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "प्रत्येक",
+    "documents": 103,
+    "renderings": [
+     {
+      "english": "preparation",
+      "documents": 12,
+      "lift": 6.35,
+      "coverage": 0.117,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कल्याण",
+    "documents": 101,
+    "renderings": [
+     {
+      "english": "holders",
+      "documents": 13,
+      "lift": 11.88,
+      "coverage": 0.129,
+      "mr_partners": 3
+     },
+     {
+      "english": "widows",
+      "documents": 13,
+      "lift": 11.88,
+      "coverage": 0.129,
+      "mr_partners": 3
+     },
+     {
+      "english": "kalyan",
+      "documents": 13,
+      "lift": 11.03,
+      "coverage": 0.129,
+      "mr_partners": 1
+     },
+     {
+      "english": "soldiers",
+      "documents": 12,
+      "lift": 10.97,
+      "coverage": 0.119,
+      "mr_partners": 2
+     },
+     {
+      "english": "collectors",
+      "documents": 13,
+      "lift": 6.44,
+      "coverage": 0.129,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "बँक",
+    "documents": 100,
+    "renderings": [
+     {
+      "english": "credited",
+      "documents": 12,
+      "lift": 8.0,
+      "coverage": 0.12,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "जोडलेल्या",
+    "documents": 100,
+    "renderings": [
+     {
+      "english": "collectors",
+      "documents": 13,
+      "lift": 6.5,
+      "coverage": 0.13,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "इतक्या",
+    "documents": 99,
+    "renderings": [
+     {
+      "english": "accorded",
+      "documents": 25,
+      "lift": 6.18,
+      "coverage": 0.253,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आढावा",
+    "documents": 99,
+    "renderings": [
+     {
+      "english": "review",
+      "documents": 52,
+      "lift": 8.88,
+      "coverage": 0.525,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "विभागात",
+    "documents": 98,
+    "renderings": [
+     {
+      "english": "typewriter",
+      "documents": 12,
+      "lift": 7.73,
+      "coverage": 0.122,
+      "mr_partners": 3
+     },
+     {
+      "english": "joined",
+      "documents": 17,
+      "lift": 6.51,
+      "coverage": 0.173,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अंमलात",
+    "documents": 98,
+    "renderings": [
+     {
+      "english": "periodic",
+      "documents": 12,
+      "lift": 9.18,
+      "coverage": 0.122,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "मुदतवाढ",
+    "documents": 98,
+    "renderings": [
+     {
+      "english": "extending",
+      "documents": 15,
+      "lift": 12.24,
+      "coverage": 0.153,
+      "mr_partners": 1
+     },
+     {
+      "english": "deadline",
+      "documents": 37,
+      "lift": 10.79,
+      "coverage": 0.378,
+      "mr_partners": 3
+     },
+     {
+      "english": "expired",
+      "documents": 17,
+      "lift": 8.67,
+      "coverage": 0.173,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "तरतूदीतून",
+    "documents": 98,
+    "renderings": [
+     {
+      "english": "eighty",
+      "documents": 19,
+      "lift": 6.29,
+      "coverage": 0.194,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "निर्माण",
+    "documents": 97,
+    "renderings": [
+     {
+      "english": "create",
+      "documents": 23,
+      "lift": 10.94,
+      "coverage": 0.237,
+      "mr_partners": 1
+     },
+     {
+      "english": "creating",
+      "documents": 13,
+      "lift": 10.05,
+      "coverage": 0.134,
+      "mr_partners": 1
+     },
+     {
+      "english": "important",
+      "documents": 12,
+      "lift": 6.75,
+      "coverage": 0.124,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पदावरील",
+    "documents": 96,
+    "renderings": [
+     {
+      "english": "nomination",
+      "documents": 13,
+      "lift": 11.61,
+      "coverage": 0.135,
+      "mr_partners": 1
+     },
+     {
+      "english": "exempted",
+      "documents": 13,
+      "lift": 8.12,
+      "coverage": 0.135,
+      "mr_partners": 3
+     },
+     {
+      "english": "vacancy",
+      "documents": 13,
+      "lift": 6.25,
+      "coverage": 0.135,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आक्षेप",
+    "documents": 96,
+    "renderings": [
+     {
+      "english": "complied",
+      "documents": 12,
+      "lift": 6.52,
+      "coverage": 0.125,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आस्था",
+    "documents": 96,
+    "renderings": [
+     {
+      "english": "ashika",
+      "documents": 13,
+      "lift": 10.16,
+      "coverage": 0.135,
+      "mr_partners": 3
+     },
+     {
+      "english": "advocate",
+      "documents": 15,
+      "lift": 6.94,
+      "coverage": 0.156,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "परिशिष्ट",
+    "documents": 94,
+    "renderings": [
+     {
+      "english": "annexed",
+      "documents": 14,
+      "lift": 8.51,
+      "coverage": 0.149,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अभियांत्रिकी",
+    "documents": 94,
+    "renderings": [
+     {
+      "english": "mechanical",
+      "documents": 12,
+      "lift": 12.77,
+      "coverage": 0.128,
+      "mr_partners": 2
+     },
+     {
+      "english": "technological",
+      "documents": 18,
+      "lift": 6.38,
+      "coverage": 0.191,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "समितीच्या",
+    "documents": 93,
+    "renderings": [
+     {
+      "english": "equipment",
+      "documents": 17,
+      "lift": 8.77,
+      "coverage": 0.183,
+      "mr_partners": 2
+     },
+     {
+      "english": "meetings",
+      "documents": 12,
+      "lift": 6.45,
+      "coverage": 0.129,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "युवक",
+    "documents": 92,
+    "renderings": [
+     {
+      "english": "headquarters",
+      "documents": 13,
+      "lift": 6.28,
+      "coverage": 0.141,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "खातरजमा",
+    "documents": 91,
+    "renderings": [
+     {
+      "english": "verify",
+      "documents": 19,
+      "lift": 8.95,
+      "coverage": 0.209,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "एकत्रित",
+    "documents": 91,
+    "renderings": [
+     {
+      "english": "integrated",
+      "documents": 16,
+      "lift": 9.17,
+      "coverage": 0.176,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "उद्योग",
+    "documents": 91,
+    "renderings": [
+     {
+      "english": "environment",
+      "documents": 13,
+      "lift": 6.59,
+      "coverage": 0.143,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कमी",
+    "documents": 91,
+    "renderings": [
+     {
+      "english": "less",
+      "documents": 30,
+      "lift": 11.64,
+      "coverage": 0.33,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "कार्यासन",
+    "documents": 89,
+    "renderings": [
+     {
+      "english": "karyasana",
+      "documents": 19,
+      "lift": 12.81,
+      "coverage": 0.213,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अक्षरी",
+    "documents": 89,
+    "renderings": [
+     {
+      "english": "ninety",
+      "documents": 19,
+      "lift": 7.12,
+      "coverage": 0.213,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पुढे",
+    "documents": 89,
+    "renderings": [
+     {
+      "english": "continued",
+      "documents": 17,
+      "lift": 10.42,
+      "coverage": 0.191,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "तयार",
+    "documents": 87,
+    "renderings": [
+     {
+      "english": "preparing",
+      "documents": 15,
+      "lift": 13.79,
+      "coverage": 0.172,
+      "mr_partners": 1
+     },
+     {
+      "english": "preparation",
+      "documents": 20,
+      "lift": 12.54,
+      "coverage": 0.23,
+      "mr_partners": 3
+     },
+     {
+      "english": "bring",
+      "documents": 14,
+      "lift": 7.15,
+      "coverage": 0.161,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अनुदानाची",
+    "documents": 87,
+    "renderings": [
+     {
+      "english": "awards",
+      "documents": 12,
+      "lift": 6.13,
+      "coverage": 0.138,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कामगार",
+    "documents": 87,
+    "renderings": [
+     {
+      "english": "environment",
+      "documents": 13,
+      "lift": 6.9,
+      "coverage": 0.149,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "दाखल",
+    "documents": 87,
+    "renderings": [
+     {
+      "english": "petitions",
+      "documents": 12,
+      "lift": 10.34,
+      "coverage": 0.138,
+      "mr_partners": 2
+     },
+     {
+      "english": "entered",
+      "documents": 12,
+      "lift": 8.71,
+      "coverage": 0.138,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "महालेखापाल",
+    "documents": 87,
+    "renderings": [
+     {
+      "english": "licensure",
+      "documents": 12,
+      "lift": 13.79,
+      "coverage": 0.138,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "निवड",
+    "documents": 86,
+    "renderings": [
+     {
+      "english": "selected",
+      "documents": 40,
+      "lift": 8.59,
+      "coverage": 0.465,
+      "mr_partners": 3
+     },
+     {
+      "english": "test",
+      "documents": 12,
+      "lift": 6.7,
+      "coverage": 0.14,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "प्रधान",
+    "documents": 86,
+    "renderings": [
+     {
+      "english": "assembly",
+      "documents": 13,
+      "lift": 8.64,
+      "coverage": 0.151,
+      "mr_partners": 2
+     },
+     {
+      "english": "principal",
+      "documents": 77,
+      "lift": 7.41,
+      "coverage": 0.895,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "क्रीयुसे",
+    "documents": 85,
+    "renderings": [
+     {
+      "english": "balewadi",
+      "documents": 12,
+      "lift": 14.12,
+      "coverage": 0.141,
+      "mr_partners": 3
+     },
+     {
+      "english": "taluk",
+      "documents": 13,
+      "lift": 7.98,
+      "coverage": 0.153,
+      "mr_partners": 2
+     },
+     {
+      "english": "headquarters",
+      "documents": 12,
+      "lift": 6.27,
+      "coverage": 0.141,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "शाखा",
+    "documents": 84,
+    "renderings": [
+     {
+      "english": "prisa",
+      "documents": 16,
+      "lift": 9.94,
+      "coverage": 0.19,
+      "mr_partners": 2
+     },
+     {
+      "english": "advocate",
+      "documents": 14,
+      "lift": 7.41,
+      "coverage": 0.167,
+      "mr_partners": 3
+     },
+     {
+      "english": "empowerment",
+      "documents": 13,
+      "lift": 7.14,
+      "coverage": 0.155,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "चार",
+    "documents": 84,
+    "renderings": [
+     {
+      "english": "four",
+      "documents": 31,
+      "lift": 6.92,
+      "coverage": 0.369,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अनुदानातून",
+    "documents": 84,
+    "renderings": [
+     {
+      "english": "covered",
+      "documents": 23,
+      "lift": 7.82,
+      "coverage": 0.274,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "स्तरावर",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "verify",
+      "documents": 12,
+      "lift": 6.2,
+      "coverage": 0.145,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "याचिका",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "petitions",
+      "documents": 15,
+      "lift": 13.55,
+      "coverage": 0.181,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अधिक",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "girls",
+      "documents": 12,
+      "lift": 6.43,
+      "coverage": 0.145,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "समितीने",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "equipment",
+      "documents": 12,
+      "lift": 6.94,
+      "coverage": 0.145,
+      "mr_partners": 2
+     },
+     {
+      "english": "functions",
+      "documents": 14,
+      "lift": 6.75,
+      "coverage": 0.169,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "औरंगाबाद",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "marathwada",
+      "documents": 13,
+      "lift": 7.23,
+      "coverage": 0.157,
+      "mr_partners": 2
+     },
+     {
+      "english": "ambedkar",
+      "documents": 12,
+      "lift": 6.94,
+      "coverage": 0.145,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मराठी",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "language",
+      "documents": 25,
+      "lift": 12.05,
+      "coverage": 0.301,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "यांच्याकडून",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "prospectus",
+      "documents": 16,
+      "lift": 6.8,
+      "coverage": 0.193,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "बंद",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "opening",
+      "documents": 14,
+      "lift": 6.53,
+      "coverage": 0.169,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "आपल्या",
+    "documents": 83,
+    "renderings": [
+     {
+      "english": "preparation",
+      "documents": 12,
+      "lift": 7.89,
+      "coverage": 0.145,
+      "mr_partners": 3
+     },
+     {
+      "english": "bring",
+      "documents": 14,
+      "lift": 7.5,
+      "coverage": 0.169,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "स्थानिक",
+    "documents": 82,
+    "renderings": [
+     {
+      "english": "boards",
+      "documents": 13,
+      "lift": 7.61,
+      "coverage": 0.159,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "व्यवस्था",
+    "documents": 82,
+    "renderings": [
+     {
+      "english": "opening",
+      "documents": 14,
+      "lift": 6.61,
+      "coverage": 0.171,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "केल्यास",
+    "documents": 82,
+    "renderings": [
+     {
+      "english": "communicated",
+      "documents": 12,
+      "lift": 7.98,
+      "coverage": 0.146,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "हिस्सा",
+    "documents": 81,
+    "renderings": [
+     {
+      "english": "yojana",
+      "documents": 12,
+      "lift": 9.36,
+      "coverage": 0.148,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "बदली",
+    "documents": 80,
+    "renderings": [
+     {
+      "english": "replacement",
+      "documents": 13,
+      "lift": 9.29,
+      "coverage": 0.163,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "मर्यादेत",
+    "documents": 80,
+    "renderings": [
+     {
+      "english": "equal",
+      "documents": 12,
+      "lift": 6.92,
+      "coverage": 0.15,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "समाप्त",
+    "documents": 80,
+    "renderings": [
+     {
+      "english": "termination",
+      "documents": 15,
+      "lift": 11.84,
+      "coverage": 0.188,
+      "mr_partners": 3
+     },
+     {
+      "english": "expire",
+      "documents": 13,
+      "lift": 11.47,
+      "coverage": 0.163,
+      "mr_partners": 2
+     },
+     {
+      "english": "increment",
+      "documents": 13,
+      "lift": 11.47,
+      "coverage": 0.163,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "शिफारस",
+    "documents": 80,
+    "renderings": [
+     {
+      "english": "recommend",
+      "documents": 14,
+      "lift": 14.0,
+      "coverage": 0.175,
+      "mr_partners": 1
+     },
+     {
+      "english": "mpsc",
+      "documents": 12,
+      "lift": 10.0,
+      "coverage": 0.15,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वापर",
+    "documents": 79,
+    "renderings": [
+     {
+      "english": "exercise",
+      "documents": 30,
+      "lift": 12.32,
+      "coverage": 0.38,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "निधीच्या",
+    "documents": 79,
+    "renderings": [
+     {
+      "english": "hostel",
+      "documents": 12,
+      "lift": 8.68,
+      "coverage": 0.152,
+      "mr_partners": 3
+     },
+     {
+      "english": "complied",
+      "documents": 12,
+      "lift": 7.93,
+      "coverage": 0.152,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पध्दतीने",
+    "documents": 79,
+    "renderings": [
+     {
+      "english": "composite",
+      "documents": 13,
+      "lift": 6.81,
+      "coverage": 0.165,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मासिक",
+    "documents": 79,
+    "renderings": [
+     {
+      "english": "awards",
+      "documents": 12,
+      "lift": 6.75,
+      "coverage": 0.152,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "संपूर्ण",
+    "documents": 78,
+    "renderings": [
+     {
+      "english": "entire",
+      "documents": 31,
+      "lift": 10.6,
+      "coverage": 0.397,
+      "mr_partners": 1
+     },
+     {
+      "english": "certified",
+      "documents": 13,
+      "lift": 6.25,
+      "coverage": 0.167,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "योजनेंतर्गत",
+    "documents": 77,
+    "renderings": [
+     {
+      "english": "yojana",
+      "documents": 13,
+      "lift": 10.66,
+      "coverage": 0.169,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "पुन्हा",
+    "documents": 77,
+    "renderings": [
+     {
+      "english": "composite",
+      "documents": 12,
+      "lift": 6.45,
+      "coverage": 0.156,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "तातडीने",
+    "documents": 77,
+    "renderings": [
+     {
+      "english": "termination",
+      "documents": 13,
+      "lift": 10.66,
+      "coverage": 0.169,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "झाले",
+    "documents": 76,
+    "renderings": [
+     {
+      "english": "joined",
+      "documents": 16,
+      "lift": 7.89,
+      "coverage": 0.211,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "विभागांना",
+    "documents": 76,
+    "renderings": [
+     {
+      "english": "divisions",
+      "documents": 22,
+      "lift": 9.92,
+      "coverage": 0.289,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "नव्याने",
+    "documents": 75,
+    "renderings": [
+     {
+      "english": "newly",
+      "documents": 13,
+      "lift": 12.24,
+      "coverage": 0.173,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "टक्के",
+    "documents": 75,
+    "renderings": [
+     {
+      "english": "cent",
+      "documents": 33,
+      "lift": 8.95,
+      "coverage": 0.44,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "आस्थापना",
+    "documents": 74,
+    "renderings": [
+     {
+      "english": "attendance",
+      "documents": 13,
+      "lift": 7.81,
+      "coverage": 0.176,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "विद्यापीठाच्या",
+    "documents": 74,
+    "renderings": [
+     {
+      "english": "registrar",
+      "documents": 14,
+      "lift": 6.49,
+      "coverage": 0.189,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "तपासणी",
+    "documents": 74,
+    "renderings": [
+     {
+      "english": "check",
+      "documents": 12,
+      "lift": 10.24,
+      "coverage": 0.162,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "नाशिक",
+    "documents": 74,
+    "renderings": [
+     {
+      "english": "nandurbar",
+      "documents": 12,
+      "lift": 10.24,
+      "coverage": 0.162,
+      "mr_partners": 1
+     },
+     {
+      "english": "dhule",
+      "documents": 15,
+      "lift": 7.85,
+      "coverage": 0.203,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "कार्य",
+    "documents": 73,
+    "renderings": [
+     {
+      "english": "tourism",
+      "documents": 13,
+      "lift": 12.57,
+      "coverage": 0.178,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आहरित",
+    "documents": 72,
+    "renderings": [
+     {
+      "english": "integrated",
+      "documents": 12,
+      "lift": 8.7,
+      "coverage": 0.167,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "नस्ती",
+    "documents": 72,
+    "renderings": [
+     {
+      "english": "nasti",
+      "documents": 14,
+      "lift": 15.56,
+      "coverage": 0.194,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अमरावती",
+    "documents": 72,
+    "renderings": [
+     {
+      "english": "amaravati",
+      "documents": 15,
+      "lift": 16.67,
+      "coverage": 0.208,
+      "mr_partners": 1
+     },
+     {
+      "english": "buldhana",
+      "documents": 14,
+      "lift": 11.11,
+      "coverage": 0.194,
+      "mr_partners": 2
+     },
+     {
+      "english": "yavatmal",
+      "documents": 16,
+      "lift": 10.26,
+      "coverage": 0.222,
+      "mr_partners": 2
+     },
+     {
+      "english": "washim",
+      "documents": 12,
+      "lift": 10.0,
+      "coverage": 0.167,
+      "mr_partners": 2
+     },
+     {
+      "english": "wardha",
+      "documents": 12,
+      "lift": 9.09,
+      "coverage": 0.167,
+      "mr_partners": 2
+     },
+     {
+      "english": "latur",
+      "documents": 16,
+      "lift": 7.21,
+      "coverage": 0.222,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "लोकसेवा",
+    "documents": 71,
+    "renderings": [
+     {
+      "english": "maloa",
+      "documents": 12,
+      "lift": 16.9,
+      "coverage": 0.169,
+      "mr_partners": 2
+     },
+     {
+      "english": "mpsc",
+      "documents": 17,
+      "lift": 15.96,
+      "coverage": 0.239,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "विवरणपत्र",
+    "documents": 71,
+    "renderings": [
+     {
+      "english": "prospectus",
+      "documents": 13,
+      "lift": 6.46,
+      "coverage": 0.183,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अध्यक्ष",
+    "documents": 71,
+    "renderings": [
+     {
+      "english": "constitution",
+      "documents": 12,
+      "lift": 9.66,
+      "coverage": 0.169,
+      "mr_partners": 2
+     },
+     {
+      "english": "president",
+      "documents": 20,
+      "lift": 9.66,
+      "coverage": 0.282,
+      "mr_partners": 2
+     },
+     {
+      "english": "functions",
+      "documents": 14,
+      "lift": 7.89,
+      "coverage": 0.197,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सुधारीत",
+    "documents": 71,
+    "renderings": [
+     {
+      "english": "revised",
+      "documents": 66,
+      "lift": 6.16,
+      "coverage": 0.93,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "परिशिष्ट्ट",
+    "documents": 70,
+    "renderings": [
+     {
+      "english": "meaning",
+      "documents": 12,
+      "lift": 7.91,
+      "coverage": 0.171,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "निविदा",
+    "documents": 70,
+    "renderings": [
+     {
+      "english": "tendering",
+      "documents": 19,
+      "lift": 16.29,
+      "coverage": 0.271,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "प्रकल्प",
+    "documents": 70,
+    "renderings": [
+     {
+      "english": "projects",
+      "documents": 20,
+      "lift": 13.19,
+      "coverage": 0.286,
+      "mr_partners": 1
+     },
+     {
+      "english": "project",
+      "documents": 66,
+      "lift": 12.3,
+      "coverage": 0.943,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सध्या",
+    "documents": 69,
+    "renderings": [
+     {
+      "english": "presently",
+      "documents": 12,
+      "lift": 12.28,
+      "coverage": 0.174,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "८००",
+    "documents": 69,
+    "renderings": [
+     {
+      "english": "income",
+      "documents": 12,
+      "lift": 11.59,
+      "coverage": 0.174,
+      "mr_partners": 1
+     },
+     {
+      "english": "composite",
+      "documents": 12,
+      "lift": 7.2,
+      "coverage": 0.174,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कळविण्यात",
+    "documents": 69,
+    "renderings": [
+     {
+      "english": "communicated",
+      "documents": 12,
+      "lift": 9.49,
+      "coverage": 0.174,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "होण्यासाठी",
+    "documents": 69,
+    "renderings": [
+     {
+      "english": "absence",
+      "documents": 12,
+      "lift": 8.35,
+      "coverage": 0.174,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "१९८१",
+    "documents": 68,
+    "renderings": [
+     {
+      "english": "appear",
+      "documents": 15,
+      "lift": 7.35,
+      "coverage": 0.221,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "सदस्य",
+    "documents": 66,
+    "renderings": [
+     {
+      "english": "constitute",
+      "documents": 12,
+      "lift": 14.55,
+      "coverage": 0.182,
+      "mr_partners": 2
+     },
+     {
+      "english": "president",
+      "documents": 22,
+      "lift": 11.43,
+      "coverage": 0.333,
+      "mr_partners": 2
+     },
+     {
+      "english": "constitution",
+      "documents": 12,
+      "lift": 10.39,
+      "coverage": 0.182,
+      "mr_partners": 2
+     },
+     {
+      "english": "functions",
+      "documents": 13,
+      "lift": 7.88,
+      "coverage": 0.197,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मंत्री",
+    "documents": 64,
+    "renderings": [
+     {
+      "english": "assembly",
+      "documents": 13,
+      "lift": 11.61,
+      "coverage": 0.203,
+      "mr_partners": 2
+     },
+     {
+      "english": "legislative",
+      "documents": 12,
+      "lift": 7.76,
+      "coverage": 0.188,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पाटील",
+    "documents": 64,
+    "renderings": [
+     {
+      "english": "rajendra",
+      "documents": 14,
+      "lift": 13.82,
+      "coverage": 0.219,
+      "mr_partners": 2
+     },
+     {
+      "english": "ashok",
+      "documents": 12,
+      "lift": 11.25,
+      "coverage": 0.188,
+      "mr_partners": 2
+     },
+     {
+      "english": "pawar",
+      "documents": 14,
+      "lift": 10.1,
+      "coverage": 0.219,
+      "mr_partners": 2
+     },
+     {
+      "english": "deshmukh",
+      "documents": 12,
+      "lift": 7.5,
+      "coverage": 0.188,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "प्रति",
+    "documents": 63,
+    "renderings": [
+     {
+      "english": "telephone",
+      "documents": 12,
+      "lift": 12.7,
+      "coverage": 0.19,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पदोन्नती",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "rank",
+      "documents": 16,
+      "lift": 6.32,
+      "coverage": 0.258,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "तात्पुरत्या",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "temporarily",
+      "documents": 15,
+      "lift": 17.08,
+      "coverage": 0.242,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "विशि",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "vishy",
+      "documents": 18,
+      "lift": 19.35,
+      "coverage": 0.29,
+      "mr_partners": 2
+     },
+     {
+      "english": "chancellor",
+      "documents": 13,
+      "lift": 16.77,
+      "coverage": 0.21,
+      "mr_partners": 2
+     },
+     {
+      "english": "registrar",
+      "documents": 22,
+      "lift": 12.17,
+      "coverage": 0.355,
+      "mr_partners": 3
+     },
+     {
+      "english": "vice",
+      "documents": 13,
+      "lift": 9.32,
+      "coverage": 0.21,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "येतात",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "arrears",
+      "documents": 12,
+      "lift": 6.83,
+      "coverage": 0.194,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "एसडी",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "areas",
+      "documents": 13,
+      "lift": 7.19,
+      "coverage": 0.21,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "याव्यात",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "basic",
+      "documents": 12,
+      "lift": 6.83,
+      "coverage": 0.194,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "तंत्रज्ञान",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "technology",
+      "documents": 57,
+      "lift": 9.19,
+      "coverage": 0.919,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "वितरित",
+    "documents": 62,
+    "renderings": [
+     {
+      "english": "tune",
+      "documents": 12,
+      "lift": 7.04,
+      "coverage": 0.194,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "भत्ता",
+    "documents": 61,
+    "renderings": [
+     {
+      "english": "daily",
+      "documents": 21,
+      "lift": 9.84,
+      "coverage": 0.344,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "इयत्ता",
+    "documents": 59,
+    "renderings": [
+     {
+      "english": "free",
+      "documents": 13,
+      "lift": 10.58,
+      "coverage": 0.22,
+      "mr_partners": 2
+     },
+     {
+      "english": "class",
+      "documents": 38,
+      "lift": 7.81,
+      "coverage": 0.644,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "विवरणपत्रातील",
+    "documents": 59,
+    "renderings": [
+     {
+      "english": "prospectus",
+      "documents": 12,
+      "lift": 7.18,
+      "coverage": 0.203,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "तपासून",
+    "documents": 58,
+    "renderings": [
+     {
+      "english": "changes",
+      "documents": 12,
+      "lift": 6.06,
+      "coverage": 0.207,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पदाचा",
+    "documents": 57,
+    "renderings": [
+     {
+      "english": "assume",
+      "documents": 12,
+      "lift": 19.43,
+      "coverage": 0.211,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "वर्षाकरीता",
+    "documents": 56,
+    "renderings": [
+     {
+      "english": "eighty",
+      "documents": 14,
+      "lift": 8.11,
+      "coverage": 0.25,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अवलंब",
+    "documents": 56,
+    "renderings": [
+     {
+      "english": "adopting",
+      "documents": 15,
+      "lift": 20.09,
+      "coverage": 0.268,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "महिला",
+    "documents": 56,
+    "renderings": [
+     {
+      "english": "child",
+      "documents": 26,
+      "lift": 17.41,
+      "coverage": 0.464,
+      "mr_partners": 3
+     },
+     {
+      "english": "health",
+      "documents": 18,
+      "lift": 6.12,
+      "coverage": 0.321,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आधारे",
+    "documents": 56,
+    "renderings": [
+     {
+      "english": "based",
+      "documents": 26,
+      "lift": 7.63,
+      "coverage": 0.464,
+      "mr_partners": 2
+     },
+     {
+      "english": "accepted",
+      "documents": 13,
+      "lift": 6.19,
+      "coverage": 0.232,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "स्थापना",
+    "documents": 55,
+    "renderings": [
+     {
+      "english": "established",
+      "documents": 17,
+      "lift": 9.05,
+      "coverage": 0.309,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "भारत",
+    "documents": 54,
+    "renderings": [
+     {
+      "english": "bharat",
+      "documents": 12,
+      "lift": 19.05,
+      "coverage": 0.222,
+      "mr_partners": 1
+     },
+     {
+      "english": "program",
+      "documents": 12,
+      "lift": 6.2,
+      "coverage": 0.222,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "आयोगाने",
+    "documents": 54,
+    "renderings": [
+     {
+      "english": "mpsc",
+      "documents": 14,
+      "lift": 17.28,
+      "coverage": 0.259,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "प्रवर्ग",
+    "documents": 52,
+    "renderings": [
+     {
+      "english": "proceedings",
+      "documents": 12,
+      "lift": 6.15,
+      "coverage": 0.231,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "ठेवण्यास",
+    "documents": 52,
+    "renderings": [
+     {
+      "english": "continued",
+      "documents": 14,
+      "lift": 14.69,
+      "coverage": 0.269,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "संलग्नता",
+    "documents": 52,
+    "renderings": [
+     {
+      "english": "directed",
+      "documents": 12,
+      "lift": 6.02,
+      "coverage": 0.231,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "उच्चस्तरीय",
+    "documents": 51,
+    "renderings": [
+     {
+      "english": "junior",
+      "documents": 13,
+      "lift": 6.8,
+      "coverage": 0.255,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "रकमा",
+    "documents": 51,
+    "renderings": [
+     {
+      "english": "balance",
+      "documents": 12,
+      "lift": 6.14,
+      "coverage": 0.235,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "लिपिक",
+    "documents": 51,
+    "renderings": [
+     {
+      "english": "typist",
+      "documents": 30,
+      "lift": 23.53,
+      "coverage": 0.588,
+      "mr_partners": 2
+     },
+     {
+      "english": "typewriter",
+      "documents": 19,
+      "lift": 23.53,
+      "coverage": 0.373,
+      "mr_partners": 3
+     },
+     {
+      "english": "typists",
+      "documents": 12,
+      "lift": 23.53,
+      "coverage": 0.235,
+      "mr_partners": 1
+     },
+     {
+      "english": "clerks",
+      "documents": 13,
+      "lift": 23.53,
+      "coverage": 0.255,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "जिल्हाधिकारी",
+    "documents": 51,
+    "renderings": [
+     {
+      "english": "collectorate",
+      "documents": 12,
+      "lift": 23.53,
+      "coverage": 0.235,
+      "mr_partners": 1
+     },
+     {
+      "english": "collectors",
+      "documents": 20,
+      "lift": 19.61,
+      "coverage": 0.392,
+      "mr_partners": 3
+     },
+     {
+      "english": "persons",
+      "documents": 15,
+      "lift": 8.4,
+      "coverage": 0.294,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "संपुष्टात",
+    "documents": 50,
+    "renderings": [
+     {
+      "english": "expired",
+      "documents": 12,
+      "lift": 12.0,
+      "coverage": 0.24,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "ज्ञापन",
+    "documents": 50,
+    "renderings": [
+     {
+      "english": "memo",
+      "documents": 17,
+      "lift": 22.67,
+      "coverage": 0.34,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "कोल्हापूर",
+    "documents": 50,
+    "renderings": [
+     {
+      "english": "sangli",
+      "documents": 13,
+      "lift": 13.57,
+      "coverage": 0.26,
+      "mr_partners": 2
+     },
+     {
+      "english": "ratnagiri",
+      "documents": 13,
+      "lift": 11.56,
+      "coverage": 0.26,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "रूजू",
+    "documents": 50,
+    "renderings": [
+     {
+      "english": "joined",
+      "documents": 12,
+      "lift": 9.0,
+      "coverage": 0.24,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "संशोधन",
+    "documents": 50,
+    "renderings": [
+     {
+      "english": "research",
+      "documents": 48,
+      "lift": 15.36,
+      "coverage": 0.96,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "परिविक्षा",
+    "documents": 49,
+    "renderings": [
+     {
+      "english": "increment",
+      "documents": 14,
+      "lift": 20.17,
+      "coverage": 0.286,
+      "mr_partners": 2
+     },
+     {
+      "english": "satisfactory",
+      "documents": 12,
+      "lift": 19.59,
+      "coverage": 0.245,
+      "mr_partners": 1
+     },
+     {
+      "english": "technological",
+      "documents": 14,
+      "lift": 9.52,
+      "coverage": 0.286,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "छत्रपती",
+    "documents": 49,
+    "renderings": [
+     {
+      "english": "sambhajinagar",
+      "documents": 35,
+      "lift": 21.98,
+      "coverage": 0.714,
+      "mr_partners": 2
+     },
+     {
+      "english": "chhatrapati",
+      "documents": 49,
+      "lift": 20.69,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "सांस्कृतिक",
+    "documents": 48,
+    "renderings": [
+     {
+      "english": "tourism",
+      "documents": 14,
+      "lift": 20.59,
+      "coverage": 0.292,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पयंत",
+    "documents": 48,
+    "renderings": [
+     {
+      "english": "deadline",
+      "documents": 16,
+      "lift": 9.52,
+      "coverage": 0.333,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "चौकशी",
+    "documents": 48,
+    "renderings": [
+     {
+      "english": "initiated",
+      "documents": 12,
+      "lift": 16.67,
+      "coverage": 0.25,
+      "mr_partners": 1
+     },
+     {
+      "english": "proceedings",
+      "documents": 12,
+      "lift": 6.67,
+      "coverage": 0.25,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "जनसंपर्क",
+    "documents": 47,
+    "renderings": [
+     {
+      "english": "mavaj",
+      "documents": 12,
+      "lift": 21.88,
+      "coverage": 0.255,
+      "mr_partners": 2
+     },
+     {
+      "english": "publicity",
+      "documents": 12,
+      "lift": 18.02,
+      "coverage": 0.255,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "इंग्रजी",
+    "documents": 47,
+    "renderings": [
+     {
+      "english": "financed",
+      "documents": 12,
+      "lift": 21.88,
+      "coverage": 0.255,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "करावयाची",
+    "documents": 47,
+    "renderings": [
+     {
+      "english": "cases",
+      "documents": 13,
+      "lift": 7.06,
+      "coverage": 0.277,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "प्रमुख",
+    "documents": 47,
+    "renderings": [
+     {
+      "english": "heads",
+      "documents": 14,
+      "lift": 12.33,
+      "coverage": 0.298,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "सध्याचा",
+    "documents": 46,
+    "renderings": [
+     {
+      "english": "resources",
+      "documents": 12,
+      "lift": 12.04,
+      "coverage": 0.261,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "हजारात",
+    "documents": 46,
+    "renderings": [
+     {
+      "english": "junior",
+      "documents": 12,
+      "lift": 6.96,
+      "coverage": 0.261,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "महामंडळे",
+    "documents": 46,
+    "renderings": [
+     {
+      "english": "boards",
+      "documents": 14,
+      "lift": 14.61,
+      "coverage": 0.304,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "यापैकी",
+    "documents": 46,
+    "renderings": [
+     {
+      "english": "whichever",
+      "documents": 27,
+      "lift": 22.72,
+      "coverage": 0.587,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सैनिक",
+    "documents": 46,
+    "renderings": [
+     {
+      "english": "widows",
+      "documents": 12,
+      "lift": 24.08,
+      "coverage": 0.261,
+      "mr_partners": 3
+     },
+     {
+      "english": "soldiers",
+      "documents": 12,
+      "lift": 24.08,
+      "coverage": 0.261,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "कार्यकारी",
+    "documents": 44,
+    "renderings": [
+     {
+      "english": "executive",
+      "documents": 39,
+      "lift": 14.57,
+      "coverage": 0.886,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अनुसूचित",
+    "documents": 44,
+    "renderings": [
+     {
+      "english": "tribe",
+      "documents": 14,
+      "lift": 23.86,
+      "coverage": 0.318,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "प्रतिनियुक्तीच्या",
+    "documents": 43,
+    "renderings": [
+     {
+      "english": "expire",
+      "documents": 12,
+      "lift": 19.7,
+      "coverage": 0.279,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "नगर",
+    "documents": 43,
+    "renderings": [
+     {
+      "english": "nagar",
+      "documents": 19,
+      "lift": 21.21,
+      "coverage": 0.442,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पायाभूत",
+    "documents": 43,
+    "renderings": [
+     {
+      "english": "basic",
+      "documents": 14,
+      "lift": 11.49,
+      "coverage": 0.326,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "कअनि",
+    "documents": 42,
+    "renderings": [
+     {
+      "english": "kaani",
+      "documents": 14,
+      "lift": 28.57,
+      "coverage": 0.333,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "प्रमाणित",
+    "documents": 42,
+    "renderings": [
+     {
+      "english": "certified",
+      "documents": 27,
+      "lift": 24.11,
+      "coverage": 0.643,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "हजर",
+    "documents": 42,
+    "renderings": [
+     {
+      "english": "appear",
+      "documents": 18,
+      "lift": 14.29,
+      "coverage": 0.429,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "मागविण्यात",
+    "documents": 42,
+    "renderings": [
+     {
+      "english": "telephone",
+      "documents": 12,
+      "lift": 19.05,
+      "coverage": 0.286,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "दराने",
+    "documents": 42,
+    "renderings": [
+     {
+      "english": "rate",
+      "documents": 29,
+      "lift": 13.81,
+      "coverage": 0.69,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "प्रवास",
+    "documents": 41,
+    "renderings": [
+     {
+      "english": "daily",
+      "documents": 20,
+      "lift": 13.94,
+      "coverage": 0.488,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "जाहिरात",
+    "documents": 41,
+    "renderings": [
+     {
+      "english": "advertising",
+      "documents": 12,
+      "lift": 27.02,
+      "coverage": 0.293,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "माहे",
+    "documents": 41,
+    "renderings": [
+     {
+      "english": "arrears",
+      "documents": 13,
+      "lift": 11.19,
+      "coverage": 0.317,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कनिष्ठ",
+    "documents": 40,
+    "renderings": [
+     {
+      "english": "junior",
+      "documents": 37,
+      "lift": 24.67,
+      "coverage": 0.925,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वैद्यकीय",
+    "documents": 40,
+    "renderings": [
+     {
+      "english": "health",
+      "documents": 17,
+      "lift": 8.1,
+      "coverage": 0.425,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "उपस्थित",
+    "documents": 40,
+    "renderings": [
+     {
+      "english": "attendance",
+      "documents": 13,
+      "lift": 14.44,
+      "coverage": 0.325,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वार्षिक",
+    "documents": 40,
+    "renderings": [
+     {
+      "english": "annual",
+      "documents": 38,
+      "lift": 23.75,
+      "coverage": 0.95,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "दिले",
+    "documents": 40,
+    "renderings": [
+     {
+      "english": "directed",
+      "documents": 14,
+      "lift": 9.13,
+      "coverage": 0.35,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वाटप",
+    "documents": 40,
+    "renderings": [
+     {
+      "english": "allotment",
+      "documents": 14,
+      "lift": 16.15,
+      "coverage": 0.35,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "राबविण्यात",
+    "documents": 39,
+    "renderings": [
+     {
+      "english": "implemented",
+      "documents": 25,
+      "lift": 8.18,
+      "coverage": 0.641,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अंदाजपत्रकास",
+    "documents": 39,
+    "renderings": [
+     {
+      "english": "accorded",
+      "documents": 18,
+      "lift": 11.3,
+      "coverage": 0.462,
+      "mr_partners": 3
+     },
+     {
+      "english": "ninety",
+      "documents": 13,
+      "lift": 11.11,
+      "coverage": 0.333,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पहिल्या",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "instalment",
+      "documents": 12,
+      "lift": 17.22,
+      "coverage": 0.316,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "न्यायालयाच्या",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "rank",
+      "documents": 12,
+      "lift": 7.73,
+      "coverage": 0.316,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "नांदेड",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "jalna",
+      "documents": 12,
+      "lift": 15.79,
+      "coverage": 0.316,
+      "mr_partners": 3
+     },
+     {
+      "english": "latur",
+      "documents": 17,
+      "lift": 14.51,
+      "coverage": 0.447,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "प्राचार्य",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "principal",
+      "documents": 36,
+      "lift": 7.84,
+      "coverage": 0.947,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "संभाजीनगर",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "sambhajinagar",
+      "documents": 38,
+      "lift": 30.77,
+      "coverage": 1.0,
+      "mr_partners": 2
+     },
+     {
+      "english": "chhatrapati",
+      "documents": 35,
+      "lift": 19.06,
+      "coverage": 0.921,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "छाननी",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "proposals",
+      "documents": 12,
+      "lift": 7.73,
+      "coverage": 0.316,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "ठिकाण",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "place",
+      "documents": 36,
+      "lift": 6.15,
+      "coverage": 0.947,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "चालविणारी",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "govt",
+      "documents": 38,
+      "lift": 6.09,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "संस्थेविरूध्द",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "govt",
+      "documents": 38,
+      "lift": 6.09,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "चालविणाऱ्या",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "govt",
+      "documents": 38,
+      "lift": 6.09,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "नियमितपणे",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "regularly",
+      "documents": 14,
+      "lift": 26.71,
+      "coverage": 0.378,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "तत्सम",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "similar",
+      "documents": 30,
+      "lift": 22.11,
+      "coverage": 0.811,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "उमेदवार",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "selected",
+      "documents": 15,
+      "lift": 7.48,
+      "coverage": 0.405,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आरोग्य",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "health",
+      "documents": 36,
+      "lift": 18.53,
+      "coverage": 0.973,
+      "mr_partners": 3
+     },
+     {
+      "english": "child",
+      "documents": 13,
+      "lift": 13.18,
+      "coverage": 0.351,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "शिल्लक",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "balance",
+      "documents": 26,
+      "lift": 18.33,
+      "coverage": 0.703,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "उत्तीर्ण",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "exempted",
+      "documents": 12,
+      "lift": 19.46,
+      "coverage": 0.324,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "जमाती",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "tribe",
+      "documents": 13,
+      "lift": 26.35,
+      "coverage": 0.351,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "पुरस्कार",
+    "documents": 36,
+    "renderings": [
+     {
+      "english": "puraskar",
+      "documents": 16,
+      "lift": 33.33,
+      "coverage": 0.444,
+      "mr_partners": 2
+     },
+     {
+      "english": "gaurav",
+      "documents": 14,
+      "lift": 31.11,
+      "coverage": 0.389,
+      "mr_partners": 2
+     },
+     {
+      "english": "awards",
+      "documents": 25,
+      "lift": 30.86,
+      "coverage": 0.694,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सेवानिवृत्त",
+    "documents": 36,
+    "renderings": [
+     {
+      "english": "retired",
+      "documents": 27,
+      "lift": 26.47,
+      "coverage": 0.75,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "प्रादेशिक",
+    "documents": 36,
+    "renderings": [
+     {
+      "english": "regional",
+      "documents": 34,
+      "lift": 15.32,
+      "coverage": 0.944,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "तपासण्याचे",
+    "documents": 36,
+    "renderings": [
+     {
+      "english": "four",
+      "documents": 12,
+      "lift": 6.25,
+      "coverage": 0.333,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पदांचा",
+    "documents": 35,
+    "renderings": [
+     {
+      "english": "figure",
+      "documents": 12,
+      "lift": 16.46,
+      "coverage": 0.343,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सैनिकी",
+    "documents": 35,
+    "renderings": [
+     {
+      "english": "girls",
+      "documents": 12,
+      "lift": 15.24,
+      "coverage": 0.343,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "लातूर",
+    "documents": 35,
+    "renderings": [
+     {
+      "english": "latur",
+      "documents": 35,
+      "lift": 32.43,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पाठविण्यात",
+    "documents": 35,
+    "renderings": [
+     {
+      "english": "certified",
+      "documents": 12,
+      "lift": 12.86,
+      "coverage": 0.343,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अनुक्रमे",
+    "documents": 35,
+    "renderings": [
+     {
+      "english": "respectively",
+      "documents": 29,
+      "lift": 24.25,
+      "coverage": 0.829,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "टंकलेखक",
+    "documents": 35,
+    "renderings": [
+     {
+      "english": "typist",
+      "documents": 27,
+      "lift": 30.86,
+      "coverage": 0.771,
+      "mr_partners": 2
+     },
+     {
+      "english": "typewriter",
+      "documents": 14,
+      "lift": 25.26,
+      "coverage": 0.4,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पुरवठा",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "sanitation",
+      "documents": 14,
+      "lift": 19.76,
+      "coverage": 0.412,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पदनि",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "figure",
+      "documents": 12,
+      "lift": 16.94,
+      "coverage": 0.353,
+      "mr_partners": 3
+     },
+     {
+      "english": "till",
+      "documents": 19,
+      "lift": 6.91,
+      "coverage": 0.559,
+      "mr_partners": 3
+     },
+     {
+      "english": "designation",
+      "documents": 20,
+      "lift": 6.48,
+      "coverage": 0.588,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अस्थायी",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "till",
+      "documents": 20,
+      "lift": 7.28,
+      "coverage": 0.588,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अभियंता",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "bhawan",
+      "documents": 15,
+      "lift": 12.91,
+      "coverage": 0.441,
+      "mr_partners": 1
+     },
+     {
+      "english": "executive",
+      "documents": 21,
+      "lift": 10.15,
+      "coverage": 0.618,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "बांधकामे",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "crores",
+      "documents": 12,
+      "lift": 6.14,
+      "coverage": 0.353,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वगळून",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "excluding",
+      "documents": 27,
+      "lift": 26.47,
+      "coverage": 0.794,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "त्याचप्रमाणे",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "similarly",
+      "documents": 21,
+      "lift": 27.45,
+      "coverage": 0.618,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "लेखी",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "writing",
+      "documents": 14,
+      "lift": 22.46,
+      "coverage": 0.412,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "मशि",
+    "documents": 33,
+    "renderings": [
+     {
+      "english": "masi",
+      "documents": 13,
+      "lift": 36.36,
+      "coverage": 0.394,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "चंद्रपूर",
+    "documents": 33,
+    "renderings": [
+     {
+      "english": "chandrapur",
+      "documents": 33,
+      "lift": 35.29,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "व्यक्ती",
+    "documents": 33,
+    "renderings": [
+     {
+      "english": "persons",
+      "documents": 16,
+      "lift": 13.85,
+      "coverage": 0.485,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अधिव्याख्याता",
+    "documents": 33,
+    "renderings": [
+     {
+      "english": "advocate",
+      "documents": 23,
+      "lift": 30.98,
+      "coverage": 0.697,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वस्तू",
+    "documents": 33,
+    "renderings": [
+     {
+      "english": "goods",
+      "documents": 23,
+      "lift": 26.98,
+      "coverage": 0.697,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "उमेदवारांना",
+    "documents": 33,
+    "renderings": [
+     {
+      "english": "selected",
+      "documents": 12,
+      "lift": 6.71,
+      "coverage": 0.364,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अँड",
+    "documents": 33,
+    "renderings": [
+     {
+      "english": "research",
+      "documents": 13,
+      "lift": 6.3,
+      "coverage": 0.394,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मावज",
+    "documents": 32,
+    "renderings": [
+     {
+      "english": "mavaj",
+      "documents": 13,
+      "lift": 34.82,
+      "coverage": 0.406,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "तालुका",
+    "documents": 32,
+    "renderings": [
+     {
+      "english": "taluk",
+      "documents": 23,
+      "lift": 37.5,
+      "coverage": 0.719,
+      "mr_partners": 2
+     },
+     {
+      "english": "taluka",
+      "documents": 22,
+      "lift": 34.38,
+      "coverage": 0.688,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "सात",
+    "documents": 32,
+    "renderings": [
+     {
+      "english": "seven",
+      "documents": 25,
+      "lift": 15.62,
+      "coverage": 0.781,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "दूरध्वनी",
+    "documents": 32,
+    "renderings": [
+     {
+      "english": "telephone",
+      "documents": 13,
+      "lift": 27.08,
+      "coverage": 0.406,
+      "mr_partners": 3
+     },
+     {
+      "english": "regional",
+      "documents": 12,
+      "lift": 6.08,
+      "coverage": 0.375,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "विद्या",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "vidya",
+      "documents": 21,
+      "lift": 33.87,
+      "coverage": 0.677,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "बाबासाहेब",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "ambedkar",
+      "documents": 24,
+      "lift": 37.16,
+      "coverage": 0.774,
+      "mr_partners": 3
+     },
+     {
+      "english": "phule",
+      "documents": 12,
+      "lift": 17.2,
+      "coverage": 0.387,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सातारा",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "satara",
+      "documents": 31,
+      "lift": 35.29,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "लक्षात",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "view",
+      "documents": 21,
+      "lift": 6.56,
+      "coverage": 0.677,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "उत्तर",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "north",
+      "documents": 17,
+      "lift": 38.71,
+      "coverage": 0.548,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "तंत्रनिकेतन",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "technological",
+      "documents": 20,
+      "lift": 21.51,
+      "coverage": 0.645,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "इच्छुकता",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "sought",
+      "documents": 12,
+      "lift": 14.08,
+      "coverage": 0.387,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "निर्देश",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "directed",
+      "documents": 12,
+      "lift": 10.1,
+      "coverage": 0.387,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अपेक्षित",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "expected",
+      "documents": 22,
+      "lift": 35.48,
+      "coverage": 0.71,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "तज्ञ",
+    "documents": 30,
+    "renderings": [
+     {
+      "english": "implement",
+      "documents": 12,
+      "lift": 12.0,
+      "coverage": 0.4,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "प्रस्तावाच्या",
+    "documents": 30,
+    "renderings": [
+     {
+      "english": "pursuance",
+      "documents": 15,
+      "lift": 8.7,
+      "coverage": 0.5,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "रोख",
+    "documents": 30,
+    "renderings": [
+     {
+      "english": "cash",
+      "documents": 29,
+      "lift": 25.22,
+      "coverage": 0.967,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पदस्थापनेच्या",
+    "documents": 30,
+    "renderings": [
+     {
+      "english": "immediate",
+      "documents": 13,
+      "lift": 7.22,
+      "coverage": 0.433,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "देशमुख",
+    "documents": 30,
+    "renderings": [
+     {
+      "english": "deshmukh",
+      "documents": 30,
+      "lift": 40.0,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "दुरुस्ती",
+    "documents": 29,
+    "renderings": [
+     {
+      "english": "repair",
+      "documents": 23,
+      "lift": 36.6,
+      "coverage": 0.793,
+      "mr_partners": 1
+     },
+     {
+      "english": "maintenance",
+      "documents": 12,
+      "lift": 9.93,
+      "coverage": 0.414,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पदांसाठी",
+    "documents": 29,
+    "renderings": [
+     {
+      "english": "based",
+      "documents": 12,
+      "lift": 6.8,
+      "coverage": 0.414,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "दायित्व",
+    "documents": 29,
+    "renderings": [
+     {
+      "english": "responsibility",
+      "documents": 19,
+      "lift": 7.42,
+      "coverage": 0.655,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "धुळे",
+    "documents": 29,
+    "renderings": [
+     {
+      "english": "dhule",
+      "documents": 28,
+      "lift": 37.37,
+      "coverage": 0.966,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "समन्वय",
+    "documents": 29,
+    "renderings": [
+     {
+      "english": "coordination",
+      "documents": 18,
+      "lift": 29.79,
+      "coverage": 0.621,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "मुदत",
+    "documents": 29,
+    "renderings": [
+     {
+      "english": "deadline",
+      "documents": 14,
+      "lift": 13.79,
+      "coverage": 0.483,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "जागा",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "space",
+      "documents": 13,
+      "lift": 27.86,
+      "coverage": 0.464,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "क्षेत्रीय",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "regional",
+      "documents": 15,
+      "lift": 8.69,
+      "coverage": 0.536,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "न्यायालयीन",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "cases",
+      "documents": 16,
+      "lift": 14.59,
+      "coverage": 0.571,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अंदाजपत्रक",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "accorded",
+      "documents": 14,
+      "lift": 12.24,
+      "coverage": 0.5,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मानधन",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "honorarium",
+      "documents": 16,
+      "lift": 36.09,
+      "coverage": 0.571,
+      "mr_partners": 1
+     },
+     {
+      "english": "remuneration",
+      "documents": 23,
+      "lift": 30.8,
+      "coverage": 0.821,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "निवासी",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "residential",
+      "documents": 14,
+      "lift": 27.27,
+      "coverage": 0.5,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "लघुलेखक",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "writer",
+      "documents": 24,
+      "lift": 39.56,
+      "coverage": 0.857,
+      "mr_partners": 3
+     },
+     {
+      "english": "story",
+      "documents": 12,
+      "lift": 39.56,
+      "coverage": 0.429,
+      "mr_partners": 1
+     },
+     {
+      "english": "lower",
+      "documents": 12,
+      "lift": 22.36,
+      "coverage": 0.429,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पवार",
+    "documents": 27,
+    "renderings": [
+     {
+      "english": "pawar",
+      "documents": 26,
+      "lift": 44.44,
+      "coverage": 0.963,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अंशत",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "partially",
+      "documents": 12,
+      "lift": 46.15,
+      "coverage": 0.462,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "फुले",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "savitribai",
+      "documents": 23,
+      "lift": 46.15,
+      "coverage": 0.885,
+      "mr_partners": 2
+     },
+     {
+      "english": "phule",
+      "documents": 26,
+      "lift": 44.44,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मानकांप्रमाणे",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "view",
+      "documents": 17,
+      "lift": 6.33,
+      "coverage": 0.654,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "गव्हर्नन्स",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "project",
+      "documents": 15,
+      "lift": 7.53,
+      "coverage": 0.577,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मराठवाडा",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "marathwada",
+      "documents": 26,
+      "lift": 46.15,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "उपक्रम",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "activities",
+      "documents": 14,
+      "lift": 17.46,
+      "coverage": 0.538,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "महागाई",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "rate",
+      "documents": 16,
+      "lift": 12.31,
+      "coverage": 0.615,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "भागविण्यासाठी",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "heading",
+      "documents": 13,
+      "lift": 6.52,
+      "coverage": 0.5,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "रत्नागिरी",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "ratnagiri",
+      "documents": 26,
+      "lift": 44.44,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "देखभाल",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "maintenance",
+      "documents": 22,
+      "lift": 21.12,
+      "coverage": 0.88,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "निवडणूक",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "election",
+      "documents": 21,
+      "lift": 45.82,
+      "coverage": 0.84,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "यवतमाळ",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "yavatmal",
+      "documents": 25,
+      "lift": 46.15,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अधिक्रमित",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "superseded",
+      "documents": 12,
+      "lift": 38.4,
+      "coverage": 0.48,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "महाराज",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "shahu",
+      "documents": 12,
+      "lift": 44.31,
+      "coverage": 0.48,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "घडेल",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "whichever",
+      "documents": 25,
+      "lift": 38.71,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आंबेडकर",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "ambedkar",
+      "documents": 24,
+      "lift": 46.08,
+      "coverage": 0.96,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "रकमेचे",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "project",
+      "documents": 12,
+      "lift": 6.26,
+      "coverage": 0.48,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कुलसचिव",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "registrar",
+      "documents": 24,
+      "lift": 32.91,
+      "coverage": 0.96,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "भाषा",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "language",
+      "documents": 24,
+      "lift": 38.4,
+      "coverage": 0.96,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "नमुना",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "sample",
+      "documents": 15,
+      "lift": 42.35,
+      "coverage": 0.6,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "शहर",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "city",
+      "documents": 25,
+      "lift": 38.71,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "एकशे",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "crores",
+      "documents": 12,
+      "lift": 8.35,
+      "coverage": 0.48,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मुख्यालय",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "headquarters",
+      "documents": 21,
+      "lift": 37.33,
+      "coverage": 0.84,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "टेक्नॉलॉजी",
+    "documents": 25,
+    "renderings": [
+     {
+      "english": "technology",
+      "documents": 24,
+      "lift": 9.6,
+      "coverage": 0.96,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "विमा",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "insurance",
+      "documents": 23,
+      "lift": 29.49,
+      "coverage": 0.958,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "गौरव",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "gaurav",
+      "documents": 15,
+      "lift": 50.0,
+      "coverage": 0.625,
+      "mr_partners": 2
+     },
+     {
+      "english": "puraskar",
+      "documents": 13,
+      "lift": 40.62,
+      "coverage": 0.542,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "वेतनवाढी",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "below",
+      "documents": 14,
+      "lift": 6.25,
+      "coverage": 0.583,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "शिंदे",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "shinde",
+      "documents": 23,
+      "lift": 50.0,
+      "coverage": 0.958,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "शाळेत",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "class",
+      "documents": 12,
+      "lift": 6.06,
+      "coverage": 0.5,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "बीड",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "beed",
+      "documents": 21,
+      "lift": 50.0,
+      "coverage": 0.875,
+      "mr_partners": 1
+     },
+     {
+      "english": "jalna",
+      "documents": 12,
+      "lift": 25.0,
+      "coverage": 0.5,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वाहन",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "vehicle",
+      "documents": 14,
+      "lift": 46.67,
+      "coverage": 0.583,
+      "mr_partners": 1
+     },
+     {
+      "english": "driver",
+      "documents": 13,
+      "lift": 36.11,
+      "coverage": 0.542,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "सूट",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "exempted",
+      "documents": 14,
+      "lift": 35.0,
+      "coverage": 0.583,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "जालना",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "jalna",
+      "documents": 23,
+      "lift": 47.92,
+      "coverage": 0.958,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अभ्यास",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "study",
+      "documents": 14,
+      "lift": 23.56,
+      "coverage": 0.609,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "विकसित",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "developed",
+      "documents": 19,
+      "lift": 35.4,
+      "coverage": 0.826,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "होईपर्यंत",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "till",
+      "documents": 21,
+      "lift": 11.3,
+      "coverage": 0.913,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "रायगड",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "raigad",
+      "documents": 23,
+      "lift": 50.0,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "परिरक्षण",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "maintenance",
+      "documents": 19,
+      "lift": 19.83,
+      "coverage": 0.826,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "दिव्यांग",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "divyang",
+      "documents": 13,
+      "lift": 52.17,
+      "coverage": 0.565,
+      "mr_partners": 1
+     },
+     {
+      "english": "disabilities",
+      "documents": 15,
+      "lift": 41.19,
+      "coverage": 0.652,
+      "mr_partners": 2
+     },
+     {
+      "english": "persons",
+      "documents": 13,
+      "lift": 16.15,
+      "coverage": 0.565,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "नाईक",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "naik",
+      "documents": 23,
+      "lift": 44.44,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "वितरणास",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "declared",
+      "documents": 17,
+      "lift": 6.2,
+      "coverage": 0.739,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सावित्रीबाई",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "savitribai",
+      "documents": 22,
+      "lift": 52.17,
+      "coverage": 1.0,
+      "mr_partners": 2
+     },
+     {
+      "english": "phule",
+      "documents": 22,
+      "lift": 44.44,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "उपस्थिती",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "attendance",
+      "documents": 21,
+      "lift": 42.42,
+      "coverage": 0.955,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कौशल्य",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "entrepreneurship",
+      "documents": 12,
+      "lift": 54.55,
+      "coverage": 0.545,
+      "mr_partners": 1
+     },
+     {
+      "english": "skills",
+      "documents": 13,
+      "lift": 47.27,
+      "coverage": 0.591,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "परिवि",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "below",
+      "documents": 13,
+      "lift": 6.33,
+      "coverage": 0.591,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वर्धा",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "wardha",
+      "documents": 21,
+      "lift": 52.07,
+      "coverage": 0.955,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "१३९",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "names",
+      "documents": 14,
+      "lift": 6.26,
+      "coverage": 0.636,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "शर्तींमध्ये",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "place",
+      "documents": 21,
+      "lift": 6.19,
+      "coverage": 0.955,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "कसे",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "whether",
+      "documents": 13,
+      "lift": 29.71,
+      "coverage": 0.619,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अहमदनगर",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "ahmednagar",
+      "documents": 21,
+      "lift": 54.55,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "आकृतीबंध",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "figure",
+      "documents": 12,
+      "lift": 27.43,
+      "coverage": 0.571,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "परिपूर्ण",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "complete",
+      "documents": 12,
+      "lift": 10.71,
+      "coverage": 0.571,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "विद्युत",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "electrical",
+      "documents": 16,
+      "lift": 50.79,
+      "coverage": 0.762,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "ठेवण्याचा",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "below",
+      "documents": 13,
+      "lift": 6.63,
+      "coverage": 0.619,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "बुलढाणा",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "buldhana",
+      "documents": 20,
+      "lift": 54.42,
+      "coverage": 0.952,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अनुज्ञेयता",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "licensure",
+      "documents": 12,
+      "lift": 57.14,
+      "coverage": 0.571,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "नावाचा",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "names",
+      "documents": 15,
+      "lift": 7.03,
+      "coverage": 0.714,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "सांगली",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "sangli",
+      "documents": 21,
+      "lift": 52.17,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "दैनिक",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "daily",
+      "documents": 21,
+      "lift": 28.57,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "प्रमाण",
+    "documents": 21,
+    "renderings": [
+     {
+      "english": "ratio",
+      "documents": 13,
+      "lift": 41.27,
+      "coverage": 0.619,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अधिसंख्य",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "maximum",
+      "documents": 12,
+      "lift": 20.0,
+      "coverage": 0.6,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "प्रकरणे",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "cases",
+      "documents": 18,
+      "lift": 22.98,
+      "coverage": 0.9,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "बाल",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "child",
+      "documents": 19,
+      "lift": 35.62,
+      "coverage": 0.95,
+      "mr_partners": 3
+     },
+     {
+      "english": "names",
+      "documents": 13,
+      "lift": 6.39,
+      "coverage": 0.65,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पंधरा",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "fifteen",
+      "documents": 15,
+      "lift": 60.0,
+      "coverage": 0.75,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "मौजे",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "mauje",
+      "documents": 14,
+      "lift": 60.0,
+      "coverage": 0.7,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "वाशिम",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "washim",
+      "documents": 19,
+      "lift": 57.0,
+      "coverage": 0.95,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "कोकण",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "konkan",
+      "documents": 20,
+      "lift": 60.0,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "समाप्तीचा",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "since",
+      "documents": 16,
+      "lift": 6.15,
+      "coverage": 0.8,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "थकबाकी",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "arrears",
+      "documents": 18,
+      "lift": 31.76,
+      "coverage": 0.9,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आदर्श",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "model",
+      "documents": 16,
+      "lift": 50.53,
+      "coverage": 0.842,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "आधी",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "whichever",
+      "documents": 15,
+      "lift": 30.56,
+      "coverage": 0.789,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वसंतराव",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "vasantrao",
+      "documents": 19,
+      "lift": 63.16,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "कंपनी",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "company",
+      "documents": 18,
+      "lift": 36.67,
+      "coverage": 0.947,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अशोक",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "ashok",
+      "documents": 19,
+      "lift": 60.0,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "प्रस्तावांची",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "proposals",
+      "documents": 18,
+      "lift": 23.2,
+      "coverage": 0.947,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अंशदान",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "contribution",
+      "documents": 16,
+      "lift": 37.43,
+      "coverage": 0.842,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "सातशे",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "seven",
+      "documents": 17,
+      "lift": 17.89,
+      "coverage": 0.895,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "भंडारा",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "bhandara",
+      "documents": 19,
+      "lift": 60.0,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "मलोआ",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "maloa",
+      "documents": 12,
+      "lift": 63.16,
+      "coverage": 0.632,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "सोई",
+    "documents": 19,
+    "renderings": [
+     {
+      "english": "view",
+      "documents": 17,
+      "lift": 8.66,
+      "coverage": 0.895,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आपुक",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "apuk",
+      "documents": 16,
+      "lift": 66.67,
+      "coverage": 0.889,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अधिक्षक",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "superintendent",
+      "documents": 12,
+      "lift": 28.57,
+      "coverage": 0.667,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "बहुजन",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "bahujan",
+      "documents": 15,
+      "lift": 66.67,
+      "coverage": 0.833,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "कंत्राटी",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "contractual",
+      "documents": 13,
+      "lift": 48.15,
+      "coverage": 0.722,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पर्यावरण",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "environment",
+      "documents": 17,
+      "lift": 43.59,
+      "coverage": 0.944,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पोलीस",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "police",
+      "documents": 16,
+      "lift": 42.67,
+      "coverage": 0.889,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "संजय",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "sanjay",
+      "documents": 18,
+      "lift": 66.67,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "समकक्ष",
+    "documents": 18,
+    "renderings": [
+     {
+      "english": "equivalent",
+      "documents": 16,
+      "lift": 32.32,
+      "coverage": 0.889,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "सहभागी",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "participate",
+      "documents": 12,
+      "lift": 56.47,
+      "coverage": 0.706,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पालघर",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "palghar",
+      "documents": 17,
+      "lift": 70.59,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "अधीक्षक",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "superintendent",
+      "documents": 15,
+      "lift": 37.82,
+      "coverage": 0.882,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "मागासवर्गीय",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "class",
+      "documents": 12,
+      "lift": 8.56,
+      "coverage": 0.706,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अधिकारांचा",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "exercise",
+      "documents": 15,
+      "lift": 28.62,
+      "coverage": 0.882,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "सहकार",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "marketing",
+      "documents": 12,
+      "lift": 60.5,
+      "coverage": 0.706,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "राजेंद्र",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "rajendra",
+      "documents": 17,
+      "lift": 63.16,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "बृहन्मुंबई",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "brihanmumbai",
+      "documents": 15,
+      "lift": 55.73,
+      "coverage": 0.882,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "आहार",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "nutrition",
+      "documents": 12,
+      "lift": 65.16,
+      "coverage": 0.706,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "आशिका",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "ashika",
+      "documents": 15,
+      "lift": 66.18,
+      "coverage": 0.882,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "आयुक्तालय",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "commissionerate",
+      "documents": 15,
+      "lift": 66.18,
+      "coverage": 0.882,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "रिसर्च",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "research",
+      "documents": 17,
+      "lift": 16.0,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "उच्चश्रेणी",
+    "documents": 17,
+    "renderings": [
+     {
+      "english": "writer",
+      "documents": 15,
+      "lift": 40.72,
+      "coverage": 0.882,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पदोन्नतीचे",
+    "documents": 16,
+    "renderings": [
+     {
+      "english": "effect",
+      "documents": 13,
+      "lift": 6.59,
+      "coverage": 0.812,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पाणी",
+    "documents": 16,
+    "renderings": [
+     {
+      "english": "sanitation",
+      "documents": 13,
+      "lift": 39.0,
+      "coverage": 0.812,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "जलसंपदा",
+    "documents": 16,
+    "renderings": [
+     {
+      "english": "resources",
+      "documents": 16,
+      "lift": 46.15,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "विमानचालन",
+    "documents": 16,
+    "renderings": [
+     {
+      "english": "declared",
+      "documents": 12,
+      "lift": 6.29,
+      "coverage": 0.75,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "गणेश",
+    "documents": 16,
+    "renderings": [
+     {
+      "english": "ganesh",
+      "documents": 16,
+      "lift": 60.0,
+      "coverage": 1.0,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पर्यटन",
+    "documents": 16,
+    "renderings": [
+     {
+      "english": "tourism",
+      "documents": 16,
+      "lift": 70.59,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   }
+  ],
+  "inconsistent_terms": [
+   {
+    "marathi": "लिपिक",
+    "documents": 51,
+    "renderings": [
+     {
+      "english": "typist",
+      "documents": 30,
+      "lift": 23.53,
+      "coverage": 0.588,
+      "mr_partners": 2
+     },
+     {
+      "english": "typewriter",
+      "documents": 19,
+      "lift": 23.53,
+      "coverage": 0.373,
+      "mr_partners": 3
+     },
+     {
+      "english": "typists",
+      "documents": 12,
+      "lift": 23.53,
+      "coverage": 0.235,
+      "mr_partners": 1
+     },
+     {
+      "english": "clerks",
+      "documents": 13,
+      "lift": 23.53,
+      "coverage": 0.255,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "पुरस्कार",
+    "documents": 36,
+    "renderings": [
+     {
+      "english": "puraskar",
+      "documents": 16,
+      "lift": 33.33,
+      "coverage": 0.444,
+      "mr_partners": 2
+     },
+     {
+      "english": "gaurav",
+      "documents": 14,
+      "lift": 31.11,
+      "coverage": 0.389,
+      "mr_partners": 2
+     },
+     {
+      "english": "awards",
+      "documents": 25,
+      "lift": 30.86,
+      "coverage": 0.694,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "पदनि",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "figure",
+      "documents": 12,
+      "lift": 16.94,
+      "coverage": 0.353,
+      "mr_partners": 3
+     },
+     {
+      "english": "till",
+      "documents": 19,
+      "lift": 6.91,
+      "coverage": 0.559,
+      "mr_partners": 3
+     },
+     {
+      "english": "designation",
+      "documents": 20,
+      "lift": 6.48,
+      "coverage": 0.588,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "लघुलेखक",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "writer",
+      "documents": 24,
+      "lift": 39.56,
+      "coverage": 0.857,
+      "mr_partners": 3
+     },
+     {
+      "english": "story",
+      "documents": 12,
+      "lift": 39.56,
+      "coverage": 0.429,
+      "mr_partners": 1
+     },
+     {
+      "english": "lower",
+      "documents": 12,
+      "lift": 22.36,
+      "coverage": 0.429,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "दिव्यांग",
+    "documents": 23,
+    "renderings": [
+     {
+      "english": "divyang",
+      "documents": 13,
+      "lift": 52.17,
+      "coverage": 0.565,
+      "mr_partners": 1
+     },
+     {
+      "english": "disabilities",
+      "documents": 15,
+      "lift": 41.19,
+      "coverage": 0.652,
+      "mr_partners": 2
+     },
+     {
+      "english": "persons",
+      "documents": 13,
+      "lift": 16.15,
+      "coverage": 0.565,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "महिला",
+    "documents": 56,
+    "renderings": [
+     {
+      "english": "child",
+      "documents": 26,
+      "lift": 17.41,
+      "coverage": 0.464,
+      "mr_partners": 3
+     },
+     {
+      "english": "health",
+      "documents": 18,
+      "lift": 6.12,
+      "coverage": 0.321,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "छत्रपती",
+    "documents": 49,
+    "renderings": [
+     {
+      "english": "sambhajinagar",
+      "documents": 35,
+      "lift": 21.98,
+      "coverage": 0.714,
+      "mr_partners": 2
+     },
+     {
+      "english": "chhatrapati",
+      "documents": 49,
+      "lift": 20.69,
+      "coverage": 1.0,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "अंदाजपत्रकास",
+    "documents": 39,
+    "renderings": [
+     {
+      "english": "accorded",
+      "documents": 18,
+      "lift": 11.3,
+      "coverage": 0.462,
+      "mr_partners": 3
+     },
+     {
+      "english": "ninety",
+      "documents": 13,
+      "lift": 11.11,
+      "coverage": 0.333,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "नांदेड",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "jalna",
+      "documents": 12,
+      "lift": 15.79,
+      "coverage": 0.316,
+      "mr_partners": 3
+     },
+     {
+      "english": "latur",
+      "documents": 17,
+      "lift": 14.51,
+      "coverage": 0.447,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "संभाजीनगर",
+    "documents": 38,
+    "renderings": [
+     {
+      "english": "sambhajinagar",
+      "documents": 38,
+      "lift": 30.77,
+      "coverage": 1.0,
+      "mr_partners": 2
+     },
+     {
+      "english": "chhatrapati",
+      "documents": 35,
+      "lift": 19.06,
+      "coverage": 0.921,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "आरोग्य",
+    "documents": 37,
+    "renderings": [
+     {
+      "english": "health",
+      "documents": 36,
+      "lift": 18.53,
+      "coverage": 0.973,
+      "mr_partners": 3
+     },
+     {
+      "english": "child",
+      "documents": 13,
+      "lift": 13.18,
+      "coverage": 0.351,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "टंकलेखक",
+    "documents": 35,
+    "renderings": [
+     {
+      "english": "typist",
+      "documents": 27,
+      "lift": 30.86,
+      "coverage": 0.771,
+      "mr_partners": 2
+     },
+     {
+      "english": "typewriter",
+      "documents": 14,
+      "lift": 25.26,
+      "coverage": 0.4,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "अभियंता",
+    "documents": 34,
+    "renderings": [
+     {
+      "english": "bhawan",
+      "documents": 15,
+      "lift": 12.91,
+      "coverage": 0.441,
+      "mr_partners": 1
+     },
+     {
+      "english": "executive",
+      "documents": 21,
+      "lift": 10.15,
+      "coverage": 0.618,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "तालुका",
+    "documents": 32,
+    "renderings": [
+     {
+      "english": "taluk",
+      "documents": 23,
+      "lift": 37.5,
+      "coverage": 0.719,
+      "mr_partners": 2
+     },
+     {
+      "english": "taluka",
+      "documents": 22,
+      "lift": 34.38,
+      "coverage": 0.688,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "दूरध्वनी",
+    "documents": 32,
+    "renderings": [
+     {
+      "english": "telephone",
+      "documents": 13,
+      "lift": 27.08,
+      "coverage": 0.406,
+      "mr_partners": 3
+     },
+     {
+      "english": "regional",
+      "documents": 12,
+      "lift": 6.08,
+      "coverage": 0.375,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "बाबासाहेब",
+    "documents": 31,
+    "renderings": [
+     {
+      "english": "ambedkar",
+      "documents": 24,
+      "lift": 37.16,
+      "coverage": 0.774,
+      "mr_partners": 3
+     },
+     {
+      "english": "phule",
+      "documents": 12,
+      "lift": 17.2,
+      "coverage": 0.387,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "दुरुस्ती",
+    "documents": 29,
+    "renderings": [
+     {
+      "english": "repair",
+      "documents": 23,
+      "lift": 36.6,
+      "coverage": 0.793,
+      "mr_partners": 1
+     },
+     {
+      "english": "maintenance",
+      "documents": 12,
+      "lift": 9.93,
+      "coverage": 0.414,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "मानधन",
+    "documents": 28,
+    "renderings": [
+     {
+      "english": "honorarium",
+      "documents": 16,
+      "lift": 36.09,
+      "coverage": 0.571,
+      "mr_partners": 1
+     },
+     {
+      "english": "remuneration",
+      "documents": 23,
+      "lift": 30.8,
+      "coverage": 0.821,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "फुले",
+    "documents": 26,
+    "renderings": [
+     {
+      "english": "savitribai",
+      "documents": 23,
+      "lift": 46.15,
+      "coverage": 0.885,
+      "mr_partners": 2
+     },
+     {
+      "english": "phule",
+      "documents": 26,
+      "lift": 44.44,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "गौरव",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "gaurav",
+      "documents": 15,
+      "lift": 50.0,
+      "coverage": 0.625,
+      "mr_partners": 2
+     },
+     {
+      "english": "puraskar",
+      "documents": 13,
+      "lift": 40.62,
+      "coverage": 0.542,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "बीड",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "beed",
+      "documents": 21,
+      "lift": 50.0,
+      "coverage": 0.875,
+      "mr_partners": 1
+     },
+     {
+      "english": "jalna",
+      "documents": 12,
+      "lift": 25.0,
+      "coverage": 0.5,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "वाहन",
+    "documents": 24,
+    "renderings": [
+     {
+      "english": "vehicle",
+      "documents": 14,
+      "lift": 46.67,
+      "coverage": 0.583,
+      "mr_partners": 1
+     },
+     {
+      "english": "driver",
+      "documents": 13,
+      "lift": 36.11,
+      "coverage": 0.542,
+      "mr_partners": 2
+     }
+    ]
+   },
+   {
+    "marathi": "सावित्रीबाई",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "savitribai",
+      "documents": 22,
+      "lift": 52.17,
+      "coverage": 1.0,
+      "mr_partners": 2
+     },
+     {
+      "english": "phule",
+      "documents": 22,
+      "lift": 44.44,
+      "coverage": 1.0,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कौशल्य",
+    "documents": 22,
+    "renderings": [
+     {
+      "english": "entrepreneurship",
+      "documents": 12,
+      "lift": 54.55,
+      "coverage": 0.545,
+      "mr_partners": 1
+     },
+     {
+      "english": "skills",
+      "documents": 13,
+      "lift": 47.27,
+      "coverage": 0.591,
+      "mr_partners": 1
+     }
+    ]
+   },
+   {
+    "marathi": "बाल",
+    "documents": 20,
+    "renderings": [
+     {
+      "english": "child",
+      "documents": 19,
+      "lift": 35.62,
+      "coverage": 0.95,
+      "mr_partners": 3
+     },
+     {
+      "english": "names",
+      "documents": 13,
+      "lift": 6.39,
+      "coverage": 0.65,
+      "mr_partners": 3
+     }
+    ]
+   },
+   {
+    "marathi": "कदम",
+    "documents": 14,
+    "renderings": [
+     {
+      "english": "kadam",
+      "documents": 14,
+      "lift": 85.71,
+      "coverage": 1.0,
+      "mr_partners": 1
+     },
+     {
+      "english": "shri",
+      "documents": 12,
+      "lift": 6.05,
+      "coverage": 0.857,
+      "mr_partners": 1
+     }
+    ]
+   }
+  ],
+  "method": "document-level lift between Marathi and English terms across aligned pairs",
+  "caveat": "Association is not translation: a term and a frequent collocate both score. This finds candidates for inconsistent rendering; it is not a dictionary. The English side is machine translation of the Marathi."
+ }
+}

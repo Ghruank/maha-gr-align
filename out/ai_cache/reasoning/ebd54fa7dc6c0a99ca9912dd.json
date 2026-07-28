@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अशी सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"व्यवस्थापकीय संचालक या पदाचा कालावधी\",\"gloss_en\":\"In paragraph 3, item a.3 of the said government decision, the term of the post of Administrative Director is being amended from two years (or until age 60, whichever is earlier) to three years (or until age 60, whichever is earlier).\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-9a552301-32d0-4813-b11a-e7fc79dd7130",
+  "object": "chat.completion",
+  "created": 1785091829,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अशी सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"व्यवस्थापकीय संचालक या पदाचा कालावधी\",\"gloss_en\":\"In paragraph 3, item a.3 of the said government decision, the term of the post of Administrative Director is being amended from two years (or until age 60, whichever is earlier) to three years (or until age 60, whichever is earlier).\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"8. सदर शासन निर्णयातील परिच्छेद ३ मधील अ.क्र. ३ मध्ये \"व्यवस्थापकीय संचालक या पदाचा कालावधी दोन वर्षाचा किंवा वयाची ६० वर्षे होईपर्यंत, यापैकी जे अगोदर घडेल त्या कालावधीसाठी राहील \"याऐवजी\" व्यवस्थापकीय संचालक या पदाचा कालावधी तीन वर्षाचा किंवा वयाची ६० वर्षे होईपर्यंत, यापैकी जे अगोदर घडेल त्या कालावधीसाठी राहील\" अशी सुधारणा करण्यात येत आहे.\"\n\nInterpretation: It says within the same decision, paragraph 3 item 3, the term of the post \"व्यवस्थापकीय संचालक\" is being changed from two years to three years. This is a \"सुधारणा\" i.e., amendment to the prior order's provision. It is not cancelling the whole order, just amending a clause. So type = AMENDS.\n\nTarget index: The candidate prior GR list includes one GR (index 1). The sentence refers to \"सदर शासन निर्णयातील\" meaning \"the said government decision\". It likely refers to that prior GR. So target_index = 1.\n\nEvidence_span: need exact substring that shows amendment. The phrase \"अशी सुधारणा करण्यात येत आहे\" indicates amendment. Also the quoted text shows replacement. Choose a substring that includes \"सुधारणा\". For example: \"अशी सुधारणा करण्यात येत आहे\". That is exact.\n\nCancelled_object: The object being amended is the term of the post \"व्यवस्थापकीय संचालक\". The noun being changed is \"व्यवस्थापकीय संचालक या पदाचा कालावधी\". So cancelled_object should be the thing being cancelled/changed: \"व्यवस्थापकीय संचालक या पदाचा कालावधी\". Since it's amendment, we can still provide cancelled_object as the object being changed. The spec says \"the Marathi noun that is cancelled/amended\". So we can put \"व्यवस्थापकीय संचालक या पदाचा कालावधी\". Or maybe just \"व्यवस्थापकीय संचालक\". But better include full phrase.\n\nGloss_en: literal translation: \"In paragraph 3, item a.3 of the said government decision, the term of the post of Administrative Director is being amended from a period of two years or until the age of 60, whichever is earlier, to a period of three years or until the age of 60, whichever is earlier.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck JSON format: compact, no spaces? It's okay to have spaces. Ensure keys correct.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.292796922,
+   "prompt_tokens": 915,
+   "prompt_time": 0.899107512,
+   "completion_tokens": 698,
+   "completion_time": 1.444154532,
+   "total_tokens": 1613,
+   "total_time": 2.343262044,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 581
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01kyfw797neqdbqqzqba3ba206",
+   "seed": 2110492064
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "ebd54fa7dc6c0a99ca9912dd",
+ "role": "reasoning"
+}

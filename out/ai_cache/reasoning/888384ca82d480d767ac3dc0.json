@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":\"वरिष्ट्ठ\",\"gloss_en\":\"By partial amendment, the senior (post) of the Nagpur division under the Accounts and Treasury Directorate\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-d40a5eba-c663-458a-a30c-1e9588eda4df",
+  "object": "chat.completion",
+  "created": 1785091583,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":\"वरिष्ट्ठ\",\"gloss_en\":\"By partial amendment, the senior (post) of the Nagpur division under the Accounts and Treasury Directorate\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"अंशत: बदल करुन लेखा व कोषागारे संचालनालयाच्या अधिनस्त नागपूर विभागातील वरिष्ट्ठ\"\n\nIt seems truncated? It says \"अंशत: बदल करुन लेखा व कोषागारे संचालनालयाच्या अधिनस्त नागपूर विभागातील वरिष्ट्ठ\". Means \"by partial amendment, the senior ... of Nagpur division under the Accounts and Treasury Directorate\". Likely it's an amendment (अंशत: बदल) to something. The sentence includes \"अंशत: बदल करुन\" which indicates AMENDS. It references prior GR (candidate list). The sentence says \"अंशत: बदल करुन ...\". It is modifying something, not cancelling the whole order. So type = AMENDS.\n\ntarget_index: which prior GR is being referenced? There's only one candidate: index 1. So target_index = 1.\n\nevidence_span: need exact substring that justifies type. Could be \"अंशत: बदल करुन\". That indicates amendment. So evidence_span = \"अंशत: बदल करुन\". Must be exact substring from input. Yes.\n\ncancelled_object: what is being cancelled/amended? The sentence says \"अंशत: बदल करुन लेखा व कोषागारे संचालनालयाच्या अधिनस्त नागपूर विभागातील वरिष्ट्ठ\". The noun being changed is \"वरिष्ट्ठ\" (senior). Probably \"वरिष्ठ\" (senior post). So cancelled_object = \"वरिष्ट्ठ\". But maybe the object being amended is the senior post. So we can put \"वरिष्ट्ठ\". Use Marathi noun.\n\ngloss_en: literal English translation: \"By partial amendment, the senior ... of Nagpur division under the Accounts and Treasury Directorate\". Provide translation.\n\nconfidence: high, maybe 0.96.\n\nCheck traps: Not a file number cue. Not supersedes because it's partial amendment. Not deliberative. So AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320285453,
+   "prompt_tokens": 810,
+   "prompt_time": 0.043223706,
+   "completion_tokens": 478,
+   "completion_time": 0.99354717,
+   "total_tokens": 1288,
+   "total_time": 1.036770876,
+   "completion_tokens_details": {
+    "reasoning_tokens": 407
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_77b12279f9",
+  "x_groq": {
+   "id": "req_01kyfvzta0edwtr6tseqzxz7n4",
+   "seed": 1986875768
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "888384ca82d480d767ac3dc0",
+ "role": "reasoning"
+}

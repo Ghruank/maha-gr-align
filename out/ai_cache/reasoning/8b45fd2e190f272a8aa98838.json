@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्याचा प्रस्ताव\",\"cancelled_object\":null,\"gloss_en\":\"Proposal for amendment by the Urban Development Department with the competent authority's approval to the Finance Department\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-e362b78e-99b7-4b30-ac3a-b484b83c4596",
+  "object": "chat.completion",
+  "created": 1785091463,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्याचा प्रस्ताव\",\"cancelled_object\":null,\"gloss_en\":\"Proposal for amendment by the Urban Development Department with the competent authority's approval to the Finance Department\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"सुधारणा करण्याचा प्रस्ताव नगर विकास विभागाने सक्षम प्राधिकारी यांच्या मान्यतेने वित्त विभागास\"\n\nTranslation: \"The proposal for amendment (or improvement) by the Urban Development Department with the approval of the competent authority to the Finance Department\". It's a proposal, not an operative change. It mentions \"सुधारणा करण्याचा प्रस्ताव\" (proposal for amendment). This is deliberative, not a decision. According to trap 3, such sentences are considered REFERENCES (they are in proposal section). So type = REFERENCES.\n\nTarget_index: which prior GR is referenced? There's one candidate prior GR listed. The sentence does not explicitly mention it, but the list says it's mentioned. However we need to decide if the sentence references that prior GR. The sentence does not contain any explicit identifier like \"शाहमी-२०२३/न वि वि/प्र.क्र.६४/अर्थबळ\". The candidate list is given by the system; we must pick the index if the sentence establishes a relationship. Since the sentence is a proposal, likely it's just referencing the prior GR (maybe as context). The instruction: \"You are given the sentence and a numbered list of prior GRs that a deterministic resolver has ALREADY matched inside it.\" So the prior GR is already matched inside the sentence (i.e., the sentence contains that reference). But the visible sentence does not show that reference; maybe it's omitted? Possibly the sentence includes the reference but truncated? The given sentence ends abruptly; maybe the reference is after? But we only have that snippet. The candidate list says there is a prior GR mentioned. So we should set target_index = 1.\n\nEvidence_span: need exact substring that justifies the type. For REFERENCES, we need a substring that shows it's a proposal, e.g., \"सुधारणा करण्याचा प्रस्ताव\". That indicates it's a proposal, not operative. So evidence_span = \"सुधारणा करण्याचा प्रस्ताव\". Cancelled_object: null because not cancelling. Gloss_en: \"Proposal for amendment by the Urban Development Department with the competent authority's approval to the Finance Department\". Confidence maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.158031056,
+   "prompt_tokens": 808,
+   "prompt_time": 0.042963801,
+   "completion_tokens": 518,
+   "completion_time": 1.0819922339999999,
+   "total_tokens": 1326,
+   "total_time": 1.124956035,
+   "completion_tokens_details": {
+    "reasoning_tokens": 451
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01kyfvw576fz48kdwh9f5tmqye",
+   "seed": 984350707
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "8b45fd2e190f272a8aa98838",
+ "role": "reasoning"
+}

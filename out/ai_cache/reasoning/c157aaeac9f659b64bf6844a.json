@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्यात येत\",\"cancelled_object\":\"बदली आदेश\",\"gloss_en\":\"In the said transfer order, a partial change is being made for administrative reasons and now in front of their name\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-d6acf6f1-6e94-428b-a519-f1e248645efc",
+  "object": "chat.completion",
+  "created": 1785091748,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करण्यात येत\",\"cancelled_object\":\"बदली आदेश\",\"gloss_en\":\"In the said transfer order, a partial change is being made for administrative reasons and now in front of their name\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"सदरहू बदली आदेशात प्रशासकीय कारणास्तव अंशत: बदल करण्यात येत असून आता त्यांच्या नावासमोरील\"\n\nTranslation: \"In the said transfer order, an administrative reason partial change is being made and now in front of their name ...\" (sentence seems incomplete). It says \"अंशत: बदल करण्यात येत असून\" meaning \"partial change is being made\". This indicates an amendment (partial change) to a prior order (the prior GR). So type is AMENDS.\n\nTarget_index: which prior GR? There's only one candidate: index 1. So target_index = 1.\n\nEvidence_span: need exact substring that justifies type. The phrase \"अंशत: बदल करण्यात येत\" indicates amendment. So evidence_span = \"अंशत: बदल करण्यात येत\". Must be exact substring from input. The input: \"सदरहू बदली आदेशात प्रशासकीय कारणास्तव अंशत: बदल करण्यात येत असून आता त्यांच्या नावासमोरील\". The substring \"अंशत: बदल करण्यात येत\" appears exactly. Yes.\n\nCancelled_object: what is being cancelled/amended? It's a \"बदली आदेश\" (transfer order) partially changed. The object being changed is \"बदली आदेश\". But the cancelled/amended object is the \"बदली आदेश\". However the sentence says \"अंशत: बदल करण्यात येत\". It modifies the prior order, not cancels it. So cancelled_object maybe \"बदली आदेश\". But the instruction: \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. Since it's an amendment, we can put the noun being amended: \"बदली आदेश\". Or maybe \"बदली\". The phrase \"बदली आदेशात\" indicates the order. So we set \"बदली आदेश\". Could also be \"बदली\". We'll choose \"बदली आदेश\".\n\nGloss_en: literal English translation: \"In the said transfer order, a partial change is being made for administrative reasons and now in front of their name\". Provide translation.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28781571,
+   "prompt_tokens": 790,
+   "prompt_time": 0.078422036,
+   "completion_tokens": 530,
+   "completion_time": 1.088669896,
+   "total_tokens": 1320,
+   "total_time": 1.167091932,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 455
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_017482bd7f",
+  "x_groq": {
+   "id": "req_01kyfw4ts6eh7bqfbxyddj8aac",
+   "seed": 1424126036
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "c157aaeac9f659b64bf6844a",
+ "role": "reasoning"
+}

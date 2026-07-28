@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The Government decision dated 28.1.2021 is cancelled\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-6f4014f4-f4c6-4f95-b684-5ba444412f6b",
+  "object": "chat.completion",
+  "created": 1785054432,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The Government decision dated 28.1.2021 is cancelled\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly:\n\n\"प्रस्तावना : राज्य नियोजन मंडळाचे कार्यकारी अध्यक्ष यांचे दालन व कार्यालयासाठी १२०० चौ.फूट जागा वाटप करण्याबाबतचा संदर्भाधीन दिनांक २८.१.2021 रोजीचा शासन निर्णय रद्द करुन सदर १२०० चौ.फूट जागा महाराष्ट्र इन्स्टिटयूशन फॉर ट्रान्सफॉमेशन-मित्र (Maharashtra Institution for Transformation-MITRA) \" या संस्थेच्या कार्यालयासाठी वाटप करण्याचा प्रस्ताव शासनाच्या विचाराधीन होता. त्यानुषंगाने शासनाने खालीलप्रमाणे निर्णय घेतला आहे :\"\n\nKey parts: \"संदर्भाधीन दिनांक २८.१.२०२१ रोजीचा शासन निर्णय रद्द करुन\" => \"by cancelling the reference decision dated 28.1.2021\". So it says the prior decision (the one dated 28 Jan 2021) is being cancelled. That is a cancellation of a prior order itself. So that is SUPERSEDES? Wait: The prior order is being cancelled. According to trap 2, if the sentence cancels a prior order itself, that is SUPERSEDES. Yes.\n\nWe need to identify target_index: the candidate list has one entry (index 1). So target_index = 1.\n\nEvidence_span: need exact substring that shows cancellation. The phrase \"रद्द करुन\" appears. The phrase \"संदर्भाधीन दिनांक २८.१.२०२१ रोजीचा शासन निर्णय रद्द करुन\". The exact substring that indicates cancellation: maybe \"रद्द करुन\". But we need a substring that justifies the type. Could be \"रद्द करुन\". That is the operative phrase. Provide that.\n\nCancelled_object: what is being cancelled? The prior \"शासन निर्णय\". So the noun is \"शासन निर्णय\". Could also be \"निर्णय\". We'll put \"शासन निर्णय\". Or \"निर्णय\". The instruction: \"the Marathi noun that is cancelled/amended\". So \"शासन निर्णय\". Provide that.\n\nGloss_en: literal English translation: \"Cancellation of the Government decision dated 28.1.2021\". Provide full translation: \"The Government decision dated 28.1.2021 is cancelled\". Provide.\n\nConfidence: high, maybe 0.98.\n\nCheck trap 3: deliberative mood not a decision. This is not deliberative; it's a cancellation. So classification is SUPERSEDES.\n\nReturn JSON compact.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283747824,
+   "prompt_tokens": 920,
+   "prompt_time": 0.040179683,
+   "completion_tokens": 608,
+   "completion_time": 1.262544939,
+   "total_tokens": 1528,
+   "total_time": 1.302724622,
+   "completion_tokens_details": {
+    "reasoning_tokens": 546
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5082008e34",
+  "x_groq": {
+   "id": "req_01kyerj18fffqvd6ca4p8jztt1",
+   "seed": 234111767
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "3edc001524861e7721dc37fe",
+ "role": "reasoning"
+}

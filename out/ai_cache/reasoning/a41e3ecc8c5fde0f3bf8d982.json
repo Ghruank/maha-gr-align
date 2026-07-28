@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र.२ येथील शासन पूरकपत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"It has arrived. Also, as per the referenced No.2, under the government supplementary letter, there is an amendment in the present government decision.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-94c0b3a8-d665-4939-9a5b-a8e5c9d3774e",
+  "object": "chat.completion",
+  "created": 1785053952,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र.२ येथील शासन पूरकपत्रान्वये\",\"cancelled_object\":null,\"gloss_en\":\"It has arrived. Also, as per the referenced No.2, under the government supplementary letter, there is an amendment in the present government decision.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"आला आहे. तसेच संदर्भाधीन क्र.२ येथील शासन पूरकपत्रान्वये सदर शासन निर्णयामध्ये सुधारणा\"\n\nTranslation: \"It has arrived. Also, as per the referenced No.2, under the government supplementary letter, there is an amendment in the present government decision.\"\n\nWe have candidate prior GR: #1.\n\nWe need to see if the sentence establishes a relationship: It says \"संदर्भाधीन क्र.२ येथील शासन पूरकपत्रान्वये सदर शासन निर्णयामध्ये सुधारणा\". That indicates that there is an amendment (सुधारणा) in the present decision, based on a supplementary letter referenced. It is not cancelling the prior order; it's amending the present decision, but referencing prior? The phrase \"सुधारणा\" means amendment. It says \"सदर शासन निर्णयामध्ये सुधारणा\" meaning \"amendment in this decision\". It references prior GR (क्र.२) but the operative change is an amendment to the current decision, not to the prior GR. However the classification is about relationship to prior GRs listed. The sentence says \"संदर्भाधीन क्र.२ ... शासन पूरकपत्रान्वये\". That is referencing prior GR #1? Actually candidate list: \"GR dated 2021-07-12, number सेनिवे-२०१९/प्र.क्र.३४८/सेवा-४\". The sentence mentions \"संदर्भाधीन क्र.२\". That likely refers to that prior GR (maybe index 2). So it references prior GR. Does it amend it? It says \"संदर्भाधीन ... शासन पूरकपत्रान्वये सदर शासन निर्णयामध्ये सुधारणा\". It indicates that based on the supplementary letter of the referenced GR, there is an amendment in this decision. That is not cancelling the prior GR, but making amendment to this decision, referencing prior. So relationship type: REFERENCES? The sentence does not change the prior GR; it just cites it as basis for amendment. So classification: REFERENCES.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that justifies type. Could be \"संदर्भाधीन क्र.२\". That shows reference. Or \"संदर्भाधीन क्र.२ येथील शासन पूरकपत्रान्वये\". Use that.\n\ncancelled_object: null (since not cancelling). gloss_en: \"It has arrived. Also, as per the referenced No.2, under the government supplementary letter, there is an amendment in the present government decision.\"\n\nconfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.313572811,
+   "prompt_tokens": 813,
+   "prompt_time": 0.03418781,
+   "completion_tokens": 650,
+   "completion_time": 1.3575276299999999,
+   "total_tokens": 1463,
+   "total_time": 1.39171544,
+   "completion_tokens_details": {
+    "reasoning_tokens": 560
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6b677c2caf",
+  "x_groq": {
+   "id": "req_01kyer3ckgf4atkp2671qpn53z",
+   "seed": 1460374250
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a41e3ecc8c5fde0f3bf8d982",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अट रद्द करण्याबाबतची\",\"cancelled_object\":\"अट\",\"gloss_en\":\"The condition of requiring a minimum of 50% marks and the condition of a minimum age of 50 years are to be cancelled.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-3e000db4-143e-4a43-b3e2-f396273e8ba6",
+  "object": "chat.completion",
+  "created": 1785055330,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अट रद्द करण्याबाबतची\",\"cancelled_object\":\"अट\",\"gloss_en\":\"The condition of requiring a minimum of 50% marks and the condition of a minimum age of 50 years are to be cancelled.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence is a proposal/introduction: \"प्रस्तावना:- ... शासनाच्या विचाराधीन होती. याअनुषंगाने ... सुधारणा करण्याचा निर्णय शासनाने घेतला आहे:\" It mentions prior GRs (the two). It says the decision is to amend qualifications: cancel the requirement of minimum 50% marks and minimum age 50 years for a certain exam. It says \"शासन निर्णय दि.०१.१२.२०२२ मधील परिच्छेद क्र. ५.१ ... अट रद्द करण्याबाबतची ... तसेच ... अट रद्द करण्याची बाब ... शासनाच्या विचाराधीन होती. याअनुषंगाने ... सुधारणा करण्याचा निर्णय शासनाने घेतला आहे:\" So the sentence is making a decision to amend (cancel) certain conditions that were in a prior decision (the 01-12-2022 decision). The prior GRs listed are from 2022-12-01 and 2023-03-09. The sentence is not cancelling those GRs themselves, but amending the provisions (cancelling specific conditions) within them. According to trap 2, if canceling specific conditions (appointments, etc.) that were made under a prior GR, that is AMENDS, not SUPERSEDES. So type = AMENDS. target_index: which prior GR is being referenced? It mentions \"शासन निर्णय दि.०१.१२.२०२२\" which matches GR dated 2022-12-01 (candidate 1). Also mentions \"शासन निर्णय दि.०१.१२.२०२२\" again for both conditions. The second candidate is GR dated 2023-03-09, but the sentence does not refer to that date; maybe it's just listed but not operative. The operative reference is to the 01-12-2022 decision. So target_index = 1.\n\nEvidence_span: need exact substring that shows the operative change. Something like \"अट रद्द करण्याबाबतची\" or \"अट रद्द करण्याची बाब\". The phrase indicating cancellation: \"अट रद्द करण्याबाबतची\" and \"अट रद्द करण्याची\". Choose one that includes the cancellation verb \"रद्द\". Let's pick \"अट रद्द करण्याबाबतची\". That is present in the sentence: \"... मर्यादित विभागीय स्पर्धा परीक्षेकरीता पदवी परीक्षेमध्ये किमान ५० टक्के गुण असणे आवश्यक असलेली अट रद्द करण्याबाबतची, तसेच ... अट रद्द करण्याची बाब ...\". So evidence_span = \"अट रद्द करण्याबाबतची\". Cancelled_object: the noun being cancelled is \"अट\" (condition). Could be \"अट\". So cancelled_object = \"अट\". Gloss_en: literal translation: \"Regarding the condition of requiring a minimum of 50 percent marks ... the condition is to be cancelled, and also the condition of minimum age 50 years is to be cancelled.\" Provide a concise translation: \"The condition of requiring a minimum of 50% marks and the condition of a minimum age of 50 years are to be cancelled.\" Confidence maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282499411,
+   "prompt_tokens": 1108,
+   "prompt_time": 0.036838399,
+   "completion_tokens": 760,
+   "completion_time": 1.7851885730000001,
+   "total_tokens": 1868,
+   "total_time": 1.822026972,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 682
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyesdefzfxysz3rh9vqa6xtw",
+   "seed": 1393302049
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "f9adf9058790db5deea60de8",
+ "role": "reasoning"
+}

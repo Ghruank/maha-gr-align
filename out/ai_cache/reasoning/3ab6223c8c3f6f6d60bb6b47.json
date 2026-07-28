@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र.१ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The cabinet has approved the establishment of law universities in Mumbai, Nagpur and Aurangabad, and administrative approval for construction under reference No.1 and No.2 decisions, etc.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-b917b790-4eac-4f2c-b6ec-7159e1432b1c",
+  "object": "chat.completion",
+  "created": 1785054986,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र.१ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The cabinet has approved the establishment of law universities in Mumbai, Nagpur and Aurangabad, and administrative approval for construction under reference No.1 and No.2 decisions, etc.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence is a \"प्रस्तावना :\" (intro) describing that the cabinet approved establishment of law universities, etc. It mentions prior decisions (reference) \"संदर्भ क्र.१ येथील शासन निर्णयान्वये\" and \"संदर्भ क्र.२ येथील शासन निर्णयान्वये\". Also mentions \"दि.०८.०७.२०२२ रोजीच्या शासन निर्णयान्वये अधिक्रमित करण्यास मान्यता\". These are references, not operative changes. Also note trap 3: deliberative mood is not a decision. This is proposal/introduction, not operative. So classification: REFERENCES. target_index: which prior GR? The candidate list includes two GRs dated 2021-01-14 and 2022-07-08. The sentence mentions \"दि.०८.०७.२०२२\" which is 2022-07-08, matches second candidate. Also mentions \"दि.१४.०१.२०२१\" which is 2021-01-14, matches first candidate. So both are referenced. But we need a single target_index. Which one is the primary? The sentence references both. The instruction: \"You are given the sentence and a numbered list of prior GRs that a deterministic resolver has ALREADY matched inside it. Decide what relationship, if any, the sentence establishes.\" So we need to pick which relationship to which prior GR? If multiple, maybe choose the first? Not specified. Probably choose the one that is being referenced as operative? Both are references. Could we set target_index null? But we have references to both. Might need to pick the one that is most directly referenced. The sentence says \"संदर्भ क्र.१ ... प्रशासकीय मान्यता देण्यात आली होती.\" That's referencing prior GR (maybe 2021). Also \"संदर्भ क्र.२ ... प्रशासकीय मान्यता\". That's referencing prior GR (maybe 2022). Also later \"दि.०८.०७.२०२२ रोजीच्या शासन निर्णयान्वये\". That's also 2022. So multiple references. The schema expects a single target_index. In such ambiguous case, maybe choose null? But that would be NONE. However the sentence clearly references prior GRs, so type should be REFERENCES. target_index maybe null because multiple? The spec says target_index: <1-based index into the candidate list, or null>. If multiple, maybe null. I'd set null.\n\nEvidence_span: need exact substring that justifies type. Could pick \"संदर्भ क्र.१ येथील शासन निर्णयान्वये\" as evidence of reference. Or \"संदर्भ क्र.२ येथील शासन निर्णयान्वये\". Choose one.\n\nCancelled_object: null.\n\nGloss_en: literal English translation.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286043657,
+   "prompt_tokens": 1127,
+   "prompt_time": 0.081205898,
+   "completion_tokens": 690,
+   "completion_time": 1.433421158,
+   "total_tokens": 1817,
+   "total_time": 1.5146270560000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 596
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c868cf1eaa",
+  "x_groq": {
+   "id": "req_01kyes2yccejjrzszfeaxybz1k",
+   "seed": 1707566313
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "3ab6223c8c3f6f6d60bb6b47",
+ "role": "reasoning"
+}

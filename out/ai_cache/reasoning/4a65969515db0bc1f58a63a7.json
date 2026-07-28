@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आता सुधारणा करण्यात आली असून\",\"cancelled_object\":\"यंत्रणा\",\"gloss_en\":\"According to reference number 5 of the government circular, the mechanism and procedure existing for departmental inquiries against the currently existing Group “A” (grade pay less than Rs.7600) and gazetted officers in Group “B” have now been improved, and accordingly, a panel of contract inquiry officers is created for departmental inquiry cases against Group “A” and Group “B” gazetted officers, and the urgent departmental inquiry cases that would otherwise be assigned to the Regional Departmental Inquiry Officer under M.N.A.S.E. (Discipline and Appeal) Rules, 1979 Rule 7(1) are to be transferred to the contract inquiry officers in the panel.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-2e09a1e0-9bee-4f71-b323-6028c9d83d23",
+  "object": "chat.completion",
+  "created": 1785091880,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आता सुधारणा करण्यात आली असून\",\"cancelled_object\":\"यंत्रणा\",\"gloss_en\":\"According to reference number 5 of the government circular, the mechanism and procedure existing for departmental inquiries against the currently existing Group “A” (grade pay less than Rs.7600) and gazetted officers in Group “B” have now been improved, and accordingly, a panel of contract inquiry officers is created for departmental inquiry cases against Group “A” and Group “B” gazetted officers, and the urgent departmental inquiry cases that would otherwise be assigned to the Regional Departmental Inquiry Officer under M.N.A.S.E. (Discipline and Appeal) Rules, 1979 Rule 7(1) are to be transferred to the contract inquiry officers in the panel.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly: \"According to reference number 5, as per the government circular, currently existing group 'A' (grade pay less than Rs.7600) and group 'B' among gazetted officers, for departmental inquiry, the existing mechanism and procedure have now been improved, and accordingly, for departmental inquiry cases against group 'A' (grade pay less than Rs.7600) and 'B' gazetted officers, a panel of contract inquiry officers is created, and for newly arising departmental inquiry cases of group A and B gazetted officers, along with the cases assigned to the Regional Departmental Inquiry Officer under M.N.A.S.E. (Discipline and Appeal) Rules, 1979 Rule 7(1), the urgent departmental inquiry cases are to be transferred to the contract inquiry officers in the panel.\"\n\nSo this sentence is amending the procedure, creating a panel, improving mechanism. It references prior GR (candidate 1). It does not cancel the prior order itself; it modifies the procedure. So type = AMENDS.\n\ntarget_index = 1 (since only one candidate). evidence_span: need exact substring that shows amendment. Something like \"आता सुधारणा करण्यात आली असून\" or \"नव्याने उभभवणाऱ्या विभागीय चौकशीच्या प्रकरणांसह... पॅनेल मधील कंत्राटी चौकशी अधिकारी यांचेकडे सोपविण्याचे\". The operative phrase indicating amendment: \"आता सुधारणा करण्यात आली असून\". That indicates improvement. Also \"नव्याने उभभवणाऱ्या ... पॅनेल तयार करुन\". So pick a substring that clearly shows amendment. Let's choose \"आता सुधारणा करण्यात आली असून\". That is in the sentence.\n\ncancelled_object: Since it's amending, not cancelling. The object being amended is \"विभागीय चौकशी करण्यासाठी अस्तित्वात असलेल्या यंत्रणेत व कार्यपध्दतीत\". So the noun is \"यंत्रणा\" or \"कार्यपध्दती\". Could put \"यंत्रणा व कार्यपध्दती\". The spec: \"the Marathi noun that is cancelled/amended\". So we need the noun that is being amended. The sentence says \"आता सुधारणा करण्यात आली असून\". The object being improved is \"अस्तित्वात असलेल्या यंत्रणेत व कार्यपध्दतीत\". So maybe \"यंत्रणा\". We'll set cancelled_object to \"यंत्रणा\". Or \"कार्यपध्दती\". Choose \"यंत्रणा\". Could also be \"विभागीय चौकशी\". But better to pick \"यंत्रणा\". We'll set \"cancelled_object\": \"यंत्रणा\".\n\ngloss_en: Provide literal English translation. Something like: \"According to reference number 5 of the government circular, the mechanism and procedure existing for departmental inquiries against the currently existing Group “A” (grade pay less than Rs.7600) and gazetted officers in Group “B” have now been improved, and accordingly, a panel of contract inquiry officers is created for departmental inquiry cases against Group “A” and Group “B” gazetted officers, and the urgent departmental inquiry cases that would otherwise be assigned to the Regional Departmental Inquiry Officer under M.N.A.S.E. (Discipline and Appeal) Rules, 1979 Rule 7(1) are to be transferred to the contract inquiry officers in the panel.\"\n\nconfidence: high, maybe 0.96.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28801598,
+   "prompt_tokens": 1067,
+   "prompt_time": 0.052201361,
+   "completion_tokens": 914,
+   "completion_time": 2.025413519,
+   "total_tokens": 1981,
+   "total_time": 2.07761488,
+   "completion_tokens_details": {
+    "reasoning_tokens": 729
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5082008e34",
+  "x_groq": {
+   "id": "req_01kyfw8v13f4f8g9egf07z1raj",
+   "seed": 931245455
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "4a65969515db0bc1f58a63a7",
+ "role": "reasoning"
+}

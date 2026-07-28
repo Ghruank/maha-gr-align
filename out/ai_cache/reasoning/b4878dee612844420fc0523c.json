@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"परिच्छेद क्र.३ व ४ मध्ये सुधारणा\",\"cancelled_object\":\"परिच्छेद\",\"gloss_en\":\"Regarding making amendments in paragraphs 3 and 4 of Government Circular No.1\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-e488d586-1e8b-4f8f-8608-bb666adb4ddb",
+  "object": "chat.completion",
+  "created": 1785091688,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"परिच्छेद क्र.३ व ४ मध्ये सुधारणा\",\"cancelled_object\":\"परिच्छेद\",\"gloss_en\":\"Regarding making amendments in paragraphs 3 and 4 of Government Circular No.1\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"क्र.१” येथील शासन परिपत्रकातील परिच्छेद क्र.३ व ४ मध्ये सुधारणा करण्याबाबत केलेल्या\"\n\nTranslation: \"Regarding making amendments in paragraphs 3 and 4 of the government circular No.1\". It says \"सुधारणा करण्याबाबत केलेल्या\" i.e., \"made regarding amendment\". This is about amending paragraphs of a prior circular. The prior GR is listed: GR dated 2025-04-23, number संकीर्ण-२०२४/प्र.क्र.५४/कोषा प्रशा-४.\n\nThe sentence is about making amendments to that prior order's paragraphs. That is an AMENDS relationship (modifies part of prior order). Not supersedes because it's not canceling the whole order, just amending paragraphs. So type AMENDS.\n\ntarget_index: 1 (since only one candidate).\n\nevidence_span: need exact substring that shows amendment. The sentence includes \"सुधारणा\". The phrase \"परिच्छेद क्र.३ व ४ मध्ये सुधारणा करण्याबाबत\" is the operative part. So evidence_span could be \"परिच्छेद क्र.३ व ४ मध्ये सुधारणा\". Must be exact substring from input. The input: \"क्र.१” येथील शासन परिपत्रकातील परिच्छेद क्र.३ व ४ मध्ये सुधारणा करण्याबाबत केलेल्या\". So we can pick \"परिच्छेद क्र.३ व ४ मध्ये सुधारणा\". That appears exactly.\n\ncancelled_object: Since it's amendment, not cancellation. The object being amended is \"परिच्छेद\". But cancelled_object field is for cancelled object; for AMENDS we still need to fill? The spec says \"cancelled_object\": \"<the Marathi noun that is cancelled/amended, or null>\". So for AMENDS we can put the noun being amended: \"परिच्छेद\". Or maybe \"परिच्छेद\". We'll put \"परिच्छेद\". Could also be \"परिच्छेद क्र.३ व ४\". But noun is \"परिच्छेद\". We'll use that.\n\ngloss_en: literal English translation: \"Regarding making amendments in paragraphs 3 and 4 of Government Circular No.1\". Provide.\n\nconfidence: high, 0.97.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.315112289,
+   "prompt_tokens": 815,
+   "prompt_time": 0.017146207,
+   "completion_tokens": 567,
+   "completion_time": 1.183616128,
+   "total_tokens": 1382,
+   "total_time": 1.200762335,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 493
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_0708ac49a5",
+  "x_groq": {
+   "id": "req_01kyfw30zzf6pbwza30brrmzjy",
+   "seed": 737983213
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b4878dee612844420fc0523c",
+ "role": "reasoning"
+}

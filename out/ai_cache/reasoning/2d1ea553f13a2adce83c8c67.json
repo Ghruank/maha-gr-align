@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अशासकीय सदस्यांच्या नियुक्त्या रद्द करुन\",\"cancelled_object\":\"अशासकीय सदस्यांच्या नियुक्त्या\",\"gloss_en\":\"The appointments of non‑official members made in the government decision dated 23‑08‑2021 are being cancelled and the reconstitution of the committee with the following persons is under government consideration.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-15d4bf29-2927-4fd6-9a0f-7107b5c90f57",
+  "object": "chat.completion",
+  "created": 1785055007,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अशासकीय सदस्यांच्या नियुक्त्या रद्द करुन\",\"cancelled_object\":\"अशासकीय सदस्यांच्या नियुक्त्या\",\"gloss_en\":\"The appointments of non‑official members made in the government decision dated 23‑08‑2021 are being cancelled and the reconstitution of the committee with the following persons is under government consideration.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence is Marathi. Let's translate roughly:\n\n\"Currently, ... there is demand ... so the university formed a committee on 23-08-2021 per government decision. Now the appointments of non-official members (अशासकीय सदस्यांच्या नियुक्त्या) in the 23-08-2021 government decision are being cancelled and a committee is to be reconstituted with following persons; this is under consideration of the government.\"\n\nKey phrase: \"आता दि.२३.०८.२०२१ रोजीच्या शासन निर्णयातील अशासकीय सदस्यांच्या नियुक्त्या रद्द करुन खालील व्यक्तींची समिती पुनर्गठित करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nInterpretation: \"Now the appointments of non-official members in the 23-08-2021 government decision are being cancelled and the matter of reconstituting the committee with the following persons was under consideration of the government.\"\n\nThe phrase \"रद्द करुन\" means \"by cancelling\". So they are cancelling the appointments of non-official members made under that prior GR. That is not cancelling the entire prior order; it's cancelling specific appointments. According to trap 2, that is AMENDS, not SUPERSEDES. The cancelled object is \"अशासकीय सदस्यांच्या नियुक्त्या\". So type AMENDS.\n\nTarget index: the prior GR list has one entry, index 1.\n\nEvidence span: need exact substring from input that shows the operative change. Likely \"अशासकीय सदस्यांच्या नियुक्त्या रद्द करुन\". Or \"अशासकीय सदस्यांच्या नियुक्त्या रद्द करुन\". Must be exact characters.\n\nLet's locate: The sentence includes \"... दि.२३.०८.२०२१ रोजीच्या शासन निर्णयातील अशासकीय सदस्यांच्या नियुक्त्या रद्द करुन ...\". So evidence_span could be \"अशासकीय सदस्यांच्या नियुक्त्या रद्द करुन\". That is exact.\n\nCancelled_object: \"अशासकीय सदस्यांच्या नियुक्त्या\". Provide that.\n\nGloss_en: literal translation: \"The appointments of non-official members made in the government decision dated 23-08-2021 are being cancelled and the matter of reconstituting the committee with the following persons is under consideration of the government.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck JSON fields: type, target_index, evidence_span, cancelled_object, gloss_en, confidence.\n\ntarget_index is 1 (1-based). Provide integer.\n\nMake sure JSON compact, no extra spaces? It's okay.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28237658,
+   "prompt_tokens": 1005,
+   "prompt_time": 0.050975951,
+   "completion_tokens": 626,
+   "completion_time": 1.388395226,
+   "total_tokens": 1631,
+   "total_time": 1.439371177,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 527
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyes3k3qe37brrcq0nepjx30",
+   "seed": 213825057
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2d1ea553f13a2adce83c8c67",
+ "role": "reasoning"
+}

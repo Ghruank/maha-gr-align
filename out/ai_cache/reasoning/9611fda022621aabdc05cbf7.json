@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रावेत, पुणे असा बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":\"प्रशासकीय मान्यता\",\"gloss_en\":\"Government decision: because the warehouse site has been changed from Yerwada, Pune to Ravet, Pune, the administrative approval given under reference 3 is being ordered under this decision\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-31bf73f1-8013-4594-928f-62a228d8521c",
+  "object": "chat.completion",
+  "created": 1785054399,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रावेत, पुणे असा बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\",\"cancelled_object\":\"प्रशासकीय मान्यता\",\"gloss_en\":\"Government decision: because the warehouse site has been changed from Yerwada, Pune to Ravet, Pune, the administrative approval given under reference 3 is being ordered under this decision\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. Let's translate: \"शासन निर्णय : जिल्हाधिकारी व जिल्हा निवडणूक अधिकारी, पुणे कार्यालयाकडून ईव्हीएम व्हीव्हीपॅट साठवणूकीसाठी नव्याने गोदाम बांधकामासाठी संदर्भाधीन क्र.४ अन्वये केलेल्या विनंतीनुसार संदर्भ क्र.३ अन्वये देण्यात आलेली प्रशासकीय मान्यता, गोदाम बांधकामाच्या जागेत यापूर्वी प्रस्तावित असलेल्या येरवडा, पुणे याऐवजी रावेत, पुणे असा बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे.\"\n\nInterpretation: The decision is that based on request under reference no.4, and administrative approval given under reference no.3, because the site for warehouse construction changed from Yerwada, Pune to Ravet, Pune, the present government decision is being \"morekrimit\" (ordered) i.e., the decision is being made. It seems to be an amendment to prior approval (administrative approval) due to change of location. It does not cancel the prior order itself, but modifies the location. So it's AMENDS. The target prior GR is candidate 1. The cancelled/amended object: \"प्रशासकीय मान्यता\" (administrative approval) or maybe \"संदर्भ क्र.३ अन्वये देण्यात आलेली प्रशासकीय मान्यता\". The sentence says \"morekrimit\" (morekrim) meaning \"ordered\" i.e., the present decision is being made to change. So it's amending the prior administrative approval. So type AMENDS.\n\nWe need evidence_span: a substring that shows the operative change. Something like \"रावेत, पुणे असा बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\". That indicates amendment. Or \"संदर्भ क्र.३ अन्वये देण्यात आलेली प्रशासकीय मान्यता\" is being changed. The phrase \"रावेत, पुणे असा बदल\" indicates change. Choose a span: \"रावेत, पुणे असा बदल झाल्यामुळे प्रस्तुत शासन निर्णयान्वये अधिक्रमित करण्यात येत आहे\". That is exact.\n\nCancelled_object: \"प्रशासकीय मान्यता\" (administrative approval). Provide Marathi noun.\n\nGloss_en: literal translation: \"Government decision: Since the site for the new warehouse for EVVMP storage has been changed from Yerwada, Pune to Ravet, Pune, the administrative approval given under reference 3 is being ordered under the present government decision.\"\n\nConfidence high, maybe 0.96.\n\ntarget_index: 1 (since only one candidate). Provide as integer.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283675039,
+   "prompt_tokens": 923,
+   "prompt_time": 0.020175029,
+   "completion_tokens": 681,
+   "completion_time": 1.4909456859999999,
+   "total_tokens": 1604,
+   "total_time": 1.5111207150000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 574
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_acbbc9c4c3",
+  "x_groq": {
+   "id": "req_01kyerh13efc5sbp3rscb515hb",
+   "seed": 1583836024
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "9611fda022621aabdc05cbf7",
+ "role": "reasoning"
+}

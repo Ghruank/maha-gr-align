@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Cancellation of the allocation for the Assistant, Group‑K post\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-2629beb6-1d00-4f36-8b11-6ba7c43b73ef",
+  "object": "chat.completion",
+  "created": 1785091553,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Cancellation of the allocation for the Assistant, Group‑K post\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence: \"सहायक, गट-क पदावरील नियतवाटप रद्द\"\n\nTranslation: \"Assistant, group-K post allocation cancelled\". It says \"नियतवाटप रद्द\" meaning the allocation is cancelled. It refers to prior GR? The candidate list includes GR dated 2024-07-01. The sentence likely cancels the allocation made under that prior GR. According to trap 2, if it cancels an allocation (a specific object) made under prior GR, that prior GR is not superseded; it's an amendment (AMENDS). So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation: \"नियतवाटप रद्द\". The sentence includes \"नियतवाटप रद्द\". That is the operative phrase. cancelled_object: the noun being cancelled: \"नियतवाटप\". Could also be \"पदावरील नियतवाटप\". The object is \"नियतवाटप\". We'll put that.\n\ngloss_en: literal English translation: \"Cancellation of the allocation for the Assistant, Group-K post\". Provide.\n\nconfidence: high, maybe 0.98.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283482018,
+   "prompt_tokens": 778,
+   "prompt_time": 0.043634864,
+   "completion_tokens": 326,
+   "completion_time": 0.680322998,
+   "total_tokens": 1104,
+   "total_time": 0.723957862,
+   "completion_tokens_details": {
+    "reasoning_tokens": 261
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_53dd116a39",
+  "x_groq": {
+   "id": "req_01kyfvyxmzeby9teb5rddy0tcy",
+   "seed": 1578204272
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "9ef561d8919eebb7a0050d06",
+ "role": "reasoning"
+}

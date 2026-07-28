@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\",\"cancelled_object\":null,\"gloss_en\":\"The candidate's recommendation will be automatically considered cancelled and communicated to the commission.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-4309a5b6-4608-47e3-ab90-2df460fee577",
+  "object": "chat.completion",
+  "created": 1785091608,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\",\"cancelled_object\":null,\"gloss_en\":\"The candidate's recommendation will be automatically considered cancelled and communicated to the commission.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence is about verification of certificates for candidates, and says if verification not done, appointment won't be made and recommendation will be considered automatically cancelled and communicated to commission. It mentions \"आधिसूचनेत नमूद केलेल्या अर्हतेनुसार\" etc. It does not explicitly cancel the prior GR. It seems to be giving procedural instruction. It references prior GR? The prior GR is \"आस्थाप-२०२२/प्र.क्र.७४/विमा प्रशासन\". The sentence does not explicitly mention that GR number. It just says \"आधिसूचनेत नमूद केलेल्या अर्हतेनुसार\". No explicit citation. So maybe NONE? But the candidate list includes that GR, but the sentence does not mention it. So classification should be NONE, target_index null.\n\nCheck traps: No cue words like \"रद्द\" referring to prior order itself. It says \"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\". That's cancellation of recommendation, not of prior GR. So not supersedes. Not amends. Not references. So NONE.\n\nProvide JSON with type NONE, target_index null, evidence_span maybe a phrase that shows no reference? But need evidence_span that justifies type. Could pick a substring that shows no reference to prior GR, maybe the whole sentence? But evidence_span must be exact substring of input sentence. Could use something like \"उमेदवाराची शिफारस आपोआप रद्द समजण्यात येईल\". That shows cancellation of recommendation, not prior GR. That supports NONE.\n\ncancelled_object: \"शिफारस\" maybe? But cancelled_object only for supersedes/amends. For NONE, set null.\n\ngloss_en: Provide literal English translation.\n\nConfidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.388859566,
+   "prompt_tokens": 1059,
+   "prompt_time": 0.084059068,
+   "completion_tokens": 476,
+   "completion_time": 0.989602407,
+   "total_tokens": 1535,
+   "total_time": 1.073661475,
+   "completion_tokens_details": {
+    "reasoning_tokens": 402
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6fb4303df4",
+  "x_groq": {
+   "id": "req_01kyfw0j35e94a8nx937jzt162",
+   "seed": 2072234117
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "9d9198f0ca99354faaf93a45",
+ "role": "reasoning"
+}

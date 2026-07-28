@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"बीसीसी-२०१८/प्र.क्र.२८९/१६-ब, दि.१३.०९.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Read: ... General Administration Department, file No. BCC-2018/Pr.No.289/16-B, dated 13-09-2019\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-c7ad8983-9d50-47d2-843e-160c6db26703",
+  "object": "chat.completion",
+  "created": 1785054492,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"बीसीसी-२०१८/प्र.क्र.२८९/१६-ब, दि.१३.०९.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Read: ... General Administration Department, file No. BCC-2018/Pr.No.289/16-B, dated 13-09-2019\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is a list of references: \"वाचा: १) ... ९) ...\" It lists many prior GRs. The candidate list only includes one prior GR (the 2019-09-13 one). The sentence is just a \"read:\" list, likely references. No operative change. So type = REFERENCES. target_index = 1 (since that prior GR is mentioned). evidence_span: need exact substring that shows the reference. The substring could be \"बीसीसी-२०१८/प्र.क्र.२८९/१६-ब, दि.१३.०९.२०१९\". That appears in the sentence. Cancelled_object null. Gloss_en: \"Read: 1) ... 9) ...\" but we need literal translation: maybe \"Read: 1) General Administration Department, file no: ... 9) General Administration Department, file no: BCC-2018/Pr.No.289/16-B, dated 13.09.2019\". Provide translation. Confidence high 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282747184,
+   "prompt_tokens": 1173,
+   "prompt_time": 0.049827343,
+   "completion_tokens": 328,
+   "completion_time": 0.676774864,
+   "total_tokens": 1501,
+   "total_time": 0.726602207,
+   "completion_tokens_details": {
+    "reasoning_tokens": 226
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c868cf1eaa",
+  "x_groq": {
+   "id": "req_01kyerkx9nfknre4hkdmw8pksf",
+   "seed": 1746346778
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a33859c82b0542a7be920e48",
+ "role": "reasoning"
+}

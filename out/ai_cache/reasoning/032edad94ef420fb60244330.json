@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"evidence_span\":\"रद्द करण्यात येत आहेत\",\"gloss_en\":\"The appointments of non‑official members of the committee formed under the government decision dated 23‑08‑2021 regarding the Ahilyadevi Holkar memorial are being cancelled under this decision.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-17bc4e1a-7de7-45cd-849d-9b40271bc95c",
+  "object": "chat.completion",
+  "created": 1785051032,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"evidence_span\":\"रद्द करण्यात येत आहेत\",\"gloss_en\":\"The appointments of non‑official members of the committee formed under the government decision dated 23‑08‑2021 regarding the Ahilyadevi Holkar memorial are being cancelled under this decision.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify relationship toward any other Government Resolution it mentions.\n\nSentence: \"शासन निर्णय :- १) पुण्यश्लोक अहिल्यादेवी होळकर यांचे स्मारक उभारणी करण्यासंदर्भातील दि. २३.०८.२०२१ रोजीच्या शासन निर्णयान्वये गठित केलेल्या समितीतील अशासकीय सदस्यांच्या नियुक्त्या या शासन निर्णयान्वये रद्द करण्यात येत आहेत.\"\n\nInterpretation: It says that the appointments of non-official members of the committee formed under the government decision dated 23.08.2021 are being cancelled under this decision. So it supersedes (cancels) the prior order. So type = SUPERSEDES.\n\nEvidence span: need exact substring that justifies: \"रद्द करण्यात येत आहेत\" maybe plus mention of prior decision. The operative phrase \"रद्द\" indicates cancellation. So evidence_span could be \"रद्द करण्यात येत आहेत\". Or include \"या शासन निर्णयान्वये रद्द\". We'll pick \"रद्द करण्यात येत आहेत\".\n\nGloss_en: literal translation: \"The appointments of non-official members of the committee formed under the government decision dated 23-08-2021 regarding the erection of a memorial to the late Ahilyadevi Holkar are being cancelled under this government decision.\"\n\nConfidence high, say 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.29747357,
+   "prompt_tokens": 438,
+   "prompt_time": 0.076218745,
+   "completion_tokens": 366,
+   "completion_time": 0.77126915,
+   "total_tokens": 804,
+   "total_time": 0.847487895,
+   "completion_tokens_details": {
+    "reasoning_tokens": 290
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_2005c896b2",
+  "x_groq": {
+   "id": "req_01kyena9sqfe7tezdcvgfhk6ak",
+   "seed": 996090049
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "032edad94ef420fb60244330",
+ "role": "reasoning"
+}

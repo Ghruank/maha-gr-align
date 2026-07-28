@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय रद्द\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"According to the proposal submitted by letter, the government decisions referred to as reference No.1 and 2 of this department are cancelled.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-4bc468a4-e7c9-4ceb-a2d3-5a80179d1fa0",
+  "object": "chat.completion",
+  "created": 1785055144,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय रद्द\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"According to the proposal submitted by letter, the government decisions referred to as reference No.1 and 2 of this department are cancelled.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence (Marathi): \"पत्रान्वये सादर केलेल्या प्रस्तावानुसार, या विभागाचे संदर्भ क्र.१ व २ येथील शासन निर्णय रद्द\"\n\nTranslation: \"According to the proposal submitted by letter, the government decisions referred to as reference No.1 and 2 of this department are cancelled.\"\n\nWe have candidate prior GRs list: only one: GR dated 2025-06-20. The sentence says \"या विभागाचे संदर्भ क्र.१ व २ येथील शासन निर्णय रद्द\". It mentions \"शासन निर्णय रद्द\" i.e., \"government decision cancelled\". It cancels the prior decisions (the prior GR). So it is cancelling the prior order itself. That is SUPERSEDES (cancels the order itself). Not AMENDS because it's cancelling the order, not just parts. So type = SUPERSEDES.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"शासन निर्णय रद्द\". The sentence includes \"शासन निर्णय रद्द\". So evidence_span = \"शासन निर्णय रद्द\". Cancelled_object: the noun being cancelled: \"शासन निर्णय\". Could be \"शासन निर्णय\". Provide that.\n\ngloss_en: literal English translation: \"According to the proposal submitted by letter, the government decisions referred to as reference No.1 and 2 of this department are cancelled.\"\n\nConfidence maybe 0.99.\n\nReturn JSON compact.\n\nCheck traps: No cue words inside file numbers. No deliberative mood. It's operative. So SUPERSEDES.\n\nMake sure JSON fields: type, target_index, evidence_span, cancelled_object, gloss_en, confidence.\n\ntarget_index integer 1.\n\nOk."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.313414866,
+   "prompt_tokens": 791,
+   "prompt_time": 0.017590029,
+   "completion_tokens": 440,
+   "completion_time": 0.972962994,
+   "total_tokens": 1231,
+   "total_time": 0.990553023,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 364
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_0708ac49a5",
+  "x_groq": {
+   "id": "req_01kyes7sbcf0hv40mx6t6qaty5",
+   "seed": 713299270
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b4074f257adc078cd75cfa45",
+ "role": "reasoning"
+}

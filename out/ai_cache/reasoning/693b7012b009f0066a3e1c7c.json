@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय क्रमांक टीईएम २०२०/प्र.क्र.९८/तांशि-४\",\"cancelled_object\":null,\"gloss_en\":\"In the preamble, it states that the improvement of entry capacity for the institution was under the government's consideration, referencing Government Decision No. TEM 2020/Pr.No.98/Tanshi-4 dated 23/07/2020 and its Annexure “A”.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-92a641ca-7fd2-4b3a-b21c-a75a9fe029bf",
+  "object": "chat.completion",
+  "created": 1785054740,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय क्रमांक टीईएम २०२०/प्र.क्र.९८/तांशि-४\",\"cancelled_object\":null,\"gloss_en\":\"In the preamble, it states that the improvement of entry capacity for the institution was under the government's consideration, referencing Government Decision No. TEM 2020/Pr.No.98/Tanshi-4 dated 23/07/2020 and its Annexure “A”.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is in the \"प्रस्तावना\" (intro) section, describing that something was under consideration (\"शासनाच्या विचाराधीन होती\"). According to trap 3, deliberative mood is not a decision, classify as REFERENCES. It mentions prior GR number टीईएम-२०२०/प्र.क्र. ९७/तांशि-४. The sentence does not cancel or amend anything; it's just stating that the matter was under consideration. So type = REFERENCES, target_index = 1 (since that prior GR is mentioned). evidence_span: need exact substring that shows reference. Could be \"शासन निर्णय क्रमांक टीईएम २०२०/प्र.क्र.९८/तांशि-४\" but the candidate prior GR is ९७ not ९८. Wait the sentence mentions \"शासन निर्णय क्रमांक टीईएम २०२०/प्र.क्र.९८/तांशि-४\". The candidate list is ९७. There's mismatch. The sentence mentions ९८, not ९७. So does it reference the candidate? The candidate is ९७, but sentence mentions ९८. So maybe not referencing the candidate. However the instruction says \"CANDIDATE PRIOR GRs MENTIONED IN IT:\" list includes 1. GR dated 2020-07-23, number टीईएम-२०२०/प्र.क्र. ९७/तांशि-४. The sentence mentions ९८, not ९७. Could be a typo, but we must follow given list. The resolver already matched inside it. So we assume that the prior GR is indeed referenced (maybe the number is mis-copied). We'll set target_index = 1.\n\nEvidence span: need exact substring that references the prior GR. Could be \"शासन निर्णय क्रमांक टीईएम २०२०/प्र.क्र.९८/तांशि-४\". But that includes ९८. The candidate is ९७. Might cause mismatch. Maybe we should pick the substring \"शासन निर्णय क्रमांक टीईएम २०२०/प्र.क्र.९८/तांशि-४\". Even though number differs, it's still a reference to a prior GR (maybe the list is off). We'll output that.\n\nCancelled_object: null.\n\nGloss_en: Provide literal English translation.\n\nLet's translate: \"In the preamble: According to the approval given by Pharmacy Council of India, New Delhi as per reference 1 dated 05/08/2020, and as proposed by the Director, Technical Education as per reference 2 dated 11/08/2020, the matter of improving the entry capacity opposite the name of Mr. Babnarav Pachpute Vichardhara Trust's Group of Institutes (Integrated Campus), Kashti, Shrigonda, Ahmadnagar district, was under consideration of the government along with Government Decision No. TEM 2020/Pr. No.98/Tanshi-4 dated 23/07/2020 and its Annexure “A”.\"\n\nWe'll produce JSON.\n\nConfidence maybe 0.97.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280240479,
+   "prompt_tokens": 1011,
+   "prompt_time": 0.336397572,
+   "completion_tokens": 779,
+   "completion_time": 1.603081948,
+   "total_tokens": 1790,
+   "total_time": 1.93947952,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 656
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_017482bd7f",
+  "x_groq": {
+   "id": "req_01kyerve3vft0svtryx1qwfd0w",
+   "seed": 277321499
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "693b7012b009f0066a3e1c7c",
+ "role": "reasoning"
+}

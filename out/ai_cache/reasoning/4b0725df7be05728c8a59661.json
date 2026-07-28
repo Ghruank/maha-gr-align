@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या समितीमधील अशासकीय सदस्यांच्या नियुक्त्या रद्द करण्यात आल्या\",\"cancelled_object\":\"नियुक्त्या\",\"gloss_en\":\"The appointments of non-official members of this committee have been cancelled under the government decision dated 27.01.2020.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-30c4d518-6c9f-4814-bc17-e192bd91f393",
+  "object": "chat.completion",
+  "created": 1785055049,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या समितीमधील अशासकीय सदस्यांच्या नियुक्त्या रद्द करण्यात आल्या\",\"cancelled_object\":\"नियुक्त्या\",\"gloss_en\":\"The appointments of non-official members of this committee have been cancelled under the government decision dated 27.01.2020.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"समितीचे कामकाज अंतिम टप्प्यात असताना, संदर्भाधिन क्र. २ येथील शासन निर्णय दि.२७.०१.२०२० अन्वये, या समितीमधील अशासकीय सदस्यांच्या नियुक्त्या रद्द करण्यात आल्या.\"\n\nTranslation: \"While the committee's work is in the final stage, under reference No.2, the government decision dated 27.01.2020, the appointments of non-official members in this committee have been cancelled.\"\n\nWe have prior GR: GR dated 2020-01-27, number संकीर्ण-२०२०/प्र.क्र. १५/२०२०/साशि-५.\n\nThe sentence says that under that prior decision, the appointments of non-official members have been cancelled. This is cancelling appointments made under that prior GR. According to trap 2, if the sentence cancels appointments made under a prior GR, that GR is not superseded; it's AMENDS. So type = AMENDS.\n\ntarget_index: which prior GR? There's only one candidate, index 1.\n\nevidence_span: need exact substring that justifies type. Something like \"या समितीमधील अशासकीय सदस्यांच्या नियुक्त्या रद्द करण्यात आल्या\". That indicates cancellation. Or \"शासन निर्णय दि.२७.०१.२०२० अन्वये, या समितीमधील अशासकीय सदस्यांच्या नियुक्त्या रद्द करण्यात आल्या\". Choose a substring that includes the cancellation phrase. Must be exact from input. Let's copy: \"या समितीमधील अशासकीय सदस्यांच्या नियुक्त्या रद्द करण्यात आल्या\". That is present.\n\ncancelled_object: the noun being cancelled: \"नियुक्त्या\" (appointments) or \"अशासकीय सदस्यांच्या नियुक्त्या\". Probably \"नियुक्त्या\". Use Marathi noun: \"नियुक्त्या\".\n\ngloss_en: literal English translation: \"The appointments of non-official members of this committee have been cancelled under the government decision dated 27.01.2020.\"\n\nconfidence: high, say 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.31383717,
+   "prompt_tokens": 847,
+   "prompt_time": 0.055342618,
+   "completion_tokens": 543,
+   "completion_time": 1.2791622280000001,
+   "total_tokens": 1390,
+   "total_time": 1.334504846,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 455
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6c36ac20de",
+  "x_groq": {
+   "id": "req_01kyes4vwgf4facww3awyr2h76",
+   "seed": 726734614
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "4b0725df7be05728c8a59661",
+ "role": "reasoning"
+}

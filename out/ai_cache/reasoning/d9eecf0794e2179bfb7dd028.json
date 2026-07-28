@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दिनांक १७.११.२०१८ चा शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"A government decision dated 17-11-2018 has been issued...\",\"confidence\":0.92}",
+ "raw": {
+  "id": "chatcmpl-7109dd52-c9cb-406e-bc1f-54a083384e74",
+  "object": "chat.completion",
+  "created": 1785054096,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दिनांक १७.११.२०१८ चा शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"A government decision dated 17-11-2018 has been issued...\",\"confidence\":0.92}",
+     "reasoning": "We need to classify the sentence relative to the listed prior GRs. The sentence describes that a new Maharashtra House (Maharashtra Sadan) decision dated 17.11.2018 and an old one dated 19.10.2020 have been issued. It says \"सदर शासन निर्णयानुसार ... उपलब्ध करुन दिल्या जातात. ... आवश्यकतेनुसार वेळोवेळी सुधारणा करण्यात आल्या आहेत.\" Then it describes a provision: \"नवीन ... 2.1 (xvi) व जुन्या ... 2.1 (16) मध्ये ... कक्षबंध वाटप केल्यास मासिक मूळ वेतनाच्या 10% रक्कम आकारण्यात येईल... कोणत्याही परिस्थितीत ... 3 महिन्यापेक्षा अधिक वाढविता येणार नाही... त्यानुषंगाने अधिकारी/कर्मचारी यांनी ... दिर्घ कालावधीसाठी वापर केल्यास आकारावयाच्या दरामध्ये सुधारणा करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nWe need to see if this sentence is superseding, amending, referencing, or none.\n\nIt mentions prior GRs (the two dates). It seems to be referencing them, describing their provisions, and says \"आवश्यकतेनुसार वेळोवेळी सुधारणा करण्यात आल्या आहेत.\" That suggests there have been improvements over time, but does it actually cancel or amend those prior orders? It says \"सदर शासन निर्णयानुसार ... उपलब्ध करुन दिल्या जातात.\" It does not say the prior decisions are cancelled. It just references them and says there are provisions. It also says \"सुधारणा करण्यात आल्या आहेत\" but that's about the provisions being improved over time, not that this sentence is amending the prior orders. The sentence is likely a REFERENCES type: it merely cites prior orders, no operative change.\n\nThus type = REFERENCES. target_index: which prior GR is being referenced? It mentions both. The instruction: \"target_index\" is 1-based index into candidate list, or null. If multiple, maybe choose the first? The sentence references both. Might need to pick the one that is being directly related? It says \"नवीन ... १७.11.2018 ... जुने ... १९.10.2020\". Both are referenced. Could we set target_index null? But spec expects a single index. In such ambiguous case maybe choose the first mentioned? Usually they expect the primary target. The sentence seems to be about both, but maybe the primary is the new one? It says \"नवीन ... १७.11.2018 ... तसचे जुने ... १९.10.2020\". Could pick 1.\n\nEvidence_span: need exact substring that justifies type. For REFERENCES, we need a phrase that shows citation. For example: \"नवीन महाराष्ट्र सदन, नवी दिल्ली येथील ... दिनांक १७.११.२०१८ चा शासन निर्णय\" or \"जुने महाराष्ट्र सदन ... दिनांक १९.१०.२०२० चा शासन निर्णय\". Choose one.\n\nCancelled_object: null because not cancelling.\n\nGloss_en: literal translation.\n\nConfidence maybe 0.92.\n\nLet's craft JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.321934891,
+   "prompt_tokens": 1182,
+   "prompt_time": 0.051662716,
+   "completion_tokens": 733,
+   "completion_time": 1.508784623,
+   "total_tokens": 1915,
+   "total_time": 1.560447339,
+   "completion_tokens_details": {
+    "reasoning_tokens": 663
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4b2f03d631",
+  "x_groq": {
+   "id": "req_01kyer7sgpenwa4n85300xmzmg",
+   "seed": 708785458
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d9eecf0794e2179bfb7dd028",
+ "role": "reasoning"
+}

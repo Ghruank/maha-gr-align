@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आकृतीबंधात अंशत: बदल करुन\",\"cancelled_object\":\"आकृतीबंध\",\"gloss_en\":\"By partially amending the format at the senior treasury office, Nagpur division, Nagpur\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-56638344-84cc-4fb6-84a6-cc13f167678e",
+  "object": "chat.completion",
+  "created": 1785091573,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आकृतीबंधात अंशत: बदल करुन\",\"cancelled_object\":\"आकृतीबंध\",\"gloss_en\":\"By partially amending the format at the senior treasury office, Nagpur division, Nagpur\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"आकृतीबंधात अंशत: बदल करुन नागपूर विभागातील वरिष्ट्ठ कोषागार कार्यालय, नागपूर येथे\"\n\nTranslation: \"By partially amending the format, at Nagpur division's senior treasury office, Nagpur...\"\n\nIt says \"आकृतीबंधात अंशत: बदल करुन\" meaning \"by partially changing the format\". This indicates an amendment (partial change) to something, likely the prior GR. The sentence references prior GR? The candidate prior GR is \"GR dated 2021-12-15, number सेवाप्र-२०१९/प्र.क्र.१९४/कोषा प्रशा-३\". The sentence says \"आकृतीबंधात अंशत: बदल करुन\". That is an operative change: it amends the prior order (partial change). So type = AMENDS.\n\nTarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows amendment. The phrase \"आकृतीबंधात अंशत: बदल करुन\". That indicates amendment. So evidence_span = \"आकृतीबंधात अंशत: बदल करुन\". Cancelled_object: what is being changed? It's \"आकृतीबंध\" (format) maybe \"आकृतीबंध\". The sentence says \"आकृतीबंधात अंशत: बदल करुन\". So cancelled_object is \"आकृतीबंध\". But is it cancelled? It's being partially changed, not cancelled. For AMENDS, cancelled_object field expects the Marathi noun that is cancelled/amended. So we can put \"आकृतीबंध\". Or maybe \"आकृतीबंध\". We'll put that.\n\nGloss_en: literal translation: \"By partially amending the format at the senior treasury office, Nagpur division, Nagpur\". Provide.\n\nConfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320210534,
+   "prompt_tokens": 812,
+   "prompt_time": 0.039532661,
+   "completion_tokens": 479,
+   "completion_time": 1.00315145,
+   "total_tokens": 1291,
+   "total_time": 1.042684111,
+   "completion_tokens_details": {
+    "reasoning_tokens": 402
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c652c0ffaa",
+  "x_groq": {
+   "id": "req_01kyfvzgvte6tsh31t5b7mm7db",
+   "seed": 54398611
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6185d6d5ea1cfb6379b16d8b",
+ "role": "reasoning"
+}

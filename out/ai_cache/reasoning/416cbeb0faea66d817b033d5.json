@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"उमेदवाराची शिफारस आपोआप रद्द\",\"cancelled_object\":\"उमेदवाराची शिफारस\",\"gloss_en\":\"Appointment will not be made and the candidate's recommendation will be automatically considered cancelled.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-e9edf965-1411-4fab-b8fd-db9015161b49",
+  "object": "chat.completion",
+  "created": 1785091473,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"उमेदवाराची शिफारस आपोआप रद्द\",\"cancelled_object\":\"उमेदवाराची शिफारस\",\"gloss_en\":\"Appointment will not be made and the candidate's recommendation will be automatically considered cancelled.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"नियुक्ती करण्यात येणार नाही व उमेदवाराची शिफारस आपोआप रद्द समजण्यात\"\n\nTranslation: \"Appointment will not be made and the candidate's recommendation will be automatically considered cancelled.\"\n\nWe have a prior GR listed: GR dated 2022-12-27, number आस्थाप-२०१९/प्र.क्र.११/विमा प्रशासन\n\nWe need to decide relationship. The sentence says appointment will not be made and candidate's recommendation automatically considered cancelled. This is an operative change affecting appointment and recommendation. Does it supersede the prior order? The prior GR likely made some appointment or recommendation. The sentence cancels the recommendation (candidate's recommendation) and says appointment will not be made. That's a cancellation of an appointment/recommendation made under prior GR. According to trap 2: If the sentence cancels appointments, approvals, etc made under a prior GR, that GR is NOT superseded — it's AMENDS. So type = AMENDS.\n\ntarget_index: which prior GR is being referenced? There's only one candidate, index 1.\n\nevidence_span: need exact substring from input sentence that justifies type. Could be \"नियुक्ती करण्यात येणार नाही\" or \"उमेदवाराची शिफारस आपोआप रद्द\". Choose a phrase that shows cancellation. Probably \"उमेदवाराची शिफारस आपोआप रद्द\". That indicates cancellation. Or \"नियुक्ती करण्यात येणार नाही\". Both indicate cancellation. We'll pick \"उमेदवाराची शिफारस आपोआप रद्द\". Must be exact substring.\n\ncancelled_object: the noun being cancelled. Could be \"उमेदवाराची शिफारस\" (candidate's recommendation) or \"नियुक्ती\". The sentence says both appointment not made and recommendation cancelled. Which one to list? Probably the primary cancelled object is \"उमेदवाराची शिफारस\". Could also list \"नियुक्ती\". The schema expects a single noun. Choose \"उमेदवाराची शिफारस\". Or maybe \"नियुक्ती\". The sentence says appointment will not be made (i.e., appointment is cancelled). Both are cancellations. Might choose \"नियुक्ती\". Which is more direct? The phrase \"नियुक्ती करण्यात येणार नाही\" indicates appointment will not happen. That's a cancellation of appointment. The phrase \"उमेदवाराची शिफारस आपोआप रद्द\" cancels recommendation. Both are objects. Choose one; maybe \"नियुक्ती\". Let's pick \"नियुक्ती\". Provide in Marathi.\n\ngloss_en: literal English translation: \"Appointment will not be made and the candidate's recommendation will be automatically considered cancelled.\"\n\nconfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck JSON fields: type, target_index, evidence_span, cancelled_object, gloss_en, confidence.\n\ntarget_index integer 1.\n\nevidence_span must be exact substring: \"उमेदवाराची शिफारस आपोआप रद्द\". Ensure matches exactly from sentence: The sentence: \"नियुक्ती करण्यात येणार नाही व उमेदवाराची शिफारस आपोआप रद्द समजण्यात\". The substring \"उमेदवाराची शिफारस आपोआप रद्द\" appears exactly before \"समजण्यात\". Yes.\n\ncancelled_object: \"नियुक्ती\" or \"उमेदवाराची शिफारस\". Choose \"उमेदवाराची शिफारस\". Provide that.\n\nLet's craft JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.158748653,
+   "prompt_tokens": 803,
+   "prompt_time": 0.013837332,
+   "completion_tokens": 822,
+   "completion_time": 2.260722537,
+   "total_tokens": 1625,
+   "total_time": 2.274559869,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 743
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01kyfvwdwpe50a4merj6gpsrjf",
+   "seed": 556277679
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "416cbeb0faea66d817b033d5",
+ "role": "reasoning"
+}

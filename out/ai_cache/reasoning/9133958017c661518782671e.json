@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सदर दर करारामध्ये कोणतेही बदल वा सुधारणा करण्याचे अधिकार अंतिमत: शासनाचे\",\"cancelled_object\":null,\"gloss_en\":\"In this rate contract, the right to make any changes or amendments is finally with the government.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-2137e5a2-dc0d-4f54-b4b8-7ae0795e24b3",
+  "object": "chat.completion",
+  "created": 1785091891,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सदर दर करारामध्ये कोणतेही बदल वा सुधारणा करण्याचे अधिकार अंतिमत: शासनाचे\",\"cancelled_object\":null,\"gloss_en\":\"In this rate contract, the right to make any changes or amendments is finally with the government.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"३) सदर दर करारामध्ये कोणतेही बदल वा सुधारणा करण्याचे अधिकार अंतिमत: शासनाचे\"\n\nTranslation: \"In this rate contract, the right to make any changes or amendments is finally with the government.\"\n\nWe have a prior GR listed: \"GR dated 2018-04-03, number शापसे३४१-८ .क्र.प्र/०८३१/\"\n\nWe need to decide relationship. The sentence says that the right to make any changes or amendments is with the government. This is not cancelling or amending the prior order; it's stating a procedural rule about the contract. It references the prior GR? Actually the sentence does not explicitly mention the prior GR; it's just a clause. The prior GR is listed as candidate but not necessarily referenced. The sentence does not say \"as per GR ...\" So likely NONE (no relationship). Could be REFERENCES if it merely cites prior order, but there is no citation. So NONE.\n\nThus type NONE, target_index null, evidence_span maybe the whole sentence? But need evidence_span that justifies type. For NONE, we can give a span that shows no operative change? Probably the whole sentence. Provide cancelled_object null, gloss_en translation.\n\nConfidence high, say 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.288912021,
+   "prompt_tokens": 804,
+   "prompt_time": 0.040934531,
+   "completion_tokens": 354,
+   "completion_time": 0.746582039,
+   "total_tokens": 1158,
+   "total_time": 0.78751657,
+   "completion_tokens_details": {
+    "reasoning_tokens": 273
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f73454f048",
+  "x_groq": {
+   "id": "req_01kyfw97fxf5aa62c1rqwr1xqz",
+   "seed": 1181655323
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "9133958017c661518782671e",
+ "role": "reasoning"
+}

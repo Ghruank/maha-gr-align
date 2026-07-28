@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"वरील संदर्भाधीन क्रमांक २ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the above referenced number 2 government decision, improvements have been made in the procedure of the final salary certificate. Accordingly, if the instructions in that decision are strictly followed, there will be no need to separately request a ‘non‑departmental inquiry certificate’ and a ‘non‑payable certificate’.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-18a9bd53-0aca-4bc0-82d8-746f0131b474",
+  "object": "chat.completion",
+  "created": 1785053978,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"वरील संदर्भाधीन क्रमांक २ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the above referenced number 2 government decision, improvements have been made in the procedure of the final salary certificate. Accordingly, if the instructions in that decision are strictly followed, there will be no need to separately request a ‘non‑departmental inquiry certificate’ and a ‘non‑payable certificate’.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence: \"वरील संदर्भाधीन क्रमांक २ येथील शासन निर्णयान्वये अंतिम वेतन प्रमाणपत्राच्या कार्यपध्दतीत सुधारणा करण्यात आली आहे. त्यानुसार यापुढे सदर शासन निर्णयामधील सूचनांचे काटेकोरपणे पालन केल्यास “ना-विभागीय चौकशी प्रमाणपत्र” व “ना-देय प्रमाणपत्र” स्वतंत्ररित्या मागविण्याची आवश्यकता राहणार नाही. तथापि, त्यानुषंगाने महाराष्ट्र नागरी सेवा (निवृत्तिवेतन) नियम, १९८२ मधील नियम १३२ व परिशिष्ट्ट पाच मध्ये नमूद नमुना-७ मधील विभागीय चौकशीच्या अनुषंगाने अपेक्षित असलेल्या माहितीसंदर्भात पुढीलप्रमाणे सूचना देण्यात येत आहे -\"\n\nIt says: \"According to the above referenced number 2 government decision, improvements have been made in the procedure of final salary certificate. Accordingly, if the instructions in that decision are strictly followed, the need to separately request 'non-departmental inquiry certificate' and 'non-payable certificate' will no longer exist.\"\n\nThus it references a prior decision (GR) and says that under that prior decision, improvements have been made. It does not cancel or amend that prior decision; it just says that the prior decision's instructions, if followed, will eliminate need for separate certificates. It is referencing the prior decision, not changing it. So type = REFERENCES.\n\ntarget_index = 1 (since only one candidate). evidence_span: need exact substring that shows relationship. Could be \"वरील संदर्भाधीन क्रमांक २ येथील शासन निर्णयान्वये अंतिम वेतन प्रमाणपत्राच्या कार्यपध्दतीत सुधारणा करण्यात आली आहे.\" That indicates referencing. Or \"सदर शासन निर्णयामधील सूचनांचे काटेकोरपणे पालन केल्यास\". Choose a span that indicates reference. Let's pick \"वरील संदर्भाधीन क्रमांक २ येथील शासन निर्णयान्वये\". That is exact substring.\n\ncancelled_object: null because not cancelling.\n\ngloss_en: Provide literal English translation: \"According to the above referenced number 2 government decision, improvements have been made in the procedure of the final salary certificate. Accordingly, if the instructions in that decision are strictly followed, there will be no need to separately request a 'non-departmental inquiry certificate' and a 'non-payable certificate'. However, in this regard, instructions are being given as follows concerning the information expected under sample-7 of the departmental inquiry mentioned in Rule 132 and Appendix Five of the Maharashtra Civil Service (Retirement Pension) Rules, 1982.\"\n\nConfidence maybe 0.97.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.31991324,
+   "prompt_tokens": 967,
+   "prompt_time": 0.106613874,
+   "completion_tokens": 706,
+   "completion_time": 1.4831550660000001,
+   "total_tokens": 1673,
+   "total_time": 1.58976894,
+   "completion_tokens_details": {
+    "reasoning_tokens": 584
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6c36ac20de",
+  "x_groq": {
+   "id": "req_01kyer45gzf6stpezy7k8s113f",
+   "seed": 2021225966
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d2a5b7079f6bc28a341a5b15",
+ "role": "reasoning"
+}

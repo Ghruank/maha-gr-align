@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करुन\",\"cancelled_object\":null,\"gloss_en\":\"However, by making amendments here, the government now orders that, in war, war-related\",\"confidence\":0.85}",
+ "raw": {
+  "id": "chatcmpl-fe071330-2d9e-4b03-ae90-72b370afc665",
+  "object": "chat.completion",
+  "created": 1785091733,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करुन\",\"cancelled_object\":null,\"gloss_en\":\"However, by making amendments here, the government now orders that, in war, war-related\",\"confidence\":0.85}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"तथापि यामध्ये सुधारणा करुन शासन आता असे आदेश देत आहे की, युध्दात, युध्दजन्य\"\n\nTranslation: \"However, by making amendments here, the government now orders that, in war, war-related ...\" (sentence incomplete). It says \"सुधारणा करुन\" meaning \"by making amendments\". It is not cancelling a prior order; it's amending? It says \"सुधारणा करुन शासन आता असे आदेश देत आहे\". It references prior GR? The candidate prior GR is listed: \"GR dated 2018-03-27, number मासैम-२०१७/(प्र.क्र.३१०)/२०१७/२८\". The sentence does not explicitly mention that prior GR; but the list says it's mentioned. However the sentence does not contain any explicit reference to that GR number. The instruction: we have a list of prior GRs that a deterministic resolver has already matched inside it. So we assume the sentence contains a reference to that prior GR (maybe via \"सुधारणा करुन\" but that's not a reference). But the list says it's mentioned. Could be that the prior GR is being amended. The sentence says \"सुधारणा करुन ... आदेश देत आहे\". That suggests an amendment to something, not superseding the whole order. So type AMENDS.\n\nWe need target_index: 1 (since only one candidate). evidence_span: need exact substring that shows amendment. Could be \"सुधारणा करुन\". That indicates amendment. Or \"आदेश देत आहे\". But we need phrase that justifies type. Since it's amending, \"सुधारणा करुन\" is the cue. So evidence_span = \"सुधारणा करुन\". Cancelled_object: what is being cancelled/amended? The sentence says \"सुधारणा करुन ... आदेश देत आहे\". It doesn't specify object. Could be \"आदेश\". But that's the new order, not cancelled. The amendment is to something unspecified. The instruction: cancelled_object is the Marathi noun that is cancelled/amended. Here it's not cancelling something, it's amending prior order. The object being amended is perhaps \"आदेश\". But the sentence says \"आदेश देत आहे\". Not cancelled. The amendment is to prior order, but not specifying object. Could set null. Probably null.\n\nGloss_en: literal translation: \"However, by making amendments here, the government now orders that, in war, war-related\". Provide.\n\nConfidence maybe 0.85.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283444089,
+   "prompt_tokens": 810,
+   "prompt_time": 0.860395016,
+   "completion_tokens": 600,
+   "completion_time": 1.238610578,
+   "total_tokens": 1410,
+   "total_time": 2.099005594,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 534
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01kyfw4b91egdbhmc9a66bzm79",
+   "seed": 1858707132
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b3dafa961a0d757d8a8fcf23",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होते\",\"cancelled_object\":null,\"gloss_en\":\"The government was considering making amendments on 28.07.2020 and 03.02.2022.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-db94d003-9ba7-4c8c-bacf-e91b67a59da7",
+  "object": "chat.completion",
+  "created": 1785053969,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"विचाराधीन होते\",\"cancelled_object\":null,\"gloss_en\":\"The government was considering making amendments on 28.07.2020 and 03.02.2022.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"दि. २८.०७.२०२० व दि.०३.०२.२०२२ मध्ये सुधारणा करण्याचे शासनाच्या विचाराधीन होते.\"\n\nTranslation: \"The government's consideration was to make amendments on 28.07.2020 and 03.02.2022.\"\n\nThis is deliberative mood: \"विचाराधीन होते\" meaning \"was under consideration\". According to trap 3, this is not a decision, it's a proposal, so classify as REFERENCES.\n\nWe have candidate prior GR list: one prior GR. The sentence mentions dates but not explicitly referencing that GR? It says \"दि. 28.07.2020 and 03.02.2022\". The candidate GR is dated 2022-02-03, which matches 03.02.2022. So it references that prior GR. So type = REFERENCES, target_index = 1 (since it references that GR). evidence_span: need exact substring that justifies type. Could be \"विचाराधीन होते\" indicates deliberative, but also the dates referencing prior GR. The phrase \"विचाराधीन होते\" is the cue for references. Use that as evidence_span.\n\ncancelled_object: null because not cancelling.\n\ngloss_en: \"The government was considering making amendments on 28.07.2020 and 03.02.2022.\"\n\nconfidence: high, maybe 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280255432,
+   "prompt_tokens": 817,
+   "prompt_time": 0.036721991,
+   "completion_tokens": 381,
+   "completion_time": 0.786494915,
+   "total_tokens": 1198,
+   "total_time": 0.823216906,
+   "completion_tokens_details": {
+    "reasoning_tokens": 311
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01kyer3yaff5z8kd50s776a7fw",
+   "seed": 50224720
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "39b091bb68ce69c525e70abf",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या विनंत्या अमान्य करण्यात येत आहेत\",\"cancelled_object\":\"विनंती\",\"gloss_en\":\"These requests are being invalidated\",\"confidence\":0.86}",
+ "raw": {
+  "id": "chatcmpl-6bd792c1-140c-4d5d-a0e2-a8e9d53e01ed",
+  "object": "chat.completion",
+  "created": 1785091777,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"या विनंत्या अमान्य करण्यात येत आहेत\",\"cancelled_object\":\"विनंती\",\"gloss_en\":\"These requests are being invalidated\",\"confidence\":0.86}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Sentence in Marathi: \"काही अधिकाऱ्यांना विभागांनी अद्याप कार्यमुक्त केलेले नाही. तसेच काही अधिकाऱ्यांच्या बदलीस मुदतवाढ/स्थगिती/रद्द करण्याची विनंती विभागास प्राप्त झाली आहे. या विनंत्या अमान्य करण्यात येत आहेत\"\n\nTranslation: \"Some officers have not yet been released from duty by the departments. Also, requests have been received from the department for extension/postponement/cancellation of some officers' transfers. These requests are being invalidated.\"\n\nWe need to see if it references prior GR, amends, supersedes, or none.\n\nThe sentence says \"These requests are being invalidated.\" It mentions \"requests\" to extend/postpone/cancel some officers' transfers. It says they are being invalidated. This is an operative change: it cancels the requests. But does it cancel a prior GR? The prior GR is dated 2018-06-08. We don't know its content. The sentence does not explicitly refer to that GR; it just says \"these requests are being invalidated\". It could be referencing prior GR's requests? The candidate list is just prior GRs mentioned in it. The sentence does not mention the GR by number or date. However the list says \"CANDIDATE PRIOR GRs MENTIONED IN IT: 1. GR dated 2018-06-08\". So the system thinks that the sentence mentions that GR (maybe via some hidden reference). But we need to decide relationship.\n\nIf the sentence invalidates requests for extension/postponement/cancellation of officer transfers, that could be amending a prior order that had granted those requests. If the prior GR had approved those transfers, then invalidating the requests would be amending that GR (modifying part). Not superseding the entire order.\n\nThus likely AMENDS. Cancelled object: \"विनंती\" (requests) or \"विनंती\" plural. Could be \"विनंती\" as noun. Or \"विनंती\" is the object being invalidated. So cancelled_object: \"विनंती\". Evidence span: need exact substring that shows operative change: \"या विनंत्या अमान्य करण्यात येत आहेत\". That indicates cancellation.\n\nThus JSON: type AMENDS, target_index 1 (since referencing GR #1), evidence_span \"या विनंत्या अमान्य करण्यात येत आहेत\", cancelled_object \"विनंती\", gloss_en \"These requests are being invalidated\", confidence maybe 0.85.\n\nCheck traps: Not a cue inside file number. Not superseding entire order. Not deliberative mood. So AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.316705608,
+   "prompt_tokens": 822,
+   "prompt_time": 0.017632557,
+   "completion_tokens": 633,
+   "completion_time": 1.3286457010000001,
+   "total_tokens": 1455,
+   "total_time": 1.346278258,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 571
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_77b12279f9",
+  "x_groq": {
+   "id": "req_01kyfw5qj5emavajz7gpafvf55",
+   "seed": 1824558628
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "4ae7ab6dd0a5839095117c16",
+ "role": "reasoning"
+}

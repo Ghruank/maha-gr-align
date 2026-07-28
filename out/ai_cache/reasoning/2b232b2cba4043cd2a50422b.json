@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The matter of granting government approval to amend Annexure “A” of Government Decision No. TEEM-2020/Pr. No.103/Tanshi-4 dated 13/08/2020 and to increase entry capacity was under consideration of the government.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-6a4f8291-c69f-4c2d-a46a-0424a7e0719d",
+  "object": "chat.completion",
+  "created": 1785054799,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन होती\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The matter of granting government approval to amend Annexure “A” of Government Decision No. TEEM-2020/Pr. No.103/Tanshi-4 dated 13/08/2020 and to increase entry capacity was under consideration of the government.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi, appears to be part of \"प्रस्तावना\" (introductory) section. It says: \"प्रस्तावना : ... शासनाच्या विचाराधीन होती.\" It mentions prior GR (GR dated 2020-08-13, number टीईएम-२०२०/प्र.क्र.१०३/तांशि-४). The sentence says that the matter was under consideration (\"शासनाच्या विचाराधीन होती\") i.e., deliberative mood, not a decision. According to trap 3, such sentences are classified as REFERENCES. So type = REFERENCES. target_index = 1 (since there is one candidate). evidence_span: need exact substring that justifies type. Could be \"शासनाच्या विचाराधीन होती\". That indicates deliberative. Or maybe \"प्रस्तावना :\" but better to use phrase indicating deliberative. Use \"शासनाच्या विचाराधीन होती\". cancelled_object = null (no cancellation). gloss_en: literal translation: \"Introduction: ... the matter of granting government approval to amend Annexure “A” of Government Decision No. ... and increase entry capacity was under consideration of the government.\" Provide translation. confidence maybe 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.279545499,
+   "prompt_tokens": 952,
+   "prompt_time": 0.103833038,
+   "completion_tokens": 365,
+   "completion_time": 0.76398447,
+   "total_tokens": 1317,
+   "total_time": 0.867817508,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 261
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_017482bd7f",
+  "x_groq": {
+   "id": "req_01kyerx8a9ff4spvckkvxh4x7p",
+   "seed": 1307015125
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2b232b2cba4043cd2a50422b",
+ "role": "reasoning"
+}

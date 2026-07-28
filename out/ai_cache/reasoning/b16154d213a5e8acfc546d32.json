@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"According to the provisions of the General Administration Department, Government Circular No. MloA-1119/ Pr.No.115/8 dated 02.08.2019, the allocation of the three candidates is being cancelled by this memorandum.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-370cf465-e368-43e3-ad73-d58a3b2d8583",
+  "object": "chat.completion",
+  "created": 1785091462,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"According to the provisions of the General Administration Department, Government Circular No. MloA-1119/ Pr.No.115/8 dated 02.08.2019, the allocation of the three candidates is being cancelled by this memorandum.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"सामान्य प्रशासन विभाग, शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर ३ (तीन) उमेदवारांचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\"\n\nTranslation: \"According to the provisions of the General Administration Department, Government Circular No. MloA-1119/ Pr. No.115/8, dated 02.08.2019, the allocation of the said three candidates is being cancelled by this memorandum.\"\n\nWe have prior GR list: only one candidate: GR dated 2022-12-27.\n\nWe need to see relationship: The sentence cancels allocation of three candidates, which presumably was made under the prior GR? But we don't know if the prior GR is about allocation of candidates. The sentence references a prior order: \"शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९\". That's a prior order (circular). The candidate list includes a GR dated 2022-12-27, which is not the same as the referenced order. The sentence mentions that according to provisions of that circular, the allocation of three candidates is being cancelled. The prior GR list is just one GR dated 2022-12-27, but the sentence does not mention that GR. So does it reference it? No. It references a different order (the circular). The candidate list is not mentioned. So relationship to candidate prior GR is NONE (no relationship). However, we must consider if the sentence is referencing the prior GR indirectly? It says \"according to provisions of ...\". That's a reference to a prior order (the circular). But the candidate list is a GR dated 2022-12-27, which is not the same. So we should output type NONE, target_index null.\n\nBut check traps: The sentence cancels allocation of three candidates. That's a cancellation of an object (allocation). But is that a supersede of the prior order? The prior order is not the candidate GR. So we cannot link. So NONE.\n\nWe need evidence_span: a substring that justifies type. For NONE, we need evidence that shows no relationship? Probably we can give a span that shows no mention of the prior GR. But we need to provide an evidence_span that justifies the type. Could be the whole sentence? But we need to show that it does not reference the candidate GR. Maybe we can give the part that shows it's about a different order: \"शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९\". That indicates it's referencing a different order, not the candidate. So we can set evidence_span to that substring.\n\nCancelled_object: the noun being cancelled: \"नियतवाटप\" (allocation) of candidates. So cancelled_object = \"नियतवाटप\". Even though type is NONE, cancelled_object should be null? The spec says cancelled_object is the Marathi noun that is cancelled/amended, or null. If type is NONE, probably null. But we could still fill? The spec: \"cancelled_object\": \"<the Marathi noun that is cancelled/amended, or null>\". If type is NONE, there is no cancellation relationship, so null.\n\nGloss_en: literal English translation: \"According to the provisions of the General Administration Department, Government Circular No. MloA-1119/ Pr.No.115/8 dated 02.08.2019, the allocation of the three candidates is being cancelled by this memorandum.\"\n\nConfidence: high, say 0.98.\n\ntarget_index: null.\n\nThus JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.29190968,
+   "prompt_tokens": 841,
+   "prompt_time": 0.381034513,
+   "completion_tokens": 943,
+   "completion_time": 3.200617089,
+   "total_tokens": 1784,
+   "total_time": 3.581651602,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 818
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e1a78f200e",
+  "x_groq": {
+   "id": "req_01kyfvw1b2e41tztgcyznxz82g",
+   "seed": 1553026791
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b16154d213a5e8acfc546d32",
+ "role": "reasoning"
+}

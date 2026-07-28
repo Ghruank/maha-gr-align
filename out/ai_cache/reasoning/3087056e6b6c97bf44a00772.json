@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"पूरकपत्र\",\"gloss_en\":\"Therefore, amendments are being made in the supplementary document referred to as reference No.2.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-5d72a610-7d60-46d7-954a-0df92efc76da",
+  "object": "chat.completion",
+  "created": 1785054279,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"पूरकपत्र\",\"gloss_en\":\"Therefore, amendments are being made in the supplementary document referred to as reference No.2.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"त्यामुळे संदर्भाधीन क्र.२ येथील पूरकपत्रामध्ये खालीलप्रमाणे सुधारणा करण्यात येत आहे.\"\n\nTranslation: \"Therefore, in the supplementary document referred to as reference No.2, the following amendments are being made.\"\n\nWe have a prior GR listed: \"GR dated 2021-07-12, number सेनिवे-२०१९/प्र.क्र.३४८/सेवा-४\". The sentence says \"संदर्भाधीन क्र.२ येथील पूरकपत्रामध्ये ... सुधारणा करण्यात येत आहे.\" It references a supplementary document (पूरकपत्र) of reference No.2, and says amendments are being made. It does not cancel the prior order itself; it amends something within that prior order? Actually it says \"सुधारणा\" (amendment) being made to the supplementary document. This is an amendment to something under the prior GR, not superseding the order itself. So type = AMENDS.\n\nTarget_index: which prior GR? The sentence mentions \"संदर्भाधीन क्र.२\". The candidate list is one GR. Does that correspond? Likely yes, the prior GR is being referenced. So target_index = 1.\n\nEvidence_span: need exact substring that justifies type. Could be \"सुधारणा करण्यात येत आहे\". That indicates amendment. Or \"संदर्भाधीन क्र.२\". But we need substring that shows amendment. Use \"सुधारणा करण्यात येत आहे\". That is exact.\n\nCancelled_object: what is being amended? The object is \"पूरकपत्र\". The sentence says amendment is being made in the supplementary document. So cancelled_object? For AMENDS, we need the Marathi noun that is cancelled/amended. Here it's \"पूरकपत्र\". So cancelled_object = \"पूरकपत्र\". (Even though it's amendment, not cancellation, but field expects the noun that is cancelled/amended.)\n\nGloss_en: literal translation: \"Therefore, amendments are being made in the supplementary document referred to as reference No.2.\"\n\nConfidence: high, maybe 0.97.\n\nCheck traps: Not a cue inside file number. Not superseding. Not deliberative. So AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284310123,
+   "prompt_tokens": 811,
+   "prompt_time": 0.406298552,
+   "completion_tokens": 542,
+   "completion_time": 1.155396872,
+   "total_tokens": 1353,
+   "total_time": 1.561695424,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 473
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_acbbc9c4c3",
+  "x_groq": {
+   "id": "req_01kyerdc5tf3m8nhtwvnv4q8z7",
+   "seed": 325637413
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "3087056e6b6c97bf44a00772",
+ "role": "reasoning"
+}

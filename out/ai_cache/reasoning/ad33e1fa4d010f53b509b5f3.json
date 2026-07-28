@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made on 23-09-2024 as follows:\",\"confidence\":0.85}",
+ "raw": {
+  "id": "chatcmpl-319536a5-e8ba-4be3-8dc2-8c77ff4f97af",
+  "object": "chat.completion",
+  "created": 1785054595,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made on 23-09-2024 as follows:\",\"confidence\":0.85}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"दि.२३.०९.२०२४ मध्ये पुढीलप्रमाणे सुधारणा करण्यात येत आहे :-\"\n\nTranslation: \"On 23-09-2024, the following amendments are being made: -\"\n\nIt says \"सुधारणा करण्यात येत आहे\" meaning amendments are being made. It references prior GR? The candidate list includes GR dated 2024-09-23 (same date). The sentence says amendments are being made, but does it refer to that prior GR? It says \"सुधारणा करण्यात येत आहे\" which is a verb indicating amendment. It likely amends the prior order. However, we need to see if it cancels something specific. It says \"सुधारणा\" (amendments) but not specifying what object is being amended. The sentence is generic, but the type likely AMENDS, referencing prior GR. The target_index should be 1 (the only candidate). evidence_span: we need exact substring that justifies type. Could be \"सुधारणा करण्यात येत आहे\". That indicates amendment.\n\nCancelled_object: Since it's amendment, we need the noun that is being amended. The sentence doesn't specify a noun; just says \"सुधारणा\". Could be null. According to schema, cancelled_object is the Marathi noun that is cancelled/amended, or null. Since not specified, null.\n\nGloss_en: \"Amendments are being made on 23-09-2024 as follows:\".\n\nConfidence maybe 0.85.\n\nCheck traps: Not a file number cue. Not supersedes because not canceling the order itself. It's amending. Not deliberative. So AMENDS.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281657666,
+   "prompt_tokens": 785,
+   "prompt_time": 0.017035542,
+   "completion_tokens": 424,
+   "completion_time": 0.958546303,
+   "total_tokens": 1209,
+   "total_time": 0.975581845,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 357
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_017482bd7f",
+  "x_groq": {
+   "id": "req_01kyerq0z8fwnaffn7zs05dbrn",
+   "seed": 776863573
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "ad33e1fa4d010f53b509b5f3",
+ "role": "reasoning"
+}

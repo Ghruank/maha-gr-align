@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन आहे\",\"cancelled_object\":null,\"gloss_en\":\"The matter of cancelling the procedure of providing on the system is under government consideration.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-4af00c84-06b3-4648-a1a7-4a9effc6bd92",
+  "object": "chat.completion",
+  "created": 1785091710,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासनाच्या विचाराधीन आहे\",\"cancelled_object\":null,\"gloss_en\":\"The matter of cancelling the procedure of providing on the system is under government consideration.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"प्रणालीवर उपलब्ध करुन देण्याची” कार्यपद्धती रद्द करण्याची बाब शासनाच्या विचाराधीन आहे. त्यानुसार\"\n\nTranslation: \"The matter of cancelling the procedure of providing on the system is under government consideration. Accordingly\"\n\nKey: It says \"रद्द करण्याची बाब शासनाच्या विचाराधीन आहे\" - \"the matter of cancelling ... is under consideration\". This is deliberative mood, not a decision. According to trap 3, such sentences are not operative change, they are references. So type = REFERENCES.\n\nTarget index: It mentions prior GR list; we need to see if it references that prior GR. The sentence does not explicitly cite the prior GR number; but the list is given as candidate prior GRs mentioned in it. The sentence does not contain any explicit reference to that GR (like number). However the instruction: \"CANDIDATE PRIOR GRs MENTIONED IN IT\" suggests that the prior GR is considered mentioned. But we must decide target_index: if we think it references that prior GR, we set target_index = 1. The sentence says \"रद्द करण्याची बाब शासनाच्या विचाराधीन आहे\" - no explicit mention of the prior GR. But the list says it's mentioned. Possibly the prior GR is being referenced implicitly. The classification expects we pick the index if there is a relationship. Since we have a relationship (references) to that prior GR, we set target_index = 1.\n\nEvidence_span: need exact substring that justifies type. For REFERENCES, we need a substring showing it's deliberative, not operative. The phrase \"शासनाच्या विचाराधीन आहे\" indicates deliberative. So evidence_span = \"शासनाच्या विचाराधीन आहे\". That is exact substring.\n\nCancelled_object: Since it's not cancelling anything, null.\n\nGloss_en: literal translation: \"The matter of cancelling the procedure of providing on the system is under government consideration.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON.\n\nCheck JSON: fields: type, target_index, evidence_span, cancelled_object, gloss_en, confidence.\n\ntarget_index integer or null. Use 1.\n\nCancelled_object null.\n\nOk."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282288636,
+   "prompt_tokens": 819,
+   "prompt_time": 0.03826567,
+   "completion_tokens": 516,
+   "completion_time": 1.080347724,
+   "total_tokens": 1335,
+   "total_time": 1.118613394,
+   "completion_tokens_details": {
+    "reasoning_tokens": 452
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "x_groq": {
+   "id": "req_01kyfw3p8gf88b0knnm15p4jra",
+   "seed": 1650076179
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e2fe6246e3695f7e4a2d8946",
+ "role": "reasoning"
+}

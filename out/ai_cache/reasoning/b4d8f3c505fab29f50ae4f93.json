@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"व्यपगत झालेली पदे पुर्नजिवित करणे\",\"cancelled_object\":\"पदे\",\"gloss_en\":\"Reviving the posts that have become vacant.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-1cdad8d2-47a0-482b-98b8-b5791b4b5b3e",
+  "object": "chat.completion",
+  "created": 1785091640,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"व्यपगत झालेली पदे पुर्नजिवित करणे\",\"cancelled_object\":\"पदे\",\"gloss_en\":\"Reviving the posts that have become vacant.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence: \"६) व्यपगत झालेली पदे पुर्नजिवित करणे.\"\n\nMarathi: \"व्यपगत झालेली पदे पुर्नजिवित करणे.\" Means \"Revive the posts that have become vacant.\" So it's about reviving posts that have become vacant. It references prior GR? The candidate list includes one prior GR: \"GR dated 2022-04-27, number पदनि २०२२/प्र.क्र. १५/आपुक\". The sentence likely amends that prior order? It says reviving vacant posts. Does it cancel something? It is not canceling the prior order; it's likely amending the prior order by reviving posts that were vacated under it. So it's AMENDS. The cancelled_object? Not cancelled, but \"पदे\" (posts) are being revived, i.e., the object being acted upon is \"पदे\". Since it's amending prior order to revive posts, the cancelled_object maybe null because not cancelled. But the schema expects cancelled_object for AMENDS? It says \"the Marathi noun that is cancelled/amended\". For AMENDS, we can put the noun being amended: \"पदे\". So cancelled_object = \"पदे\". target_index = 1 (since only one candidate). evidence_span: exact substring \"व्यपगत झालेली पदे पुर्नजिवित करणे\". Need to match exactly as in sentence. The sentence includes \"६) व्यपगत झालेली पदे पुर्नजिवित करणे.\" The evidence_span should be the phrase without the leading number and punctuation? It must be exact substring of input sentence. The input includes \"६) व्यपगत झालेली पदे पुर्नजिवित करणे.\" So we can choose \"व्यपगत झालेली पदे पुर्नजिवित करणे\". That appears after \"६) \". So include that substring. Gloss_en: \"Reviving the posts that have become vacant.\" Confidence high 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.157893007,
+   "prompt_tokens": 794,
+   "prompt_time": 0.194378939,
+   "completion_tokens": 484,
+   "completion_time": 1.099315104,
+   "total_tokens": 1278,
+   "total_time": 1.293694043,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 419
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_84bf0227ec",
+  "x_groq": {
+   "id": "req_01kyfw1hmweb9rs64j6dvptpxp",
+   "seed": 1747629705
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b4d8f3c505fab29f50ae4f93",
+ "role": "reasoning"
+}

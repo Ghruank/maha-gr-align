@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made\",\"confidence\":0.9}",
+ "raw": {
+  "id": "chatcmpl-a44627a1-b5b6-4e7a-b092-1e06b7ee6fc2",
+  "object": "chat.completion",
+  "created": 1785091667,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत आहे\",\"cancelled_object\":null,\"gloss_en\":\"Amendments are being made\",\"confidence\":0.9}",
+     "reasoning": "We need to classify the sentence: \"सुधारणा करण्यात येत आहे -\"\n\nIt says \"सुधारणा करण्यात येत आहे -\" which translates to \"Amendments are being made\". This is a deliberative? Actually it's stating that amendment is being made, but not specifying what is being amended. It is not referencing a prior order? It mentions prior GR list includes one: GR dated 2022-09-27, number शासाउ २०२२/प्र.क्र.१०/सा.उ.\n\nThe sentence says \"सुधारणा करण्यात येत आहे -\". This is an operative statement that amendments are being made, but does it refer to the prior GR? It likely is amending that prior GR. However the sentence does not specify what is being amended; but the presence of prior GR list suggests it's about that GR. The phrase \"सुधारणा करण्यात येत आहे\" is a verb phrase meaning \"amendments are being made\". That indicates an AMENDS relationship (modifies part of prior order). Not supersedes because it's not canceling the whole order. So type AMENDS.\n\ntarget_index: 1 (since only one candidate). evidence_span: \"सुधारणा करण्यात येत आहे\". Cancelled_object: Since it's amendment, not cancellation. The object being amended? The noun is not given; could be \"सुधारणा\" itself? The cancelled_object field expects the Marathi noun that is cancelled/amended. For AMENDS, we should put the object being amended? The instruction: \"cancelled_object\": \"<the Marathi noun that is cancelled/amended, or null>\". So for AMENDS, we can put the noun that is being amended, maybe \"सुधारणा\". But \"सुधारणा\" is the action, not the object. Could be \"सुधारणा\" as the amendment. Might be null if unclear. Probably null.\n\ngloss_en: \"Amendments are being made\". confidence maybe 0.9.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282894106,
+   "prompt_tokens": 788,
+   "prompt_time": 0.03878665,
+   "completion_tokens": 472,
+   "completion_time": 0.990104155,
+   "total_tokens": 1260,
+   "total_time": 1.028890805,
+   "completion_tokens_details": {
+    "reasoning_tokens": 416
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyfw2c9mecmasnw7zs60khhe",
+   "seed": 247259049
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "75586f93b5bc6372731e29ee",
+ "role": "reasoning"
+}

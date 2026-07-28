@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"evidence_span\":\"पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/ २०१९/३५४\",\"gloss_en\":\"Letter No.5(3)/Temporary Posts/Continuing/2019/354 dated 07.10.2019\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-c4ecfbf8-2305-40db-8511-8b9c79aa427d",
+  "object": "chat.completion",
+  "created": 1785051036,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"evidence_span\":\"पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/ २०१९/३५४\",\"gloss_en\":\"Letter No.5(3)/Temporary Posts/Continuing/2019/354 dated 07.10.2019\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence. The sentence: \"३) संचालक,तंत्र शिक्षण संचालनालय, मुंबई यांचे पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/ २०१९/३५४, दिनांक ०७.१०.२०१9.\"\n\nIt mentions a letter (पत्र) with a number that includes \"पुढे चालू\". That's part of the file number, not an operative verb. The sentence is just citing a letter, no operative change. So relationship: REFERENCES (it merely cites a prior order). Evidence span: maybe \"पत्र क्र.५(३)/आस्थायीपदे/पुढे चालू/ २०१९/३५४\". Gloss: \"Letter No.5(3)/Temporary Posts/Continuing/2019/354 dated 07.10.2019\". Confidence high, say 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.291096929,
+   "prompt_tokens": 410,
+   "prompt_time": 0.017890685,
+   "completion_tokens": 276,
+   "completion_time": 0.587126928,
+   "total_tokens": 686,
+   "total_time": 0.605017613,
+   "completion_tokens_details": {
+    "reasoning_tokens": 194
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyenadq8ejm8qcjrk1vaf8h2",
+   "seed": 1179536241
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "aec7eb1a2d368297cf22cf34",
+ "role": "reasoning"
+}

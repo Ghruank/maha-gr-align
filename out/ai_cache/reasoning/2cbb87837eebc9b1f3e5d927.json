@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र.३ येथिल दि.१८.०२.२०२१ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"The state government, relying on the government decision dated 18-02-2021 (reference No.3), has taken the decision...\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-c515dfff-4301-4b47-9db5-504e7398981f",
+  "object": "chat.completion",
+  "created": 1785054311,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र.३ येथिल दि.१८.०२.२०२१ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"The state government, relying on the government decision dated 18-02-2021 (reference No.3), has taken the decision...\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is long Marathi. It mentions prior GR: \"संदर्भाधिन क्र.३ येथिल दि.१८.०२.२०२१ च्या शासन निर्णयान्वये संदर्भाधिन क्र.२ येथिल दि.२९.१२.२०१७ चे शासन पत्र रद्द करून ...\" So it says: \"रद्द करून\" i.e., cancel the prior government letter dated 29-12-2017 under reference 2, as per the decision of the 18-02-2021 decision. So it cancels a prior order (government letter). The candidate list only includes one prior GR: dated 2021-02-18, number बीसीसी २०१८/प्र.क्र.३६६/१६-ब. That matches the \"संदर्भाधिन क्र.३ येथिल दि.१८.०२.२०२१ च्या शासन निर्णय\". So the sentence cancels that prior order? Actually it says \"संदर्भाधिन क्र.३ येथिल दि.१८.०२.२०२१ च्या शासन निर्णयान्वये ... शासन पत्र रद्द करून\". So it cancels the earlier letter (dated 29-12-2017) under authority of the 18-02-2021 decision. The action is canceling a prior order (the 29-12-2017 letter). But the candidate list is the 2021-02-18 GR. The sentence does not cancel that GR; it uses it as authority to cancel another. So the relationship to the candidate GR is that it references it (cites it) but does not cancel it. So type = REFERENCES. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows reference. Could be \"संदर्भाधिन क्र.३ येथिल दि.१८.०२.२०२१ च्या शासन निर्णयान्वये\". That phrase appears. So evidence_span = that exact substring. cancelled_object: null because not cancelling the candidate GR. Gloss_en: literal translation. Provide something like \"The state government, ... decided ... under the government decision dated 18-02-2021 (reference No.3) ...\". Provide translation. Confidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.159810728,
+   "prompt_tokens": 1154,
+   "prompt_time": 0.046376185,
+   "completion_tokens": 580,
+   "completion_time": 1.219001236,
+   "total_tokens": 1734,
+   "total_time": 1.265377421,
+   "completion_tokens_details": {
+    "reasoning_tokens": 481
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_84bf0227ec",
+  "x_groq": {
+   "id": "req_01kyerebdwe3wrhgdc377pvz48",
+   "seed": 1911771966
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2cbb87837eebc9b1f3e5d927",
+ "role": "reasoning"
+}

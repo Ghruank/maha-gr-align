@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":\"स्तंभ\",\"gloss_en\":\"Dated 13-09-2024, by making partial changes, the district mentioned in column (2) of the following table\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-c47e0755-247d-4bf8-aad1-2f4eaf5f1fd4",
+  "object": "chat.completion",
+  "created": 1785054601,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अंशत: बदल करुन\",\"cancelled_object\":\"स्तंभ\",\"gloss_en\":\"Dated 13-09-2024, by making partial changes, the district mentioned in column (2) of the following table\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"दि.१३.०९.२०२४, यामध्ये अंशत: बदल करुन, पुढील तक्त्यातील स्तंभ (२) मध्ये नमूद जिल्याचे\"\n\nTranslation: \"Dated 13-09-2024, by making partial changes, in column (2) of the following table the mentioned district...\"\n\nIt says \"अंशत: बदल करुन\" meaning \"by making partial changes\". This indicates an amendment (AMENDS) to something. It references prior GR (candidate list). The sentence says \"अंशत: बदल करुन\" which is a cue for amendment. It modifies part of prior order, not cancel entire order. So type AMENDS.\n\ntarget_index: which prior GR? There's only one candidate, index 1.\n\nevidence_span: need exact substring that justifies type. Could be \"अंशत: बदल करुन\". That indicates amendment. So evidence_span = \"अंशत: बदल करुन\". Must be exact substring from input. The input sentence includes \"अंशत: बदल करुन\". Yes.\n\ncancelled_object: Since it's amendment, not cancellation. The object being amended is maybe \"स्तंभ (२) मध्ये नमूद जिल्याचे\". But cancelled_object field expects the Marathi noun that is cancelled/amended, or null. For AMENDS, we should provide the object being amended? The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. So we need the noun that is being changed. The sentence says \"पुढील तक्त्यातील स्तंभ (२) मध्ये नमूद जिल्याचे\". The noun is \"जिल्याचे\" (district). But maybe \"स्तंभ (२)\" is column. The amendment is to column (2) of the table. The noun could be \"स्तंभ (२)\". However \"जिल्याचे\" is an adjective. I'd choose \"स्तंभ (२)\" as the object being amended. But the phrase \"स्तंभ (२) मध्ये नमूद जिल्याचे\" - the object is the district mentioned in column 2. So the noun is \"जिल्याचे\". Might be ambiguous. The spec: \"the Marathi noun that is cancelled/amended\". So we need a noun. \"स्तंभ\" is a noun. So \"स्तंभ (२)\" maybe. Provide \"स्तंभ\". I'll output \"स्तंभ\". Could also be \"जिल्याचे\". I'll choose \"स्तंभ\". Provide as string.\n\ngloss_en: literal English translation: \"Dated 13-09-2024, by making partial changes, the district mentioned in column (2) of the following table\". Provide that.\n\nconfidence: high, maybe 0.97.\n\nReturn JSON.\n\nCheck JSON format: compact, no spaces? It's okay to have spaces. Provide keys.\n\nLet's craft:\n\n{\n\"type\":\"AMENDS\",\n\"target_index\":1,\n\"evidence_span\":\"अंशत: बदल करुन\",\n\"cancelled_object\":\"स्तंभ\",\n\"gloss_en\":\"Dated 13-09-2024, by making partial changes, the district mentioned in column (2) of the following table\",\n\"confidence\":0.97\n}\n\nCheck validity."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.319725859,
+   "prompt_tokens": 823,
+   "prompt_time": 0.019059548,
+   "completion_tokens": 752,
+   "completion_time": 1.576746268,
+   "total_tokens": 1575,
+   "total_time": 1.595805816,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 675
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dd854ee2d7",
+  "x_groq": {
+   "id": "req_01kyerq6bmfxavv8nh995y8fjh",
+   "seed": 1400803768
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "12aa2dcdf4123b69c1ee6717",
+ "role": "reasoning"
+}

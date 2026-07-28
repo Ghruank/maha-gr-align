@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दि.१४.०१.२०२१ रोजीचे शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"The proposal, as per the agreement of the Public Works, Planning and Finance Departments, is under consideration for new administrative approval, based on the government decisions dated 23.08.2019 and 14.01.2021.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-10cc5d62-b5ea-41f8-9c4e-f02d7d2653be",
+  "object": "chat.completion",
+  "created": 1785054924,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दि.१४.०१.२०२१ रोजीचे शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"The proposal, as per the agreement of the Public Works, Planning and Finance Departments, is under consideration for new administrative approval, based on the government decisions dated 23.08.2019 and 14.01.2021.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly: \"Construction as well as 3) entrance, road and protective wall construction request for approval has been made. The three works are to be included within the original estimate of Rs.149.72 crore. Therefore, including new constructions does not change the original estimate cost, only area increases. (Increased area 2539.25 sq.m.) Due to area increase, it is proposed to exclude guest house, health centre and green room buildings from original estimate and also reduce furniture cost. The proposal, as per agreement of Public Works Department, Planning Department and Finance Department, according to government decisions dated 23.08.2019 and 14.01.2021, is being considered for new administrative approval.\"\n\nKey phrase: \"सदर प्रस्तावास ... दि.२३.०८.२०१९ व दि.१४.०१.२०२१ रोजीचे शासन निर्णय अधिकरणित करुन नव्याने प्रशासकीय मान्यता देण्याची बाब विचराधीन होती.\"\n\n\"विचराधीन होती\" means \"was under consideration\". According to trap 3, deliberative mood is not a decision; classify as REFERENCES. It cites prior GR dated 2021-01-14 (and also 23.08.2019). The candidate list only includes one prior GR (2021-01-14). The sentence references that prior decision, but does not cancel or amend. So type = REFERENCES, target_index = 1 (since that prior GR is mentioned). evidence_span: need exact substring that shows reference. Could be \"दि.१४.०१.२०२१ रोजीचे शासन निर्णय\". That is the reference. Cancelled_object null. Gloss_en: literal translation. Provide confidence maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283459662,
+   "prompt_tokens": 1041,
+   "prompt_time": 0.027492756,
+   "completion_tokens": 484,
+   "completion_time": 1.009315548,
+   "total_tokens": 1525,
+   "total_time": 1.036808304,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 381
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f73454f048",
+  "x_groq": {
+   "id": "req_01kyes124ferkb5pte194pbmfy",
+   "seed": 622380591
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b34c3b756116673c9cdae9b4",
+ "role": "reasoning"
+}

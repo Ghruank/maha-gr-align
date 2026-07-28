@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The government decision dated 4.5.2021 is being cancelled by this decision.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-a141b0b4-646c-468e-b641-9cdc5e4da5a2",
+  "object": "chat.completion",
+  "created": 1785054346,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"The government decision dated 4.5.2021 is being cancelled by this decision.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"प्रस्तावना : संदर्भीय दिनांक ४.५.२०२१ रोजीचा शासन निर्णय या निर्णयाद्वारे रद्द करण्यात येत आहे.\"\n\nTranslation: \"Introduction: The government decision dated 4.5.2021 is being cancelled by this decision.\"\n\nWe have candidate prior GR: GR dated 2021-05-04, number शाकाजा-११२१/प्र.क्र.२७/२०२१/२२.\n\nThe sentence says the prior decision is being cancelled. Is this a supersede or amend? The prior order itself is being cancelled. That is SUPERSEDES (the order itself is cancelled). The cancelled_object: \"शासन निर्णय\" or maybe \"निर्णय\". The sentence says \"शासन निर्णय ... रद्द करण्यात येत आहे\". So cancelled_object could be \"शासन निर्णय\". According to trap 2, if the order itself is cancelled, it's SUPERSEDES. So type SUPERSEDES.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात येत आहे\". The sentence includes \"या निर्णयाद्वारे रद्द करण्यात येत आहे\". So evidence_span could be \"रद्द करण्यात येत आहे\". Must be exact substring from input. Let's copy: \"रद्द करण्यात येत आहे\". That appears.\n\ncancelled_object: \"शासन निर्णय\". Provide Marathi noun.\n\ngloss_en: \"The government decision dated 4.5.2021 is being cancelled by this decision.\"\n\nconfidence: high, maybe 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28465694,
+   "prompt_tokens": 816,
+   "prompt_time": 0.015966655,
+   "completion_tokens": 408,
+   "completion_time": 0.945475965,
+   "total_tokens": 1224,
+   "total_time": 0.96144262,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 340
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_acbbc9c4c3",
+  "x_groq": {
+   "id": "req_01kyerfdrpe72ty6hasm94mb9g",
+   "seed": 577463300
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6bade42e18d079d9cc603988",
+ "role": "reasoning"
+}

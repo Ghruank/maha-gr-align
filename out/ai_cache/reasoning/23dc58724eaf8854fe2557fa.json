@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"दिनांक ३१.०१.२०२० रोजीचे आदेश याद्वारे रद्द करण्यात येत आहेत\",\"cancelled_object\":\"प्रतिनियुक्ती\",\"gloss_en\":\"Also, the appointment of Mr. ... as Section Officer in the State Service Rights Commission, Konkan Division, referencing the order dated 31.01.2020, is being cancelled by this order.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-16df7eef-1dba-4221-8ab7-13fc765a7c2f",
+  "object": "chat.completion",
+  "created": 1785054077,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"दिनांक ३१.०१.२०२० रोजीचे आदेश याद्वारे रद्द करण्यात येत आहेत\",\"cancelled_object\":\"प्रतिनियुक्ती\",\"gloss_en\":\"Also, the appointment of Mr. ... as Section Officer in the State Service Rights Commission, Konkan Division, referencing the order dated 31.01.2020, is being cancelled by this order.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"४. तसेच राज्य सेवा हक्क आयोग, कोकण विभाग या कार्यालयातील कक्ष अधिकारी या पदावरील श्री. दे. सा. भगुरे, कक्ष अधिकारी, सार्वजनिक बांधकाम विभाग यांचे प्रतिनियुक्तीबाबतचे संदर्भाधीन दिनांक ३१.०१.२०२० रोजीचे आदेश याद्वारे रद्द करण्यात येत आहेत.\"\n\nInterpretation: It says that the appointment (प्रतिनियुक्ती) of Mr. ... as कक्ष अधिकारी (section officer) in the office of State Service Rights Commission, Konkan Division, etc., referencing the order dated 31.01.2020, is being cancelled by this order.\n\nThus, the sentence cancels a prior order (the order dated 31.01.2020). However, per trap 2: If the sentence cancels an appointment made under a prior GR, that GR is not superseded; it's an amendment (AMENDS). The prior GR is the order that made the appointment. The current sentence cancels that appointment. So we should label as AMENDS, not SUPERSEDES. The target_index is 1 (the only candidate). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात येत आहेत\" indicates cancellation. Also \"दिनांक ३१.०१.२०२० रोजीचे आदेश\" references the prior order. So evidence_span could be \"दिनांक ३१.०१.२०२० रोजीचे आदेश याद्वारे रद्द करण्यात येत आहेत\". Must be exact substring from input. Let's locate: The sentence: \"... दिनांक ३१.०१.२०२० रोजीचे आदेश याद्वारे रद्द करण्यात येत आहेत.\"\n\nYes that's exact. Cancelled_object: the noun being cancelled is \"प्रतिनियुक्ती\" (appointment) or \"प्रतिनियुक्तीबाबतचा आदेश\"? The sentence says \"प्रतिनियुक्तीबाबतचे ... आदेश ... रद्द\". The object cancelled is the prior order (the appointment order). But per trap 2, we need to specify what is cancelled: the appointment (प्रतिनियुक्ती). The order is being cancelled? Actually they cancel the prior order, which was an appointment order. The cancellation is of the prior order's effect (the appointment). The cancelled_object should be the Marathi noun that is cancelled/amended. Likely \"प्रतिनियुक्ती\". Let's choose \"प्रतिनियुक्ती\". Gloss_en: literal translation: \"Also, the appointment of Mr. ... as Section Officer in the office of the State Service Rights Commission, Konkan Division, referencing the order dated 31.01.2020, is being cancelled by this order.\"\n\nConfidence high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284990277,
+   "prompt_tokens": 863,
+   "prompt_time": 0.039494861,
+   "completion_tokens": 704,
+   "completion_time": 1.45925,
+   "total_tokens": 1567,
+   "total_time": 1.498744861,
+   "completion_tokens_details": {
+    "reasoning_tokens": 593
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01kyer76shemfavh39k66gbt3q",
+   "seed": 1851451558
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "23dc58724eaf8854fe2557fa",
+ "role": "reasoning"
+}

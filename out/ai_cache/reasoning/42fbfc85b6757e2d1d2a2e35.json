@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"Government decision: The reference government decision dated 28.1.2021 regarding allocation of 1200 sq. ft. space for the executive chairman’s hall and office of the State Planning Board is being cancelled and the said 1200 sq. ft. space is being allocated to the office of Maharashtra Institution for Transformation-MITRA.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-de87c6f6-ac8a-40b0-b28c-2a2f28c39ea0",
+  "object": "chat.completion",
+  "created": 1785054443,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"रद्द करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"Government decision: The reference government decision dated 28.1.2021 regarding allocation of 1200 sq. ft. space for the executive chairman’s hall and office of the State Planning Board is being cancelled and the said 1200 sq. ft. space is being allocated to the office of Maharashtra Institution for Transformation-MITRA.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"शासन निर्णय : राज्य नियोजन मंडळाचे कार्यकारी अध्यक्ष यांचे दालन व कार्यालयासाठी १२०० चौ. फूट जागा वाटप करण्याबाबतचा संदर्भाधीन दिनांक २८.१.२०२१ रोजीचा शासन निर्णय रद्द करुन सदर १२०० चौ.फूट जागा महाराष्ट्र इन्स्टिटयूशन फॉर ट्रान्सफॉमेशन-मित्र (Maharashtra Institution for Transformation-MITRA) \" या संस्थेच्या कार्यालयासाठी वाटप करण्यात येत आहे.\"\n\nInterpretation: It says: \"Government decision: The reference government decision dated 28.1.2021 regarding allocation of 1200 sq ft space for the executive chairman's hall and office of the State Planning Board is being cancelled, and the said 1200 sq ft space is being allocated to the office of Maharashtra Institution for Transformation-MITRA.\"\n\nThus it cancels a prior government decision (the prior GR). The prior GR is the one listed (GR dated 2021-01-28). The sentence cancels that prior order itself. So type is SUPERSEDES? According to trap 2: If the sentence cancels a prior order itself, that's SUPERSEDES. It cancels the prior order (the decision). So type SUPERSEDES.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करुन\" indicates cancellation. The exact substring: \"रद्द करुन\". Could also include more context: \"रद्द करुन सदर १२०० चौ.फूट जागा\". The phrase \"रद्द करुन\" is enough. Must be exact from input. The input contains \"रद्द करुन\". Yes.\n\ncancelled_object: what is being cancelled? The prior order itself, but we need the Marathi noun that is cancelled/amended. Could be \"शासन निर्णय\". The sentence says \"संदर्भाधीन ... शासन निर्णय रद्द करुन\". So cancelled_object = \"शासन निर्णय\". That seems appropriate.\n\ngloss_en: literal English translation: \"Government decision: The reference government decision dated 28.1.2021 regarding allocation of 1200 sq. ft. space for the executive chairman’s hall and office of the State Planning Board is being cancelled and the said 1200 sq. ft. space is being allocated to the office of Maharashtra Institution for Transformation-MITRA.\"\n\nconfidence: high, maybe 0.99.\n\nReturn JSON.\n\nCheck JSON format: compact, no spaces? It's okay to have spaces. Ensure keys correct.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314601884,
+   "prompt_tokens": 896,
+   "prompt_time": 0.020043374,
+   "completion_tokens": 668,
+   "completion_time": 1.57619514,
+   "total_tokens": 1564,
+   "total_time": 1.596238514,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 552
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6b677c2caf",
+  "x_groq": {
+   "id": "req_01kyerjcd8fghsd8s7esf6mp8x",
+   "seed": 154427607
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "42fbfc85b6757e2d1d2a2e35",
+ "role": "reasoning"
+}

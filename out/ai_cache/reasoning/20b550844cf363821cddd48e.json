@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department Government Circular No. ... dated 02-08-2019, the allocation of the said candidate 1(a) is being cancelled by this memorandum.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-d9e3de7a-de1b-4bc1-a2bc-4aca8b191934",
+  "object": "chat.completion",
+  "created": 1785091386,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department Government Circular No. ... dated 02-08-2019, the allocation of the said candidate 1(a) is being cancelled by this memorandum.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"यास्तव, सामान्य प्रशासन विभाग, शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर १ (एक) उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\"\n\nTranslation: \"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02-08-2019, the allocation of the said candidate 1 (a) is being cancelled by this memorandum.\"\n\nWe have prior GR list: only one candidate prior GR dated 2022-12-27. The sentence references a prior order (government circular) from 2019, not the listed prior GR. The candidate list includes a GR dated 2022-12-27, but the sentence does not mention that. So does it reference the prior GR? No. So relationship to listed GR is NONE.\n\nBut we must consider if the sentence cancels something made under that prior GR? It cancels \"नियतवाटप\" (allocation) of a candidate, but that allocation is presumably under the 2019 circular, not the 2022 GR. Since the candidate list does not include that 2019 circular, we cannot link. So target_index null, type NONE.\n\nEvidence span: need a substring that justifies type. For NONE, we can give a span that shows no reference to the candidate GR. Maybe the whole sentence? But evidence_span should be substring that justifies the type. For NONE, maybe we can give the part that shows no reference: maybe \"सदर १ (एक) उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\" But that indicates cancellation but not referencing prior GR. However we need to justify NONE: we can note that the only prior GR mentioned is not in the candidate list. So evidence could be the reference to \"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\" which is not in candidate list. That shows it's not referencing candidate. So evidence_span = \"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\". That indicates reference to a different order.\n\nCancelled_object: \"नियतवाटप\" (allocation). Since it's cancelled, but we are classifying as NONE because not referencing candidate GR. However cancelled_object field should be null if type NONE? The spec: \"cancelled_object\": \"<the Marathi noun that is cancelled/amended, or null>\". For NONE, we can set null.\n\nGloss_en: literal translation.\n\nConfidence: high, maybe 0.97.\n\nThus JSON:\n\n{\n\"type\":\"NONE\",\n\"target_index\":null,\n\"evidence_span\":\"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\",\n\"cancelled_object\":null,\n\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department Government Circular No. ... dated 02-08-2019, the allocation of the said candidate 1(a) is being cancelled by this memorandum.\",\n\"confidence\":0.97\n}\n\nCheck JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281875366,
+   "prompt_tokens": 841,
+   "prompt_time": 0.038896687,
+   "completion_tokens": 861,
+   "completion_time": 1.811916309,
+   "total_tokens": 1702,
+   "total_time": 1.8508129960000002,
+   "completion_tokens_details": {
+    "reasoning_tokens": 743
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e1a78f200e",
+  "x_groq": {
+   "id": "req_01kyfvss6ffxdbr9447tmtq0pg",
+   "seed": 129797790
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "20b550844cf363821cddd48e",
+ "role": "reasoning"
+}

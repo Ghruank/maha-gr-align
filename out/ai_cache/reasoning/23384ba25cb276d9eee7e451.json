@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अ.क्र. १३० व १३२ वगळण्यात येत आहे\",\"cancelled_object\":\"अभ्यासक्रम\",\"gloss_en\":\"The approval of the courses numbered 130 and 132 in Annexure A of the government decision dated 13/08/2020 has been cancelled by AICTE, and therefore items 130 and 132 are being omitted from Annexure A.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-7b42c56b-91aa-4cf9-a614-08ea7af419ee",
+  "object": "chat.completion",
+  "created": 1785054797,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अ.क्र. १३० व १३२ वगळण्यात येत आहे\",\"cancelled_object\":\"अभ्यासक्रम\",\"gloss_en\":\"The approval of the courses numbered 130 and 132 in Annexure A of the government decision dated 13/08/2020 has been cancelled by AICTE, and therefore items 130 and 132 are being omitted from Annexure A.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list. Sentence: \"शासन निर्णय : वर नमूद दिनांक १३/०८/२०२० च्या शासन निर्णयासोबतच्या Annexure A मधील १) अ.क्र. १३० व १३२ समोरील अभ्यासक्रमांची अखिल भारतीय तंत्र शिक्षण परिषद, नवी दिल्ली यांनी दिनांक ३१/०७/२०२० रोजीच्या मान्यता पत्रान्वये मान्यता रद्द केली आहे. यास्तव Annexure A मधील अ.क्र. १३० व १३२ वगळण्यात येत आहे.\"\n\nInterpretation: It says that the courses listed in Annexure A (items 130 and 132) have had their approval cancelled by the All India Council for Technical Education (AICTE) on 31/07/2020. Therefore, those items are being removed from Annexure A. This is a change to the prior GR dated 13/08/2020 (the prior order). It is not cancelling the entire prior order, just removing specific items (courses) from its annexure. So it's an amendment (AMENDS). The cancelled_object is \"अ.क्र. १३० व १३२\" (items 130 and 132) or \"अभ्यासक्रम\" (courses). The sentence says \"मान्यता रद्द केली आहे\" (approval cancelled) and \"वगळण्यात येत आहे\" (being omitted). So the object being cancelled/amended is the courses (अभ्यासक्रम) or the items. We'll put \"अभ्यासक्रम\" as cancelled_object.\n\nTarget_index: the prior GR is candidate 1, so index 1.\n\nEvidence_span: need exact substring that shows the operative change. Could be \"अ.क्र. १३० व १३२ वगळण्यात येत आहे\". That indicates removal. Or \"मान्यता रद्द केली आहे\". Choose a span that indicates amendment. Use \"अ.क्र. १३० व १३२ वगळण्यात येत आहे\". Must be exact from sentence. The sentence includes that phrase exactly: \"अ.क्र. १३० व १३२ वगळण्यात येत आहे\". Yes.\n\nGloss_en: literal translation: \"The approval of the courses numbered 130 and 132 in Annexure A of the government decision dated 13/08/2020 has been cancelled by AICTE, and therefore items 130 and 132 are being omitted from Annexure A.\"\n\nConfidence: high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.278946836,
+   "prompt_tokens": 899,
+   "prompt_time": 0.02008502,
+   "completion_tokens": 645,
+   "completion_time": 1.497513805,
+   "total_tokens": 1544,
+   "total_time": 1.5175988249999999,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 533
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_b1dd3e7a63",
+  "x_groq": {
+   "id": "req_01kyerx6acfzp80xa6sep3wwxr",
+   "seed": 1716558602
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "23384ba25cb276d9eee7e451",
+ "role": "reasoning"
+}

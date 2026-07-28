@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"A government decision has been issued for the purchase of an H145 helicopter from Airbus Helicopters to be stationed in Nagpur for the flood-affected campaign, under the referenced government decision. Paragraphs 1, 2, 3 and 4 of the said decision are being amended due to the increase in foreign exchange rates.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-55188107-4d12-42c2-a94c-1a1d5fe026a0",
+  "object": "chat.completion",
+  "created": 1785091793,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"A government decision has been issued for the purchase of an H145 helicopter from Airbus Helicopters to be stationed in Nagpur for the flood-affected campaign, under the referenced government decision. Paragraphs 1, 2, 3 and 4 of the said decision are being amended due to the increase in foreign exchange rates.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Sentence: \"संदर्भाधीन शासन निर्णयान्वये शासनाच्या नक्षलग्रस्त अभियानाकरीता ... एअरबस हेलिकॉप्टरर्स ... H१४५ हे हेलिकॉप्टर खरेदी ... शासन निर्णय जारी करण्यात आला आहे. सदर शासन निर्णयामधील परिच्छेद क्र.१, २, ३ व ४ मध्ये परकीय चलनात झालेल्या दरातील वाढीनुसार खालीलप्रमाणे सुधारणा करण्यात येत आहे.\"\n\nInterpretation: It says a new government decision is issued to purchase a helicopter, and within that decision, paragraphs 1-4 are being amended (सुधारणा) due to foreign exchange rate increase. The prior GR is referenced: \"संदर्भाधीन शासन निर्णयान्वये\" meaning \"under the referenced government decision\". The sentence is not cancelling the prior GR; it's amending paragraphs within the new decision? Actually it says \"संदर्भाधीन शासन निर्णयान्वये ... शासन निर्णय जारी करण्यात आला आहे.\" So it's issuing a new decision under the referenced prior decision. Then \"सदर शासन निर्णयामधील परिच्छेद ... सुधारणा करण्यात येत आहे.\" That indicates amendments to the new decision's paragraphs, not to the prior GR. The prior GR is just referenced. No cancellation. So relationship: REFERENCES (just cites prior GR). Not AMENDS because not modifying prior GR. So type = REFERENCES. target_index = 1 (since candidate list index 1). evidence_span: need exact substring that shows reference. Could be \"संदर्भाधीन शासन निर्णयान्वये\". That phrase indicates referencing. Or \"संदर्भाधीन शासन निर्णयान्वये\". Use that. cancelled_object null. gloss_en: literal translation: \"A government decision has been issued for the purchase of an H145 helicopter from Airbus Helicopters company to be stationed in Nagpur for the flood-affected campaign, under the referenced government decision. Paragraphs 1,2,3,4 of the said decision are being amended as per the increase in foreign exchange rates.\" confidence maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.29255139,
+   "prompt_tokens": 891,
+   "prompt_time": 0.167926694,
+   "completion_tokens": 569,
+   "completion_time": 1.187360582,
+   "total_tokens": 1460,
+   "total_time": 1.3552872759999999,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 452
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01kyfw674ffefr87xyrbv6g1sh",
+   "seed": 640972719
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "0a768925d0832fdda833a9b2",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"कार्यपध्दतीमध्ये पुढीलप्रमाणे सुधारणा करण्यात येत आहेत.\",\"cancelled_object\":null,\"gloss_en\":\"Improvements are being made in the procedure as follows.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-1d7dc7ae-9247-4fbc-a4db-1f5e46e05555",
+  "object": "chat.completion",
+  "created": 1785091631,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"कार्यपध्दतीमध्ये पुढीलप्रमाणे सुधारणा करण्यात येत आहेत.\",\"cancelled_object\":null,\"gloss_en\":\"Improvements are being made in the procedure as follows.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence: \"कार्यपध्दतीमध्ये पुढीलप्रमाणे सुधारणा करण्यात येत आहेत.\"\n\nTranslation: \"Improvements are being made in the procedure as follows.\"\n\nWe have a candidate prior GR: \"GR dated 2023-12-04, number रानियो-२०२३/प्र.क्र.६४/सेवा-४\". The sentence does not explicitly reference that prior GR; it's just stating improvements are being made. It may be referencing prior GR? The list says candidate prior GRs mentioned in it. But does the sentence actually mention it? No, the sentence does not contain any reference to that GR number. So there is no operative relationship. According to guidelines, if it's just a statement of improvements, it's not canceling or amending anything. It might be referencing prior GR? No. So type = NONE. target_index null. evidence_span maybe the whole sentence? But we need evidence_span that justifies the type. For NONE, we can give a span that shows no operative change, maybe the whole sentence. Provide \"कार्यपध्दतीमध्ये पुढीलप्रमाणे सुधारणा करण्यात येत आहेत.\" as evidence_span.\n\ncancelled_object null. gloss_en: \"Improvements are being made in the procedure as follows.\"\n\nConfidence high, say 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320070272,
+   "prompt_tokens": 799,
+   "prompt_time": 0.040026493,
+   "completion_tokens": 348,
+   "completion_time": 0.727892242,
+   "total_tokens": 1147,
+   "total_time": 0.767918735,
+   "completion_tokens_details": {
+    "reasoning_tokens": 279
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_be28f5c9f2",
+  "x_groq": {
+   "id": "req_01kyfw1994eb1s7rm1z7svjv05",
+   "seed": 1502097038
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "785102446744af8ba667d369",
+ "role": "reasoning"
+}

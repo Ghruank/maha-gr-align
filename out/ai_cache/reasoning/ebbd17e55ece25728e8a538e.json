@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय क्र. संकीर्ण-२०१८/प्र.क्र.५६/१८/विशि-१, दि.०८.०३.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Higher and Technical Education Department, Government Decision No. संकीर्ण-२०१८/प्र.क्र.५६/१८/विशि-१ dated 08.03.2019\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-943e5b47-b079-41ee-a6f6-79824c29ae5b",
+  "object": "chat.completion",
+  "created": 1785055075,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय क्र. संकीर्ण-२०१८/प्र.क्र.५६/१८/विशि-१, दि.०८.०३.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Higher and Technical Education Department, Government Decision No. संकीर्ण-२०१८/प्र.क्र.५६/१८/विशि-१ dated 08.03.2019\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence lists several prior orders: \"उच्च व तंत्र शिक्षण विभाग, शासन निर्णय क्र.एनजीसी-१२९८/(१७१०९/४४६८)/विशि-४, दि.१८.११.२००४ २) उच्च व तंत्र शिक्षण विभाग, शासन निर्णय क्र. एनजीसी-२००९/(२४३/०९/विशि-१, दि.१२.०८.२००९ ३) उच्च व तंत्र शिक्षण विभाग, शासन अधिसूचना क्र. संकीर्ण-२००९/(३२६/०९)/विशि-१, दि.०७.१०.२००९ ४) उच्च व तंत्र शिक्षण विभाग, शासन निर्णय क्र. संकीर्ण-२०१८/प्र.क्र.५६/१८/विशि-१, दि.०८.०३.२०१९ ५) उच्च व तंत्र शिक्षण विभाग, शासन अधिसूचना (सुधारणा) क्र.२०२०/प्र.क्र.१८४/२०/ विशि- १. दि.०१.०८.२०२२.\"\n\nWe have candidate prior GR list only includes #1: GR dated 2019-03-08, number संकीर्ण-२०१८/प्र.क्र.५६/१८/विशि-१.\n\nThe sentence includes that as item 4. The sentence is just a list of prior orders, no operative language like \"रद्द\", \"सुधारणा\", \"अधिक्रमित\", etc. It seems to be a references list. So type = REFERENCES, target_index = 1 (since only one candidate matches). evidence_span: need exact substring that shows the reference. Could be \"शासन निर्णय क्र. संकीर्ण-२०१८/प्र.क्र.५६/१८/विशि-१, दि.०८.०३.२०१९\". That is present. Cancelled_object null. Gloss_en: literal translation: \"Higher and Technical Education Department, Government Decision No. ...\". Provide translation. Confidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320419496,
+   "prompt_tokens": 1024,
+   "prompt_time": 0.028127763,
+   "completion_tokens": 574,
+   "completion_time": 1.284841272,
+   "total_tokens": 1598,
+   "total_time": 1.312969035,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 457
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c652c0ffaa",
+  "x_groq": {
+   "id": "req_01kyes5np0f6kawptk6wwmz48k",
+   "seed": 2090793097
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "ebbd17e55ece25728e8a538e",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"प्रथम हप्त्यात घेतलेल्या अग्रिमाची रक्कम परत करून अग्रिम रद्द करण्याची विनंती केल्यास\",\"cancelled_object\":null,\"gloss_en\":\"If a request is made to return the amount of advance taken in the first installment and cancel the advance\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-65a19f1e-9983-4be4-9fc3-c9b01823a647",
+  "object": "chat.completion",
+  "created": 1785091511,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"प्रथम हप्त्यात घेतलेल्या अग्रिमाची रक्कम परत करून अग्रिम रद्द करण्याची विनंती केल्यास\",\"cancelled_object\":null,\"gloss_en\":\"If a request is made to return the amount of advance taken in the first installment and cancel the advance\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"प्रथम हप्त्यात घेतलेल्या अग्रिमाची रक्कम परत करून अग्रिम रद्द करण्याची विनंती केल्यास\"\n\nTranslation: \"If a request is made to return the amount of advance taken in the first installment and cancel the advance\"\n\nIt mentions prior GR? The candidate list includes one prior GR: \"GR dated 2021-02-02, number -घबांअ-२०१९/प्र.क्र.१४/२०१९/ विनियम\". The sentence does not explicitly reference that GR; it's just a condition about returning advance and canceling advance. No operative language like \"रद्द करण्यात येत आहे\" referencing the prior order. It says \"अग्रिम रद्द करण्याची विनंती केल्यास\" which is a request to cancel an advance, not cancel the prior order. So relationship: NONE? Or maybe it references the prior GR? The sentence does not mention it. So NONE.\n\nWe need to output JSON with type NONE, target_index null, evidence_span maybe empty? But must provide a substring that justifies type. For NONE, we can give a span that shows no operative change? Probably we can give the whole sentence as evidence that it's not a relationship. But evidence_span should be exact substring that justifies the type. For NONE, maybe we can give the whole sentence. Let's give the whole sentence.\n\ncancelled_object null, gloss_en literal translation.\n\nConfidence high, say 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284340691,
+   "prompt_tokens": 810,
+   "prompt_time": 0.024156423,
+   "completion_tokens": 401,
+   "completion_time": 0.979289165,
+   "total_tokens": 1211,
+   "total_time": 1.003445588,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 312
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01kyfvxkp8e8cbg5q493s6gv51",
+   "seed": 1514430435
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "11cc90b187f3341d4f102ee1",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"यास्तव, सामान्य प्रशासन विभाग, शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर ६ (सहा) उमेदवारांचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department Government Circular No. ... dated 02-08-2019, the allocation of the six candidates is being cancelled by this memorandum.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-1960fcfe-a7f8-48ce-8f52-75c553ce8b7b",
+  "object": "chat.completion",
+  "created": 1785091409,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"यास्तव, सामान्य प्रशासन विभाग, शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर ६ (सहा) उमेदवारांचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department Government Circular No. ... dated 02-08-2019, the allocation of the six candidates is being cancelled by this memorandum.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"यास्तव, सामान्य प्रशासन विभाग, शासन परिपत्रक क्र.मलोआ-१११९/ प्र.क्र.११५/८, दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर ६ (सहा) उमेदवारांचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\"\n\nTranslation: \"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02-08-2019, the allocation of the six (6) candidates is being cancelled by this memorandum.\"\n\nWe have prior GR list: only one candidate prior GR dated 2022-12-27. The sentence references a prior order (government circular) from 2019, not the listed prior GR. The candidate list includes a GR dated 2022-12-27, but the sentence does not mention that. So does it reference that prior GR? No. So relationship to listed GR is NONE.\n\nBut we must consider if the sentence cancels something under that prior GR? It cancels allocation of six candidates, but that allocation is presumably under the 2019 circular, not the 2022 GR. Since the candidate list does not include that 2019 circular, we cannot link. So target_index null, type NONE.\n\nEvidence span: need a substring that justifies type. For NONE, we can give a span that shows no reference to the candidate GR. Maybe the whole sentence? But evidence_span should be exact substring that justifies the type. For NONE, maybe we can give the part that shows no reference: maybe the whole sentence, but it's okay.\n\nCancelled_object: \"नियतवाटप\" (allocation) of candidates. But since we are classifying as NONE, cancelled_object should be null.\n\nGloss_en: Provide literal translation.\n\nConfidence high, say 0.98.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.284218436,
+   "prompt_tokens": 842,
+   "prompt_time": 0.044240949,
+   "completion_tokens": 569,
+   "completion_time": 1.18221898,
+   "total_tokens": 1411,
+   "total_time": 1.226459929,
+   "completion_tokens_details": {
+    "reasoning_tokens": 409
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01kyfvtfwqfvjvz9rzhznqz0ty",
+   "seed": 1427867420
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "bcca5c2969a32db816d8f40b",
+ "role": "reasoning"
+}

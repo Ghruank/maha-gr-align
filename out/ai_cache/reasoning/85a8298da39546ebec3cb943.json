@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of the following clerk-typist is being cancelled for administrative reasons.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-da0479a7-eee3-4ee6-a337-f71fba92a45c",
+  "object": "chat.completion",
+  "created": 1785091753,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहे\",\"cancelled_object\":\"बदली\",\"gloss_en\":\"The transfer of the following clerk-typist is being cancelled for administrative reasons.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence: \"खालील लिपिक-टंकलेखकाची बदली प्रशासकीय कारणास्तव रद्द करण्यात येत आहे:\" Means: \"The transfer (posting) of the following clerk-typist is being cancelled for administrative reasons.\"\n\nWe have prior GR list: #1 is a GR dated 2018-05-07. The sentence cancels a \"बदली\" (transfer/posting) of a clerk-typist. The prior GR likely made that posting. The sentence cancels that posting, not the entire prior order. According to trap 2, if it cancels appointments, approvals, sanctions, posts, funds, or committee memberships made under a prior GR, that GR is not superseded; it's AMENDS. So type = AMENDS.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात येत आहे\" indicates cancellation. Also \"बदली\" is the object being cancelled. So evidence_span could be \"रद्द करण्यात येत आहे\". Must be exact substring from input. The input sentence: \"खालील लिपिक-टंकलेखकाची बदली प्रशासकीय कारणास्तव रद्द करण्यात येत आहे:\" So we can pick \"रद्द करण्यात येत आहे\". That is present.\n\ncancelled_object: the noun being cancelled: \"बदली\". Could also be \"लिपिक-टंकलेखकाची बदली\". The noun is \"बदली\". We'll output \"बदली\". Gloss_en: literal translation: \"The transfer of the following clerk-typist is being cancelled for administrative reasons.\"\n\nConfidence: high, say 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.288738237,
+   "prompt_tokens": 787,
+   "prompt_time": 0.051192928,
+   "completion_tokens": 430,
+   "completion_time": 0.899220599,
+   "total_tokens": 1217,
+   "total_time": 0.950413527,
+   "completion_tokens_details": {
+    "reasoning_tokens": 365
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyfw50n4ehf8811txyywk4az",
+   "seed": 1067902092
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "85a8298da39546ebec3cb943",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"रकाना क्रमांक १२ व 13\",\"gloss_en\":\"In annexure “A” of Government Decision No. TEEM-2020/Pr.No.98/Tanshi-4 dated 23/07/2020, entry No.120, the numbers opposite the name of Mr. Babnarav Pachpute Vichardhara Trust’s Group of Institutions (Integrated Campus), Kasti, Shri Gonda, Ahmadnagar district, in rows 12 and 13 are being corrected from “12” and “-6” to “15” and “-3” respectively.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-2aad8314-85cc-4c79-b805-2a1cd37b4879",
+  "object": "chat.completion",
+  "created": 1785054751,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे\",\"cancelled_object\":\"रकाना क्रमांक १२ व 13\",\"gloss_en\":\"In annexure “A” of Government Decision No. TEEM-2020/Pr.No.98/Tanshi-4 dated 23/07/2020, entry No.120, the numbers opposite the name of Mr. Babnarav Pachpute Vichardhara Trust’s Group of Institutions (Integrated Campus), Kasti, Shri Gonda, Ahmadnagar district, in rows 12 and 13 are being corrected from “12” and “-6” to “15” and “-3” respectively.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence: \"शासननिर्णय : शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९८/तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व १३ मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे.\"\n\nInterpretation: This is a government decision that amends an annexure entry: changing numbers from \"12\" and \"-6\" to \"15\" and \"-3\". This is a modification (amendment) to a prior order's annexure. It does not cancel the prior order itself, just amends a part (the annexure entry). So type = AMENDS.\n\nTarget index: The prior GR mentioned is #1 (the only candidate). So target_index = 1.\n\nEvidence_span: need exact substring that shows amendment. Likely \"अ.क्र.१२० ... अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे\". The phrase \"शुधरना करण्यात येत आहे\" indicates amendment. So evidence_span could be \"अ.क्र.१२० ... अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे\". Must be exact substring from input. Let's copy exact part: The sentence includes \"... अ.क्र.१२० समोरील ... रकाना क्रमांक १२ व १३ मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे.\"\n\nThus evidence_span = \"अ.क्र.१२० समोरील ... रकाना क्रमांक १२ व १३ मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे\". But need exact characters as in input. Let's extract from original:\n\nOriginal: \"शासननिर्णय : शासन निर्णय क्रमांक टीईएम-२०२०/प्र.क्र.९८/तांशि-४, दिनांक २३/०७/२०२० सोबतच्या Annexure “A” मधील अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे.\"\n\nNote there is \"13\" not \"१३\"? Actually input shows \"13\". We'll copy exactly: \"अ.क्र.१२० समोरील ... रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे\". Need exact substring. Let's take: \"अ.क्र.१२० समोरील ... रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे\". But we cannot include ellipsis. Must be exact contiguous substring. Let's locate contiguous part: Starting from \"अ.क्र.१२० समोरील मा. श्री. बबनराव पाचपुते विचारधारा ट्रस्टचे ग्रुप ऑफ इन्स्टिट्युशन्स (इंटिग्रेटेड कँपस), काष्टी, श्रीगोंदा, जि. अहमदनगर या संस्थेच्या नावासमोरील रकाना क्रमांक १२ व 13 मध्ये अनुक्रमे “१२” व “-६” ऐवजी “१५” व “-३” अशी सुधारणा करण्यात येत आहे.\"\n\nThus evidence_span = that whole phrase. We'll use that.\n\nCancelled_object: The object being amended is the \"रकाना क्रमांक १२ व 13\" i.e., the entries numbers. So cancelled_object? Actually it's being changed, not cancelled. For AMENDS, cancelled_object field expects the noun that is cancelled/amended. Could be \"रकाना क्रमांक १२ व 13\". We'll put \"रकाना क्रमांक १२ व 13\". Or maybe \"अ.क्र.१२०\". But the amendment is to the numbers. We'll choose \"रकाना क्रमांक १२ व 13\".\n\nGloss_en: literal translation: \"In the annexure “A” of Government Decision No. TEEM-2020/Pr.No.98/Tanshi-4 dated 23/07/2020, entry No.120, the numbers opposite the name of Mr. Babnarav Pachpute Vichardhara Trust’s Group of Institutions (Integrated Campus), Kasti, Shri Gonda, Ahmadnagar district, in rows 12 and 13 are being corrected from “12” and “-6” to “15” and “-3” respectively.\"\n\nConfidence high, say 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.28206492,
+   "prompt_tokens": 951,
+   "prompt_time": 0.021368905,
+   "completion_tokens": 1493,
+   "completion_time": 3.09540559,
+   "total_tokens": 2444,
+   "total_time": 3.116774495,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1220
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyervq0tftr9anarsh34bz7k",
+   "seed": 1053702085
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "50b4c29ae64ac461da3ac125",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आवश्यक सुधारणा\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"A government decision is issued on 06-08-2024 to make necessary amendments in the government decision.\",\"confidence\":0.85}",
+ "raw": {
+  "id": "chatcmpl-448d2686-484a-4d14-aaa8-f56cc62fa53c",
+  "object": "chat.completion",
+  "created": 1785055114,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"आवश्यक सुधारणा\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"A government decision is issued on 06-08-2024 to make necessary amendments in the government decision.\",\"confidence\":0.85}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"शासन निर्णयामध्ये आवश्यक सुधारणा करण्याकरिता दि.०६.०८.२०२४ रोजी शासन निर्णय निर्गमीत\"\n\nTranslation: \"A government decision is issued on 06-08-2024 to make necessary amendments in the government decision.\"\n\nIt says a decision is issued to make necessary amendments. It references a prior GR? The candidate list includes one prior GR dated 2024-08-06, number शिष्ट्यवृ-२०२४/प्र.क्र.२४३/तांशि-४. The sentence says \"शासन निर्णयामध्ये आवश्यक सुधारणा करण्याकरिता दि.०६.०८.२०२४ रोजी शासन निर्णय निर्गमीत\". This seems to be a reference to a new decision being issued on that date, but does it modify the prior GR? It says \"to make necessary amendments in the government decision\". It could be an amendment to the prior decision. However, the sentence itself is the issuance of a new decision, not necessarily cancelling the prior. It says \"necessary improvements\" (सुधारणा) but not explicitly cancelling. It could be an amendment (AMENDS) to the prior GR. The phrase \"आवश्यक सुधारणा करण्याकरिता\" indicates purpose: to make necessary amendments. That suggests the new decision amends the prior decision. So type AMENDS.\n\nTarget index: 1 (since only one candidate). Evidence span: need exact substring that shows amendment. The phrase \"आवश्यक सुधारणा करण्याकरिता\" indicates amendment. Or \"शासन निर्णय निर्गमीत\". Which part indicates amendment? Probably \"आवश्यक सुधारणा\". So evidence_span = \"आवश्यक सुधारणा\". Cancelled_object: Since it's amendment, not cancellation. The object being amended is \"शासन निर्णय\". So cancelled_object should be null? For AMENDS, we can put the object being amended? The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. For AMENDS, it's the object being amended. So we can put \"शासन निर्णय\". Gloss_en: \"A government decision is issued on 06-08-2024 to make necessary amendments in the government decision.\"\n\nConfidence maybe 0.85.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.15859978,
+   "prompt_tokens": 815,
+   "prompt_time": 0.013861168,
+   "completion_tokens": 548,
+   "completion_time": 1.222834827,
+   "total_tokens": 1363,
+   "total_time": 1.236695995,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 478
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_84bf0227ec",
+  "x_groq": {
+   "id": "req_01kyes6vjeexjvm4pt5e05r8z1",
+   "seed": 990086535
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "1b7efda7c16ce609a7ebe159",
+ "role": "reasoning"
+}

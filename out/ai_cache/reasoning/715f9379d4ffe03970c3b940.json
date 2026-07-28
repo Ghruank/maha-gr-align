@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"बीसीसी ११२२/प्र.क्र.१२८/१६-ब\",\"cancelled_object\":null,\"gloss_en\":\"Reference: 1. Maharashtra ... 2. General Administration Department, Government Decision No. BCC 1122/Pr.No.128/16-B, dated 21-09-2022 ...\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-a0f0a15c-e319-46ce-a83b-d9f9d620a4bd",
+  "object": "chat.completion",
+  "created": 1785054517,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"बीसीसी ११२२/प्र.क्र.१२८/१६-ब\",\"cancelled_object\":null,\"gloss_en\":\"Reference: 1. Maharashtra ... 2. General Administration Department, Government Decision No. BCC 1122/Pr.No.128/16-B, dated 21-09-2022 ...\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence is a \"संदर्भ :\" list of references. It lists prior GRs. No operative change. So type is REFERENCES. target_index should be the index of the prior GR that is referenced. There is one candidate prior GR (index 1). Since it's referenced, we set target_index = 1. evidence_span: need exact substring that shows the reference. Could be \"बीसीसी ११२२/प्र.क्र.१२८/१६-ब\" appears twice. Choose one occurrence. Provide exact substring. For example \"बीसीसी ११२२/प्र.क्र.१२८/१६-ब\". cancelled_object null. gloss_en literal translation: \"Reference: 1. Maharashtra ... 2. General Administration Department, Government Decision No. BCC 1122/Pr.No.128/16-B, dated 21.9.2022 ...\". Provide translation. confidence maybe 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287408391,
+   "prompt_tokens": 950,
+   "prompt_time": 0.040243377,
+   "completion_tokens": 302,
+   "completion_time": 0.619296397,
+   "total_tokens": 1252,
+   "total_time": 0.659539774,
+   "completion_tokens_details": {
+    "reasoning_tokens": 202
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01kyermnj4fnvbrtddvrstqv6v",
+   "seed": 1559888757
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "715f9379d4ffe03970c3b940",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"evidence_span\":\"रद्द करण्यात येत आहे\",\"gloss_en\":\"The referenced Government Resolution No. 3 dated 28‑12‑2010 is being cancelled with retrospective effect.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-0a37266f-5866-4aa9-9684-7f37a957512f",
+  "object": "chat.completion",
+  "created": 1785051033,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"evidence_span\":\"रद्द करण्यात येत आहे\",\"gloss_en\":\"The referenced Government Resolution No. 3 dated 28‑12‑2010 is being cancelled with retrospective effect.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify relationship toward any other government resolution it mentions.\n\nSentence: \"शासन निर्णय: संदर्भाधीन क्र.३ येथील दि.२८.१२.२०१० रोजीचा शासन निर्णय पूर्वलक्षी प्रभावाने रद्द करण्यात येत आहे.\"\n\nTranslation: \"Government resolution: The referenced No.3, the government resolution dated 28-12-2010, is being cancelled with retrospective effect.\"\n\nThus it supersedes (cancels) a prior order. So type: SUPERSEDES.\n\nEvidence span: need exact substring that justifies it. Likely \"रद्द करण्यात येत आहे\" indicates cancellation. Also \"संदर्भाधीन क्र.३ ... शासन निर्णय\" indicates referencing prior. The operative verb is \"रद्द\". So evidence_span could be \"रद्द करण्यात येत आहे\". Provide that.\n\nGloss_en: \"The referenced Government Resolution No.3 dated 28-12-2010 is being cancelled with retrospective effect.\"\n\nConfidence high, say 0.99.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314634121,
+   "prompt_tokens": 398,
+   "prompt_time": 0.019225127,
+   "completion_tokens": 275,
+   "completion_time": 0.58623472,
+   "total_tokens": 673,
+   "total_time": 0.605459847,
+   "completion_tokens_details": {
+    "reasoning_tokens": 215
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_0708ac49a5",
+  "x_groq": {
+   "id": "req_01kyenab9yfwgsekgg5tm3yada",
+   "seed": 637691916
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e87bc13855ac42dd9a8820c4",
+ "role": "reasoning"
+}

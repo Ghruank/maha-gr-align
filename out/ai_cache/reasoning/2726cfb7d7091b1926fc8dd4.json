@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्रमांक १ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Because there was no arrangement for handling complaints of teachers and other staff in privately funded/partially funded schools and court cases were increasing, the High and Technical Education Department formed a grievance redressal committee as per the government decision dated 18/12/2018 and, on the same basis, formed a grievance redressal committee under reference number 1's government decision and reference number 2's amendment for handling complaints of teachers and other staff of recognized private schools; the Education Commissioner issued related instructions.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-335067a1-28bd-4004-b7fb-056ee4f6e919",
+  "object": "chat.completion",
+  "created": 1785055191,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्रमांक १ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Because there was no arrangement for handling complaints of teachers and other staff in privately funded/partially funded schools and court cases were increasing, the High and Technical Education Department formed a grievance redressal committee as per the government decision dated 18/12/2018 and, on the same basis, formed a grievance redressal committee under reference number 1's government decision and reference number 2's amendment for handling complaints of teachers and other staff of recognized private schools; the Education Commissioner issued related instructions.\",\"confidence\":0.99}",
+     "reasoning": "We need to determine relationship. Sentence describes that because no arrangement for complaints, they formed a grievance redressal committee per a government decision dated 18/12/2018, and also per prior decision reference number 1 and 2 etc. It mentions \"वरील संदर्भ क्रमांक १ च्या शासन निर्णयान्वये व २ च्या शुध्दीपत्रकान्वये मान्यताप्राप्त ... तक्रार निवारण समिती गठीत करण्यात आली आहे.\" So it is forming a committee under prior decisions. This is not cancelling anything, just referencing prior decisions and forming committee per them. So relationship is REFERENCES. target_index should be 1 (the only candidate). evidence_span: need exact substring that shows reference. Could be \"संदर्भ क्रमांक १ च्या शासन निर्णयान्वये\". That is in sentence. Provide that as evidence_span. cancelled_object null. gloss_en literal translation: \"In view of the lack of arrangement for handling complaints of teachers and other staff in privately funded/partially funded schools, and the increase in court cases, the High and Technical Education Department has formed a grievance redressal committee as per the government decision dated 18/12/2018, and also under reference number 1's government decision and reference number 2's amendment, a grievance redressal committee has been formed for handling complaints of teachers and other staff of recognized private funded/... etc.\" Provide confidence high 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282997909,
+   "prompt_tokens": 1060,
+   "prompt_time": 0.029965451,
+   "completion_tokens": 463,
+   "completion_time": 1.038994046,
+   "total_tokens": 1523,
+   "total_time": 1.068959497,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 306
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyes96rkfgeakr0hg0atpfkk",
+   "seed": 615468474
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2726cfb7d7091b1926fc8dd4",
+ "role": "reasoning"
+}

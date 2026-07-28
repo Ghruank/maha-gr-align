@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम रद्द करुन\",\"cancelled_object\":\"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम\",\"gloss_en\":\"The prefabricated building construction approved under order No.1 is cancelled and, instead, the building will be constructed as a permanent RCC structure to be used as a Centre of Excellence, and this has been requested to be included in the construction approved by the government order dated 23-08-2019.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-0619b765-f3eb-4241-85bf-c2dc478cfc16",
+  "object": "chat.completion",
+  "created": 1785054913,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम रद्द करुन\",\"cancelled_object\":\"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम\",\"gloss_en\":\"The prefabricated building construction approved under order No.1 is cancelled and, instead, the building will be constructed as a permanent RCC structure to be used as a Centre of Excellence, and this has been requested to be included in the construction approved by the government order dated 23-08-2019.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GRs. The sentence mentions \"वाचा क्र.१\", \"वाचा क्र.३\", \"संदर्भ क्र.४\". But candidate list only includes one prior GR: #1 dated 2021-01-14. The sentence includes \"वाचा क्र.१\" and \"वाचा क्र.३\" etc. The candidate list is only #1, which likely corresponds to \"वाचा क्र.१\". The sentence says: \"विद्यापीठाची तात्पुरती व्यवस्था होण्याकरीता प्रि-फॅब्रिकेटेड बिल्डिंग बांधकाम करण्याकरीता वाचा क्र.१ येथील शासन निर्णयान्वये मान्यता देण्यात आली होती.\" So earlier there was approval for prefabricated building. Then later they decided to cancel that prefabricated building and instead build RCC structure. So they are cancelling the prefabricated building construction. That is a cancellation of a specific action (construction) that was approved under prior GR. According to trap 2, if the sentence cancels a construction (approval) made under prior GR, that prior GR is not superseded; it's AMENDS. So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase \"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम रद्द करुन\" is the operative phrase. So evidence_span = \"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम रद्द करुन\". Cancelled_object: the noun being cancelled: \"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम\". Could be \"बांधकाम\". We'll put \"प्रि-फ्रॅब्रिकेटेड बिल्डिंग बांधकाम\". Gloss_en: literal translation: \"Cancellation of the prefabricated building construction\". Provide full translation of sentence? Should be literal English translation of the sentence. Might be long. But we can give a concise translation: \"The prefabricated building construction approved under order No.1 is cancelled and, instead, the building will be constructed as a permanent RCC structure to be used as a Centre of Excellence, and this has been requested to be included in the construction approved by the government order dated 23-08-2019.\" That's okay.\n\nConfidence high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282606364,
+   "prompt_tokens": 1160,
+   "prompt_time": 0.067070894,
+   "completion_tokens": 637,
+   "completion_time": 1.5884209089999999,
+   "total_tokens": 1797,
+   "total_time": 1.6554918029999999,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 501
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyes0pw2eqntpjxv46h0mqn7",
+   "seed": 426563874
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "14b812f9daa99796f875d5a5",
+ "role": "reasoning"
+}

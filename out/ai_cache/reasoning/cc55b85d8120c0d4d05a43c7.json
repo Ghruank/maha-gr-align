@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात आलेली आहे\",\"cancelled_object\":\"नियुक्ती\",\"gloss_en\":\"The appointment of members appointed by the state government to the regulatory board of the government engineering institution under reference numbers (1) and (2) has been cancelled under the government decision dated 10.01.2020 (reference number (3)).\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-0606d813-0a1b-4e72-bd64-ffd337c569e7",
+  "object": "chat.completion",
+  "created": 1785054728,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात आलेली आहे\",\"cancelled_object\":\"नियुक्ती\",\"gloss_en\":\"The appointment of members appointed by the state government to the regulatory board of the government engineering institution under reference numbers (1) and (2) has been cancelled under the government decision dated 10.01.2020 (reference number (3)).\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR(s). The sentence is in Marathi. Let's translate roughly:\n\n\"2. The term of the regulatory board appointed under the government decision mentioned in reference number (1) will end at the end of 2020. Since the appointment of members and chairperson of the regulatory board (Board of Governance- BoG) of 6 state engineering colleges, 2 government-owned 100% funded engineering colleges and 1 hotel management and catering technology college is under consideration, the appointment of members appointed by the state government to the regulatory board of the government engineering institution under reference numbers (1) and (2) is, under the government decision dated 10.01.2020 (reference number (3)), cancelled.\"\n\nSo the sentence says that the appointment of members appointed by the state government to the regulatory board under reference numbers (1) and (2) is cancelled under the decision dated 10.01.2020 (reference number (3)). The candidate prior GR is the one dated 2020-01-10, number संकीर्ण-११११/(०२/२०)/तांशि-२.\n\nThus the sentence cancels appointments made under that prior GR. According to trap 2, if the sentence cancels appointments made under a prior GR, that GR is not superseded; it's an amendment (AMENDS). So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The sentence includes \"...रद्द करण्यात आलेली आहे.\" The phrase \"रद्द करण्यात आलेली आहे\" indicates cancellation. Also includes reference to the prior GR: \"संदर्भ क्रमांक (३) येथील दिनांक १०.०१.२०२० च्या शासन निर्णयान्वये\". The exact substring that shows cancellation: \"रद्द करण्यात आलेली आहे\". That is present. Cancelled_object: the noun being cancelled is \"नियामक मंडळावर राज्य शासनाद्वारे नियुक्त केलेल्या सदस्यांची नियुक्ती\" i.e., \"appointment of members\". The noun could be \"नियुक्ती\". So cancelled_object = \"नियुक्ती\". Gloss_en: literal translation: \"The appointment of members appointed by the state government to the regulatory board of the government engineering institution under reference numbers (1) and (2) has been cancelled under the government decision dated 10.01.2020 (reference number (3)).\"\n\nConfidence high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.319565218,
+   "prompt_tokens": 1007,
+   "prompt_time": 0.049496827,
+   "completion_tokens": 617,
+   "completion_time": 1.292579384,
+   "total_tokens": 1624,
+   "total_time": 1.342076211,
+   "completion_tokens_details": {
+    "reasoning_tokens": 517
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c652c0ffaa",
+  "x_groq": {
+   "id": "req_01kyerv28pfsdv39r374mpbggk",
+   "seed": 1474247371
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "cc55b85d8120c0d4d05a43c7",
+ "role": "reasoning"
+}

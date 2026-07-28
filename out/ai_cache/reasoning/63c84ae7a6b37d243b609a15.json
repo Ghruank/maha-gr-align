@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दिनांक २२/२/२०१८ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the government decision dated 22/2/2018, some improvements have been made.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-c7da45ba-b202-484b-b134-856347910774",
+  "object": "chat.completion",
+  "created": 1785054808,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"दिनांक २२/२/२०१८ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"According to the government decision dated 22/2/2018, some improvements have been made.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence relative to prior GR(s). The sentence describes a scheme, mentions that \"या विभागाच्या दिनांक ७/१०/२०१७ व दिनांक २२/२/२०१८ च्या शासन निर्णयान्वये काही सुधारणा करण्यात आलेल्या आहेत.\" It references prior decisions (government orders) dated 7/10/2017 and 22/2/2018. The candidate list includes GR dated 2018-02-22, number संकीर्ण-२०१७/प्र.क्र.४०७/ तांशि-४. The sentence says \"या विभागाच्या दिनांक ... च्या शासन निर्णयान्वये काही सुधारणा करण्यात आलेल्या आहेत.\" That's a reference to prior decisions, not a cancellation or amendment. It just says improvements were made under those decisions. So relationship is REFERENCES. target_index should be 1 (since only one candidate). evidence_span: need exact substring that shows reference. The phrase \"दिनांक २२/२/२०१८ च्या शासन निर्णयान्वये\" is in the sentence. That references the prior GR. So evidence_span = \"दिनांक २२/२/२०१८ च्या शासन निर्णयान्वये\". Cancelled_object null. Gloss_en: literal translation. Provide translation. Confidence high, maybe 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.27955719,
+   "prompt_tokens": 1061,
+   "prompt_time": 0.026116194,
+   "completion_tokens": 351,
+   "completion_time": 0.759915181,
+   "total_tokens": 1412,
+   "total_time": 0.786031375,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 274
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01kyerxh7mfg68yf929j33th59",
+   "seed": 2127490288
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "63c84ae7a6b37d243b609a15",
+ "role": "reasoning"
+}

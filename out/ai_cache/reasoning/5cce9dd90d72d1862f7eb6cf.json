@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र.१ वरील शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"The departmental promotion committee No.1, formed for preparing the selection list for promotion of the posts of Under Secretary, Senior Assistant, Section Officer and Selection Category Junior Accountant in the Ministry service, is being constituted under the government decision referred to as No.1 by this order.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-8a1494bf-5689-4930-8036-ee609fcadddf",
+  "object": "chat.completion",
+  "created": 1785091928,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र.१ वरील शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"The departmental promotion committee No.1, formed for preparing the selection list for promotion of the posts of Under Secretary, Senior Assistant, Section Officer and Selection Category Junior Accountant in the Ministry service, is being constituted under the government decision referred to as No.1 by this order.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"मंत्रालयीन सेवेतील अवर सचिव, वरिष्ठ स्वीय सहायक, कक्ष अधिकारी व निवडश्रेणी लघुलेखक या संवर्गातील पदावर पदोन्नतीच्या प्रयोजनार्थ निवडसूची तयार करण्यासाठी गठीत करण्यात आलेल्या विभागीय पदोन्नती समिती क्र.१ चे संदर्भाधिन क्र.१ वरील शासन निर्णय या आदेशान्वये अधिक्रमित करण्यात येत आहे.\"\n\nInterpretation: It says that the departmental promotion committee (number 1) formed for preparing a selection list for promotion of certain posts is being constituted (more precisely \"अधिक्रमित\" means constituted/appointed) under the reference decision number 1 of the above government decision, by this order.\n\nThus it references a prior GR (the one listed). It does not cancel or amend anything. It's just referencing the prior decision to constitute the committee.\n\nThus type = REFERENCES.\n\ntarget_index = 1 (since only one candidate prior GR mentioned).\n\nevidence_span: need exact substring that shows relationship. The phrase \"संदर्भाधिन क्र.१ वरील शासन निर्णय या आदेशान्वये अधिक्रमित करण्यात येत आहे.\" The part indicating reference: \"संदर्भाधिन क्र.१ वरील शासन निर्णय\". That is the reference.\n\ncancelled_object: null (since not cancelling).\n\ngloss_en: literal translation: \"The departmental promotion committee No.1, formed for preparing the selection list for promotion of the posts of Under Secretary, Senior Assistant, Section Officer and Selection Category Junior Accountant in the Ministry service, is being constituted under the government decision referred to as No.1 by this order.\"\n\nconfidence: high, maybe 0.98.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286176968,
+   "prompt_tokens": 871,
+   "prompt_time": 0.045259933,
+   "completion_tokens": 477,
+   "completion_time": 0.987679074,
+   "total_tokens": 1348,
+   "total_time": 1.032939007,
+   "completion_tokens_details": {
+    "reasoning_tokens": 368
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c800245357",
+  "x_groq": {
+   "id": "req_01kyfwabb1f7jaxy5fct5g6y6b",
+   "seed": 1035781798
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "5cce9dd90d72d1862f7eb6cf",
+ "role": "reasoning"
+}

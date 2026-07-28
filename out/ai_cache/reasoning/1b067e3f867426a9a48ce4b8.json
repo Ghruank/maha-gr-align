@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र. ४ येथील दि. ०२-०८-२०१९ च्या शासन परिपत्रकानुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to reference No.4 dated 02-08-2019 government circular, the appointment order provides that if the candidate does not join within the stipulated 30 days, or does not request an extension, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-5edc8951-cfb4-47f5-852b-a3d9f45769ff",
+  "object": "chat.completion",
+  "created": 1785054550,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधीन क्र. ४ येथील दि. ०२-०८-२०१९ च्या शासन परिपत्रकानुसार\",\"cancelled_object\":null,\"gloss_en\":\"According to reference No.4 dated 02-08-2019 government circular, the appointment order provides that if the candidate does not join within the stipulated 30 days, or does not request an extension, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence. The sentence is in Marathi. Let's translate roughly:\n\n\"2. According to the reference (संदर्भाधीन) No.4, dated 02-08-2019, the government circular, in the appointment order, it is provided that if the candidate does not join within the 30 days mentioned, or does not request an extension of time to join within the stipulated period, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\"\n\nSo the sentence is describing a provision that says the appointing authority shall cancel the appointment if candidate fails to join. This is a provision within the current order, referencing a prior circular (GR). It does not cancel the prior GR itself; it just references it and states a rule. So relationship: REFERENCES? It is citing prior GR (the circular) and stating a rule. It does not modify or supersede that prior GR. So type = REFERENCES.\n\ntarget_index: which prior GR? The list has one candidate: index 1. So target_index = 1.\n\nevidence_span: need exact substring that justifies type. Something like \"संदर्भाधीन क्र. ४ येथील दि. ०२-०८-२०१९ च्या शासन परिपत्रकानुसार\". That phrase shows referencing. So evidence_span = \"संदर्भाधीन क्र. ४ येथील दि. ०२-०८-२०१९ च्या शासन परिपत्रकानुसार\". Must be exact from sentence. Let's locate: The sentence starts \"२. संदर्भाधीन क्र. ४ येथील दि. ०२-०८-२०१९ च्या शासन परिपत्रकानुसार नियुक्ती आदेशात...\" So that substring is correct.\n\ncancelled_object: Since it's not cancelling anything, null.\n\ngloss_en: Provide literal English translation: \"According to reference No.4 dated 02-08-2019 government circular, the appointment order provides that if the candidate does not join within the stipulated 30 days, or does not request an extension, or does not join within the extended period, the appointing authority shall issue an order to cancel the appointment of the concerned candidate.\"\n\nconfidence: high, maybe 0.98.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.31480673,
+   "prompt_tokens": 910,
+   "prompt_time": 0.024288277,
+   "completion_tokens": 625,
+   "completion_time": 1.313028273,
+   "total_tokens": 1535,
+   "total_time": 1.33731655,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 483
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4140daa9c2",
+  "x_groq": {
+   "id": "req_01kyernnamfrhrgestezd36emq",
+   "seed": 1988598784
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "1b067e3f867426a9a48ce4b8",
+ "role": "reasoning"
+}

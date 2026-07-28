@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"श्रेणीवाढ/पद अवनत करणे/पद व्यपगत करणे असे प्रकार सर्रास होत असल्याचे दिसून येत\",\"cancelled_object\":null,\"gloss_en\":\"It appears that cases of promotion/demotion/cancellation of posts are occurring frequently.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-977ba5bc-e80e-4714-ba5d-1640af896f85",
+  "object": "chat.completion",
+  "created": 1785091617,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"श्रेणीवाढ/पद अवनत करणे/पद व्यपगत करणे असे प्रकार सर्रास होत असल्याचे दिसून येत\",\"cancelled_object\":null,\"gloss_en\":\"It appears that cases of promotion/demotion/cancellation of posts are occurring frequently.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"श्रेणीवाढ/पद अवनत करणे/पद व्यपगत करणे असे प्रकार सर्रास होत असल्याचे दिसून येत\"\n\nTranslation: \"It appears that cases of promotion/ demotion/ cancellation of posts are occurring frequently.\"\n\nThis is a statement, not an operative change. It does not cancel or amend any prior order. It just observes. It references prior GR? The candidate list includes one prior GR, but the sentence does not mention it explicitly. There's no mention of that GR number. So no relationship. So type = NONE. target_index null. evidence_span maybe the whole sentence? But need a substring that justifies type. For NONE, we can give a span that shows no operative language, maybe \"श्रेणीवाढ/पद अवनत करणे/पद व्यपगत करणे\". That indicates it's just describing. Provide cancelled_object null. Gloss_en: \"It appears that cases of promotion/demotion/cancellation of posts are occurring frequently.\" Confidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286568275,
+   "prompt_tokens": 817,
+   "prompt_time": 0.038088381,
+   "completion_tokens": 312,
+   "completion_time": 0.654005619,
+   "total_tokens": 1129,
+   "total_time": 0.692094,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 223
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01kyfw0vjce9zvr4z7059wbjrq",
+   "seed": 1166184329
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b1005f76222ada50b9e71cf3",
+ "role": "reasoning"
+}

@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भाधीन क्रमांक २ व ३\",\"cancelled_object\":null,\"gloss_en\":\"According to the provisions of the government circulars/decisions referred to as numbers 2 and 3, the listed under-secretaries are being unilaterally released from duties from 22/07/2019 to join the transfer department.\",\"confidence\":0.86}",
+ "raw": {
+  "id": "chatcmpl-8b42efa3-753f-406b-b05c-f7921877535c",
+  "object": "chat.completion",
+  "created": 1785091902,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भाधीन क्रमांक २ व ३\",\"cancelled_object\":null,\"gloss_en\":\"According to the provisions of the government circulars/decisions referred to as numbers 2 and 3, the listed under-secretaries are being unilaterally released from duties from 22/07/2019 to join the transfer department.\",\"confidence\":0.86}",
+     "reasoning": "We need to classify the sentence. Let's translate roughly: \"2. In this order, some officers have not yet been released from duties by the concerned departments, and some departments have requested extension/ suspension/ cancellation of officers' transfer to this department, and it is being invalidated. Following the provisions of the government circular/decision referred to in numbers 2 and 3, in the following table the listed under-secretaries are being unilaterally released from duties from date 22/07/2019 to join the transfer department...\"\n\nSo the sentence is about releasing officers from duties (कार्यमुक्त) unilaterally, based on prior circulars. It is not cancelling the prior order itself; it's acting under prior orders to release officers. It is not amending the prior order; it's implementing a release. It references prior GRs (numbers 2 and 3) but the sentence is operative: it says \"एकतर्फी कार्यमुक्त करण्यात येत आहे\". This is a decision to release officers, not just referencing. However the prior GR list only includes one candidate: GR dated 2019-06-12. The sentence mentions \"संदर्भाधीन क्रमांक २ व ३ येथील शासन परिपत्रक/ शासन निर्णयातील तरतूदीस अनुसरुन\". Those are references to other GRs (2 and 3) not listed in candidate list. The candidate list only has one GR. The sentence does not explicitly cancel that GR. It just follows its provisions. So relationship is REFERENCES (citing prior order) or maybe AMENDS? It does not modify the prior order; it just implements a release. So likely REFERENCES.\n\nWe need target_index: which candidate prior GR is being referenced? The sentence mentions \"संदर्भाधीन क्रमांक २ व ३\". Those are not the candidate list (only one). So maybe none of the listed candidates are referenced. So target_index null.\n\nThus type: REFERENCES? But if no target, maybe NONE. The instruction: \"You are given the sentence and a numbered list of prior GRs that a deterministic resolver has ALREADY matched inside it. Decide what relationship, if any, the sentence establishes.\" So we need to see if the sentence establishes a relationship to any of those prior GRs. The sentence mentions \"संदर्भाधीन क्रमांक २ व ३\". The candidate list is \"1. GR dated 2019-06-12\". That is not referenced. So relationship NONE.\n\nThus output: type NONE, target_index null, evidence_span maybe a phrase that shows no relationship? But need evidence_span: a substring justifying the type. For NONE, we can give a span that shows no reference to the candidate, maybe the whole sentence? But must be exact substring. Could give \"संदर्भाधीन क्रमांक २ व ३\". That shows references but not to candidate. But type NONE because not referencing candidate. However the instruction: \"target_index: <1-based index into the candidate list, or null>\" So null.\n\nEvidence_span: maybe \"संदर्भाधीन क्रमांक २ व ३\". That indicates references but not to candidate. That justifies NONE? Might be okay.\n\nCancelled_object: null.\n\nGloss_en: translate.\n\nConfidence: maybe 0.85.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281734867,
+   "prompt_tokens": 940,
+   "prompt_time": 0.023965977,
+   "completion_tokens": 786,
+   "completion_time": 1.818135173,
+   "total_tokens": 1726,
+   "total_time": 1.84210115,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 684
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01kyfw9h30f5t8h928c523940d",
+   "seed": 987400866
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "1f4d9e76feca6f2eb0312fb7",
+ "role": "reasoning"
+}

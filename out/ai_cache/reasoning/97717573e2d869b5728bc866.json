@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहेत\",\"cancelled_object\":\"अशासकीय सदस्यांच्या नियुक्त्या\",\"gloss_en\":\"The appointments of non-official members of the committee formed under the government decision dated 23.08.2021 are being cancelled under this government decision.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-b24bffad-464f-48a6-b84a-af3cba1eae7e",
+  "object": "chat.completion",
+  "created": 1785055014,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"रद्द करण्यात येत आहेत\",\"cancelled_object\":\"अशासकीय सदस्यांच्या नियुक्त्या\",\"gloss_en\":\"The appointments of non-official members of the committee formed under the government decision dated 23.08.2021 are being cancelled under this government decision.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"शासन निर्णय :- १) पुण्यश्लोक अहिल्यादेवी होळकर यांचे स्मारक उभारणी करण्यासंदर्भातील दि. २३.०८.२०२१ रोजीच्या शासन निर्णयान्वये गठित केलेल्या समितीतील अशासकीय सदस्यांच्या नियुक्त्या या शासन निर्णयान्वये रद्द करण्यात येत आहेत.\"\n\nInterpretation: It says that the appointments of non-official members of the committee formed under the government decision dated 23.08.2021 are being cancelled under this government decision.\n\nThus, it cancels appointments made under prior GR. According to trap 2, cancelling appointments made under prior GR is AMENDS, not SUPERSEDES. So type = AMENDS. target_index = 1 (since only one prior GR listed). evidence_span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात येत आहेत\" indicates cancellation. Also need mention of prior GR? The phrase \"दि. २३.०८.२०२१ रोजीच्या शासन निर्णयान्वये\" is the reference. The cancellation phrase: \"रद्द करण्यात येत आहेत\". So evidence_span could be \"रद्द करण्यात येत आहेत\". Must be exact substring from input. Yes.\n\ncancelled_object: the noun being cancelled: \"अशासकीय सदस्यांच्या नियुक्त्या\". So we output that.\n\ngloss_en: literal English translation: \"The appointments of non-official members of the committee formed under the government decision dated 23.08.2021 are being cancelled under this government decision.\"\n\nconfidence: high, say 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286784766,
+   "prompt_tokens": 841,
+   "prompt_time": 0.041582501,
+   "completion_tokens": 437,
+   "completion_time": 0.915048153,
+   "total_tokens": 1278,
+   "total_time": 0.956630654,
+   "completion_tokens_details": {
+    "reasoning_tokens": 352
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5781dfb07c",
+  "x_groq": {
+   "id": "req_01kyes3t1yf11962vdf6ed413a",
+   "seed": 820782716
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "97717573e2d869b5728bc866",
+ "role": "reasoning"
+}

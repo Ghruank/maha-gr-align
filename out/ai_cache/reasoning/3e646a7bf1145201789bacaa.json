@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"मान्यता रद्द करुन\",\"cancelled_object\":\"मान्यता\",\"gloss_en\":\"The administrative approval given to the Rs 44.70 crore budget for the Olympic building is cancelled and approval is given to the revised Rs 72.78 crore budget.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-250c0ec2-9476-4f2c-b6bd-11b37f2e905f",
+  "object": "chat.completion",
+  "created": 1785055373,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"मान्यता रद्द करुन\",\"cancelled_object\":\"मान्यता\",\"gloss_en\":\"The administrative approval given to the Rs 44.70 crore budget for the Olympic building is cancelled and approval is given to the revised Rs 72.78 crore budget.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence mentions prior GRs: \"संदर्भ क्र.१ येथील दि.२७.०३.२०२० च्या शासन निर्णयान्वये\" and later \"संदर्भ क्र.६ येथील दि.०५.१०.२०२३ च्या शासन निर्णयान्वये\". The candidate list only includes one prior GR: dated 2023-10-05, number ... So that corresponds to the second reference (reference 6). The sentence says: \"ऑलिम्पिक भवनाच्या रु.४४.७० कोटी खर्चाच्या अंदाजपत्रकास दिलेली प्रशासकीय मान्यता रद्द करुन सुधारीत रु.७२.७८ कोटीच्या अंदाजपत्रकास मान्यता देण्यात आली आहे.\" Also later: \"ऑलिम्पिक भवन बांधकामाच्या रू.४४.७० कोटीच्या अंदाजपत्रकास दिलेली मान्यता रद्द करून रू.७२.२८ कोटीच्या अंदजापत्रकास ... मान्यता दिली आहे.\"\n\nThus it cancels the prior administrative approval (मान्यता) for the budget of Rs 44.70 crore, and gives approval for revised budget. This is a cancellation of a prior approval under the prior GR. According to trap 2, if it cancels approvals made under prior GR, that prior GR is not superseded; it's AMENDS. So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. Could be \"मान्यता रद्द करुन\" or \"मान्यता रद्द करून\". Choose a phrase that includes cancellation. For example: \"मान्यता रद्द करुन\". That appears in sentence: \"... प्रशासकीय मान्यता रद्द करुन सुधारीत ...\". So evidence_span = \"मान्यता रद्द करुन\". Cancelled_object: the noun being cancelled is \"मान्यता\" (approval). Could also be \"प्रशासकीय मान्यता\". The noun is \"मान्यता\". We'll put \"मान्यता\". Gloss_en: literal translation: \"The administrative approval given to the Rs 44.70 crore budget for the Olympic building is cancelled and approval is given to the revised Rs 72.78 crore budget.\" Provide translation. Confidence maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283770389,
+   "prompt_tokens": 1073,
+   "prompt_time": 0.032157779,
+   "completion_tokens": 577,
+   "completion_time": 1.713273176,
+   "total_tokens": 1650,
+   "total_time": 1.745430955,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 491
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5082008e34",
+  "x_groq": {
+   "id": "req_01kyeseqtee19rpcbncxsebvg9",
+   "seed": 794763012
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "3e646a7bf1145201789bacaa",
+ "role": "reasoning"
+}

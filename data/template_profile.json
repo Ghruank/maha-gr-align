@@ -1,0 +1,480 @@
+{
+ "sampled_per_department": 700,
+ "seed": 7,
+ "departments": {
+  "Finance_Department": {
+   "sampled": 700,
+   "presence": {
+    "govt_of_maharashtra": {
+     "count": 698,
+     "rate": 0.9971
+    },
+    "department": {
+     "count": 698,
+     "rate": 0.9971
+    },
+    "mantralaya": {
+     "count": 600,
+     "rate": 0.8571
+    },
+    "reference_block": {
+     "count": 495,
+     "rate": 0.7071
+    },
+    "date_line": {
+     "count": 692,
+     "rate": 0.9886
+    },
+    "preamble": {
+     "count": 303,
+     "rate": 0.4329
+    },
+    "order_number": {
+     "count": 675,
+     "rate": 0.9643
+    },
+    "decision_header": {
+     "count": 262,
+     "rate": 0.3743
+    },
+    "signature": {
+     "count": 282,
+     "rate": 0.4029
+    }
+   },
+   "mean_position": {
+    "govt_of_maharashtra": 0.0488,
+    "department": 0.0537,
+    "mantralaya": 0.0919,
+    "date_line": 0.1236,
+    "preamble": 0.1853,
+    "order_number": 0.1258,
+    "decision_header": 0.3928,
+    "signature": 0.4788,
+    "reference_block": 0.1239
+   },
+   "numbered_conditions": {
+    "sequential": 362,
+    "non_sequential": 65,
+    "fused_ordinal_mr": 2,
+    "fused_ordinal_en": 5
+   }
+  },
+  "General_Administration_Department": {
+   "sampled": 700,
+   "presence": {
+    "govt_of_maharashtra": {
+     "count": 693,
+     "rate": 0.99
+    },
+    "department": {
+     "count": 698,
+     "rate": 0.9971
+    },
+    "mantralaya": {
+     "count": 695,
+     "rate": 0.9929
+    },
+    "reference_block": {
+     "count": 446,
+     "rate": 0.6371
+    },
+    "date_line": {
+     "count": 676,
+     "rate": 0.9657
+    },
+    "preamble": {
+     "count": 218,
+     "rate": 0.3114
+    },
+    "order_number": {
+     "count": 677,
+     "rate": 0.9671
+    },
+    "decision_header": {
+     "count": 227,
+     "rate": 0.3243
+    },
+    "signature": {
+     "count": 288,
+     "rate": 0.4114
+    }
+   },
+   "mean_position": {
+    "govt_of_maharashtra": 0.0486,
+    "department": 0.0541,
+    "mantralaya": 0.0913,
+    "date_line": 0.1587,
+    "order_number": 0.1289,
+    "reference_block": 0.1372,
+    "signature": 0.3067,
+    "decision_header": 0.394,
+    "preamble": 0.1796
+   },
+   "numbered_conditions": {
+    "sequential": 210,
+    "non_sequential": 123,
+    "fused_ordinal_mr": 2,
+    "fused_ordinal_en": 1
+   }
+  },
+  "Higher_and_Technical_Education_Department": {
+   "sampled": 700,
+   "presence": {
+    "govt_of_maharashtra": {
+     "count": 698,
+     "rate": 0.9971
+    },
+    "department": {
+     "count": 698,
+     "rate": 0.9971
+    },
+    "mantralaya": {
+     "count": 694,
+     "rate": 0.9914
+    },
+    "reference_block": {
+     "count": 604,
+     "rate": 0.8629
+    },
+    "date_line": {
+     "count": 694,
+     "rate": 0.9914
+    },
+    "preamble": {
+     "count": 471,
+     "rate": 0.6729
+    },
+    "order_number": {
+     "count": 557,
+     "rate": 0.7957
+    },
+    "decision_header": {
+     "count": 480,
+     "rate": 0.6857
+    },
+    "signature": {
+     "count": 150,
+     "rate": 0.2143
+    }
+   },
+   "mean_position": {
+    "govt_of_maharashtra": 0.0539,
+    "department": 0.0604,
+    "mantralaya": 0.0907,
+    "date_line": 0.1174,
+    "order_number": 0.1999,
+    "reference_block": 0.1084,
+    "preamble": 0.1467,
+    "decision_header": 0.3093,
+    "signature": 0.4111
+   },
+   "numbered_conditions": {
+    "sequential": 377,
+    "non_sequential": 79,
+    "fused_ordinal_mr": 13,
+    "fused_ordinal_en": 46
+   }
+  },
+  "School_Education_and_Sports_Department": {
+   "sampled": 700,
+   "presence": {
+    "govt_of_maharashtra": {
+     "count": 700,
+     "rate": 1.0
+    },
+    "department": {
+     "count": 700,
+     "rate": 1.0
+    },
+    "mantralaya": {
+     "count": 697,
+     "rate": 0.9957
+    },
+    "reference_block": {
+     "count": 585,
+     "rate": 0.8357
+    },
+    "date_line": {
+     "count": 694,
+     "rate": 0.9914
+    },
+    "preamble": {
+     "count": 544,
+     "rate": 0.7771
+    },
+    "order_number": {
+     "count": 688,
+     "rate": 0.9829
+    },
+    "decision_header": {
+     "count": 425,
+     "rate": 0.6071
+    },
+    "signature": {
+     "count": 215,
+     "rate": 0.3071
+    }
+   },
+   "mean_position": {
+    "govt_of_maharashtra": 0.053,
+    "department": 0.0615,
+    "mantralaya": 0.0995,
+    "reference_block": 0.1142,
+    "date_line": 0.1203,
+    "order_number": 0.0887,
+    "preamble": 0.221,
+    "decision_header": 0.4534,
+    "signature": 0.4858
+   },
+   "numbered_conditions": {
+    "sequential": 428,
+    "non_sequential": 100,
+    "fused_ordinal_mr": 9,
+    "fused_ordinal_en": 3
+   }
+  }
+ },
+ "order_rules": [
+  {
+   "first": "department",
+   "second": "mantralaya",
+   "documents": 2686,
+   "consistency": 0.9743
+  },
+  {
+   "first": "govt_of_maharashtra",
+   "second": "mantralaya",
+   "documents": 2681,
+   "consistency": 0.9698
+  },
+  {
+   "first": "department",
+   "second": "order_number",
+   "documents": 2597,
+   "consistency": 0.9869
+  },
+  {
+   "first": "govt_of_maharashtra",
+   "second": "order_number",
+   "documents": 2592,
+   "consistency": 0.9934
+  },
+  {
+   "first": "department",
+   "second": "reference_block",
+   "documents": 2130,
+   "consistency": 1.0
+  },
+  {
+   "first": "govt_of_maharashtra",
+   "second": "reference_block",
+   "documents": 2128,
+   "consistency": 0.9986
+  },
+  {
+   "first": "mantralaya",
+   "second": "reference_block",
+   "documents": 2030,
+   "consistency": 0.998
+  },
+  {
+   "first": "department",
+   "second": "preamble",
+   "documents": 1536,
+   "consistency": 1.0
+  },
+  {
+   "first": "govt_of_maharashtra",
+   "second": "preamble",
+   "documents": 1535,
+   "consistency": 0.9993
+  },
+  {
+   "first": "date_line",
+   "second": "preamble",
+   "documents": 1528,
+   "consistency": 0.9843
+  },
+  {
+   "first": "mantralaya",
+   "second": "preamble",
+   "documents": 1525,
+   "consistency": 0.9987
+  },
+  {
+   "first": "department",
+   "second": "decision_header",
+   "documents": 1394,
+   "consistency": 0.9993
+  },
+  {
+   "first": "govt_of_maharashtra",
+   "second": "decision_header",
+   "documents": 1393,
+   "consistency": 1.0
+  },
+  {
+   "first": "mantralaya",
+   "second": "decision_header",
+   "documents": 1388,
+   "consistency": 0.9964
+  },
+  {
+   "first": "date_line",
+   "second": "decision_header",
+   "documents": 1387,
+   "consistency": 0.982
+  },
+  {
+   "first": "reference_block",
+   "second": "preamble",
+   "documents": 1279,
+   "consistency": 1.0
+  },
+  {
+   "first": "reference_block",
+   "second": "decision_header",
+   "documents": 1217,
+   "consistency": 0.9967
+  },
+  {
+   "first": "preamble",
+   "second": "decision_header",
+   "documents": 1212,
+   "consistency": 0.9959
+  }
+ ],
+ "order_free_variation": [
+  {
+   "first": "govt_of_maharashtra",
+   "second": "department",
+   "documents": 2789,
+   "consistency": 0.8921
+  },
+  {
+   "first": "department",
+   "second": "date_line",
+   "documents": 2756,
+   "consistency": 0.9278
+  },
+  {
+   "first": "govt_of_maharashtra",
+   "second": "date_line",
+   "documents": 2751,
+   "consistency": 0.9128
+  },
+  {
+   "first": "mantralaya",
+   "second": "date_line",
+   "documents": 2649,
+   "consistency": 0.9169
+  },
+  {
+   "first": "order_number",
+   "second": "date_line",
+   "documents": 2560,
+   "consistency": 0.752
+  },
+  {
+   "first": "order_number",
+   "second": "mantralaya",
+   "documents": 2491,
+   "consistency": 0.7395
+  },
+  {
+   "first": "date_line",
+   "second": "reference_block",
+   "documents": 2125,
+   "consistency": 0.64
+  },
+  {
+   "first": "order_number",
+   "second": "reference_block",
+   "documents": 1957,
+   "consistency": 0.7496
+  },
+  {
+   "first": "order_number",
+   "second": "preamble",
+   "documents": 1390,
+   "consistency": 0.8647
+  },
+  {
+   "first": "order_number",
+   "second": "decision_header",
+   "documents": 1249,
+   "consistency": 0.8911
+  },
+  {
+   "first": "govt_of_maharashtra",
+   "second": "signature",
+   "documents": 935,
+   "consistency": 0.9422
+  },
+  {
+   "first": "department",
+   "second": "signature",
+   "documents": 935,
+   "consistency": 0.9487
+  },
+  {
+   "first": "date_line",
+   "second": "signature",
+   "documents": 920,
+   "consistency": 0.8978
+  },
+  {
+   "first": "order_number",
+   "second": "signature",
+   "documents": 916,
+   "consistency": 0.8854
+  },
+  {
+   "first": "mantralaya",
+   "second": "signature",
+   "documents": 844,
+   "consistency": 0.9443
+  },
+  {
+   "first": "reference_block",
+   "second": "signature",
+   "documents": 692,
+   "consistency": 0.8974
+  },
+  {
+   "first": "preamble",
+   "second": "signature",
+   "documents": 523,
+   "consistency": 0.8719
+  },
+  {
+   "first": "decision_header",
+   "second": "signature",
+   "documents": 422,
+   "consistency": 0.609
+  }
+ ],
+ "canonical_order": [
+  "govt_of_maharashtra",
+  "department",
+  "mantralaya",
+  "reference_block",
+  "date_line",
+  "order_number",
+  "preamble",
+  "decision_header",
+  "signature"
+ ],
+ "canonical_order_positions": {
+  "govt_of_maharashtra": 0.0511,
+  "department": 0.0574,
+  "mantralaya": 0.0934,
+  "date_line": 0.1298,
+  "preamble": 0.1853,
+  "order_number": 0.1327,
+  "decision_header": 0.3827,
+  "signature": 0.4165,
+  "reference_block": 0.1196
+ }
+}

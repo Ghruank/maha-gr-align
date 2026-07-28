@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"कोणतीही कार्यवाही रद्द समजण्यात यावी\",\"cancelled_object\":\"कार्यवाही\",\"gloss_en\":\"Any action taken under reference No.3 of the decision dated 18-02-2021 shall be deemed cancelled.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-9b69b060-2494-4778-84cb-12f535174b49",
+  "object": "chat.completion",
+  "created": 1785054120,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"कोणतीही कार्यवाही रद्द समजण्यात यावी\",\"cancelled_object\":\"कार्यवाही\",\"gloss_en\":\"Any action taken under reference No.3 of the decision dated 18-02-2021 shall be deemed cancelled.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"५. संदर्भाधिन क्र.३ येथील दि.१८.०२.२०२१ च्या शासन निर्णयानुसार करण्यात आलेली कोणतीही कार्यवाही रद्द समजण्यात यावी.\"\n\nTranslation: \"5. Any action taken under reference No.3 of the decision dated 18.02.2021 shall be considered cancelled.\"\n\nWe have candidate prior GR: #1 is GR dated 2021-02-18, number बीसीसी २०१८/प्र.क्र.३६६/१६-ब.\n\nThe sentence says any action taken under that prior decision is to be considered cancelled. This is cancelling actions taken under that prior order, not cancelling the order itself. According to trap 2, if cancelling appointments, approvals, etc made under prior GR, that GR is not superseded; it's AMENDS. The cancelled object is \"कार्यवाही\" (action/proceedings). So type AMENDS, target_index 1, evidence_span is the phrase that indicates cancellation: \"रद्द समजण्यात यावी\". But need exact substring that shows cancellation. The phrase \"रद्द समजण्यात यावी\" is the operative. Could also include \"कोणतीही कार्यवाही रद्द समजण्यात यावी\". The evidence_span must be exact substring from input. Let's pick \"कोणतीही कार्यवाही रद्द समजण्यात यावी\". That includes the object and cancellation.\n\nCancelled_object: \"कार्यवाही\". Provide in Marathi noun.\n\nGloss_en: \"Any action taken under reference No.3 of the decision dated 18-02-2021 shall be deemed cancelled.\"\n\nConfidence high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.280068049,
+   "prompt_tokens": 823,
+   "prompt_time": 0.015795876,
+   "completion_tokens": 432,
+   "completion_time": 0.936833351,
+   "total_tokens": 1255,
+   "total_time": 0.952629227,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 353
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01kyer8gvwfk7rxmr632wnq80k",
+   "seed": 467229055
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6751168c14d37d83856f8756",
+ "role": "reasoning"
+}

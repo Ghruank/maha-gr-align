@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"उपरोक्त संदर्भाधीन क्र. १ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: Under the above‑referenced Government Decision No. 1, Dr Rajurkar Sanjay Vasudev Rao, Dr Ingole Sanjay Bhanudas, Dr Vashimkar Prashant Vishwambhar and Dr Dhole Lalit Purushottam were appointed as Assistant Professors ... Subsequently, under Government Decision No. 2, Dr Rajurkar's posting was partially altered ... and under Government Order No. 3, Dr ...\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-4c1ec05c-ac36-49ab-b720-376eeb3646a1",
+  "object": "chat.completion",
+  "created": 1785054820,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"उपरोक्त संदर्भाधीन क्र. १ येथील शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: Under the above‑referenced Government Decision No. 1, Dr Rajurkar Sanjay Vasudev Rao, Dr Ingole Sanjay Bhanudas, Dr Vashimkar Prashant Vishwambhar and Dr Dhole Lalit Purushottam were appointed as Assistant Professors ... Subsequently, under Government Decision No. 2, Dr Rajurkar's posting was partially altered ... and under Government Order No. 3, Dr ...\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence. The sentence is in the \"प्रस्तावना\" (intro) section. It mentions prior GRs: reference to \"उपरोक्त संदर्भाधीन क्र. १ येथील शासन निर्णयान्वये ...\" and \"संदर्भाधीन क्र.२ येथील शासन निर्णयान्वये ...\" and \"संदर्भाधीन क्र.३ येथील शासन आदेशान्वये\". These are references, not operative changes. Also note trap 3: deliberative mood is not a decision. This is in प्रस्तावना, which is introductory, not operative. So classification should be REFERENCES. target_index: which prior GR? The list has only one candidate GR (index 1). The sentence references that GR (क्र. १). So target_index = 1.\n\nevidence_span: need exact substring that justifies type. Could be \"उपरोक्त संदर्भाधीन क्र. १ येथील शासन निर्णयान्वये\". That shows reference. Or \"संदर्भाधीन क्र.२ येथील शासन निर्णयान्वये\". Choose one. Provide exact substring from input. Let's copy: \"उपरोक्त संदर्भाधीन क्र. १ येथील शासन निर्णयान्वये\". Ensure spaces match. The input: \"उपरोक्त संदर्भाधीन क्र. १ येथील शासन निर्णयान्वये\". Yes.\n\ncancelled_object: null because not cancelling.\n\ngloss_en: literal English translation. Provide translation: \"Introduction: Under the above referenced Government Decision No. 1, Dr. Rajurkar Sanjay Vasudev Rao, Dr. Ingole Sanjay Bhanudas, Dr. Vashimkar Prashant Vishwambhar and Dr. Dhole Lalit Purushottam were appointed as Assistant Professors ... etc. Subsequently, under Government Decision No. 2, Dr. Rajurkar's posting was partially changed ... etc. Then under Government Order No. 3, Dr....\". Provide concise translation.\n\nconfidence: high, maybe 0.98.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.319939838,
+   "prompt_tokens": 1081,
+   "prompt_time": 0.034260712,
+   "completion_tokens": 599,
+   "completion_time": 1.311574636,
+   "total_tokens": 1680,
+   "total_time": 1.345835348,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 436
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6fb4303df4",
+  "x_groq": {
+   "id": "req_01kyerxw8cfh5a3xnq99ts4086",
+   "seed": 1228155620
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2732e8d9def43d02f5fed61f",
+ "role": "reasoning"
+}

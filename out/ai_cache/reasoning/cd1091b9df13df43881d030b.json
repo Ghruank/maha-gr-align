@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"मानधन व भत्त्यांच्या दरांत पुढीलप्रमाणे सुधारणा करण्यात येत असून\",\"cancelled_object\":\"मानधन व भत्त्यांच्या दर\",\"gloss_en\":\"The rates of salary and allowances to be paid to contract-based Chokshi officers are being improved as follows, and new ancillary instructions are being given in the said statement.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-ab4be9fc-6572-4ab6-9a86-c1e78ef97ecf",
+  "object": "chat.completion",
+  "created": 1785054650,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"मानधन व भत्त्यांच्या दरांत पुढीलप्रमाणे सुधारणा करण्यात येत असून\",\"cancelled_object\":\"मानधन व भत्त्यांच्या दर\",\"gloss_en\":\"The rates of salary and allowances to be paid to contract-based Chokshi officers are being improved as follows, and new ancillary instructions are being given in the said statement.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence. The sentence: \"सामान्य प्रशासन विभागाच्या दि.१३.०३.२०२५ च्या शासन निर्णयासोबतच्या विवरणपत्र -४ मध्ये दर्शविण्यात आलेल्या, कंत्राटी तत्वावरील चोकशी अधिकारी यांना अदा करावयाच्या मानधन व भत्त्यांच्या दरांत पुढीलप्रमाणे सुधारणा करण्यात येत असून, सदर विवरणपत्रात नमूद आनुषंगिक सूचना नव्याने देण्यात येत आहेत :-\"\n\nInterpretation: It says that in the accompanying statement -4 of the General Administration Department's government decision dated 13.03.2025, the rates of salary and allowances to be paid to contract-based \"chokshi\" officers are being improved as follows, and new ancillary instructions are being given in that statement.\n\nThus it is amending (improving) the rates of salary and allowances. It references prior GR (the GR dated 2025-03-13). It is not cancelling the prior order; it's amending the rates (which are part of that prior order). According to trap 2, if it modifies rates (salary/allowances) that were under prior GR, that's AMENDS, not SUPERSEDES. So type = AMENDS. target_index = 1 (since only one prior GR listed). evidence_span: need exact substring that shows the operative change. The phrase \"मानधन व भत्त्यांच्या दरांत पुढीलप्रमाणे सुधारणा करण्यात येत असून\" indicates amendment. So evidence_span = \"मानधन व भत्त्यांच्या दरांत पुढीलप्रमाणे सुधारणा करण्यात येत असून\". Cancelled_object: it's not cancelling, it's amending \"मानधन व भत्त्यांच्या दर\". So cancelled_object maybe null? Actually it's not cancelled, it's amended. The field \"cancelled_object\" expects the Marathi noun that is cancelled/amended. For AMENDS, we should provide the object being amended. So \"मानधन व भत्त्यांच्या दर\". Provide that string. Gloss_en: literal translation: \"The rates of salary and allowances to be paid to contract-based Chokshi officers are being improved as follows, and new ancillary instructions are being given in the said statement.\" Provide translation.\n\nConfidence high, maybe 0.96.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.283893262,
+   "prompt_tokens": 884,
+   "prompt_time": 0.021979346,
+   "completion_tokens": 595,
+   "completion_time": 1.299530719,
+   "total_tokens": 1479,
+   "total_time": 1.321510065,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 490
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5082008e34",
+  "x_groq": {
+   "id": "req_01kyerrp77e1k9f12afkhbbskc",
+   "seed": 1542841344
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "cd1091b9df13df43881d030b",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक १७.११.२०१८\",\"cancelled_object\":null,\"gloss_en\":\"According to the decision, accommodation and other facilities in the Maharashtra Assembly are provided as per revised rates, classification, terms and conditions; the present decision has been amended as needed, and it refers to the government decision dated 17.11.2018 for room reservation provisions.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-7198bf03-cd8e-48fb-a570-fd246949e2e4",
+  "object": "chat.completion",
+  "created": 1785054352,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दिनांक १७.११.२०१८\",\"cancelled_object\":null,\"gloss_en\":\"According to the decision, accommodation and other facilities in the Maharashtra Assembly are provided as per revised rates, classification, terms and conditions; the present decision has been amended as needed, and it refers to the government decision dated 17.11.2018 for room reservation provisions.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence in Marathi: \"निर्णयानुसार महाराष्ट्र सदनातील कक्षबंध व इतर सुविधा, सुधारीत दर, वर्गीकरण, अटी व शर्ती प्रमाणे उपलब्ध करुन दिल्या जातात. सदर शासन निर्णयात आवश्यकतेनुसार वेळोवेळी सुधारणा करण्यात आल्या आहेत. नवीन महाराष्ट्र सदन, नवी दिल्ली येथील कक्षबंध आरक्षणाच्या शासन निर्णय दिनांक १७.११.२०१८ मधील तक्ता - २ मधील क (३) मधील तरतुदीनुसार राज्यातील संसद सदस्यांना दिल्ली येथे शासकीय निवासस्थान उपलब्ध असल्यास आणि संसद सदस्यांनी कक्षबंधाची मागणी केल्यास संसद सदस्यांकडून रु.१०००/- प्रतिकक्षबंध प्रतिदिवस इतकी रक्कम आकारण्यात येते. याप्रमाणे कक्षबंध\"\n\nInterpretation: It says according to the decision, rooms and other facilities are provided as per revised rates, classification, terms. The decision has been amended as needed. It references the prior decision dated 17.11.2018 (the candidate). It does not cancel or supersede that prior decision; it just says \"सदर शासन निर्णयात आवश्यकतेनुसार वेळोवेळी सुधारणा करण्यात आल्या आहेत.\" That indicates amendments have been made to the current decision, not that it amends the prior. It references the prior decision's provisions. So relationship is REFERENCES.\n\nCheck traps: Not a deliberative mood. Not cancel. Not supersede. So type = REFERENCES. target_index = 1 (since candidate list index 1). evidence_span: need exact substring that shows reference. The phrase \"शासन निर्णय दिनांक १७.११.२०१८ मधील\" is the reference. So evidence_span = \"शासन निर्णय दिनांक १७.११.२०१८\". Or include \"शासन निर्णय दिनांक १७.११.२०१८ मधील\". Must be exact substring from input. The input contains \"...शासन निर्णय दिनांक १७.११.२०१८ मधील तक्ता - २...\". So we can use \"शासन निर्णय दिनांक १७.११.२०१८\". That appears exactly. Yes.\n\ncancelled_object: null.\n\ngloss_en: Provide literal English translation: \"According to the decision, the accommodation and other facilities in the Maharashtra Assembly, revised rates, classification, terms and conditions are provided. The present government decision has been amended from time to time as needed. As per the reservation of accommodation in New Delhi for the new Maharashtra Assembly, according to the government decision dated 17.11.2018, ...\". Provide concise.\n\nconfidence: high, maybe 0.96.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286516301,
+   "prompt_tokens": 956,
+   "prompt_time": 0.039108474,
+   "completion_tokens": 698,
+   "completion_time": 1.464249113,
+   "total_tokens": 1654,
+   "total_time": 1.503357587,
+   "completion_tokens_details": {
+    "reasoning_tokens": 590
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_854fa9be4c",
+  "x_groq": {
+   "id": "req_01kyerfkmaeqjtdt9trh72g249",
+   "seed": 2134596313
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "8bed5ce25a3c427a2464d407",
+ "role": "reasoning"
+}

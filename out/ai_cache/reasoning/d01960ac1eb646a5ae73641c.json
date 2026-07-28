@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र. १ येथील शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"The procedure for granting individual approval after recruitment in recognized private aided schools, etc., is determined as per Government Decision reference 1 dated 06 February 2012, and other references are cited for salary, court orders, and further actions.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-1816bb69-4956-412d-8a58-de39a6a4b968",
+  "object": "chat.completion",
+  "created": 1785055242,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"संदर्भ क्र. १ येथील शासन निर्णय\",\"cancelled_object\":null,\"gloss_en\":\"The procedure for granting individual approval after recruitment in recognized private aided schools, etc., is determined as per Government Decision reference 1 dated 06 February 2012, and other references are cited for salary, court orders, and further actions.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to the listed prior GR(s). There's only one candidate prior GR: \"GR dated 2019-03-20, number ीडा विभाग, शासन निर्णय क्र. शालार्थ-१११८/प्र.क्र.३०/१८/टीएनटी-३\". The sentence mentions many references: \"संदर्भ क्र. १\", \"संदर्भ क्र. २\", \"संदर्भ क्र. ३\", \"संदर्भ क्र. ४\", \"संदर्भ क्र. ५\", \"संदर्भाधिन क्र.६\". These are internal references to other decisions, not necessarily the candidate GR. The candidate GR is likely \"शासन निर्णय क्र. शालार्थ-१११८/प्र.क्र.३०/१८/टीएनटी-३\". Does the sentence mention that? I don't see that exact phrase. The sentence mentions \"शालार्थ प्रणाली\" etc. But not the exact number. The candidate GR is \"शालार्थ-१११८/प्र.क्र.३०/१८/टीएनटी-३\". The sentence mentions \"शालार्थ प्रणाली\" but not that specific decision. So likely NONE relationship.\n\nWe must output type NONE, target_index null, evidence_span maybe a snippet that shows no operative change? But need evidence_span: a substring that justifies the type. For NONE, we can give a span that shows it's just referencing, maybe \"संदर्भ क्र. १ येथील शासन निर्णय\". That indicates reference. But we need to justify NONE: no relationship to the listed GR. So evidence_span could be something that shows no operative change to that GR. Could pick \"संदर्भ क्र. १ येथील शासन निर्णय\". That is a reference. That supports NONE.\n\ncancelled_object null. gloss_en: literal translation.\n\nLet's translate: The sentence basically says: After recruitment of teachers and non-teaching posts in recognized private aided schools etc., the procedure for granting individual approval is determined as per government decision reference 1 dated 06 Feb 2012... etc. Also salary and allowances via new system as per reference 2 decision dated 07.11.2012... Also High Court order etc... etc. So it's all references, no cancellation.\n\nThus classification: REFERENCES? Wait, the sentence is referencing many prior decisions, but the question is about relationship to the listed prior GR(s). The listed prior GR is one specific decision. The sentence does not modify or cancel it; it just maybe references it indirectly? It doesn't mention that decision. So it's NONE.\n\nReturn JSON.\n\nNeed confidence maybe 0.96.\n\nProvide evidence_span: choose a substring that shows it's just referencing, e.g., \"संदर्भ क्र. १ येथील शासन निर्णय\". That is present.\n\nLet's ensure exact substring appears: In sentence: \"... कार्यपध्दती संदर्भ क्र. १ येथील शासन निर्णय दि.०६ फेब्रुवारी, २०१२ अन्वये निश्चित करण्यात आली आहे.\" So substring \"संदर्भ क्र. १ येथील शासन निर्णय\" is exact.\n\nOk.\n\nNow produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281940315,
+   "prompt_tokens": 1324,
+   "prompt_time": 0.115144019,
+   "completion_tokens": 750,
+   "completion_time": 1.553497449,
+   "total_tokens": 2074,
+   "total_time": 1.6686414680000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 650
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c868cf1eaa",
+  "x_groq": {
+   "id": "req_01kyesar9df9p808jsge3z6e33",
+   "seed": 1392263847
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d01960ac1eb646a5ae73641c",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सदर उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"According to the provisions of 02-08-2019, the allocation of the said candidate is being cancelled by this memorandum.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-36922c47-bfba-40ca-a77f-ef9bee3c379e",
+  "object": "chat.completion",
+  "created": 1785091564,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सदर उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"According to the provisions of 02-08-2019, the allocation of the said candidate is being cancelled by this memorandum.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात\"\n\nTranslation: \"According to the provisions of 02-08-2019, the allocation of the said candidate, by this memorandum, is being cancelled.\"\n\nWe have prior GR list: 1. GR dated 2024-07-01.\n\nWe need to decide relationship. The sentence says \"रद्द करण्यात\" (is being cancelled). It cancels \"सदर उमेदवाराचे नियतवाटप\" (the allocation of the candidate). This allocation likely was made under the prior GR? The prior GR is dated 2024-07-01, but the sentence references provisions of 02-08-2019 (maybe a previous order). The prior GR is 2024-07-01, but the sentence does not explicitly say it cancels that GR. It cancels the allocation of the candidate, which could be an appointment or posting made under the prior GR. According to trap 2, if the sentence cancels appointments, approvals, sanctions, posts, funds, or committee memberships made under a prior GR, that GR is not superseded; it's AMENDS. So we should label as AMENDS, target_index = 1 (the prior GR). Cancelled object: \"नियतवाटप\" (allocation). Evidence span: need exact substring that shows cancellation. The phrase \"रद्द करण्यात\" is the operative verb. Also \"सदर उमेदवाराचे नियतवाटप\" is the object. The evidence span could be \"सदर उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात\". Must be exact substring from input. The input sentence: \"दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात\". So we can take \"सदर उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात\". That includes the cancellation phrase.\n\nNow, is it AMENDS or SUPERSEDES? The sentence cancels the allocation, not the entire order. So AMENDS.\n\nThus JSON:\n\n{\n \"type\":\"AMENDS\",\n \"target_index\":1,\n \"evidence_span\":\"सदर उमेदवाराचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात\",\n \"cancelled_object\":\"नियतवाटप\",\n \"gloss_en\":\"According to the provisions of 02-08-2019, the allocation of the said candidate is being cancelled by this memorandum.\",\n \"confidence\":0.99\n}\n\nCheck JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.290138937,
+   "prompt_tokens": 800,
+   "prompt_time": 0.043186959,
+   "completion_tokens": 680,
+   "completion_time": 1.437794281,
+   "total_tokens": 1480,
+   "total_time": 1.48098124,
+   "completion_tokens_details": {
+    "reasoning_tokens": 587
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01kyfvz6s0e67sahc89s4kj7r3",
+   "seed": 1880160916
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "6553d3ca8d849bcdec608a29",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02-08-2019, the allocation of the three candidates is being cancelled by this memorandum.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-18ca22cd-ec47-48e9-849b-d1f355988fcb",
+  "object": "chat.completion",
+  "created": 1785091369,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02-08-2019, the allocation of the three candidates is being cancelled by this memorandum.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"यास्तव, सामान्य प्रशासन विभाग, शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९ मधील तरतुदींनुसार सदर ३ (तीन) उमेदवारांचे नियतवाटप, या ज्ञापनान्वये, रद्द करण्यात येत आहे.\"\n\nTranslation: \"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02-08-2019, the allocation of the said three candidates is being cancelled by this memorandum.\"\n\nWe have prior GR list: only one candidate prior GR dated 2022-12-27. The sentence references a prior order (government circular) from 2019, not the 2022-12-27 GR. The candidate list includes that prior GR, but the sentence does not mention it. So does it reference the prior GR? No, it references a different order (the 2019 circular). Since the candidate list does not include that, there is no relationship to any listed GR. So type = NONE, target_index null.\n\nBut check if maybe the prior GR is the same as the referenced circular? The candidate is \"GR dated 2022-12-27\". The sentence references \"शासन परिपत्रक ... 02.08.2019\". Different date, so not same. So NONE.\n\nEvidence span: need a substring that justifies type NONE. Could be the whole sentence? But we need a substring that shows no relationship to listed GR. Maybe the phrase \"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\" is the reference, but that is not in candidate list. So evidence could be that reference. Use that substring.\n\nCancelled_object: \"नियतवाटप\" (allocation) of three candidates. The noun being cancelled is \"नियतवाटप\". So cancelled_object = \"नियतवाटप\". But since type is NONE, cancelled_object should be null per spec? The spec says cancelled_object is the Marathi noun that is cancelled/amended, or null. If type is NONE, there is no cancellation, so null.\n\nThus JSON: type \"NONE\", target_index null, evidence_span maybe \"शासन परिपत्रक क्र.मलोआ-१११९/प्र.क्र.११५/८, दि.०२.०८.२०१९\". gloss_en: \"Therefore, as per the provisions of the General Administration Department, Government Circular No. ... dated 02-08-2019, the allocation of the three candidates is being cancelled by this memorandum.\"\n\nConfidence high, say 0.98.\n\nReturn compact JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.314203958,
+   "prompt_tokens": 842,
+   "prompt_time": 0.040907692,
+   "completion_tokens": 711,
+   "completion_time": 1.495587727,
+   "total_tokens": 1553,
+   "total_time": 1.536495419,
+   "completion_tokens_details": {
+    "reasoning_tokens": 596
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_0708ac49a5",
+  "x_groq": {
+   "id": "req_01kyfvs92bfvsr78cw837610we",
+   "seed": 423126452
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "b389154ab0ebb683b29eb3b5",
+ "role": "reasoning"
+}

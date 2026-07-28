@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र. २ येथील दि. २८ मार्च, २०२३ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The government employees who were absent from office during 14 March to 20 March 2023, as called by the Bombay State Government Employees Union and the State Government Employees Central Union, Maharashtra, had their absence regularized as 'extraordinary leave' under reference No.2 dated 28 March 2023. In this order, it is under consideration of the government to amend and understand the period of absence as 'earned leave' instead of 'extraordinary leave'.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-ed511cf2-6a1b-4e4f-b47d-e137eeaec150",
+  "object": "chat.completion",
+  "created": 1785054459,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भ क्र. २ येथील दि. २८ मार्च, २०२३ च्या शासन निर्णयान्वये\",\"cancelled_object\":null,\"gloss_en\":\"Introduction: The government employees who were absent from office during 14 March to 20 March 2023, as called by the Bombay State Government Employees Union and the State Government Employees Central Union, Maharashtra, had their absence regularized as 'extraordinary leave' under reference No.2 dated 28 March 2023. In this order, it is under consideration of the government to amend and understand the period of absence as 'earned leave' instead of 'extraordinary leave'.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is in the \"प्रस्तावना\" (introductory) section. It says: \"प्रस्तावना : ... या आदेशात सुधारणा करून अनुपस्थितीचा कालावधी “असाधारण रजा” ऐवजी “अर्जित रजा\" म्हणून समजण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nIt mentions prior GR (dated 2023-03-28). It says that earlier, the absence was regularized as \"असाधारण रजा\" per that prior decision. Now, \"या आदेशात सुधारणा करून ... ... शासनाच्या विचाराधीन होती.\" It says the matter is under consideration (विचाराधीन). This is deliberative mood, not operative. According to trap 3, such sentences are classified as REFERENCES.\n\nThus type = REFERENCES, target_index = 1 (since it mentions that prior GR). evidence_span: need exact substring that shows relationship. Could be \"संदर्भ क्र. २ येथील दि. २८ मार्च, २०२३ च्या शासन निर्णयान्वये\". That references prior GR. Or \"संदर्भ क्र. २\". The sentence includes \"संदर्भ क्र. २ येथील दि. २८ मार्च, २०२३ च्या शासन निर्णयान्वये\". That is the reference. So evidence_span = that exact substring.\n\ncancelled_object = null (no cancellation). gloss_en: Provide literal translation.\n\nLet's craft translation: \"Introduction: The government employees who were absent from office during 14 March to 20 March 2023, as called by the Bombay State Government Employees Union and the State Government Employees Central Union, Maharashtra, had their absence regularized as 'extraordinary leave' under reference No.2 dated 28 March 2023. In this order, it is under consideration of the government to amend and understand the period of absence as 'earned leave' instead of 'extraordinary leave'.\"\n\nConfidence high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286991372,
+   "prompt_tokens": 938,
+   "prompt_time": 0.568311186,
+   "completion_tokens": 592,
+   "completion_time": 1.216380643,
+   "total_tokens": 1530,
+   "total_time": 1.784691829,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 425
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_87b3c396db",
+  "x_groq": {
+   "id": "req_01kyerjvnqefes5twzv245rkk8",
+   "seed": 288983419
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "a274cdc6ce44f75bc7b7f422",
+ "role": "reasoning"
+}

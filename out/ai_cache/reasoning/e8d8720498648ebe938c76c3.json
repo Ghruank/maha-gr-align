@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शपथपत्राच्या मसुदयामध्ये सुधारणा करण्यात येत असून\",\"cancelled_object\":\"शपथपत्राचा मसुदा\",\"gloss_en\":\"Also, the draft oath attached to the referenced government decision is being amended, and the revised oath draft is attached as Appendix “B”.\",\"confidence\":0.96}",
+ "raw": {
+  "id": "chatcmpl-2dedb3a3-d6a6-415a-9efc-9114ff5b60b2",
+  "object": "chat.completion",
+  "created": 1785091800,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शपथपत्राच्या मसुदयामध्ये सुधारणा करण्यात येत असून\",\"cancelled_object\":\"शपथपत्राचा मसुदा\",\"gloss_en\":\"Also, the draft oath attached to the referenced government decision is being amended, and the revised oath draft is attached as Appendix “B”.\",\"confidence\":0.96}",
+     "reasoning": "We need to classify the sentence relative to prior GR list (only one candidate). Determine if it supersedes, amends, references, or none.\n\nSentence in Marathi: \"संदर्भाधीन शासन निर्णयाच्या अनुषंगाने कळविण्यात येते की, सन १९७५ ते १९७७ मधील आणिबाणीच्या कालावधीत लोकशाहीकरीता लढा देणा-या ज्या व्यक्तींना बंदिवास सोसावा लागला अशा व्यक्तीचा सन्मान / यथोचित गौरव करण्यासंबंधी धोरण निश्चित करण्यात आले आहे त्याअनुषंगाने अर्जदारांकडून प्राप्त करुन घ्यावयाच्या अर्जाचा नमूना सोबत परिशिष्ट “अ” मध्ये जोडला आहे. तसेच संदर्भाधीन शासननिर्णयासोबत जोडलेल्या शपथपत्राच्या मसुदयामध्ये सुधारणा करण्यात येत असून सुधारीत शपथपत्राचा मसुदा परिशिष्ट “ब” मध्ये सोबत जोडला आहे.\"\n\nInterpretation: It says \"In accordance with the referenced government decision, it is notified that ... a policy has been determined ... a sample of the application to be received from applicants is attached as Appendix A. Also, the draft oath attached with the referenced government decision is being amended, and the revised oath draft is attached as Appendix B.\"\n\nThus it references a prior GR (the \"संदर्भाधीन शासन निर्णय\") and mentions that the oath draft attached to that prior decision is being amended. So it is amending the oath draft (a document) that was part of the prior GR. According to trap 2: If the sentence cancels appointments etc made under prior GR, that's AMENDS. Here it's amending a draft (shapathpatra) attached to prior GR. That's a modification of part of prior order, not cancelling the order itself. So type = AMENDS.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows amendment. The phrase \"शपथपत्राच्या मसुदयामध्ये सुधारणा करण्यात येत असून\" indicates amendment. So evidence_span = \"शपथपत्राच्या मसुदयामध्ये सुधारणा करण्यात येत असून\". Cancelled_object: Actually it's not cancelled, it's being amended. The object being amended is \"शपथपत्राचा मसुदा\" (the oath draft). So cancelled_object field for AMENDS? The spec says \"cancelled_object\": the Marathi noun that is cancelled/amended, or null. For AMENDS, we should give the noun being amended. So \"शपथपत्राचा मसुदा\" or \"शपथपत्र\". The phrase includes \"शपथपत्राच्या मसुदयामध्ये\". So we can put \"शपथपत्राचा मसुदा\". Provide gloss_en: literal English translation.\n\nLet's translate: \"In accordance with the referenced government decision, it is notified that a policy has been determined for honoring persons who were imprisoned during the emergency period of 1975-1977, and a sample of the application to be received from applicants is attached as Appendix “A”. Also, the draft oath attached with the referenced government decision is being amended, and the revised oath draft is attached as Appendix “B”.\"\n\nConfidence maybe 0.96.\n\nReturn JSON compact."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282220358,
+   "prompt_tokens": 973,
+   "prompt_time": 0.042529348,
+   "completion_tokens": 783,
+   "completion_time": 1.637924875,
+   "total_tokens": 1756,
+   "total_time": 1.680454223,
+   "completion_tokens_details": {
+    "reasoning_tokens": 691
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01kyfw6d72feqvy9n5p7rskbmt",
+   "seed": 1936457298
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e8d8720498648ebe938c76c3",
+ "role": "reasoning"
+}

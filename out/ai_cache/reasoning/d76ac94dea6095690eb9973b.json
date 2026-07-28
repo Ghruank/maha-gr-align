@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"कअनि-११२२/प्र.क्र.७२/१४-ब\",\"cancelled_object\":null,\"gloss_en\":\"General Administration Department, Government Decision No. कअनि-1122/Pr. No.72/14-B, dated 14.09.2023\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-e8d48c70-904d-43b9-a145-4aeb3675452d",
+  "object": "chat.completion",
+  "created": 1785054527,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"कअनि-११२२/प्र.क्र.७२/१४-ब\",\"cancelled_object\":null,\"gloss_en\":\"General Administration Department, Government Decision No. कअनि-1122/Pr. No.72/14-B, dated 14.09.2023\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence lists three items: 3) Maharashtra ... act 2022, 4) Maharashtra ... (amendment) act 2022, 5) General Administration Department, Government Decision number ... dated 14.09.2023.\n\nWe have candidate prior GR: #1 is the decision dated 2023-09-14, number कअनि-११२२/प्र.क्र.७२/१४-ब.\n\nThe sentence includes that as item 5). It is just citing that prior decision. No operative change like cancel, amend, supersede. So relationship is REFERENCES.\n\nThus type: REFERENCES, target_index: 1 (since it mentions that prior GR). evidence_span: need exact substring that shows the reference. The substring: \"कअनि-११२२/प्र.क्र.७२/१४-ब\" appears. Could also include \"सामान्य प्रशासन विभाग, शासन निर्णय क्र.कअनि-११२२/प्र.क्र.७२/१४-ब, दिनांक १४.०९.२०२३\". The evidence_span must be exact substring. Choose the part that includes the number: \"कअनि-११२२/प्र.क्र.७२/१४-ब\". Cancelled_object null. Gloss_en: literal translation: \"General Administration Department, Government Decision No. कअनि-1122/Pr. No.72/14-B, dated 14.09.2023\". Confidence high 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281361367,
+   "prompt_tokens": 946,
+   "prompt_time": 0.047471196,
+   "completion_tokens": 410,
+   "completion_time": 0.84967353,
+   "total_tokens": 1356,
+   "total_time": 0.897144726,
+   "completion_tokens_details": {
+    "reasoning_tokens": 319
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01kyermyn7enbtxzyknrfyf0jz",
+   "seed": 761215495
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d76ac94dea6095690eb9973b",
+ "role": "reasoning"
+}

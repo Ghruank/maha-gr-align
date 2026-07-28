@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिकरणित करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"Government decision: By superseding the above reference No.10 dated 12.04.2022 government decision, revised instructions regarding recruitment are being issued.\",\"confidence\":0.98}",
+ "raw": {
+  "id": "chatcmpl-f7196800-836f-4cdd-b30a-6cde0db04ec9",
+  "object": "chat.completion",
+  "created": 1785053949,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"अधिकरणित करुन\",\"cancelled_object\":\"शासन निर्णय\",\"gloss_en\":\"Government decision: By superseding the above reference No.10 dated 12.04.2022 government decision, revised instructions regarding recruitment are being issued.\",\"confidence\":0.98}",
+     "reasoning": "We need to classify the sentence.\n\nSentence: \"शासन निर्णय : वरील संदर्भ क्र. १० येथील दि.१२.०४.२०२२ चा शासन निर्णय अधिकरणित करुन पदभरतीबाबत खालीलप्रमाणे सुधारित सूचना देण्यात येत आहेत.\"\n\nInterpretation: It says \"by superseding the government decision dated 12-04-2022, reference no.10, the following revised instructions regarding recruitment are being given.\" So it says \"अधिकरणित करुन\" meaning \"by superseding\". That is a verb indicating superseding the prior order. The prior order is a government decision (शासन निर्णय) dated 12.04.2022. The sentence is issuing revised instructions about recruitment. So it cancels/overrides the prior order itself. That is SUPERSEDES. The target index is 1 (since only one candidate). Cancelled object: \"शासन निर्णय\" or maybe \"पदभरतीबाबत सूचना\"? The cancelled object is the prior order itself: \"शासन निर्णय\". The sentence says \"अधिकरणित करुन\" which means supersede. So cancelled_object: \"शासन निर्णय\". Provide evidence_span: the phrase \"अधिकरणित करुन\". Actually the exact substring: \"अधिकरणित करुन\". Need to copy exactly from input. The input has \"अधिकरणित करुन\". Yes.\n\nGloss_en: literal translation: \"Government decision: By superseding the above reference No.10 dated 12.04.2022 government decision, revised instructions regarding recruitment are being issued.\"\n\nConfidence high, maybe 0.98.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.285128752,
+   "prompt_tokens": 844,
+   "prompt_time": 0.03745803,
+   "completion_tokens": 430,
+   "completion_time": 0.892045789,
+   "total_tokens": 1274,
+   "total_time": 0.929503819,
+   "completion_tokens_details": {
+    "reasoning_tokens": 349
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01kyer39znf45bvsrcd05z7snj",
+   "seed": 658125308
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "71923506a6cd1a262b2ea21b",
+ "role": "reasoning"
+}

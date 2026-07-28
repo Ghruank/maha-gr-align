@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सातव्या वेतन आयोगानुसार\",\"cancelled_object\":null,\"gloss_en\":\"Improvement regarding giving the benefit of revised partial pension to retired pensioners for the period from 1 January 2016 to 31 December 2018 as per the Seventh Pay Commission...\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-c82f547e-9a8c-4277-8908-051909b981c3",
+  "object": "chat.completion",
+  "created": 1785056048,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"NONE\",\"target_index\":null,\"evidence_span\":\"सातव्या वेतन आयोगानुसार\",\"cancelled_object\":null,\"gloss_en\":\"Improvement regarding giving the benefit of revised partial pension to retired pensioners for the period from 1 January 2016 to 31 December 2018 as per the Seventh Pay Commission...\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. Sentence: \"सातव्या वेतन आयोगानुसार दिनांक १ जानेवारी २०१६ ते ३१ डिसेंबर २०१८ या कालावधीत सेवानिवृत्त निवृत्तिवेतनधारकांना सुधारित अंशराशीकरणाचा लाभ देण्याबाबत सुधारणा...\"\n\nIt mentions \"सातव्या वेतन आयोगानुसार ... सुधारित अंशराशीकरणाचा लाभ देण्याबाबत सुधारणा\". This seems to be a \"improvement\" (सुधारणा) about giving benefit. It does not explicitly cancel or amend a prior order. It references prior GR? The candidate prior GR is \"GR dated 2021-02-05, number सेनिवे-२०१९/प्र.क्र.३४८/सेवा-४\". The sentence does not mention that GR explicitly. It just mentions \"सातव्या वेतन आयोगानुसार\". No mention of the prior GR number. So there is no relationship to the listed prior GR. So type = NONE, target_index null, evidence_span maybe empty? But need evidence_span: a substring justifying type. For NONE, we can give a span that shows no operative change? Could give something like \"सुधारणा\". But that indicates it's a change but not referencing prior GR. However classification NONE means no relationship to any listed GR. So evidence_span could be the whole sentence or a part that shows no reference to prior GR. Provide a substring that shows no reference: maybe \"सातव्या वेतन आयोगानुसार\". That indicates it's just a statement. Provide cancelled_object null. Gloss_en: literal translation: \"Improvement regarding giving the benefit of revised partial pension to retired pensioners for the period from 1 Jan 2016 to 31 Dec 2018 as per the Seventh Pay Commission...\" Provide confidence high.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.159127214,
+   "prompt_tokens": 845,
+   "prompt_time": 0.070899102,
+   "completion_tokens": 483,
+   "completion_time": 1.018893775,
+   "total_tokens": 1328,
+   "total_time": 1.089792877,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 395
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_84bf0227ec",
+  "x_groq": {
+   "id": "req_01kyet3cbyf6b92ab3cw896s2f",
+   "seed": 181623424
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "f94ca57620d700c496bf7663",
+ "role": "reasoning"
+}

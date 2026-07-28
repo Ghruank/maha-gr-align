@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Regarding the cancellation of the allocation of technical assistant Group-C posts in the Insurance Directorate for candidates on the waiting list recommended by the Maharashtra Public Service Commission for the Maharashtra Group-C Service Main Examination 2021.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-e9de4a3c-2f61-4cd4-921c-2fa59e6dfc77",
+  "object": "chat.completion",
+  "created": 1785091403,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Regarding the cancellation of the allocation of technical assistant Group-C posts in the Insurance Directorate for candidates on the waiting list recommended by the Maharashtra Public Service Commission for the Maharashtra Group-C Service Main Examination 2021.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence (Marathi): \"महाराष्ट्र गट-क सेवा मुख्य परीक्षा - २०२१ महाराष्ट्र लोकसेवा आयोगाने शिफारस केलेल्या, प्रतीक्षायादीवरील उमेदवारांचे विमा संचालनालयातील तांत्रिक सहायक, गट-क पदावरील नियतवाटप रद्द करण्याबाबत..\"\n\nInterpretation: It's about cancellation of allocation (नियतवाटप) of technical assistant, group-C posts in Insurance Directorate for candidates on waiting list recommended by Maharashtra Public Service Commission for Maharashtra Group-C Service Main Exam 2021.\n\nThus the sentence is about cancelling the allocation (नियतवाटप) of posts (technical assistant positions). It references a prior GR dated 2022-12-27. The sentence says \"रद्द करण्याबाबत\" i.e., about cancelling the allocation. This is a cancellation of a specific allocation (post allocation) made under prior GR. According to trap 2, if the sentence cancels appointments, approvals, sanctions, posts, funds, or committee memberships made under a prior GR, that GR is NOT superseded; it's AMENDS. So type = AMENDS.\n\ntarget_index: the prior GR list index is 1.\n\nevidence_span: need exact substring that shows the operative action. Likely \"नियतवाटप रद्द\". The sentence contains \"नियतवाटप रद्द करण्याबाबत\". So evidence_span could be \"नियतवाटप रद्द\". Must be exact substring. Let's copy \"नियतवाटप रद्द\". That appears exactly? The sentence: \"... तांत्रिक सहायक, गट-क पदावरील नियतवाटप रद्द करण्याबाबत..\" Yes \"नियतवाटप रद्द\" is there.\n\ncancelled_object: the noun being cancelled is \"नियतवाटप\" (allocation) or \"पदावरील नियतवाटप\". Probably \"नियतवाटप\". Provide that.\n\ngloss_en: literal translation: \"Regarding the cancellation of the allocation of technical assistant, Group-C posts in the Insurance Directorate for candidates on the waiting list recommended by the Maharashtra Public Service Commission for the Maharashtra Group-C Service Main Examination 2021.\"\n\nconfidence: high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.282346899,
+   "prompt_tokens": 827,
+   "prompt_time": 0.040003697,
+   "completion_tokens": 577,
+   "completion_time": 1.203309307,
+   "total_tokens": 1404,
+   "total_time": 1.243313004,
+   "completion_tokens_details": {
+    "reasoning_tokens": 484
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01kyfvtagafv380k8vc6kacyj4",
+   "seed": 1411607370
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "e9f888ce737c7da40c0fed91",
+ "role": "reasoning"
+}

@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"दरकरार याव्दारे रद्द करण्यात येत आहे\",\"cancelled_object\":\"दरकरार\",\"gloss_en\":\"The contract entered into under the government decision dated 30-11-2019 is being cancelled.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-041e2906-10b2-4429-b8f6-e05eaf24a8c7",
+  "object": "chat.completion",
+  "created": 1785054286,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"दरकरार याव्दारे रद्द करण्यात येत आहे\",\"cancelled_object\":\"दरकरार\",\"gloss_en\":\"The contract entered into under the government decision dated 30-11-2019 is being cancelled.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence relative to prior GR list. The sentence says: \"शासन निर्णय, दि. ३०.११.२०१९ अन्वये ... लिस्टा ... यांचा ... दरकरार ... रद्द करण्यात येत आहे.\" So it cancels the contract (दरकरार) made under that prior decision. The prior GR is the decision dated 30.11.2019. The sentence cancels the contract, not the order itself. According to trap 2, if it cancels appointments, approvals, sanctions, posts, funds, committee memberships made under prior GR, that GR is not superseded; it's AMENDS. Here it's cancelling a contract (दरकरार) that was made under that decision. So it's AMENDS. The cancelled_object is \"दरकरार\" (contract). Could also be \"दरकरार\" or \"करार\". The sentence also mentions seizing bank guarantee, but main cancellation is of the contract. So type AMENDS, target_index 1 (since only one candidate). evidence_span: need exact substring that shows cancellation. The phrase: \"दरकरार रद्द करण्याचा अधिकार शासनास असल्याने, शासन निर्णय, दि. ३०.११.२०१९ अन्वये ... लिस्टा ... यांचा ... दरकरार ... रद्द करण्यात येत आहे.\" Choose a concise span: \"दरकरार ... रद्द करण्यात येत आहे\". Must be exact substring from input. Let's locate: The sentence: \"... दरपत्रक स्विकृतीच्या कोणत्याही टप्प्यावर दरकरार रद्द करण्याचा अधिकार शासनास असल्याने, शासन निर्णय, दि. ३०.११.२०१९ अन्वये लिस्टा ॲण्ड कंपनी, मुंबई यांचा शासनाशी झालेला दरकरार याव्दारे रद्द करण्यात येत आहे.\" So evidence_span could be \"दरकरार ... रद्द करण्यात येत आहे\". But need exact characters. Let's copy: \"दरकरार ... रद्द करण्यात येत आहे\". But ellipsis not in original. Must copy exact substring. Let's pick \"दरकरार ... रद्द करण्यात येत आहे\" not allowed. Better to copy \"दरकरार ... रद्द करण्यात येत आहे\" but we need exact. Let's locate exact phrase: \"दरकरार ... रद्द करण्यात येत आहे\". The original: \"... लिस्टा ॲण्ड कंपनी, मुंबई यांचा शासनाशी झालेला दरकरार याव्दारे रद्द करण्यात येत आहे.\" So evidence_span: \"दरकरार याव्दारे रद्द करण्यात येत आहे\". That is exact substring? Let's verify: The text: \"... लिस्टा ॲण्ड कंपनी, मुंबई यांचा शासनाशी झालेला दरकरार याव्दारे रद्द करण्यात येत आहे.\" So substring \"दरकरार याव्दारे रद्द करण्यात येत आहे\" appears. Yes.\n\nNow gloss_en: literal translation: \"The contract is being cancelled.\" Provide full sentence translation: \"Accordingly, as the government has the right to cancel the contract at any stage of rate schedule acceptance, the contract entered into between the government and Lista & Company, Mumbai under the government decision dated 30.11.2019 is being cancelled.\" We'll give concise.\n\nCancelled_object: \"दरकरार\" (contract). Provide in Marathi.\n\nConfidence high 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281951237,
+   "prompt_tokens": 1118,
+   "prompt_time": 0.0545592,
+   "completion_tokens": 772,
+   "completion_time": 1.603915529,
+   "total_tokens": 1890,
+   "total_time": 1.658474729,
+   "completion_tokens_details": {
+    "reasoning_tokens": 696
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_3af2d41834",
+  "x_groq": {
+   "id": "req_01kyerdjv8f43951jrmtctdqga",
+   "seed": 613161494
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "5f32ad206447bc67849583cf",
+ "role": "reasoning"
+}

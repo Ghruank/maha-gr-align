@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन दि. २७.०१.२०२० रोजीच्या शासन निर्णयान्वये रद्द करण्यात आली आहे\",\"cancelled_object\":\"अशासकीय सदस्यांची नियुक्ती\",\"gloss_en\":\"The appointment of non‑official members of the sub‑committee of the State Library Planning Committee, made under the Government decision dated 27‑01‑2020, has been cancelled.\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-58d2f3dd-5b78-4262-9be9-c346f7f85555",
+  "object": "chat.completion",
+  "created": 1785054888,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन दि. २७.०१.२०२० रोजीच्या शासन निर्णयान्वये रद्द करण्यात आली आहे\",\"cancelled_object\":\"अशासकीय सदस्यांची नियुक्ती\",\"gloss_en\":\"The appointment of non‑official members of the sub‑committee of the State Library Planning Committee, made under the Government decision dated 27‑01‑2020, has been cancelled.\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. The sentence in Marathi:\n\n\"समितीच्या विचारार्थ ठेवण्यात येतात. या सर्व ग्रंथातून निवडक ग्रंथांची निवड करण्याचे काम सुलभपणे पार पाडण्यासाठी, राज्य ग्रंथालय नियोजन समितीच्या उपसमितीची स्थापना करण्यात येते. त्यानुसार संदर्भाधीन दि.०३.११.२०१८ रोजीच्या शासन निर्णयान्वये गठीत करण्यात आलेल्या राज्य ग्रंथालय नियोजन समितीच्या उपसमिती मधील अशासकीय सदस्यांची नियुक्ती संदर्भाधिन दि. २७.०१.२०२० रोजीच्या शासन निर्णयान्वये रद्द करण्यात आली आहे. यानुषंगाने नव्याने राज्य ग्रंथालय नियोजन समितीची उपसमिती गठीत करण्याची बाब शासनाच्या विचाराधीन होती.\"\n\nWe have a prior GR: dated 2020-01-27, number ... (some file). The sentence says: \"संदर्भाधिन दि. २७.०१.२०२० रोजीच्या शासन निर्णयान्वये ... नियुक्ती ... रद्द करण्यात आली आहे.\" So it cancels the appointment of non-official members (अशासकीय सदस्यांची नियुक्ती) that were made under the prior decision dated 27 Jan 2020. This is cancelling an appointment made under that prior GR, not cancelling the entire prior order. According to trap 2, that is AMENDS, not SUPERSEDES. So type = AMENDS. target_index = 1 (since only one candidate). evidence_span: need exact substring that shows the cancellation. The phrase \"संदर्भाधिन दि. २७.०१.२०२० रोजीच्या शासन निर्णयान्वये रद्द करण्यात आली आहे\" is the operative part. The cancelled object is \"अशासकीय सदस्यांची नियुक्ती\". So cancelled_object = \"अशासकीय सदस्यांची नियुक्ती\". Gloss_en: literal translation: \"The appointment of non-official members of the sub-committee of the State Library Planning Committee, which was formed under the Government decision dated 27-01-2020, has been cancelled.\" Confidence maybe 0.99.\n\nMake sure JSON fields: type, target_index, evidence_span, cancelled_object, gloss_en, confidence.\n\nEvidence_span must be exact substring from input. Let's copy: \"संदर्भाधिन दि. २७.०१.२०२० रोजीच्या शासन निर्णयान्वये रद्द करण्यात आली आहे\". That appears exactly. Check punctuation: In sentence: \"... नियुक्ती संदर्भाधिन दि. २७.०१.२०२० रोजीच्या शासन निर्णयान्वये रद्द करण्यात आली आहे.\" So the substring includes preceding \"नियुक्ती \" maybe not needed. The phrase we choose is the part that indicates cancellation. We'll include the phrase starting from \"संदर्भाधिन\". That matches.\n\nNow produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.320529755,
+   "prompt_tokens": 956,
+   "prompt_time": 0.030833345,
+   "completion_tokens": 738,
+   "completion_time": 1.6237538630000001,
+   "total_tokens": 1694,
+   "total_time": 1.6545872080000001,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 622
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c652c0ffaa",
+  "x_groq": {
+   "id": "req_01kyerzyqrfqq8k436qf2p7nz4",
+   "seed": 1791455420
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "2f8bfd93107d2f81c9eb184b",
+ "role": "reasoning"
+}

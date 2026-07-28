@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दि. ०८.०९.२०२३ अन्वये सुधारणा करण्यात आली आहे\",\"cancelled_object\":\"मासिक पारिश्रमिकाची तरतूद\",\"gloss_en\":\"An amendment has been made by Government Decision dated 08-09-2023 to the provision of monthly salary in the Government Decision dated 17-12-2016 regarding the appointment of retired officers on a service contract basis for specific work.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-9e2da397-56e2-42e3-8054-7d3a2b45e61e",
+  "object": "chat.completion",
+  "created": 1785054570,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"शासन निर्णय दि. ०८.०९.२०२३ अन्वये सुधारणा करण्यात आली आहे\",\"cancelled_object\":\"मासिक पारिश्रमिकाची तरतूद\",\"gloss_en\":\"An amendment has been made by Government Decision dated 08-09-2023 to the provision of monthly salary in the Government Decision dated 17-12-2016 regarding the appointment of retired officers on a service contract basis for specific work.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence.\n\nSentence in Marathi: \"शासकोय/निमशासकोय सेवानिवृत्त अधिकाऱ्यांच्या सेवा करार पध्दतीने विवक्षित कामासाठी घेण्याबाबतच्या सामान्य प्रशासन विभाग, शासन निर्णय दि. १७.१२.२०१६ मधील मासिक पारिश्रमिकाच्या तरतूदीत, शासन निर्णय दि. ०८.०९.२०२३ अन्वये सुधारणा करण्यात आली आहे.\"\n\nInterpretation: It says that in the provision of monthly salary in the Government Decision dated 17.12.2016 regarding appointment of retired officers on service contract method for specific work, an amendment has been made by Government Decision dated 08.09.2023.\n\nThus it references a prior decision (17 Dec 2016) and says it has been amended by a newer decision (08 Sep 2023). The sentence is about amendment (सुधारणा) of the earlier decision's provision. So the relationship to prior GR (the candidate) is that the 2023 decision amends the 2016 decision. The candidate list includes GR dated 2023-09-08, number ... So that is the newer decision that makes amendment. The sentence says \"शासन निर्णय दि. ०८.०९.२०२३ अन्वये सुधारणा करण्यात आली आहे.\" So the 2023 decision amends the 2016 decision. So the relationship is AMENDS (modifies part of prior order). Not supersedes because it's not canceling the whole order, just amending a provision.\n\nCancelled_object: what is being amended? The \"मासिक पारिश्रमिकाच्या तरतूदीत\" (provision of monthly salary). So the object is \"मासिक पारिश्रमिकाची तरतूद\" or \"मासिक पारिश्रमिकाच्या तरतूदीत\". Use noun: \"मासिक पारिश्रमिकाची तरतूद\". Provide as Marathi noun.\n\nEvidence_span: need exact substring that justifies type. Could be \"शासन निर्णय दि. ०८.०९.२०२३ अन्वये सुधारणा करण्यात आली आहे\". That indicates amendment. Or \"सुधारणा करण्यात आली आहे\". Use that.\n\ntarget_index: candidate list is 1 item, so index 1.\n\ngloss_en: literal translation: \"An amendment has been made by Government Decision dated 08-09-2023 to the provision of monthly salary in the Government Decision dated 17-12-2016 regarding the appointment of retired officers on a service contract basis for specific work.\"\n\nConfidence high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286628069,
+   "prompt_tokens": 876,
+   "prompt_time": 0.038843353,
+   "completion_tokens": 683,
+   "completion_time": 1.4093631549999999,
+   "total_tokens": 1559,
+   "total_time": 1.448206508,
+   "completion_tokens_details": {
+    "reasoning_tokens": 559
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c800245357",
+  "x_groq": {
+   "id": "req_01kyerp88terragfm05np2npq2",
+   "seed": 1936394816
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "7977f5e2a2f2ec6ba2f8960e",
+ "role": "reasoning"
+}

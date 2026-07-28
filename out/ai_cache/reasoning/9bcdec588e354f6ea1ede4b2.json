@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"आदेश रद्द करण्यात येत असून\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"Now, for administrative reasons, the orders under reference numbers 1 and 2 are being cancelled, and Mrs. ... is being transferred as per column 5 of the table under the Maharashtra Government Employees' Transfer Regulation and Prevention of Delay Act, 2005, sections 4(4) and 4(5).\",\"confidence\":0.99}",
+ "raw": {
+  "id": "chatcmpl-021490e8-e6ec-445d-b1d6-60163cf614e4",
+  "object": "chat.completion",
+  "created": 1785091853,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"SUPERSEDES\",\"target_index\":1,\"evidence_span\":\"आदेश रद्द करण्यात येत असून\",\"cancelled_object\":\"आदेश\",\"gloss_en\":\"Now, for administrative reasons, the orders under reference numbers 1 and 2 are being cancelled, and Mrs. ... is being transferred as per column 5 of the table under the Maharashtra Government Employees' Transfer Regulation and Prevention of Delay Act, 2005, sections 4(4) and 4(5).\",\"confidence\":0.99}",
+     "reasoning": "We need to classify the sentence. Sentence in Marathi: \"२. आता प्रशासकीय कारणास्तव संदर्भाधिन क्रमांक १ व २ येथील आदेश रद्द करण्यात येत असून श्रीमती रं.वि.वाघमारे, वरिष्ठ स्वीय सहायक यांची खालील तक्त्यात स्तंभ क्र.५ मध्ये दर्शविल्यानुसार महाराष्ट्र शासकीय कर्मचाऱ्यांच्या बदल्यांचे विनियमन आणि शासकीय कर्तव्ये पार पाडताना होणा-या विलंबास प्रतिबंध अधिनियम, २००५ च्या कलम ४ (४) व ४(५) नुसार बदलीने पदस्थापना करण्यात येत आहे.\"\n\nInterpretation: \"Now, for administrative reasons, the orders under reference numbers 1 and 2 are being cancelled, and Mrs. ... is being transferred as per column 5 of the table, under the Maharashtra Government Employees' Transfer Regulation and Prevention of Delay Act, 2005, sections 4(4) and 4(5).\"\n\nThus the sentence cancels orders referenced (reference numbers 1 and 2). It says \"आदेश रद्द करण्यात येत असून\" meaning \"the orders are being cancelled\". This is a cancellation of prior orders themselves. So that is SUPERSEDES? According to definitions: SUPERSEDES - the sentence cancels / annuls / supersedes a prior ORDER ITSELF. Yes, it cancels the prior orders. So type = SUPERSEDES. target_index = 1 (since only one prior GR listed). evidence_span: need exact substring that shows cancellation. Could be \"आदेश रद्द करण्यात येत असून\". That is the operative phrase. Cancelled_object: the noun being cancelled is \"आदेश\". So \"आदेश\". Gloss_en: literal translation: \"Now, for administrative reasons, the orders under reference numbers 1 and 2 are being cancelled, and Mrs. ... is being transferred as per column 5 of the table under the Maharashtra Government Employees' Transfer Regulation and Prevention of Delay Act, 2005, sections 4(4) and 4(5).\" Confidence high, maybe 0.99.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.295074407,
+   "prompt_tokens": 897,
+   "prompt_time": 0.095067078,
+   "completion_tokens": 574,
+   "completion_time": 1.208365916,
+   "total_tokens": 1471,
+   "total_time": 1.303432994,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 457
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01kyfw814zerqrpgpcft5cz4pp",
+   "seed": 1115990991
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "9bcdec588e354f6ea1ede4b2",
+ "role": "reasoning"
+}

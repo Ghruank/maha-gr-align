@@ -1,0 +1,44 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Regarding the cancellation of the allocation of the Technical Assistant, Group C post.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-d766b6b2-d446-4fae-bfa5-9730990fab1c",
+  "object": "chat.completion",
+  "created": 1785091528,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"नियतवाटप रद्द\",\"cancelled_object\":\"नियतवाटप\",\"gloss_en\":\"Regarding the cancellation of the allocation of the Technical Assistant, Group C post.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence: \"तांत्रिक सहायक, गट-क पदावरील नियतवाटप रद्द करण्याबाबत..\"\n\nWe have one candidate prior GR: index 1.\n\nWe need to decide relationship.\n\nSentence says: \"तांत्रिक सहायक, गट-क पदावरील नियतवाटप रद्द करण्याबाबत..\" Means \"Regarding the cancellation of the allocation of the post of Technical Assistant, Group C\". It says \"रद्द करण्याबाबत\" = about cancellation. It is cancelling the allocation (नियतवाटप) of a post. This is a cancellation of an allocation made under prior GR? The prior GR likely made the allocation. The sentence is about cancelling that allocation. According to trap 2: If the sentence cancels appointments, approvals, sanctions, posts, funds or committee memberships made under a prior GR, that GR is NOT superseded — it stands, and its arrangements change. That is AMENDS, never SUPERSEDES. So type = AMENDS.\n\ntarget_index = 1 (since it references that prior GR). evidence_span: need exact substring that justifies type. The phrase \"रद्द करण्याबाबत\" indicates cancellation. Also \"नियतवाटप रद्द\". So evidence_span could be \"नियतवाटप रद्द\". Must be exact substring from input. The input: \"तांत्रिक सहायक, गट-क पदावरील नियतवाटप रद्द करण्याबाबत..\" The substring \"नियतवाटप रद्द\" appears. Yes.\n\ncancelled_object: the noun being cancelled is \"नियतवाटप\" (allocation) or \"पदावरील नियतवाटप\". Probably \"नियतवाटप\". Provide that.\n\ngloss_en: literal translation: \"Regarding the cancellation of the allocation of the Technical Assistant, Group C post.\"\n\nconfidence: high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287068559,
+   "prompt_tokens": 785,
+   "prompt_time": 0.033453994,
+   "completion_tokens": 478,
+   "completion_time": 1.000622174,
+   "total_tokens": 1263,
+   "total_time": 1.034076168,
+   "completion_tokens_details": {
+    "reasoning_tokens": 411
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_803c0ba83d",
+  "x_groq": {
+   "id": "req_01kyfvy41cea6anv6m1jvhxr08",
+   "seed": 1329808473
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d11d8491f486850a40885342",
+ "role": "reasoning"
+}

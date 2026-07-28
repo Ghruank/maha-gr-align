@@ -1,0 +1,89 @@
+{
+  "corpus": "Higher_and_Technical_Education_Department",
+  "n_grs": 4715,
+  "field_coverage": {
+    "decision_no": {
+      "n": 4652,
+      "pct": 98.7
+    },
+    "subject": {
+      "n": 4703,
+      "pct": 99.7
+    },
+    "date": {
+      "n": 4715,
+      "pct": 100.0
+    },
+    "references": {
+      "n": 4557,
+      "pct": 96.6
+    },
+    "body": {
+      "n": 4714,
+      "pct": 100.0
+    },
+    "conditions": {
+      "n": 1178,
+      "pct": 25.0
+    },
+    "amounts": {
+      "n": 1260,
+      "pct": 26.7
+    }
+  },
+  "artifacts": {
+    "header_variant:Resolution": 1017,
+    "references_via:inline_body": 997,
+    "references_via:header_scan": 907,
+    "header_variant:Order": 763,
+    "displaced_ordinals": 676,
+    "devanagari_in_en_translation": 441,
+    "deleaked": 441,
+    "body_date_disagrees_with_uid": 249,
+    "header_variant:Memorandum": 205,
+    "no_references_found": 158,
+    "header_variant:Circular": 132,
+    "no_date_line": 74,
+    "no_decision_no": 61,
+    "header_variant:Corrigendum": 43,
+    "header_variant:Refinery": 14,
+    "header_variant:Correctional Certificate": 14,
+    "header_variant:Sanitary": 12,
+    "subject_via:subject_line": 12,
+    "header_variant:Sanitation": 7,
+    "header_variant:Sanction": 7,
+    "header_variant:Judgment": 7,
+    "header_variant:Notification": 6,
+    "header_variant:Of Maharashtra": 6,
+    "header_variant:Supplementary Letter": 6,
+    "header_variant:Supplementary Paper": 5,
+    "header_variant:Sanction Certificate": 5,
+    "header_variant:Sanction Letter": 4,
+    "header_variant:Refinance Sheet": 4,
+    "header_variant:Scrutiny": 3,
+    "header_variant:Certificate": 3,
+    "header_variant:Corrective Notice": 3,
+    "header_variant:Has Sanctioned A Total": 2,
+    "header_variant:Of India Mhrd Letter": 2,
+    "header_variant:Memory": 2,
+    "header_variant:Record": 2,
+    "header_variant:Has Issued Reference": 1,
+    "header_variant:Recognition": 1,
+    "header_variant:In Context": 1,
+    "header_variant:Support": 1,
+    "header_variant:Currency": 1,
+    "header_variant:Purpose": 1,
+    "header_variant:Resolution Corrigendum": 1,
+    "header_variant:Preamble": 1,
+    "header_variant:Constitution": 1,
+    "header_variant:Under Reference": 1,
+    "header_variant:Supplement": 1,
+    "header_variant:Sanction Card": 1,
+    "header_variant:Refund": 1
+  },
+  "references_total": 10379,
+  "body_date": {
+    "parsed": 4100,
+    "disagrees_with_uid": 249
+  }
+}

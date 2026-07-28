@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र. १ येथील शासन निर्णय, दिनांक ०६.०३.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"The reading/library movement is being carried out through government‑approved public libraries. The Maharashtra Public Libraries Act, 1967 dated 01 May 1968 has turned 50 years old. Since there is a need to make timely changes to the said Act, for proposing amendments to the Act, reference No. 1, the government decision dated 06‑03‑2019 ...\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-554a196c-a13a-40fa-ba8c-a0c9f7246396",
+  "object": "chat.completion",
+  "created": 1785055042,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"REFERENCES\",\"target_index\":1,\"evidence_span\":\"संदर्भाधिन क्र. १ येथील शासन निर्णय, दिनांक ०६.०३.२०१९\",\"cancelled_object\":null,\"gloss_en\":\"The reading/library movement is being carried out through government‑approved public libraries. The Maharashtra Public Libraries Act, 1967 dated 01 May 1968 has turned 50 years old. Since there is a need to make timely changes to the said Act, for proposing amendments to the Act, reference No. 1, the government decision dated 06‑03‑2019 ...\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence is:\n\n\"वाचन/ग्रंथालय चळवळ पोहचविण्याचे कार्य शासनमान्य सार्वजनिक ग्रंथालयांमार्फत सुरु आहे. महाराष्ट्र सार्वजनिक ग्रंथालये अधिनियम, १९६७ दि.०१ मे, १९६८ रोजी संमत झाला असून त्यास ५० वर्षे झालेली आहेत. सदर अधिनियमात कालानुरूप बदल करण्याची आवश्यकता असल्याने अधिनियमात सुधारणा सुचविण्यासाठी संदर्भाधिन क्र. १ येथील शासन निर्णय, दिनांक ०६.०३.२०१९ अन्वये, तत्कालीन प्र.\"\n\nWe have a prior GR: \"GR dated 2019-03-06, number मराग्रं-२०१८/प्र.क्र.२१२/२०१८/साशि ५.\"\n\nThe sentence mentions \"संदर्भाधिन क्र. १ येथील शासन निर्णय, दिनांक ०६.०३.२०१९\". That is referencing a prior order (the GR). It says \"संदर्भाधिन क्र. १ येथील शासन निर्णय, दिनांक ०६.०३.२०१९ अन्वये, तत्कालीन प्र.\" This is just referencing the prior decision for context to propose amendments. It does not cancel or amend anything. It's likely a reference. Also note trap 3: deliberative mood is not a decision. This is not deliberative but referencing. So classification: REFERENCES.\n\ntarget_index: 1 (since only one candidate). evidence_span: need exact substring that shows reference. The substring: \"संदर्भाधिन क्र. १ येथील शासन निर्णय, दिनांक ०६.०३.२०१९\". That appears in sentence. So evidence_span = that.\n\ncancelled_object: null (since no cancellation). gloss_en: literal translation: \"The reading/library movement is being carried out through government-approved public libraries. The Maharashtra Public Libraries Act, 1967 dated 01 May, 1968 was enacted and it is 50 years old. Since there is a need to make timely changes to the said Act, for proposing amendments to the Act, reference No. 1, the government decision dated 06.03.2019, ...\". Provide translation.\n\nconfidence: high, maybe 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286618531,
+   "prompt_tokens": 918,
+   "prompt_time": 0.017425803,
+   "completion_tokens": 642,
+   "completion_time": 1.68504547,
+   "total_tokens": 1560,
+   "total_time": 1.702471273,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 497
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_96d96a151c",
+  "x_groq": {
+   "id": "req_01kyes4n36e7ran0s3t59fdh7q",
+   "seed": 1707399671
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "af8e916ea8d2b688c1620ec2",
+ "role": "reasoning"
+}

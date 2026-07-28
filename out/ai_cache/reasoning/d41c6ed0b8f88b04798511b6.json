@@ -1,0 +1,47 @@
+{
+ "text": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत असून\",\"cancelled_object\":\"पदस्थापनेत\",\"gloss_en\":\"Amendments are being made to the postings of the listed officers for administrative reasons, and their revised postings are shown in the specified schedule.\",\"confidence\":0.97}",
+ "raw": {
+  "id": "chatcmpl-0430db99-edb1-44ea-ad36-78010a38afb6",
+  "object": "chat.completion",
+  "created": 1785054452,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"type\":\"AMENDS\",\"target_index\":1,\"evidence_span\":\"सुधारणा करण्यात येत असून\",\"cancelled_object\":\"पदस्थापनेत\",\"gloss_en\":\"Amendments are being made to the postings of the listed officers for administrative reasons, and their revised postings are shown in the specified schedule.\",\"confidence\":0.97}",
+     "reasoning": "We need to classify the sentence. The sentence: \"महाराष्ट्र लोकसेवा आयोगाने संदर्भाधीन क्र. १ येथील दि. ०३-०२-२०२३ रोजीच्या पत्रान्वये ... ... सदर आदेशातील अ.क्र. ९ वरील ... यांच्या पदस्थापनेत प्रशासकीय कारणास्तव सुधारणा करण्यात येत असून, त्यांची सुधारित पदस्थापना ...\"\n\nIt mentions prior GR (candidate 1). The sentence says that certain appointments (positions) are being \"सुधारणा\" (improved/changed) i.e., \"सुधारणा करण्यात येत असून\". This is an amendment to the prior order's appointments. It is not cancelling the whole order, just amending specific appointments. So type = AMENDS. target_index = 1 (since referencing that prior GR). evidence_span: need exact substring that shows the operative change. Could be \"सुधारणा करण्यात येत असून\". Or \"सुधारणा करण्यात येत असून, त्यांची सुधारित पदस्थापना\". Choose a span that includes the verb \"सुधारणा\". The sentence: \"... यांच्या पदस्थापनेत प्रशासकीय कारणास्तव सुधारणा करण्यात येत असून, त्यांची सुधारित पदस्थापना ...\". So evidence_span = \"सुधारणा करण्यात येत असून\". Cancelled_object: Actually it's not cancelled, it's being amended (changed). The object being changed is \"पदस्थापनेत\" (postings). So cancelled_object maybe null? For AMENDS, we can put the noun that is being amended: \"पदस्थापनेत\". The spec says \"the Marathi noun that is cancelled/amended\". So we can put \"पदस्थापनेत\". Or \"पदस्थापना\". Use \"पदस्थापनेत\". Gloss_en: literal translation: \"Amendments are being made to the postings of ... for administrative reasons, and their revised postings are as shown in ...\". Provide translation.\n\nConfidence high, say 0.97.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.286675115,
+   "prompt_tokens": 1058,
+   "prompt_time": 0.033091018,
+   "completion_tokens": 519,
+   "completion_time": 1.153391439,
+   "total_tokens": 1577,
+   "total_time": 1.1864824569999999,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 437
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_854fa9be4c",
+  "x_groq": {
+   "id": "req_01kyerjnbaeetanjhv6nmr57rn",
+   "seed": 1162714243
+  },
+  "service_tier": "on_demand"
+ },
+ "cached": false,
+ "model": "openai/gpt-oss-120b",
+ "key": "d41c6ed0b8f88b04798511b6",
+ "role": "reasoning"
+}
