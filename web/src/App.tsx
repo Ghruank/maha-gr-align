@@ -9,8 +9,13 @@ import CheckGraph from './portal/pages/CheckGraph'
 import RecentGRs from './portal/pages/RecentGRs'
 import { LangProvider } from './portal/i18n'
 
-/* The original data dashboard is kept intact under /archive. It is loaded lazily
-   so its global stylesheet never touches the portal. */
+/* The original analytical dashboard is kept intact under /archive, but is NO LONGER LINKED
+   from the navigation or the footer (removed 2026-08-02 at the officer's request). It is still
+   reachable by typing the URL, which is what keeps it useful during questions without putting a
+   superseded interface in front of anyone.
+
+   Lazily loaded, so the chunk is never downloaded unless somebody navigates there — unlinking it
+   therefore costs the portal nothing, and its global stylesheet still cannot touch the portal. */
 const LegacyApp = lazy(() => import('./archive/LegacyApp'))
 
 export default function App() {

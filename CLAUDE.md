@@ -84,12 +84,12 @@ as "the OCR is broken" rather than "the backend is down". That mistake cost a de
 | **Alignment verdict** | `references._alignment` | ✅ **NEW** aligned / misaligned / partial, computed |
 | **Narrative review** | `refreview.py` | ✅ **NEW** local Qwen explains the verdict, 20–40 s |
 | **Cited-GR popup** | `corpus.py` + `/api/gr/{uid}` | ✅ **NEW** corpus text + official portal PDF link |
-| Portal UI | `web/src/portal/` | ✅ Home · Draft · Verify · **Check Graph** · **Recent GRs** — no stubs |
+| Portal UI | `web/src/portal/` | ✅ Home · Draft · Verify · Check Graph · Recent GRs — no stubs |
+| Legacy dashboard | `web/src/archive/` | ✅ intact at `/archive`, lazy-loaded, **unlinked from the nav** |
 | **Corpus screening** | `/api/corpus/recent` | ✅ both checks over the latest N GRs, 170 ms |
 | **In-tray / staging** | `staging.py` | ✅ **NEW** upload a GR; later uploads can cite it |
 | **Contradiction check** | `conflicts.py` | ✅ **NEW** restated amounts vs the cited order |
 | **Graph view** | `web/src/portal/GraphView.tsx` | ✅ **NEW** cites ← GR → cited-by, plain SVG |
-| Legacy dashboard | `web/src/archive/` | ✅ intact at `/archive`, lazy-loaded |
 | Tests | `tests/` | ✅ **131 passing, zero API calls** |
 
 ### The two pages that are built
@@ -316,6 +316,23 @@ side where a rendering can be wrong. Marathi is authoritative, so instead of cor
 panel lists the terms present with the English each must take — which is what an officer
 preparing the English version actually needs.
 
+### The archived dashboard was UNLINKED on 2026-08-02 — not deleted
+
+`web/src/archive/` is intact and `/archive` still resolves. What was removed is every **link**
+to it: the navigation pill and the footer entry, plus the now-unused `nav.archive` string.
+
+The distinction matters and was corrected mid-change: deleting the source also removed cytoscape
+and stranded four API routes. Keeping it costs nothing, because the route is lazily loaded — the
+486 kB chunk is never downloaded unless somebody types the URL. So it stays available for a
+question during the demo without putting a superseded interface in front of anyone.
+
+**Do not link it back into the chrome.** Every page it offered has been superseded: Reference
+Audit by Verify GR's Citations tab, Graph Explorer by Check Graph, Trust Ledger and GR-Lint by
+the finding panels. The one thing with no home in the portal is the **bilingual parity view**
+(335 magnitude errors, 26 inconsistently-rendered terms). It is still served by `/api/bilingual`,
+still reproducible with `make bilingual`, and still quoted in the deck; if it deserves a screen
+it belongs as a tab on Verify GR beside Terminology, not as a resurrected dashboard.
+
 ### Recent GRs (`/recent`, added 2026-08-02) — and the template bug it exposed
 
 The most recent N GRs, each screened on BOTH questions: does it follow the Manual's form, and
@@ -365,7 +382,7 @@ Deliberately NOT a force layout, and not cytoscape, though the archived dashboar
 The question this page answers is directional, and a cose layout places nodes by attraction so
 direction survives only in the arrowheads — unreadable on a projector. Columns also make the
 picture deterministic, which a demo needs and a force layout does not give. It keeps cytoscape
-in the lazy `/archive` chunk too; importing it here would move ~400 kB into the main bundle.
+at all — the portal ships no graph library.
 
 **A superseded neighbour is drawn red and dashed**, which needed `src_in_force` / `dst_in_force`
 added to `Store.edge_out` in `api.py`. Without them a client showing a neighbourhood would have

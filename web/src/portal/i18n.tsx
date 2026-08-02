@@ -16,7 +16,6 @@ const S = {
     'nav.verify': 'Verify GR',
     'nav.graph': 'Check Graph',
     'nav.recent': 'Recent GRs',
-    'nav.archive': 'Archived dashboard',
 
     'lang.label': 'Language',
     'lang.en': 'English',
@@ -78,7 +77,6 @@ const S = {
     'nav.verify': 'पडताळणी करा',
     'nav.graph': 'आलेख पाहा',
     'nav.recent': 'अलीकडील निर्णय',
-    'nav.archive': 'संग्रहित डॅशबोर्ड',
 
     'lang.label': 'भाषा',
     'lang.en': 'English',

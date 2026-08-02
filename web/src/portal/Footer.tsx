@@ -41,7 +41,6 @@ export default function Footer() {
               <li><Link to="/verify">{t('nav.verify')}</Link></li>
               <li><Link to="/graph">{t('nav.graph')}</Link></li>
               <li><Link to="/recent">{t('nav.recent')}</Link></li>
-              <li><Link to="/archive">{t('nav.archive')}</Link></li>
             </ul>
           </section>
 

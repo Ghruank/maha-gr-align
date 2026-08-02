@@ -55,8 +55,6 @@ export default function Shell() {
               {t(tab.key)}
             </NavLink>
           ))}
-          <span className="pk-nav-spacer" />
-          <NavLink to="/archive" className="pk-nav-archive">{t('nav.archive')}</NavLink>
         </div>
       </nav>
 
