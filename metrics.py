@@ -9,23 +9,29 @@ This is that command.
 
 ## What can and cannot be claimed
 
-The project has no hand-labelled answer key (`tests/resolver_truth.json` does not exist), so
-**this file computes no accuracy figure and none should be quoted.** What it computes instead is
-three things that need no labels and are, for a sceptical audience, arguably better:
+The project has no HUMAN-labelled answer key (`tests/resolver_truth.json` does not exist). It
+does have an **AI-adjudicated** precision audit as of 2026-08-02 — `out/precision_audit.json`,
+48/50 on a deliberately hard sample — run at the officer's instruction because no human was
+available. `_accuracy()` reports it with `provenance: ai-adjudicated` attached, and that label
+must travel with the number every time it is quoted. Auditor and author are the same model.
+
+The three label-free measures below remain the stronger evidence for a sceptical audience,
+because none of them depends on anybody's judgement:
 
 * **Ablation** — what the design choice actually buys, measured on this corpus. Unfalsifiable,
   because it is a property of the data rather than of our code.
 * **Cross-language agreement** — a *lower bound* on precision from an independent-ish witness.
 * **Invariant violations** — a count of structural laws broken. Zero is meaningful.
 
-The one thing genuinely requiring human labels is a true precision/recall figure. Say
-"unmeasured" rather than inventing one.
+Recall is still unmeasured, and the audit surfaced a real instance: a citation naming two dates
+produces only one edge. Say "unmeasured" for recall rather than inventing a figure.
 """
 
 from __future__ import annotations
 
 import re
 import json
+import pathlib
 import time
 import random
 import argparse
@@ -306,6 +312,42 @@ def refusals(g: dict) -> dict:
     }
 
 
+def _accuracy() -> dict:
+    """The precision figure, if an audit has been run — with its provenance attached.
+
+    Two states, and the difference is not cosmetic:
+
+    * **`hand-labelled`** — a human adjudicated the sample. This is what CLAUDE.md's rule asks
+      for and the only kind that is ground truth.
+    * **`ai-adjudicated`** — Claude adjudicated it, at the officer's instruction, because no
+      human was available. Auditor and author are the same model, so shared blind spots cannot
+      be ruled out. It is materially better than nothing and materially worse than a human, and
+      the `provenance` field says so wherever the number is quoted.
+
+    An absent audit still reports UNMEASURED. Nothing here invents a figure.
+    """
+    import json as _json
+    f = pathlib.Path(__file__).resolve().parent / "out" / "precision_audit.json"
+    if not f.exists():
+        return {"value": None,
+                "status": "UNMEASURED — run: python audit_precision.py, then adjudicate",
+                "note": "Do not quote an accuracy figure. Quote ablation, cross-language "
+                        "agreement (a lower bound) and invariant violations instead."}
+    a = _json.loads(f.read_text(encoding="utf-8"))
+    return {
+        "value": a["precision_conservative"],
+        "status": f"{a['correct']}/{a['sample']} on a sample weighted towards the hard paths",
+        "provenance": "ai-adjudicated, NOT human ground truth — see out/precision_audit.json",
+        "demonstrably_wrong": a["wrong"],
+        "uncertain_counted_as_error": a["uncertain_counted_as_error"],
+        "by_stratum": a["by_stratum"],
+        "note": ("The sample deliberately over-weights digit-key, cross-department, "
+                 "date-drifted and inherited-number edges, so this UNDERSTATES precision over "
+                 "the graph as a whole: 88.6% of all edges have an exact date match and were "
+                 "not sampled at that rate. Quote per stratum, and quote the provenance."),
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--graph", default="out/graph.json")
@@ -322,12 +364,7 @@ def main():
     out = {
         "generated_at": datetime.datetime.now().isoformat(timespec="seconds"),
         "graph_built_at": g["meta"]["built_at"],
-        "accuracy": {
-            "value": None,
-            "status": "UNMEASURED — requires hand-labelled tests/resolver_truth.json",
-            "note": "Do not quote an accuracy figure. Quote ablation, cross-language "
-                    "agreement (a lower bound) and invariant violations instead.",
-        },
+        "accuracy": _accuracy(),
         "scale": scale(g),
         "ablation": ablation(g, idx, a.window),
         "invariants": invariants(g, a.window),

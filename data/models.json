@@ -1,0 +1,59 @@
+{
+  "_comment": [
+    "Pinned local model roster for the on-prem NLP engine (NFR-2: nothing leaves the box).",
+    "Every id here was verified to exist and load on 2026-07-31. `make models` fetches them.",
+    "Hardware this was measured on: 12-core CPU, 15 GB RAM, NO GPU (Intel UHD only)."
+  ],
+
+  "llm": {
+    "role": "Reasoning + structured extraction. Replaces the hosted Groq model.",
+    "runtime": "ollama",
+    "id": "qwen3.5:2b",
+    "endpoint": "http://localhost:11434",
+    "size_gb": 2.7,
+    "measured": {
+      "throughput_tok_s": 9.3,
+      "load_s": 0.7,
+      "note": "Thinking must be disabled (`think: false`). With thinking on, a single classification burned 500 tokens and 54 s without emitting an answer — NFR-1 allows 30 s total."
+    }
+  },
+
+  "translation": {
+    "role": "Marathi <-> English. Used instead of the LLM because the LLM mistranslates legal Marathi (see notes).",
+    "runtime": "transformers",
+    "ids": {
+      "indic_en": "ai4bharat/indictrans2-indic-en-dist-200M",
+      "en_indic": "ai4bharat/indictrans2-en-indic-dist-200M"
+    },
+    "gated": true,
+    "gate_note": "Both repos are gated on HuggingFace. Accept the licence on each model page while signed in, then `hf auth login`. Ungated third-party mirrors exist (Raghavan/*, prajdabre/rotary-*) but are not the official weights and the rotary ones are a different architecture — do not substitute silently in a government deliverable.",
+    "preprocessor": "IndicTransToolkit (built from sdist on Python 3.14 — no cp314 wheel is published)",
+    "measured": {
+      "beam5_2_sentences_s": 2.0,
+      "note": "CPU, num_beams=5, KV cache on (requires transformers 4.53.3). Verified correct on real GR Marathi: `सदर मान्यता ही कायम विनाअनुदानित तत्त्वावर राहील.` -> 'The approval will remain on a non-subsidised basis.'"
+    }
+  },
+
+  "embeddings": {
+    "role": "FR-4/FR-5 semantic clause search. Two separate indexes, per decision of 2026-07-31.",
+    "runtime": "sentence-transformers",
+    "marathi": {
+      "id": "l3cube-pune/marathi-sentence-similarity-sbert",
+      "note": "MahaSBERT-STS. Similarity-tuned; preferred over the NLI variant for retrieval."
+    },
+    "marathi_alt": {
+      "id": "l3cube-pune/marathi-sentence-bert-nli",
+      "note": "Plain MahaSBERT. Kept for comparison."
+    },
+    "english": {
+      "id": "BAAI/bge-base-en-v1.5",
+      "note": "English side of the two-index design. 768-dim, matching MahaSBERT so the two spaces are at least dimensionally comparable."
+    }
+  },
+
+  "notes": [
+    "Qwen3.5-2B mistranslated `सदर मान्यता` as 'the prevailing belief' (correct: 'the said approval'). This is the measured justification for routing all translation through IndicTrans2 rather than the LLM.",
+    "On a naive zero-shot prompt Qwen3.5-2B misclassified an explicit `रद्द करण्यात येत आहेत` ('are hereby cancelled') sentence as REFERENCES in Marathi and AMENDS in English. It fails in BOTH languages, so this is a prompt/scale limit, not a Marathi-specific weakness. It is NOT a fair comparison against the hosted model, which runs a tuned prompt in type_edges.py. Re-measure with the real prompt before drawing conclusions.",
+    "Groq settings are retained in .env for the planned local-vs-hosted agreement comparison. They are not a runtime dependency."
+  ]
+}

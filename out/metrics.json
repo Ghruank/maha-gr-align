@@ -1,10 +1,40 @@
 {
- "generated_at": "2026-07-28T20:18:24",
+ "generated_at": "2026-08-02T16:29:23",
  "graph_built_at": "2026-07-26T13:18:12",
  "accuracy": {
-  "value": null,
-  "status": "UNMEASURED — requires hand-labelled tests/resolver_truth.json",
-  "note": "Do not quote an accuracy figure. Quote ablation, cross-language agreement (a lower bound) and invariant violations instead."
+  "value": 0.96,
+  "status": "48/50 on a sample weighted towards the hard paths",
+  "provenance": "ai-adjudicated, NOT human ground truth — see out/precision_audit.json",
+  "demonstrably_wrong": 0,
+  "uncertain_counted_as_error": 2,
+  "by_stratum": {
+   "digit_key": {
+    "n": 14,
+    "correct": 14,
+    "precision": 1.0
+   },
+   "cross_department": {
+    "n": 12,
+    "correct": 12,
+    "precision": 1.0
+   },
+   "date_drifted": {
+    "n": 8,
+    "correct": 6,
+    "precision": 0.75
+   },
+   "inherited_number": {
+    "n": 6,
+    "correct": 6,
+    "precision": 1.0
+   },
+   "exact_number": {
+    "n": 10,
+    "correct": 10,
+    "precision": 1.0
+   }
+  },
+  "note": "The sample deliberately over-weights digit-key, cross-department, date-drifted and inherited-number edges, so this UNDERSTATES precision over the graph as a whole: 88.6% of all edges have an exact date match and were not sampled at that rate. Quote per stratum, and quote the provenance."
  },
  "scale": {
   "departments": 4,

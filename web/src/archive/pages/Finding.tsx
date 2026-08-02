@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { api, fmt, DEPT_COLOR, type Overview } from '../api'
+import { api, fmt, DEPT_COLOR, type Overview } from '../../api'
 
 // The landing page leads with a FINDING, not a feature list (CLAUDE.md pitch framing).
 // A judge should understand what this project discovered within fifteen seconds.
@@ -85,7 +85,7 @@ export default function Finding() {
           </div>
         </div>
         <p style={{ marginTop: 14, marginBottom: 0 }}>
-          <Link to="/audit">Every finding, with the Marathi sentence that proves it →</Link>
+          <Link to="/archive/audit">Every finding, with the Marathi sentence that proves it →</Link>
         </p>
       </div>
 

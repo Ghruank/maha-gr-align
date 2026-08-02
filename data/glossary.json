@@ -1,0 +1,696 @@
+{
+ "_source": {
+  "normative": "Maharashtra Manual of Office Procedures, 2023 (documents/mcs270623075036.pdf) and SRS FR-11",
+  "proposed_from": "dominant rendering in the orgpedia/mahGRs corpus",
+  "rule": "Only entries with approved=true are enforced. Everything else is a proposal awaiting a human decision and is reported as advisory.",
+  "built_by": "build_glossary.py"
+ },
+ "terms": [
+  {
+   "id": "resolution",
+   "mr": "शासन निर्णय",
+   "en": "Government Resolution",
+   "variants_en": [
+    "Government Decision",
+    "Government Order",
+    "Govt. Resolution",
+    "Government Ruling"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6 (FORM OF GOVERNMENT RESOLUTION)",
+   "approved": true,
+   "strict": true,
+   "note": "The Manual uses 'Government Resolution' throughout and never 'Government Decision'.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 1021,
+    "variants_used_in": {
+     "Government Decision": 1861,
+     "Government Order": 568,
+     "Government Ruling": 1
+    },
+    "marathi_term_in": 2053
+   }
+  },
+  {
+   "id": "circular",
+   "mr": "शासन परिपत्रक",
+   "en": "Government Circular",
+   "variants_en": [
+    "Government Letter",
+    "Govt Circular",
+    "Circular Letter"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.5",
+   "approved": true,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 708,
+    "variants_used_in": {
+     "Government Letter": 66
+    },
+    "marathi_term_in": 741
+   }
+  },
+  {
+   "id": "memorandum",
+   "mr": "शासन ज्ञापन",
+   "en": "Government Memorandum",
+   "variants_en": [
+    "Government Memo",
+    "Office Memo"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.4",
+   "approved": true,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 87,
+    "variants_used_in": {},
+    "marathi_term_in": 81
+   }
+  },
+  {
+   "id": "notification",
+   "mr": "अधिसूचना",
+   "en": "Notification",
+   "variants_en": [
+    "Announcement",
+    "Public Notice"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.7 (FORM OF GOVERNMENT NOTIFICATION)",
+   "approved": true,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 318,
+    "variants_used_in": {
+     "Announcement": 13
+    },
+    "marathi_term_in": 176
+   }
+  },
+  {
+   "id": "corrigendum",
+   "mr": "शुद्धिपत्रक",
+   "en": "Corrigendum",
+   "variants_en": [
+    "Errata",
+    "Erratum",
+    "Purification Letter",
+    "Correction Letter"
+   ],
+   "variants_mr": [
+    "शुध्दीपत्रक"
+   ],
+   "authority": "Corpus dominant rendering; the Manual gives no form for a corrigendum",
+   "approved": false,
+   "strict": true,
+   "note": "Not in the Manual. 'Purification Letter' is a literal machine translation of शुद्धिपत्रक and is not English legal usage.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 141,
+    "variants_used_in": {
+     "Purification Letter": 1
+    },
+    "marathi_term_in": 11
+   }
+  },
+  {
+   "id": "order",
+   "mr": "शासन आदेश",
+   "en": "Government Order",
+   "variants_en": [
+    "Government Instruction",
+    "State Order"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 568,
+    "variants_used_in": {},
+    "marathi_term_in": 505
+   }
+  },
+  {
+   "id": "subject",
+   "mr": "विषय",
+   "en": "Subject",
+   "variants_en": [
+    "Topic",
+    "Sub."
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6",
+   "approved": true,
+   "strict": true,
+   "note": "'Regarding' is deliberately NOT listed: it opens legitimate subject lines rather than standing in for the label.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 1066,
+    "variants_used_in": {
+     "Topic": 13
+    },
+    "marathi_term_in": 512
+   }
+  },
+  {
+   "id": "read",
+   "mr": "वाचा",
+   "en": "Read",
+   "variants_en": [
+    "Readable",
+    "Perused"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6 ('Read.-')",
+   "approved": true,
+   "strict": false,
+   "note": "'Reference' is NOT listed as a wrong rendering: it is the correct rendering of संदर्भ, which has its own entry, and the English alone cannot tell the two apart.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 958,
+    "variants_used_in": {
+     "Readable": 1
+    },
+    "marathi_term_in": 1329
+   }
+  },
+  {
+   "id": "reference",
+   "mr": "संदर्भ",
+   "en": "Reference",
+   "variants_en": [
+    "Contextual Note"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "'Regard' is NOT listed: 'in this regard' is ordinary English prose, not a rendering of the label.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 1656,
+    "variants_used_in": {},
+    "marathi_term_in": 1999
+   }
+  },
+  {
+   "id": "preamble",
+   "mr": "प्रस्तावना",
+   "en": "Preamble",
+   "variants_en": [
+    "Introduction",
+    "Foreword",
+    "Background"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, FR-11 (Background -> Reference -> Resolution)",
+   "approved": true,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 358,
+    "variants_used_in": {
+     "Introduction": 320,
+     "Background": 18
+    },
+    "marathi_term_in": 1383
+   }
+  },
+  {
+   "id": "govt",
+   "mr": "महाराष्ट्र शासन",
+   "en": "Government of Maharashtra",
+   "variants_en": [
+    "Maharashtra Government",
+    "Govt. of Maharashtra",
+    "Maharashtra State Government"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6 (GOVERNMENT OF MAHARASHTRA)",
+   "approved": true,
+   "strict": true,
+   "note": "The article is not listed as a variant: 'the Government of Maharashtra' is correct in running prose and wrong only in the masthead, which this check cannot tell apart.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 2480,
+    "variants_used_in": {
+     "Maharashtra Government": 114,
+     "Govt. of Maharashtra": 4,
+     "Maharashtra State Government": 7
+    },
+    "marathi_term_in": 2486
+   }
+  },
+  {
+   "id": "mantralaya",
+   "mr": "मंत्रालय",
+   "en": "Mantralaya",
+   "variants_en": [
+    "Ministry",
+    "Secretariat",
+    "Ministry Building"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6",
+   "approved": true,
+   "strict": true,
+   "note": "A place name, not a common noun. 'Ministry' is a mistranslation.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 1854,
+    "variants_used_in": {
+     "Ministry": 966,
+     "Secretariat": 130,
+     "Ministry Building": 2
+    },
+    "marathi_term_in": 2453
+   }
+  },
+  {
+   "id": "governor_line",
+   "mr": "राज्यपाल यांच्या आदेशानुसार व नावाने",
+   "en": "By order and in the name of the Governor of Maharashtra",
+   "variants_en": [
+    "By order of the Governor",
+    "On behalf of the Governor",
+    "As per the order and in the name of the Governor"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6",
+   "approved": true,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 37,
+    "variants_used_in": {
+     "By order of the Governor": 1
+    },
+    "marathi_term_in": 40
+   }
+  },
+  {
+   "id": "under_secy",
+   "mr": "अवर सचिव",
+   "en": "Under Secretary",
+   "variants_en": [
+    "Sub Secretary",
+    "Junior Secretary"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6 (Under Secretary to the Government of Maharashtra)",
+   "approved": true,
+   "strict": true,
+   "note": "A distinct rank. Never interchangeable with Deputy or Principal Secretary.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 155,
+    "variants_used_in": {},
+    "marathi_term_in": 175
+   }
+  },
+  {
+   "id": "deputy_secy",
+   "mr": "उप सचिव",
+   "en": "Deputy Secretary",
+   "variants_en": [
+    "Vice Secretary",
+    "Assistant Secretary"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023",
+   "approved": true,
+   "strict": true,
+   "note": "A distinct rank.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 268,
+    "variants_used_in": {
+     "Assistant Secretary": 6
+    },
+    "marathi_term_in": 238
+   }
+  },
+  {
+   "id": "principal_secy",
+   "mr": "प्रधान सचिव",
+   "en": "Principal Secretary",
+   "variants_en": [
+    "Main Secretary"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023",
+   "approved": true,
+   "strict": true,
+   "note": "'Chief Secretary' is deliberately NOT listed as a variant: it is a real and different office (मुख्य सचिव), so flagging it would be wrong far more often than right.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 100,
+    "variants_used_in": {},
+    "marathi_term_in": 124
+   }
+  },
+  {
+   "id": "addl_chief_secy",
+   "mr": "अपर मुख्य सचिव",
+   "en": "Additional Chief Secretary",
+   "variants_en": [
+    "Extra Chief Secretary"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023",
+   "approved": true,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 96,
+    "variants_used_in": {},
+    "marathi_term_in": 92
+   }
+  },
+  {
+   "id": "budget_head",
+   "mr": "लेखाशीर्ष",
+   "en": "Budget Head",
+   "variants_en": [
+    "Account Head",
+    "Accounting Head",
+    "head of account",
+    "Ledger Head"
+   ],
+   "variants_mr": [],
+   "authority": "SRS FR-11 (budget head, e.g. 2054-00-101-02)",
+   "approved": true,
+   "strict": true,
+   "note": "The Manual's form says 'The expenditure should be debited to-'; FR-11 names the field 'Budget Head'. The corpus overwhelmingly writes 'head of account'.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 4,
+    "variants_used_in": {
+     "Account Head": 112,
+     "Accounting Head": 7,
+     "head of account": 46
+    },
+    "marathi_term_in": 387
+   }
+  },
+  {
+   "id": "finance_concurrence",
+   "mr": "वित्त विभागाची सहमती",
+   "en": "concurrence of the Finance Department",
+   "variants_en": [
+    "Finance Department consent",
+    "approval of the Finance Department",
+    "agreement of the Finance Department"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6",
+   "approved": true,
+   "strict": true,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 47,
+    "variants_used_in": {
+     "approval of the Finance Department": 59
+    },
+    "marathi_term_in": 58
+   }
+  },
+  {
+   "id": "grant",
+   "mr": "अनुदान",
+   "en": "Grant-in-aid",
+   "variants_en": [
+    "Donation",
+    "Gratuity"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "'Allowance' is NOT listed: it is the correct rendering of भत्ता. 'Subsidy' is a distinct instrument. Non-strict, so no replacement is proposed.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 142,
+    "variants_used_in": {
+     "Donation": 4,
+     "Gratuity": 10
+    },
+    "marathi_term_in": 1077
+   }
+  },
+  {
+   "id": "funds",
+   "mr": "निधी",
+   "en": "Funds",
+   "variants_en": [
+    "Monies"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "'Fund' singular is number agreement, not a terminology defect, and is not listed.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 550,
+    "variants_used_in": {},
+    "marathi_term_in": 692
+   }
+  },
+  {
+   "id": "supersede",
+   "mr": "अधिक्रमित",
+   "en": "Superseded",
+   "variants_en": [
+    "Overridden",
+    "Overruled"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "Distinct from रद्द (cancelled) and मागे घेणे (withdrawn). Reported without a suggestion because the English alone cannot tell which Marathi term it renders.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 25,
+    "variants_used_in": {
+     "Overridden": 2,
+     "Overruled": 2
+    },
+    "marathi_term_in": 51
+   }
+  },
+  {
+   "id": "cancel",
+   "mr": "रद्द",
+   "en": "Cancelled",
+   "variants_en": [
+    "Nullified",
+    "Annulled"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "Distinct from अधिक्रमित (superseded).",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 123,
+    "variants_used_in": {},
+    "marathi_term_in": 356
+   }
+  },
+  {
+   "id": "withdraw",
+   "mr": "मागे घेण्यात",
+   "en": "Withdrawn",
+   "variants_en": [
+    "Taken back",
+    "Retracted"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 145,
+    "variants_used_in": {
+     "Taken back": 2
+    },
+    "marathi_term_in": 0
+   }
+  },
+  {
+   "id": "lapse",
+   "mr": "व्यपगत",
+   "en": "Lapsed",
+   "variants_en": [
+    "Elapsed"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "'Expired' is NOT listed: a scheme legitimately expires by its own terms.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 9,
+    "variants_used_in": {
+     "Elapsed": 3
+    },
+    "marathi_term_in": 20
+   }
+  },
+  {
+   "id": "amend",
+   "mr": "सुधारणा",
+   "en": "Amendment",
+   "variants_en": [
+    "Improvement",
+    "Betterment"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "सुधारणा also means 'reform' in ordinary usage and appears inside file NAMES (वित्तीय सुधारणा-१ = 'Financial Reforms-1'), so a rendering here is not always a defect.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 44,
+    "variants_used_in": {
+     "Improvement": 26,
+     "Betterment": 1
+    },
+    "marathi_term_in": 202
+   }
+  },
+  {
+   "id": "partially",
+   "mr": "अंशत:",
+   "en": "Partially",
+   "variants_en": [
+    "Partly",
+    "In part"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": false,
+   "note": "",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 49,
+    "variants_used_in": {
+     "Partly": 8,
+     "In part": 14
+    },
+    "marathi_term_in": 76
+   }
+  },
+  {
+   "id": "said",
+   "mr": "सदर",
+   "en": "The said",
+   "variants_en": [
+    "The prevailing",
+    "The aforementioned said"
+   ],
+   "variants_mr": [],
+   "authority": "Corpus dominant rendering",
+   "approved": false,
+   "strict": true,
+   "note": "The single commonest Devanagari token surviving into the English translation (1,529 instances across 319 HTE GRs). Qwen3.5-2B renders it 'the prevailing belief'.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 1301,
+    "variants_used_in": {
+     "The prevailing": 121
+    },
+    "marathi_term_in": 2205
+   }
+  },
+  {
+   "id": "dept",
+   "mr": "विभाग",
+   "en": "Department",
+   "variants_en": [
+    "Ministry Department"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6",
+   "approved": true,
+   "strict": false,
+   "note": "'Section' and 'Wing' are NOT listed: they render कलम and शाखा respectively.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 2497,
+    "variants_used_in": {
+     "Ministry Department": 43
+    },
+    "marathi_term_in": 2493
+   }
+  },
+  {
+   "id": "number",
+   "mr": "क्रमांक",
+   "en": "No.",
+   "variants_en": [
+    "Serial Number"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6 ('Resolution No.')",
+   "approved": true,
+   "strict": false,
+   "note": "'Number' spelled out is not a defect; only a serial-number reading is.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 1970,
+    "variants_used_in": {
+     "Serial Number": 155
+    },
+    "marathi_term_in": 2312
+   }
+  },
+  {
+   "id": "distribution",
+   "mr": "प्रति",
+   "en": "To",
+   "variants_en": [
+    "Recipients",
+    "Distribution List"
+   ],
+   "variants_mr": [],
+   "authority": "Maharashtra Manual of Office Procedures, 2023, Appendix 10.6",
+   "approved": true,
+   "strict": false,
+   "note": "'Copy to' is legitimate for प्रत and is not listed.",
+   "evidence": {
+    "documents_sampled": 2500,
+    "approved_used_in": 2453,
+    "variants_used_in": {
+     "Recipients": 1
+    },
+    "marathi_term_in": 781
+   }
+  }
+ ]
+}

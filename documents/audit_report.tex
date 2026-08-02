@@ -1,0 +1,449 @@
+% Compliance audit of MAHA-GR-ALIGN against the SRS.
+%   xelatex audit_report.tex   (run from documents/)
+% XeLaTeX, not pdflatex: the report quotes Marathi and needs the vendored Noto Devanagari face.
+\documentclass[11pt,a4paper]{article}
+\usepackage[top=20mm,bottom=22mm,left=19mm,right=19mm]{geometry}
+\usepackage{fontspec}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{FreeSerif}
+\newfontfamily\dev[Script=Devanagari,Path=../web/public/fonts/]{NotoSerifDevanagari.ttf}
+\newfontfamily\mono{FreeMono}
+\newcommand{\code}[1]{{\mono\small #1}}
+
+\definecolor{ok}{HTML}{0C6B45}
+\definecolor{part}{HTML}{7A5F00}
+\definecolor{no}{HTML}{8C1E18}
+
+\newcommand{\MET}{\textcolor{ok}{\textbf{MET}}}
+\newcommand{\PART}{\textcolor{part}{\textbf{PARTIAL}}}
+\newcommand{\NOT}{\textcolor{no}{\textbf{NOT MET}}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.12}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small MAHA-GR-ALIGN — SRS compliance audit}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries MAHA-GR-ALIGN}\\[2mm]
+{\large Compliance audit against the Software Requirements Specification}\\[3mm]
+{\small AI-Assisted Drafting and Legal Alignment System for Maharashtra Government Resolutions}\\[1mm]
+{\small VJTI AI Hackathon 2026 — Problem Area 1}\\[4mm]
+{\small\itshape Audited 2 August 2026 against
+\code{Maha-GR-Align\_Simple\_SRS-updated.pdf}}
+\end{center}
+
+\vspace{2mm}
+\hrule
+\vspace{4mm}
+
+\section{Executive summary}
+
+\begin{center}
+\begin{tabular}{@{}llp{88mm}@{}}
+\toprule
+\textbf{Group} & \textbf{Verdict} & \textbf{Basis} \\
+\midrule
+FR-1 -- FR-3 & \MET & Extraction, archive verification and highlighting, live on an uploaded document \\
+FR-4 -- FR-6 & \MET & 23{,}977-clause vector index, cross-department search, score and source link \\
+FR-7 -- FR-9 & \MET & 31-term controlled glossary, flagging and suggestion \\
+FR-10 -- FR-12 & \MET & Manual of Office Procedure Appendix 10.6, deterministic \\
+FR-13, FR-15, FR-16 & \MET & Upload and type; audit trail; PDF and DOCX \\
+FR-14 & \PART & Validation shown against the document; provenance carried by version history rather than a side-by-side pane \\
+NFR-1, 2, 5, 6 & \MET & 10\,ms against a 30\,s budget; on-premise; Unicode; provenance on every finding \\
+NFR-3, NFR-4 & \NOT & Prototype: not yet trialled with a desk officer, not yet deployed \\
+\midrule
+\textbf{Overall} & \multicolumn{2}{@{}l@{}}{\textbf{15 of 16 functional requirements met, 1 partial.}} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every figure in this report was measured on the real corpus and is reproducible by a command
+named in Section~\ref{sec:repro}.
+
+Beyond the specification, the system implements two checks the SRS does not ask for and which
+address the problem statement's ``cross-department conflict detection'' more directly than
+similarity search can:
+
+\begin{itemize}[leftmargin=6mm,itemsep=1mm]
+\item \textbf{Cross-document contradiction} --- a draft that restates a figure from the order it
+      cites, differently from what that order says, is caught exactly. Demonstrated by two
+      documents that each pass every other check.
+\item \textbf{Blast radius} --- before a draft that cancels an order is issued, the system reports
+      how many GRs still in force depend on that order, and in which departments.
+\end{itemize}
+
+\section{Scale}
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Government Resolutions indexed & 17{,}283 \\
+Departments & 4 \\
+Archive coverage & 2017-10-12 to 2026-07-22 \\
+Resolved citation edges & 4{,}815 \\
+\quad of which cross-departmental & 1{,}538 \\
+\quad typed \textsc{supersedes} / \textsc{amends} & 33 / 169 \\
+Clauses in the vector index & 23{,}977 (from 6{,}000 GRs) \\
+\quad searchable after masking procedural boilerplate & 21{,}018 \\
+Controlled glossary terms & 31 \\
+Finding codes across four checkers & 13 reference, 15 template, 3 glossary, 1 contradiction \\
+Automated tests, zero network calls & 131 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Functional requirements}
+
+\subsection*{3.1 Reference Parser Module}
+
+\begin{longtable}{@{}p{11mm}p{15mm}p{125mm}@{}}
+\toprule
+\textbf{Req} & \textbf{Verdict} & \textbf{Evidence} \\
+\midrule
+\endhead
+FR-1 & \MET &
+\code{references.py} extracts cited orders from the preamble and the operative body, and
+classifies nine document kinds: Government Resolution, circular, corrigendum, notification,
+order, \textbf{court order}, Act, letter, minutes. The distinction is load-bearing --- the
+archive holds departmental orders and never holds court orders, so classifying before judging
+is what stops a High Court order being reported as a missing GR. \\
+\addlinespace
+FR-2 & \MET &
+Each citation resolves against the 17{,}283-node index on two keys: the Devanagari file number
+(exact, or a script-independent digit key) \emph{and} the date within a $\pm$3-day window.
+Neither alone suffices --- 41.1\% of GRs share a file number, and a date-only resolver produced
+19{,}840 edges with five GRs falsely tied at in-degree 292. \\
+\addlinespace
+FR-3 & \MET &
+Thirteen finding codes with line numbers and click-to-highlight in the document. \\
+\bottomrule
+\end{longtable}
+
+\textbf{Measured extraction: 98.9\%} of date-bearing reference items (3{,}461 of 3{,}501 across
+906 GRs), against an acceptance threshold of 80\%. Reaching it required supporting spelled-out
+Marathi dates --- {\dev दिनांक ०९ जुलै, २०२६} --- matched on a matra-stripped skeleton so that a
+visually-reordered PDF text layer still parses correctly.
+
+\subsection*{3.2 Semantic Conflict Detector}
+
+\begin{longtable}{@{}p{11mm}p{15mm}p{125mm}@{}}
+\toprule
+\textbf{Req} & \textbf{Verdict} & \textbf{Evidence} \\
+\midrule
+\endhead
+FR-4 & \MET &
+\code{embed.py} extracts operative clauses and encodes them with MahaSBERT
+(\code{l3cube-pune/marathi-sentence-similarity-sbert}, 768-dim, CPU). Only the operative section
+is indexed: headers and {\dev वाचा} blocks are near-identical corpus-wide and would make every
+GR the nearest neighbour of every other. \\
+\addlinespace
+FR-5 & \MET &
+23{,}977 clauses from 6{,}000 GRs; 21{,}018 searchable after masking procedural boilerplate.
+Search excludes the drafting officer's own department by default, which is the requirement's
+point --- within a department the officer already knows the standing orders. Measured live:
+\textbf{0.6\,s} per draft. \\
+\addlinespace
+FR-6 & \MET &
+Each hit shows the cosine score, a band, the source department and date, and a link that opens
+the source GR with its supersession status and its official \code{gr.maharashtra.gov.in} URL. \\
+\bottomrule
+\end{longtable}
+
+\textbf{Retrieval quality.} Procedural furniture --- the Finance-concurrence line, the budget-head
+line --- appears near-verbatim in a large share of all GRs and matched everything before it was
+masked, at scores of 0.87--0.91. With 2{,}959 such clauses (12\%) excluded, hits are substantive:
+an infrastructure-funding draft returns other departments' infrastructure-funding clauses at
+0.66--0.69, and a fund-release draft returns fund-release clauses at 0.71--0.76. The masking is
+applied at \emph{search} time rather than index time, so the exclusion list can be tightened
+without re-encoding.
+
+Similarity is reported as a score against a stated threshold rather than as a verdict, and every
+hit is presented as a candidate for the officer to read. This matches FR-6's wording --- the
+requirement asks for \emph{potential} conflicts.
+
+\subsection*{3.3 Bilingual Terminology Module}
+
+\begin{longtable}{@{}p{11mm}p{15mm}p{125mm}@{}}
+\toprule
+\textbf{Req} & \textbf{Verdict} & \textbf{Evidence} \\
+\midrule
+\endhead
+FR-7 & \MET &
+\code{data/glossary.json}: 31 terms, each citing its authority --- the Manual of Office Procedure
+or SRS FR-11. \code{make glossary} re-measures corpus evidence only and never overwrites a
+curated decision. \\
+\addlinespace
+FR-8 & \MET &
+Non-approved renderings are flagged with line numbers and occurrence counts. \\
+\addlinespace
+FR-9 & \MET &
+The approved term is suggested, \emph{except} where a replacement cannot be justified from one
+side of the document: {\dev रद्द} (cancelled), {\dev अधिक्रमित} (superseded) and {\dev व्यपगत}
+(lapsed) do different things to an order, so ``cancelled'' in an English GR may be a correct
+rendering of {\dev रद्द}. Those report the ambiguity and withhold the suggestion. \\
+\bottomrule
+\end{longtable}
+
+\textbf{The finding this module exists for.} Across 2{,}500 corpus documents, ``Government
+Decision'' appears in \textbf{1{,}861} and ``Government Resolution'' in \textbf{1{,}021} --- and
+the Manual of Office Procedure uses ``Government Resolution'' six times and ``Government
+Decision'' \textbf{not once}. The dominant machine-translated rendering is the non-standard one.
+No amount of mining the corpus could reveal this, which is exactly why FR-7 asks for a
+\emph{controlled} list rather than a discovered one.
+
+\subsection*{3.4 Template Enforcement Engine}
+
+\begin{longtable}{@{}p{11mm}p{15mm}p{125mm}@{}}
+\toprule
+\textbf{Req} & \textbf{Verdict} & \textbf{Evidence} \\
+\midrule
+\endhead
+FR-10 & \MET &
+Structure declared in \code{data/gr\_template.json} from Manual Appendix 10.6. No model call, and
+a test enforces that. \\
+\addlinespace
+FR-11 & \MET &
+All four named items verified: preamble ordering (Background $\rightarrow$ Reference
+$\rightarrow$ Resolution) as codes T20--T22; financial sanction block; signature headers; and the
+budget head, matched on digits rather than separators --- a hyphen-anchored regex finds
+\textbf{zero} budget heads in 1{,}500 real GRs, because the corpus writes them space-separated and
+in Devanagari digits. \code{2054-00-101-02} and {\dev २२०३-००-८००-०१} both match. \\
+\addlinespace
+FR-12 & \MET &
+Errors, warnings and advisories, each citing the Manual clause that triggered it. \\
+\bottomrule
+\end{longtable}
+
+\textbf{Two rule sets, one engine.} A document \emph{we generate} is held to the full Appendix
+10.6 form. An \emph{already-issued} GR read back through OCR is scored differently, because
+sections that are images in the signed PDF cannot be read by any text pipeline --- the signature
+block appears in 30.4\% of the corpus and the Governor's order line in 2.2\%. Under the drafting
+rules 0.2\% of 400 real GRs score compliant, which measures the scan rather than the drafting;
+under the issued rules, 45.0\%. Every section not counted is named in the response, so nothing is
+silently forgiven.
+
+\subsection*{3.5 User Interface and Workflow}
+
+\begin{longtable}{@{}p{11mm}p{15mm}p{125mm}@{}}
+\toprule
+\textbf{Req} & \textbf{Verdict} & \textbf{Evidence} \\
+\midrule
+\endhead
+FR-13 & \MET &
+Five pages: Home, Draft GR (type), Verify GR (upload PDF or scan), Check Graph, Recent GRs
+(upload to a pre-issue in-tray). Extraction tries the PDF text layer first and OCRs only scans,
+reporting which was used --- OCR over a document you can already read exactly introduces errors
+rather than removing them. \\
+\addlinespace
+FR-14 & \PART &
+Validation results are shown beside the document on tabbed panels --- Template, Citations and
+Terminology on Verify; Template and Other Departments on Draft. There is no side-by-side
+original-versus-suggestion pane: the preview is deliberately the single source of truth, so AI
+output is applied in place and provenance is carried by the version history. This guarantees a
+hand edit can never be silently reverted by a later merge, but it does not literally implement
+the two-pane layout the requirement describes. \\
+\addlinespace
+FR-15 & \MET &
+Version history tags every entry Template / AI / Officer with a timestamp and a restore button.
+Hand edits become versions once typing settles. \\
+\addlinespace
+FR-16 & \MET &
+PDF and DOCX generated from one document model, so the two cannot drift. \\
+\bottomrule
+\end{longtable}
+
+\section{Engineering guardrails}
+
+The system is designed so that a wrong answer is structurally hard to produce. Each guardrail
+below is enforced in code, and most are pinned by a test.
+
+\subsection*{Facts are computed, never generated}
+
+No model call exists in \code{template.py}, \code{references.py}, \code{conflicts.py} or
+\code{glossary.py}, and a test asserts the absence of the imports that would allow one. Whether a
+draft carries a signature block, whether a citation resolves, whether two figures differ --- each
+is settled by a regex or an integer comparison. A language model may \emph{explain} a finding; it
+is never the reason the system believes one.
+
+The alignment verdict is the clearest case. Given the findings and asked to judge, the local
+model concluded that a document ``remains valid because the cited references are either
+unverified or superseded'' --- about a document whose citations had in fact been superseded. The
+verdict is therefore computed from the dependency graph and handed to the model to phrase.
+
+\subsection*{Model output is filtered before it reaches the officer}
+
+\begin{itemize}[leftmargin=6mm,itemsep=1mm]
+\item \textbf{Identifiers are withheld from the prompt.} The narrative reviewer is never shown an
+      order number, date or line number; citations are identified to it only as \code{[1]},
+      \code{[2]}. It cannot corrupt an identifier it never saw.
+\item \textbf{Any sentence containing an unexpected digit is discarded whole}, not repaired. A
+      mangled file number reads exactly as authoritative as a correct one, so the only safe
+      action is to drop the sentence and report how many were dropped.
+\item \textbf{Summaries are gated on figures.} Every monetary amount in the document is extracted
+      deterministically and whitelisted, including its crore and lakh readings; a sentence quoting
+      any other figure is removed. A summary with a wrong rupee figure is worse than no summary.
+\end{itemize}
+
+\subsection*{The five ways of not finding something are never merged}
+
+A citation that does not resolve is reported under one of five distinct verdicts:
+\code{not\_in\_archive} (the only one that is a defect in the document), \code{outside\_range},
+\code{other\_dept}, \code{out\_of\_scope} and \code{unverifiable}. Collapsing them into ``missing''
+would roughly quadruple the error count and make it false --- on one sample GR, 5 genuine misses
+against 12 citations that simply predate the archive. Court orders and Acts are reported as
+outside what a GR archive holds, never as missing references.
+
+\subsection*{Abstention is a first-class outcome}
+
+Ambiguity abstains rather than guessing. If a file number matches a series but no member falls in
+the date window, the citation is left unresolved rather than snapped to the nearest sibling. If a
+citation gives a date but no file number, no resolution is offered --- a date alone cannot identify
+an order, because every GR issued that day would match. If a glossary term's correct replacement
+cannot be established from one side of a bilingual document, the suggestion is withheld and the
+ambiguity is stated.
+
+\subsection*{Evidence travels with every claim}
+
+Every graph edge carries the verbatim Marathi sentence that produced it, and that sentence is
+shown wherever the edge is used to justify a finding. Template findings cite the Manual clause.
+Glossary findings cite the Manual or state that the entry is a proposal. Semantic hits show the
+source GR, its department, its date and a link to the signed PDF on the Government's own site.
+An edge whose justification cannot be displayed does not ship.
+
+\subsection*{Degradation is visible, never silent}
+
+If the local model is unreachable, the affected panel says so and shows the computed result
+instead. If the corpus is absent, the pages that need it grey out rather than failing on click.
+If OCR produced the text rather than a PDF text layer, the interface says which and shows the
+confidence, because those warrant different trust. ``The model was unavailable'' is a legitimate
+state to display; a fabricated answer is not.
+
+\section{Statistics}
+
+\begin{center}
+\begin{tabular}{@{}p{78mm}r@{}}
+\toprule
+\multicolumn{2}{@{}l}{\textbf{Accuracy and coverage}} \\
+\midrule
+Citation extraction, date-bearing reference items & 98.9\% \\
+Resolver precision, stratified sample & 48/50 \\
+\quad digit-key matches & 14/14 \\
+\quad cross-department & 12/12 \\
+\quad {\dev समक्रमांक} inherited number & 6/6 \\
+\quad exact number & 10/10 \\
+\quad date-drifted & 6/8 \\
+Edges with an exact date match & 88.6\% \\
+Template compliance, issued rule set, 400 GRs & 45.0\% \\
+\addlinespace
+\multicolumn{2}{@{}l}{\textbf{Performance}} \\
+\midrule
+All four deterministic checks, one GR & 10\,ms \\
+Citation check alone & 4\,ms \\
+Semantic search, warm & 0.6\,s \\
+Corpus screening, 15 GRs & 170\,ms \\
+NFR-1 budget & 30{,}000\,ms \\
+\addlinespace
+\multicolumn{2}{@{}l}{\textbf{Findings across the corpus}} \\
+\midrule
+Dead references (GRs in force citing superseded orders) & 24 \\
+\quad rotted / born dead / latent cross-department & 10 / 14 / 2 \\
+Largest blast radius, single Finance circular & 229 live dependents \\
+Bilingual magnitude errors detected & 335 \\
+Inconsistently rendered legal terms & 26 \\
+``Government Decision'' vs ``Government Resolution'' & 1{,}861 vs 1{,}021 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Architecture (SRS \S5)}
+
+\begin{center}
+\begin{tabular}{@{}lp{112mm}@{}}
+\toprule
+\textbf{Layer} & \textbf{As built} \\
+\midrule
+1. Data & mahGRs corpus, PDF$\rightarrow$text$\rightarrow$embeddings, with an EasyOCR
+(Marathi + English) fallback for scans. \\
+2. NLP engine & MahaSBERT for Marathi sentence embeddings, IndicTrans2 for translation,
+Qwen3.5-2B for generation --- all running on-premise, on CPU. \\
+3. Vector search & Exact NumPy inner product over a $23{,}977 \times 768$ matrix, a few
+milliseconds per query. Chosen over FAISS (``or similar'' in the SRS) because at this scale the
+exact scores are cheap, and an SDC deployment needs one fewer dependency. \\
+4. Compliance rules & \code{data/gr\_template.json} (Manual Appendix 10.6) and
+\code{data/glossary.json} (controlled terminology), both plain JSON and editable without code
+changes. \\
+5. Frontend & React + Vite dashboard, five pages, bilingual interface, vendored Devanagari fonts
+so it renders correctly with no network. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Acceptance criteria (SRS \S9)}
+\label{sec:accept}
+
+\begin{longtable}{@{}p{5mm}p{72mm}p{15mm}p{53mm}@{}}
+\toprule
+\# & \textbf{Criterion} & \textbf{Verdict} & \textbf{Measured} \\
+\midrule
+\endhead
+1 & Extracts $\geq$80\% of cited references from a sample preamble & \MET &
+\textbf{98.9\%} --- 3{,}461 of 3{,}501 date-bearing reference items across 906 GRs \\
+\addlinespace
+2 & Two conflicting clauses flagged with a similarity score above a threshold & \MET &
+Cross-department hits scored 0.66--0.76 above a 0.55 threshold; separately, a
+Rs.\,5,00,00,000 contradiction detected exactly between two otherwise-clean documents \\
+\addlinespace
+3 & A generated draft contains all mandatory template sections & \MET &
+Both demonstration GRs compliant in draft mode --- all 15 sections including budget head,
+Finance concurrence, Governor's order line and signature \\
+\addlinespace
+4 & Marathi--English term mismatches highlighted against a small glossary & \MET &
+31-term glossary; ``Government Decision'' flagged against the Manual's ``Government Resolution''
+with a suggested replacement \\
+\addlinespace
+5 & A working web prototype allows upload and viewing validation results & \MET &
+Five pages, three upload paths, all checks live \\
+\bottomrule
+\end{longtable}
+
+\section{Reproducing every figure}
+\label{sec:repro}
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Figure} & \textbf{Command} \\
+\midrule
+Graph scale, edge types & \code{make graph} \\
+Dead references & \code{make audit} \\
+All reported numbers & \code{make metrics} \\
+Resolver precision sample & \code{make precision} \\
+Glossary and corpus evidence & \code{make glossary} \\
+Clause vector index & \code{make index} \\
+Citation report for one document & \code{make refcheck FILE=...} \\
+Test suite (131, no network) & \code{make test} \\
+Service health & \code{make doctor} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{3mm}
+\hrule
+\vspace{2mm}
+{\small Corpus: \href{https://github.com/orgpedia/mahGRs}{orgpedia/mahGRs} (MIT licence).
+Template authority: Maharashtra Manual of Office Procedures, 2023, Appendix 10.6. Prototype built
+for the VJTI AI Hackathon 2026; not an official Government of Maharashtra service.}
+
+\end{document}

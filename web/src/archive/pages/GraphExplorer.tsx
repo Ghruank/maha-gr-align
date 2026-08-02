@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import cytoscape from 'cytoscape'
-import { api, fmt, DEPT_COLOR, EDGE_COLOR, type Edge, type Node } from '../api'
+import { api, fmt, DEPT_COLOR, EDGE_COLOR, type Edge, type Node } from '../../api'
 
 // The thesis, visible. Node = GR, edge = a legal dependency. Clicking an edge shows the verbatim
 // Marathi sentence that produced it — if we cannot show that sentence, the edge does not ship.

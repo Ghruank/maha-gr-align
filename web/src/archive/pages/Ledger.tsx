@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { api, fmt } from '../api'
+import { api, fmt } from '../../api'
 
 // The page no competing team will have. It answers "how do you know your AI isn't making things
 // up" with a number and a browsable list of the specific times it tried.

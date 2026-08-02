@@ -1,0 +1,505 @@
+{
+ "_WHAT_THIS_IS": "A precision audit of resolver.py, adjudicated by Claude (the same agent that wrote the resolver) at the officer's explicit instruction on 2026-08-02, because no human was available. CLAUDE.md's rule that the answer key must be hand-labelled by a human was OVERRIDDEN by the officer for this file. Read the caveats before quoting the number.",
+ "_CAVEATS": [
+  "The auditor and the author are the same model. Shared blind spots cannot be ruled out and this is NOT equivalent to human ground truth.",
+  "Mitigation applied: every case was judged against the target's CRAWLED PORTAL METADATA (GRs.json order_number, subject, date), which is produced by a different pipeline than the OCR text the resolver reads — so agreement is not automatic.",
+  "Mitigation applied: the packet showed every OTHER GR sharing the file number, so 'it picked a plausible document but a better one existed' was checkable.",
+  "The sample is deliberately skewed towards the hard paths. It is NOT representative of the graph, and the blended figure understates true precision. Quote per stratum.",
+  "Precision only. Recall was not audited; two cases ([13], [50]) showed a citation naming two dates producing only one edge."
+ ],
+ "method": "adjudicate the verbatim Marathi citation against the target's portal metadata",
+ "sample": 50,
+ "correct": 48,
+ "uncertain_counted_as_error": 2,
+ "wrong": 0,
+ "precision_conservative": 0.96,
+ "precision_note": "48/50 = 96%. No case was demonstrably WRONG; the 2 deductions are cases I could not confirm either way, counted against the resolver.",
+ "by_stratum": {
+  "digit_key": {
+   "n": 14,
+   "correct": 14,
+   "precision": 1.0
+  },
+  "cross_department": {
+   "n": 12,
+   "correct": 12,
+   "precision": 1.0
+  },
+  "date_drifted": {
+   "n": 8,
+   "correct": 6,
+   "precision": 0.75
+  },
+  "inherited_number": {
+   "n": 6,
+   "correct": 6,
+   "precision": 1.0
+  },
+  "exact_number": {
+   "n": 10,
+   "correct": 10,
+   "precision": 1.0
+  }
+ },
+ "population_context": {
+  "edges_total": 4815,
+  "exact_date_match": 4267,
+  "exact_date_match_share": 0.886,
+  "edges_sharing_the_doubtful_profile": 18,
+  "doubtful_profile_share": 0.0037,
+  "doubtful_profile_definition": "|date drift| >= 2 days AND >= 2 other GRs share the file number within 30 days — the profile of both deductions below"
+ },
+ "actionable_finding": "Both deductions sit at the edge of the +/-3 day window inside a DENSE same-number series. Only 18 edges in the whole graph (0.37%) share that profile. Abstaining on them, or marking them low-confidence, would cost almost nothing and would remove the only failure mode this audit could find.",
+ "labels": [
+  {
+   "n": 1,
+   "stratum": "digit_key",
+   "citing": "202403191502367521",
+   "resolved_to": "202201311308092521",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 2,
+   "stratum": "digit_key",
+   "citing": "202212161727479721",
+   "resolved_to": "201902071316254321",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Number matches modulo OCR spacing (१४ ९ = १४९) and a टिएनटी/टीएनटी matra variant; date exact. The one sibling is dated 2018-06-20, nowhere near."
+  },
+  {
+   "n": 3,
+   "stratum": "digit_key",
+   "citing": "201909271256553421",
+   "resolved_to": "201909241254519521",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 4,
+   "stratum": "digit_key",
+   "citing": "202110051628403821",
+   "resolved_to": "202101191716324521",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 5,
+   "stratum": "digit_key",
+   "citing": "201906101127060121",
+   "resolved_to": "201904051659251821",
+   "date_delta_days": 1,
+   "verdict": "CORRECT",
+   "reason": "+1d publication drift. Number matches; the five same-number siblings are all 2-4 months later, so no competing candidate exists anywhere near the cited date."
+  },
+  {
+   "n": 6,
+   "stratum": "digit_key",
+   "citing": "202603091323241707",
+   "resolved_to": "202309181502026007",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 7,
+   "stratum": "digit_key",
+   "citing": "202408231609150321",
+   "resolved_to": "202408061604522521",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 8,
+   "stratum": "digit_key",
+   "citing": "202603311415171621",
+   "resolved_to": "202508061515509221",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 9,
+   "stratum": "digit_key",
+   "citing": "201903221558139421",
+   "resolved_to": "201812061520136621",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 10,
+   "stratum": "digit_key",
+   "citing": "202409231755499507",
+   "resolved_to": "202107141625065407",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "The citation's OCR reads संकोर्ण where the portal has संकीर्ण — the letters DISAGREE and the digit key carried it. Exactly the failure the digit key was designed for. Date exact."
+  },
+  {
+   "n": 11,
+   "stratum": "digit_key",
+   "citing": "202601271448319005",
+   "resolved_to": "202402021829458605",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Digit key 2023464 collides across departments: three School Education GRs share it with unrelated subjects. Date AND department disambiguated correctly, and the citation names वित्त विभाग explicitly."
+  },
+  {
+   "n": 12,
+   "stratum": "digit_key",
+   "citing": "202509301148520908",
+   "resolved_to": "202407091429374008",
+   "date_delta_days": 1,
+   "verdict": "CORRECT",
+   "reason": "WEAKEST of the correct set. Citation reads शिष्यवबू, portal reads शिष्ट्यवृ — both mangled renderings of शिष्यवृत्ती (scholarship), so the letters cannot be compared. Resting on digit key + 1d drift + department + a subject (fee waiver for EWS girls) consistent with a scholarship file. No competing candidate."
+  },
+  {
+   "n": 13,
+   "stratum": "digit_key",
+   "citing": "202203141257218821",
+   "resolved_to": "202103311020122121",
+   "date_delta_days": 1,
+   "verdict": "CORRECT",
+   "reason": "+1d, exact number, subject 'Continuation of Posts' matches the citing GR's purpose. NOTE a recall gap, not a precision error: the citation names TWO dates and only the first produced an edge."
+  },
+  {
+   "n": 14,
+   "stratum": "digit_key",
+   "citing": "202301181602395421",
+   "resolved_to": "202203301957391721",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 15,
+   "stratum": "cross_department",
+   "citing": "202112201545214721",
+   "resolved_to": "202104061715308005",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 16,
+   "stratum": "cross_department",
+   "citing": "202405221436434521",
+   "resolved_to": "202404011504552205",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 17,
+   "stratum": "cross_department",
+   "citing": "202303281240361521",
+   "resolved_to": "202204041559285705",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 18,
+   "stratum": "cross_department",
+   "citing": "202601131849480221",
+   "resolved_to": "202507141536382205",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 19,
+   "stratum": "cross_department",
+   "citing": "202603061323288221",
+   "resolved_to": "202510081858442305",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 20,
+   "stratum": "cross_department",
+   "citing": "202603271933480121",
+   "resolved_to": "202504071435036805",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Same file number as [19] — अर्थसं-२०२५/प्र.क्र.४४/अर्थ-३ — but dated 07.04.2025 against [19]'s 08.10.2025, and each resolved to its own member. Together these two demonstrate the date key doing real work rather than riding along."
+  },
+  {
+   "n": 21,
+   "stratum": "cross_department",
+   "citing": "202401161446149921",
+   "resolved_to": "202304121456100605",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 22,
+   "stratum": "cross_department",
+   "citing": "202603271736084107",
+   "resolved_to": "202404011504552205",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 23,
+   "stratum": "cross_department",
+   "citing": "202504221701156321",
+   "resolved_to": "202504071435036805",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 24,
+   "stratum": "cross_department",
+   "citing": "202312281808059307",
+   "resolved_to": "202304121456100605",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 25,
+   "stratum": "cross_department",
+   "citing": "202604101127215707",
+   "resolved_to": "202604091458327405",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 26,
+   "stratum": "cross_department",
+   "citing": "202402261434068708",
+   "resolved_to": "202402211708574705",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 27,
+   "stratum": "date_drifted",
+   "citing": "202107051538148407",
+   "resolved_to": "202103011651545807",
+   "date_delta_days": 3,
+   "verdict": "CORRECT",
+   "reason": "+3d, at the window edge, but benign: 26 Feb 2021 was a Friday and 1 Mar the following Monday, so the gap is a weekend. Exact number, and the only same-number siblings are four months out."
+  },
+  {
+   "n": 28,
+   "stratum": "date_drifted",
+   "citing": "202207211315166908",
+   "resolved_to": "202204061533459108",
+   "date_delta_days": 1,
+   "verdict": "CORRECT",
+   "reason": "+1d, exact number, no siblings at all. The target's subject looks unrelated to the citing GR's topic, but a GR may cite an unrelated order procedurally; identity is what was audited."
+  },
+  {
+   "n": 29,
+   "stratum": "date_drifted",
+   "citing": "202305041537520208",
+   "resolved_to": "202012101653268908",
+   "date_delta_days": 2,
+   "verdict": "CORRECT",
+   "reason": "+2d. Exact number. Target is 'Revised Pay Rule-2020 instructions' and the citing GR concerns 7th Pay Commission arrears — strongly consistent."
+  },
+  {
+   "n": 30,
+   "stratum": "date_drifted",
+   "citing": "202205301451429107",
+   "resolved_to": "202204111536373307",
+   "date_delta_days": -1,
+   "verdict": "CORRECT",
+   "reason": "-1d, i.e. the target predates the cited date, which is the wrong direction for publication lag. Accepted anyway: exact number, matching subject, and the recurring grant-release series has its next member seven weeks later, so there is no plausible alternative."
+  },
+  {
+   "n": 31,
+   "stratum": "date_drifted",
+   "citing": "202308031615102007",
+   "resolved_to": "202201281146394007",
+   "date_delta_days": -3,
+   "verdict": "UNCERTAIN",
+   "reason": "-3d, at the window edge and in the WRONG direction, inside a dense series (2021-11-25, 2022-01-28, 2022-03-22, 2022-03-31, 2022-07-29). A document signed 31.01.2022 should be published on or after that date, not three days before. Either the citation's date is wrong or the cited member is absent from the crawl and this should have been left unresolved. I cannot tell which from the evidence available, so it is counted as an error."
+  },
+  {
+   "n": 32,
+   "stratum": "date_drifted",
+   "citing": "202210181456488808",
+   "resolved_to": "202201051115236308",
+   "date_delta_days": 1,
+   "verdict": "CORRECT",
+   "reason": "+1d, exact number, target and citing GR both concern the same university."
+  },
+  {
+   "n": 33,
+   "stratum": "date_drifted",
+   "citing": "202012181145272307",
+   "resolved_to": "202009181232260007",
+   "date_delta_days": 1,
+   "verdict": "CORRECT",
+   "reason": "+1d, exact number, one sibling a month later."
+  },
+  {
+   "n": 34,
+   "stratum": "date_drifted",
+   "citing": "202503311337425121",
+   "resolved_to": "202503281929011621",
+   "date_delta_days": 3,
+   "verdict": "UNCERTAIN",
+   "reason": "+3d into a dense cluster — same-number GRs exist on 28, 29 and 31 March 2025 and the citation says 25 March. The resolver took the nearest. Plausible, but with three members inside a week I cannot confirm the 25 March order is the one published on the 28th. Counted as an error."
+  },
+  {
+   "n": 35,
+   "stratum": "inherited_number",
+   "citing": "202003161547567507",
+   "resolved_to": "202001081712208807",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "समक्रमांक ('of the same number'). Self-verifying: the claim is that the cited order shares the citing GR's file number, and the target's portal order_number is character-identical to the citing GR's own. Date exact in all six. This stratum, which I expected to be the weakest, is the strongest in the sample."
+  },
+  {
+   "n": 36,
+   "stratum": "inherited_number",
+   "citing": "202604131309206907",
+   "resolved_to": "202603061524485507",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "समक्रमांक ('of the same number'). Self-verifying: the claim is that the cited order shares the citing GR's file number, and the target's portal order_number is character-identical to the citing GR's own. Date exact in all six. This stratum, which I expected to be the weakest, is the strongest in the sample."
+  },
+  {
+   "n": 37,
+   "stratum": "inherited_number",
+   "citing": "202310091052275008",
+   "resolved_to": "202308071633459908",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "समक्रमांक ('of the same number'). Self-verifying: the claim is that the cited order shares the citing GR's file number, and the target's portal order_number is character-identical to the citing GR's own. Date exact in all six. This stratum, which I expected to be the weakest, is the strongest in the sample."
+  },
+  {
+   "n": 38,
+   "stratum": "inherited_number",
+   "citing": "202011101123235207",
+   "resolved_to": "202010081646120507",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "समक्रमांक ('of the same number'). Self-verifying: the claim is that the cited order shares the citing GR's file number, and the target's portal order_number is character-identical to the citing GR's own. Date exact in all six. This stratum, which I expected to be the weakest, is the strongest in the sample."
+  },
+  {
+   "n": 39,
+   "stratum": "inherited_number",
+   "citing": "202402051539225721",
+   "resolved_to": "202310091606061221",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "समक्रमांक ('of the same number'). Self-verifying: the claim is that the cited order shares the citing GR's file number, and the target's portal order_number is character-identical to the citing GR's own. Date exact in all six. This stratum, which I expected to be the weakest, is the strongest in the sample."
+  },
+  {
+   "n": 40,
+   "stratum": "inherited_number",
+   "citing": "202109011813006407",
+   "resolved_to": "201805251228130207",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "समक्रमांक ('of the same number'). Self-verifying: the claim is that the cited order shares the citing GR's file number, and the target's portal order_number is character-identical to the citing GR's own. Date exact in all six. This stratum, which I expected to be the weakest, is the strongest in the sample."
+  },
+  {
+   "n": 41,
+   "stratum": "exact_number",
+   "citing": "202408061731181008",
+   "resolved_to": "202407231312213408",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 42,
+   "stratum": "exact_number",
+   "citing": "202410141828288221",
+   "resolved_to": "202409161522226521",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 43,
+   "stratum": "exact_number",
+   "citing": "202503031732134607",
+   "resolved_to": "202408201125566107",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 44,
+   "stratum": "exact_number",
+   "citing": "202410141828288221",
+   "resolved_to": "202410141347208321",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 45,
+   "stratum": "exact_number",
+   "citing": "202602101737011007",
+   "resolved_to": "202303281943099007",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 46,
+   "stratum": "exact_number",
+   "citing": "202402271341257607",
+   "resolved_to": "202111251638412007",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Same file series as [31] but the cited date matches EXACTLY, which is why this one is confident and [31] is not — a useful contrast within one series."
+  },
+  {
+   "n": 47,
+   "stratum": "exact_number",
+   "citing": "202301191752083105",
+   "resolved_to": "202202031614588205",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 48,
+   "stratum": "exact_number",
+   "citing": "202504041830279207",
+   "resolved_to": "202504041825346207",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number, exact date, correct department. Several of these are Finance budget circulars cited across departments — the cross-department stratum turned out to be the EASY case, because appropriation circulars carry clean unambiguous numbers."
+  },
+  {
+   "n": 49,
+   "stratum": "exact_number",
+   "citing": "202408201453143907",
+   "resolved_to": "201902261541231007",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Devanagari file number matches the target's portal order_number letter for letter, and the cited date equals the target's date exactly. Same-number siblings, where they exist, sit on other dates."
+  },
+  {
+   "n": 50,
+   "stratum": "exact_number",
+   "citing": "201812121127119908",
+   "resolved_to": "201805031558152308",
+   "date_delta_days": 0,
+   "verdict": "CORRECT",
+   "reason": "Exact number and exact date for the first of two dates named. As with [13], the second cited order (16.05.2018, which exists in the corpus) produced no edge — recall, not precision."
+  }
+ ]
+}

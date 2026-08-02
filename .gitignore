@@ -25,6 +25,26 @@ venv/
 # Node
 web/node_modules/
 web/dist/
+web/.env
+web/.env.local
+web/.vercel/
+
+# LaTeX build products — audit_report.pdf IS committed, its scratch files are not
+documents/*.aux
+documents/*.out
+documents/*.toc
+documents/*.fdb_latexmk
+documents/*.fls
+documents/*.synctex.gz
+
+# The clause vector index: 53 MB of derived data, rebuilt by `make index` (~35 min).
+# Committing it would make every clone carry it; DEPLOY.md explains how to regenerate.
+out/clause_index.npz
+out/clause_index.json
+
+# The pre-issue in-tray is session state, not an artefact
+out/staging.json
+out/precision_packets.json
 
 # Logs from batch runs (the artefacts they produce ARE committed)
 out/*.log

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fmt } from '../api'
+import { fmt } from '../../api'
 
 // Bilingual legal terminology. Two halves with very different confidence, and the page says so:
 // numeric parity is precise and serious; the glossary is lead-generation with real noise.

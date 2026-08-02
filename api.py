@@ -26,13 +26,14 @@ conclusion without its evidence, that route is wrong (CLAUDE.md).
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from collections import defaultdict, Counter
 from functools import lru_cache
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 ROOT = Path(__file__).resolve().parent
@@ -42,10 +43,46 @@ WEB_DIST = ROOT / "web" / "dist"
 app = FastAPI(title="MAHA-GR-ALIGN", version="0.1",
               description="Government Resolution dependency graph for Maharashtra")
 
-# Vite dev server runs on 5173; in production the build is served from this same origin.
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173",
-                                                  "http://127.0.0.1:5173"],
-                   allow_methods=["*"], allow_headers=["*"])
+# Vite dev server runs on 5173; the bundled build is served from this same origin and needs no
+# CORS at all. The extra configuration is for a SPLIT deployment — static frontend on one host,
+# this API on another — where the browser will refuse the cross-origin call unless the frontend's
+# exact origin is allowed here.
+#
+#   ALLOWED_ORIGINS=https://maha-gr-align.vercel.app,https://foo.vercel.app
+#
+# `*` is accepted for a demo but should not be used where a draft could be sensitive: with
+# credentials disabled it is harmless, but it also means any page on the internet can query this
+# service while the tunnel is open.
+_DEFAULT_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173",
+                    "http://localhost:8000", "http://127.0.0.1:8000"]
+_env_origins = [o.strip() for o in os.environ.get("ALLOWED_ORIGINS", "").split(",") if o.strip()]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=_env_origins or _DEFAULT_ORIGINS,
+    # Any *.vercel.app preview deployment, so a new preview URL does not need a restart.
+    allow_origin_regex=r"https://[a-z0-9-]+\.vercel\.app",
+    allow_methods=["*"], allow_headers=["*"],
+)
+
+
+@app.middleware("http")
+async def _private_network_access(request, call_next):
+    """Chrome's Private Network Access preflight.
+
+    A page served from a public origin (Vercel) that calls a private one (a machine on the
+    officer's own network, or localhost) triggers an extra preflight in recent Chrome, and the
+    request fails without this header even though ordinary CORS is satisfied. Harmless
+    elsewhere — other browsers ignore it.
+
+    This does NOT make `https://…vercel.app` → `http://localhost:8000` work in general: that is
+    blocked as mixed content before any preflight happens. Use an HTTPS tunnel. The header is
+    here so that the case which *can* work does.
+    """
+    response = await call_next(request)
+    if request.headers.get("access-control-request-private-network"):
+        response.headers["Access-Control-Allow-Private-Network"] = "true"
+    return response
 
 
 # --------------------------------------------------------------------------- artefacts
@@ -79,6 +116,12 @@ class Store:
             self.out_edges[e["src"]].append(e)
             self.in_edges[e["dst"]].append(e)
 
+        # Every GR with an incoming SUPERSEDES edge. Precomputed because it is the single most
+        # asked question about any node, and a caller that had to rescan the edge list to find
+        # out whether a neighbour still stands would either be slow or would skip the check.
+        self.superseded = {e["dst"] for e in self.graph["edges"]
+                           if e["type"] == "SUPERSEDES"}
+
         # unresolved citations, by citing GR — needed so a node view can show what it cites
         # that we could NOT verify. Hiding these would make every node look fully resolved.
         self.unresolved_by_src = defaultdict(list)
@@ -110,6 +153,11 @@ class Store:
             "src_subject": (self.nodes.get(e["src"]) or {}).get("subject"),
             "dst_date": (self.nodes.get(e["dst"]) or {}).get("date"),
             "src_date": (self.nodes.get(e["src"]) or {}).get("date"),
+            # Whether each END of the edge still stands. Without this a client showing a
+            # neighbourhood has to fetch every neighbour separately to find out that the order
+            # in front of it was cancelled — which is the one thing the view exists to reveal.
+            "src_in_force": e["src"] not in self.superseded,
+            "dst_in_force": e["dst"] not in self.superseded,
             "verification": self.verdicts.get((e["src"], e["dst"])),
         }
 
@@ -438,6 +486,553 @@ def bilingual(limit: int = Query(80, le=300)):
 def departments():
     c = Counter(n["dept"] for n in S.graph["nodes"] if n.get("dept"))
     return {"departments": [{"name": k, "grs": v} for k, v in c.most_common()]}
+
+
+# --------------------------------------------------------------------------- drafting
+#
+# SRS FR-13..FR-16. Everything here runs on the box: the LLM is Ollama on localhost and the
+# template check is pure Python. No request in this section can leave the State Data Centre
+# (NFR-2). `/api/draft/verify` deliberately contains no model call — structural compliance is
+# computed, never generated.
+
+import template as _template                      # noqa: E402
+import docgen as _docgen                          # noqa: E402
+import ocr as _ocr                                # noqa: E402
+import drafting as _drafting                      # noqa: E402
+import references as _references                  # noqa: E402
+import refreview as _refreview                    # noqa: E402
+import corpus as _corpus                          # noqa: E402
+import glossary as _glossary                      # noqa: E402
+import conflicts as _conflicts                    # noqa: E402
+import staging as _staging                        # noqa: E402
+import summarize as _summarize                    # noqa: E402
+import semantic as _semantic                      # noqa: E402
+from ai.local import LocalAIUnavailable           # noqa: E402
+from pydantic import BaseModel                    # noqa: E402
+
+# The citation checker's index is built from the graph this process already holds, not re-read
+# from the corpus. One consequence is worth stating: anything a citation resolves to is by
+# construction a node whose supersession status we can answer immediately. An index that could
+# resolve to a uid the graph does not contain would hand back "verified" with no status.
+ARCHIVE = _references.Archive(S.graph)
+
+# The in-tray: GRs uploaded but not yet crawled. Registered in ARCHIVE so a later upload can
+# cite one, which is what makes an inter-departmental conflict visible while both documents are
+# still drafts. Never written into out/graph.json — see staging.py.
+STAGING = _staging.Staging(ARCHIVE)
+
+
+def _text_of(uid: str) -> str | None:
+    """Full text of any GR we can reach: staged first, then the crawled corpus."""
+    return STAGING.text_of(uid) or _corpus.text_of(uid, "mr")
+
+
+class _PromptIn(BaseModel):
+    prompt: str
+    lang: str = "mr"
+
+
+class _DraftIn(BaseModel):
+    prompt: str
+    answers: dict[str, str] = {}
+    lang: str = "mr"
+
+
+class _RefineIn(BaseModel):
+    text: str
+    instruction: str
+    lang: str = "mr"
+
+
+class _VerifyIn(BaseModel):
+    text: str
+    lang: str = "mr"
+
+
+@app.get("/api/draft/template")
+def draft_template(lang: str = Query("mr", pattern="^(mr|en)$")):
+    """Blank Manual-of-Office-Procedure skeleton + the section contract behind it."""
+    return {
+        "lang": lang,
+        "text": _template.render_skeleton(lang),
+        "sections": _template.TEMPLATE["sections"],
+        "source": _template.TEMPLATE["_source"],
+    }
+
+
+@app.get("/api/draft/engine")
+def draft_engine():
+    """Is the local model up? The UI degrades visibly rather than failing on send."""
+    ok, detail = _drafting.local.available()
+    return {"available": ok, "detail": detail}
+
+
+@app.post("/api/draft/questions")
+def draft_questions(body: _PromptIn):
+    try:
+        return _drafting.questions_for(body.prompt, body.lang)
+    except LocalAIUnavailable as exc:
+        # Degrade, never fake: a fixed questionnaire, plainly labelled as such.
+        return {"questions": _drafting._fallback_questions(body.lang),
+                "stats": {"local": False, "fallback": True, "error": str(exc)},
+                "degraded": True}
+
+
+@app.post("/api/draft/generate")
+def draft_generate(body: _DraftIn):
+    try:
+        out = _drafting.draft(body.prompt, body.answers, body.lang)
+    except LocalAIUnavailable as exc:
+        raise HTTPException(503, f"Local model unavailable: {exc}") from exc
+    out["verify"] = _template.verify(out["text"], body.lang)
+    return out
+
+
+@app.post("/api/draft/refine")
+def draft_refine(body: _RefineIn):
+    try:
+        out = _drafting.refine(body.text, body.instruction, body.lang)
+    except LocalAIUnavailable as exc:
+        raise HTTPException(503, f"Local model unavailable: {exc}") from exc
+    out["verify"] = _template.verify(out["text"], body.lang)
+    return out
+
+
+@app.post("/api/draft/verify")
+def draft_verify(body: _VerifyIn):
+    """FR-12. Deterministic; no model is consulted and none ever will be."""
+    return _template.verify(body.text, body.lang)
+
+
+# --------------------------------------------------------------------------- references
+#
+# SRS FR-1/2/3 and the problem statement's cross-department conflict bullet. Like the template
+# check above, deterministic end to end: citations come out by regex, resolve against the graph's
+# own index, and every supersession claim is an edge carrying the sentence that produced it.
+#
+# Measured at ~4 ms on a 19-citation GR, which is why it can ride along on the upload response
+# instead of being a second round trip the officer has to wait through.
+
+@app.get("/api/references/status")
+def references_status():
+    """Whether the archive is loaded, and what it covers. The UI states the denominator rather
+    than implying the corpus is all of Maharashtra's GRs."""
+    if not ARCHIVE.available:
+        return {"available": False,
+                "hint": "run: python graph.py data/mahGRs/GRs --out out/graph.json"}
+    corpus_ok, corpus_detail = _corpus.available()
+    model_ok, model_detail = _refreview.local.available()
+    return {"available": True, "grs": len(ARCHIVE.nodes),
+            "departments": sorted(ARCHIVE.in_index),
+            "covers": [ARCHIVE.covers[0].isoformat(), ARCHIVE.covers[1].isoformat()],
+            "supersedes_edges": sum(len(v) for v in ARCHIVE.killed_by.values()),
+            "amends_edges": sum(len(v) for v in ARCHIVE.amended_by.values()),
+            # Two independent optional capabilities. Citation checking needs neither; the popup
+            # needs the corpus and the narrative review needs the model, so the UI can offer or
+            # grey each one rather than failing on click.
+            "corpus": {"available": corpus_ok, "detail": corpus_detail},
+            "model": {"available": model_ok, "detail": model_detail}}
+
+
+@app.post("/api/references/check")
+def references_check(body: _VerifyIn):
+    """FR-1 + FR-2 + FR-3 over a pasted, drafted or extracted document."""
+    return _references.check(body.text, body.lang, ARCHIVE)
+
+
+# --------------------------------------------------------------------------- glossary
+#
+# SRS FR-7/8/9. Deterministic: whether a document writes "Government Decision" where the Manual
+# says "Government Resolution" is settled by a string comparison, not by a model.
+
+@app.get("/api/glossary")
+def glossary_list():
+    """FR-7 — the controlled list itself, so it can be read and argued with."""
+    ok, detail = _glossary.available()
+    g = _glossary.load()
+    return {"available": ok, "detail": detail,
+            "source": g.get("_source", {}), "terms": g.get("terms", [])}
+
+
+# --------------------------------------------------------------------------- semantic (FR-4/5/6)
+#
+# The one place in the project that shows a SCORE rather than a verdict. Unlike a citation,
+# which either resolves or does not, similarity is a continuum with no defensible cut-off — so
+# the threshold is a display convenience, is returned with the response, and is stated on screen.
+
+@app.get("/api/semantic/status")
+def semantic_status():
+    """Is the clause index built, and what does it cover?"""
+    st = _semantic.index().status()
+    ok, detail = _semantic.embed.available("mr")
+    return {**st, "model_loaded": ok, "model_detail": detail,
+            "default_min_score": _semantic.DEFAULT_MIN}
+
+
+class _SemanticIn(BaseModel):
+    text: str
+    lang: str = "mr"
+    dept: str | None = None
+    top_k: int = 4
+    min_score: float = _semantic.DEFAULT_MIN
+    include_own: bool = False
+
+
+@app.post("/api/semantic/check")
+def semantic_check(body: _SemanticIn):
+    """FR-4/5/6. Embeds the draft's operative clauses and searches other departments.
+
+    The department is read from the draft when not supplied, because FR-5 asks specifically for
+    clauses from OTHER departments and an officer should not have to state their own.
+    """
+    dept = body.dept
+    if dept is None:
+        dept = _references.doc_dept(body.text)
+    return _semantic.check(body.text, body.lang, dept, body.top_k, body.min_score,
+                           body.include_own)
+
+
+@app.post("/api/summary")
+def summary(body: _VerifyIn):
+    """A plain-English summary of an uploaded GR — genuinely generative.
+
+    The only place in this project where the model produces content rather than explaining a
+    computed finding, because nothing can compute "what does this seven-page Marathi order
+    actually do". The frame is still deterministic: department, date, number and every monetary
+    figure are extracted and handed over, and a sentence quoting any other figure is discarded
+    before the response leaves this process.
+    """
+    ref = _references.check(body.text, body.lang, ARCHIVE)
+    header = {
+        "department": ref.get("document", {}).get("department"),
+        "date": ref.get("document", {}).get("date"),
+        "decision_no": ref.get("document", {}).get("decision_no"),
+        "citations": ref.get("summary", {}).get("citations", 0),
+    }
+    return _summarize.summarize(body.text, header)
+
+
+@app.post("/api/glossary/check")
+def glossary_check(body: _VerifyIn):
+    """FR-8 + FR-9 over a document."""
+    return _glossary.check(body.text, body.lang)
+
+
+@app.get("/api/gr/{uid}")
+def gr_source(uid: str, lang: str = Query("mr", pattern="^(mr|en)$")):
+    """One archived GR, for the popup behind a citation.
+
+    Text comes from the corpus on disk rather than the graph, which carries no text on purpose
+    (17,283 documents of Marathi would make the artefact unservable). The portal URL is the
+    prize here: it is the actual signed PDF on the Government's own site, which is a stronger
+    answer to "does this order really exist" than anything we can render ourselves.
+    """
+    node = S.nodes.get(uid)
+    if not node:
+        raise HTTPException(404, f"GR {uid} is not in the index")
+    body = _corpus.text_of(uid, lang)
+    return {
+        "uid": uid,
+        "node": node,
+        "portal": _corpus.portal(uid),
+        "status": ARCHIVE.status(uid),
+        "lang": lang,
+        "text": body,
+        # Distinguish "we do not hold the text on this box" from "the GR is empty". Only the
+        # first is a deployment fact; the UI must not present it as a property of the GR.
+        "text_available": body is not None,
+        "cites": [S.edge_out(e) for e in S.out_edges.get(uid, [])][:40],
+        "cited_by_count": len(S.in_edges.get(uid, [])),
+    }
+
+
+@lru_cache(maxsize=32)
+def _screen(uid: str) -> dict | None:
+    """Run BOTH checks over one archived GR. Cached: the corpus never changes under us."""
+    text = _corpus.text_of(uid, "mr")
+    if not text:
+        return None
+    # `issued`, not `draft`. These documents already exist and were read back through OCR, so
+    # the signature block and the Governor's order line are images the crawl could not see.
+    # Judging them by the drafting rules scores 0.2% of a valid corpus as compliant, which
+    # measures our pipeline rather than the Government's drafting.
+    tpl = _template.verify(text, "mr", mode="issued")
+    ref = _references.check(text, "mr", ARCHIVE)
+    node = S.nodes.get(uid, {})
+    return {
+        "uid": uid,
+        "date": node.get("date"),
+        "dept": node.get("dept"),
+        "decision_no": node.get("decision_no"),
+        "subject": node.get("subject"),
+        "portal": (_corpus.portal(uid) or {}).get("url"),
+        "in_force": uid not in S.superseded,
+        "template": {
+            "doc_type": tpl["doc_type"],
+            "appendix": tpl["manual_appendix"],
+            "compliant": tpl["compliant"],
+            "errors": tpl["counts"]["error"],
+            "present": sum(1 for v in tpl["sections_present"].values() if v),
+            "total": len(tpl["sections_present"]),
+            "missing": [f["label"] for f in tpl["findings"] if f["severity"] == "error"],
+            "relaxed": tpl["relaxed"],
+        },
+        "references": {
+            "verdict": ref["alignment"]["verdict"],
+            "label": ref["alignment"]["label"],
+            "reasons": ref["alignment"]["reasons"],
+            "citations": ref["summary"]["citations"],
+            "verified": ref["summary"]["verified"],
+            "superseded": ref["summary"]["superseded"],
+            "amended": ref["summary"]["amended"],
+            "missing": ref["summary"]["not_in_archive"],
+            "cross_department": ref["summary"]["cross_department"],
+            "errors": ref["counts"]["error"],
+        },
+    }
+
+
+# --------------------------------------------------------------------------- staging
+#
+# Upload a GR that is not in the corpus, check it against everything that is — and against
+# everything else uploaded. The second half is the point: a contradiction between two draft
+# resolutions from different departments is invisible until both exist in one index.
+
+def _screen_text(text: str, lang: str, uid: str | None = None) -> dict:
+    """All four checks over one document, in the shape the listing renders."""
+    tpl = _template.verify(text, lang, mode="issued")
+    ref = _references.check(text, lang, ARCHIVE)
+    gls = _glossary.check(text, lang)
+    con = _conflicts.check(text, ref, _text_of)
+    return {
+        "template": {
+            "doc_type": tpl["doc_type"], "appendix": tpl["manual_appendix"],
+            "compliant": tpl["compliant"], "errors": tpl["counts"]["error"],
+            "present": sum(1 for v in tpl["sections_present"].values() if v),
+            "total": len(tpl["sections_present"]),
+            "missing": [f["label"] for f in tpl["findings"] if f["severity"] == "error"],
+            "relaxed": tpl["relaxed"],
+        },
+        "references": {
+            "verdict": ref["alignment"]["verdict"], "label": ref["alignment"]["label"],
+            "reasons": ref["alignment"]["reasons"],
+            "citations": ref["summary"]["citations"], "verified": ref["summary"]["verified"],
+            "superseded": ref["summary"]["superseded"], "amended": ref["summary"]["amended"],
+            "missing": ref["summary"]["not_in_archive"],
+            "cross_department": ref["summary"]["cross_department"],
+            "errors": ref["counts"]["error"],
+        },
+        "glossary": {"total": gls["counts"]["total"], "warning": gls["counts"]["warning"],
+                     "clean": gls["clean"]},
+        "conflicts": con["conflicts"],
+    }
+
+
+@app.post("/api/staging/upload")
+async def staging_upload(file: UploadFile = File(...), lang: str = Form("auto"),
+                         force_ocr: bool = Form(False)):
+    """Upload a GR into the in-tray and screen it against the archive AND the other uploads."""
+    data = await file.read()
+    if len(data) > 25 * 1024 * 1024:
+        raise HTTPException(413, "File larger than 25 MB.")
+    try:
+        extracted = _ocr.extract(data, file.filename or "upload.pdf", force_ocr=force_ocr)
+    except _ocr.OCRUnavailable as exc:
+        raise HTTPException(422, str(exc)) from exc
+    except Exception as exc:
+        raise HTTPException(400, f"Could not read the file: {exc}") from exc
+    if not extracted["text"].strip():
+        raise HTTPException(422, "No text could be extracted from this file.")
+
+    chosen = extracted["script"]["lang"] if lang == "auto" else lang
+    # Registered BEFORE screening so the checks see a consistent index — but a document is never
+    # compared with itself: `resolver.resolve` excludes the citing uid from its own candidates.
+    rec = STAGING.add(extracted["text"], chosen,
+                      file.filename or "upload.pdf",
+                      {k: v for k, v in extracted.items() if k != "text"})
+    return {"uid": rec["uid"], "node": rec["node"], "staged": True,
+            "filename": rec["filename"], "uploaded_at": rec["uploaded_at"],
+            "extraction": rec["extraction"], "lang": chosen,
+            **_screen_text(rec["text"], chosen, rec["uid"])}
+
+
+@app.get("/api/staging")
+def staging_list():
+    """The in-tray, re-screened on read so an upload reflects everything staged since."""
+    rows = []
+    for rec in STAGING.all():
+        rows.append({"uid": rec["uid"], "node": rec["node"], "staged": True,
+                     "filename": rec["filename"], "uploaded_at": rec["uploaded_at"],
+                     "date": rec["node"]["date"], "dept": rec["node"]["dept"],
+                     "decision_no": rec["node"]["decision_no"],
+                     "subject": rec["node"]["subject"], "portal": None, "in_force": True,
+                     **_screen_text(rec["text"], rec["lang"], rec["uid"])})
+    return {"available": True, "rows": rows, "count": len(rows)}
+
+
+class _ConflictIn(BaseModel):
+    conflict: dict
+    citing: dict = {}
+    lang: str = "en"
+
+
+@app.post("/api/conflict/explain")
+def conflict_explain(body: _ConflictIn):
+    """Plain-language note on one amount contradiction, from the ON-PREMISE model.
+
+    The contradiction itself is computed by `conflicts.py`; the model only says what it means.
+    The three figures are supplied and whitelisted — a sentence containing any other number is
+    discarded before the response leaves this process.
+    """
+    return _refreview.explain_conflict(body.conflict, body.citing, body.lang)
+
+
+@app.delete("/api/staging/{uid}")
+def staging_drop(uid: str):
+    if not STAGING.drop(uid):
+        raise HTTPException(404, f"{uid} is not in the in-tray")
+    return {"dropped": uid, "remaining": len(STAGING.records)}
+
+
+@app.delete("/api/staging")
+def staging_clear():
+    return {"dropped": STAGING.clear()}
+
+
+@app.get("/api/corpus/recent")
+def corpus_recent(limit: int = Query(15, ge=1, le=40), dept: str | None = None):
+    """The most recently issued GRs, each screened on BOTH questions at once.
+
+    Answers, for a run of real documents rather than one upload: is it built to the Manual's
+    form, and does it still stand on the orders it cites. Deliberately a small window — the
+    index holds 17,283 GRs and screening all of them is a batch job, not a page load.
+
+    Ordered by the uid date prefix, which is the portal publication date and is present for
+    100% of GRs (the body `Date:` line is not usable — CLAUDE.md).
+    """
+    if not _corpus.portal_index():
+        return {"available": False, "rows": [],
+                "hint": "the corpus is not present on this box; clone data/mahGRs"}
+
+    pool = [n for n in S.graph["nodes"] if not dept or n.get("dept") == dept]
+    pool.sort(key=lambda n: n["date"], reverse=True)
+
+    rows, scanned = [], 0
+    for n in pool:
+        if len(rows) >= limit:
+            break
+        scanned += 1
+        if scanned > limit * 6:          # corpus text missing for a long run: stop, don't crawl
+            break
+        r = _screen(n["uid"])
+        if r:
+            rows.append(r)
+
+    return {
+        "available": True,
+        "rows": rows,
+        "scanned": scanned,
+        "index_total": len(S.nodes),
+        "departments": sorted({n["dept"] for n in S.graph["nodes"] if n.get("dept")}),
+        "note": "Template compliance is scored under the ISSUED rule set: sections that are "
+                "images in the signed PDF (signature block, the Governor's order line) cannot "
+                "be read by OCR and are not counted against an already-issued document. The "
+                "drafting page applies the full Manual form.",
+    }
+
+
+@app.post("/api/references/review")
+def references_review(body: _VerifyIn):
+    """Plain-language review of a citation check, written by the ON-PREMISE model.
+
+    The model explains findings it is handed; it never produces them and never sees the evidence
+    a verdict would rest on, so it cannot reach a different verdict from the deterministic check.
+    Any GR number it invents is stripped before the response leaves this process — see
+    `refreview._scrub`. Degrades to the computed summary when ollama is down.
+    """
+    report = _references.check(body.text, body.lang, ARCHIVE)
+    out = _refreview.review(report, body.lang)
+    out["report"] = report
+    return out
+
+
+# --------------------------------------------------------------------------- verify upload
+#
+# SRS FR-13 ("upload or type a draft") + FR-10/11/12 applied to an existing document. The
+# template check is the SAME `template.verify` the drafting page uses — one rule engine, so a
+# GR cannot pass on one page and fail on the other.
+
+@app.get("/api/verify/ocr/status")
+def verify_ocr_status():
+    ok, detail = _ocr.available()
+    return {"available": ok, "detail": detail}
+
+
+@app.post("/api/verify/upload")
+async def verify_upload(file: UploadFile = File(...),
+                        lang: str = Form("auto"),
+                        force_ocr: bool = Form(False)):
+    """Extract text from an uploaded GR, then run the Manual-of-Office-Procedure check.
+
+    `lang=auto` picks Marathi or English from the script mix, because an officer should not
+    have to tell us what they just uploaded.
+    """
+    data = await file.read()
+    if len(data) > 25 * 1024 * 1024:
+        raise HTTPException(413, "File larger than 25 MB.")
+    try:
+        extracted = _ocr.extract(data, file.filename or "upload.pdf", force_ocr=force_ocr)
+    except _ocr.OCRUnavailable as exc:
+        raise HTTPException(422, str(exc)) from exc
+    except Exception as exc:
+        raise HTTPException(400, f"Could not read the file: {exc}") from exc
+
+    if not extracted["text"].strip():
+        raise HTTPException(422, "No text could be extracted from this file.")
+
+    chosen = extracted["script"]["lang"] if lang == "auto" else lang
+    return {
+        "extraction": {k: v for k, v in extracted.items() if k != "text"},
+        "text": extracted["text"],
+        "lang": chosen,
+        "verify": _template.verify(extracted["text"], chosen),
+        # Structure, citations and terminology answer three different questions and an officer
+        # needs all three before signing: a GR can be perfectly formed, rest on an order that
+        # was cancelled two years ago, and call it by a name the Manual does not use. All three
+        # are computed, so all three come back on the one upload.
+        "references": _references.check(extracted["text"], chosen, ARCHIVE),
+        "glossary": _glossary.check(extracted["text"], chosen),
+        "filename": file.filename,
+    }
+
+
+@app.get("/api/draft/export/status")
+def draft_export_status():
+    ok, detail = _docgen.available()
+    return {"available": ok, "detail": detail}
+
+
+_DOCX_MIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+
+
+@app.post("/api/draft/export")
+def draft_export(body: _VerifyIn, fmt: str = Query("pdf", pattern="^(pdf|docx)$")):
+    """FR-16 — PDF or DOCX from one document model, so the two cannot drift.
+
+    Layout (section order from Manual Appendix 10.6, alignment from data/gr_template.json)
+    is applied by `docgen.parse`, which reuses the same detectors as the template checker.
+    """
+    try:
+        if fmt == "docx":
+            data, mime, name = (_docgen.to_docx(body.text, body.lang), _DOCX_MIME,
+                                "government-resolution.docx")
+        else:
+            data, mime, name = (_docgen.to_pdf(body.text, body.lang), "application/pdf",
+                                "government-resolution.pdf")
+    except Exception as exc:
+        raise HTTPException(503, f"Export failed: {exc}") from exc
+    return Response(content=data, media_type=mime,
+                    headers={"Content-Disposition": f'attachment; filename="{name}"'})
 
 
 # --------------------------------------------------------------------------- static

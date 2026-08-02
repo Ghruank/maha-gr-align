@@ -1,0 +1,307 @@
+{
+  "_source": {
+    "authority": "Maharashtra Manual of Office Procedure, 2023 — Appendix 10.6, 'FORM OF GOVERNMENT RESOLUTION'",
+    "file": "documents/mcs270623075036.pdf",
+    "srs": "FR-10, FR-11, FR-12 of documents/Maha-GR-Align_Simple_SRS-updated.pdf",
+    "note": [
+      "Section order and mandatory-ness come from the Manual — it is normative.",
+      "The `corpus_rate` on each section is how often that section is detectable in 1,500 random",
+      "Marathi GRs from the mahGRs corpus. It is DESCRIPTIVE, never a pass mark: signature blocks",
+      "read 30.4% only because they are scanned images, not because real GRs lack them.",
+      "Rules are enforced on drafts we generate, not used to judge historical GRs."
+    ],
+    "layout": "Alignment set 2026-08-01 on the officer's instruction: subject right; Government of Maharashtra title, department and Mantralaya address centred; everything else left. Section ORDER remains Appendix 10.6."
+  },
+  "sections": [
+    {
+      "id": "subject",
+      "code": "T01",
+      "required": true,
+      "corpus_rate": 0.93,
+      "label": {
+        "en": "Subject",
+        "mr": "विषय"
+      },
+      "mop": "Subject ___________________________",
+      "hint": {
+        "en": "One line stating what the resolution is about.",
+        "mr": "शासन निर्णयाचा विषय एका ओळीत."
+      },
+      "align": "right"
+    },
+    {
+      "id": "govt",
+      "code": "T02",
+      "required": true,
+      "corpus_rate": 0.998,
+      "fixed": true,
+      "label": {
+        "en": "Government of Maharashtra",
+        "mr": "महाराष्ट्र शासन"
+      },
+      "mop": "GOVERNMENT OF MAHARASHTRA",
+      "align": "center"
+    },
+    {
+      "id": "department",
+      "code": "T03",
+      "required": true,
+      "corpus_rate": 0.997,
+      "label": {
+        "en": "Department",
+        "mr": "विभाग"
+      },
+      "mop": "_________________ Department.",
+      "align": "center"
+    },
+    {
+      "id": "resolution_no",
+      "code": "T04",
+      "required": true,
+      "corpus_rate": 0.688,
+      "label": {
+        "en": "Resolution No.",
+        "mr": "शासन निर्णय क्रमांक"
+      },
+      "mop": "Resolution No. ______",
+      "hint": {
+        "en": "Departmental file number. Not a unique GR identifier — 41% of GRs share theirs.",
+        "mr": "विभागीय संचिका क्रमांक."
+      },
+      "align": "left"
+    },
+    {
+      "id": "address",
+      "code": "T05",
+      "required": true,
+      "corpus_rate": 0.996,
+      "fixed": true,
+      "label": {
+        "en": "Mantralaya address",
+        "mr": "मंत्रालय पत्ता"
+      },
+      "mop": "Mantralaya, Mumbai.",
+      "align": "center"
+    },
+    {
+      "id": "date",
+      "code": "T06",
+      "required": true,
+      "corpus_rate": 0.98,
+      "label": {
+        "en": "Date",
+        "mr": "दिनांक"
+      },
+      "align": "left"
+    },
+    {
+      "id": "read",
+      "code": "T07",
+      "required": false,
+      "corpus_rate": 0.479,
+      "label": {
+        "en": "Read",
+        "mr": "वाचा"
+      },
+      "mop": "Read.-Government Resolution, ____ Department No. ____ dated the ____",
+      "hint": {
+        "en": "Enumerated prior orders this resolution rests on. Every entry is checked against the corpus.",
+        "mr": "संदर्भाधीन पूर्वीचे आदेश. प्रत्येक संदर्भ संचिकेत तपासला जातो."
+      },
+      "align": "left"
+    },
+    {
+      "id": "preamble",
+      "code": "T08",
+      "required": true,
+      "corpus_rate": 0.72,
+      "label": {
+        "en": "Preamble / Background",
+        "mr": "प्रस्तावना"
+      },
+      "hint": {
+        "en": "SRS FR-11 orders the preamble Background -> Reference -> Resolution.",
+        "mr": "पार्श्वभूमी."
+      },
+      "align": "left"
+    },
+    {
+      "id": "resolution",
+      "code": "T09",
+      "required": true,
+      "corpus_rate": 0.835,
+      "label": {
+        "en": "Resolution",
+        "mr": "शासन निर्णय"
+      },
+      "mop": "Resolution.-Sanction is accorded to ______",
+      "hint": {
+        "en": "The operative decision, then numbered paragraphs 2., 3., ...",
+        "mr": "प्रत्यक्ष निर्णय, त्यानंतर क्रमांकित परिच्छेद."
+      },
+      "align": "left"
+    },
+    {
+      "id": "expenditure",
+      "code": "T10",
+      "required": false,
+      "conditional_on": "has_financial_sanction",
+      "corpus_rate": 0.163,
+      "label": {
+        "en": "Financial sanction / Budget head",
+        "mr": "खर्च व लेखाशीर्ष"
+      },
+      "mop": "The expenditure should be debited to- ______",
+      "hint": {
+        "en": "Required only when the GR sanctions expenditure (SRS FR-11). Budget head like 2054-00-101-02.",
+        "mr": "खर्चास मान्यता देणाऱ्या निर्णयांसाठीच आवश्यक. लेखाशीर्ष उदा. २०५४-००-१०१-०२."
+      },
+      "align": "left"
+    },
+    {
+      "id": "finance_concurrence",
+      "code": "T11",
+      "required": false,
+      "conditional_on": "has_financial_sanction",
+      "corpus_rate": 0.174,
+      "label": {
+        "en": "Finance Department concurrence",
+        "mr": "वित्त विभाग सहमती"
+      },
+      "mop": "This resolution issues with the concurrence of the Finance Department on its unofficial reference No.____ dated ____",
+      "hint": {
+        "en": "Manual 9.5(6): mandatory where expenditure requires prior Finance reference under rule 11 of the Maharashtra Rules of Business (Article 166).",
+        "mr": "खर्चाच्या बाबतीत वित्त विभागाचा पूर्व संदर्भ आवश्यक असल्यास."
+      },
+      "align": "left"
+    },
+    {
+      "id": "governor_order",
+      "code": "T12",
+      "required": true,
+      "corpus_rate": 0.022,
+      "fixed": true,
+      "label": {
+        "en": "By order and in the name of the Governor of Maharashtra,",
+        "mr": "महाराष्ट्राचे राज्यपाल यांच्या आदेशानुसार व नावाने,"
+      },
+      "mop": "By order and in the name of the Governor of Maharashtra,",
+      "hint": {
+        "en": "Corpus rate is 2.2% because this sits in the scanned signature image, not the text layer. The Manual requires it; enforce on drafts.",
+        "mr": "स्वाक्षरी प्रतिमेत असल्याने संचिकेत क्वचित आढळते; मसुद्यात आवश्यक."
+      },
+      "align": "left"
+    },
+    {
+      "id": "signature",
+      "code": "T13",
+      "required": true,
+      "corpus_rate": 0.304,
+      "label": {
+        "en": "Signature block",
+        "mr": "स्वाक्षरी"
+      },
+      "mop": "_______  Under Secretary to the Government of Maharashtra, ____ Department.",
+      "hint": {
+        "en": "Name, designation (Under/Deputy/Principal Secretary), department.",
+        "mr": "नाव, पदनाम (अवर/उप/प्रधान सचिव), विभाग."
+      },
+      "align": "left"
+    },
+    {
+      "id": "distribution",
+      "code": "T14",
+      "required": false,
+      "corpus_rate": 0.45,
+      "label": {
+        "en": "To (distribution list)",
+        "mr": "प्रति"
+      },
+      "mop": "To  1) ______  2) ______",
+      "hint": {
+        "en": "Manual 10.x: use the widest collective designation; do not include officers not concerned.",
+        "mr": "व्यापक सामूहिक पदनाम वापरावे."
+      },
+      "align": "left"
+    },
+    {
+      "id": "website",
+      "code": "T15",
+      "required": false,
+      "corpus_rate": 0.388,
+      "label": {
+        "en": "Website availability line",
+        "mr": "संकेतस्थळ ओळ"
+      },
+      "hint": {
+        "en": "Not in the Manual, but 38.8% of real GRs carry it. Advisory only.",
+        "mr": "संचिकेत सामान्य, परंतु नियमावलीत नाही."
+      },
+      "align": "left"
+    }
+  ],
+  "skeleton": {
+    "mr": [
+      "विषय :- {subject}",
+      "",
+      "महाराष्ट्र शासन",
+      "{department}",
+      "शासन निर्णय क्रमांक: {resolution_no}",
+      "मंत्रालय, मुंबई ४०० ०३२",
+      "मादाम कामा मार्ग, हुतात्मा राजगुरू चौक",
+      "दिनांक : {date}",
+      "",
+      "वाचा :-",
+      "{read}",
+      "",
+      "प्रस्तावना :-",
+      "{preamble}",
+      "",
+      "शासन निर्णय :-",
+      "{resolution}",
+      "",
+      "{expenditure}",
+      "{finance_concurrence}",
+      "",
+      "सदर शासन निर्णय महाराष्ट्र शासनाच्या www.maharashtra.gov.in या संकेतस्थळावर उपलब्ध करण्यात आला आहे.",
+      "",
+      "महाराष्ट्राचे राज्यपाल यांच्या आदेशानुसार व नावाने,",
+      "",
+      "{signature}",
+      "",
+      "प्रति,",
+      "{distribution}"
+    ],
+    "en": [
+      "Subject: {subject}",
+      "",
+      "GOVERNMENT OF MAHARASHTRA",
+      "{department}",
+      "Government Resolution No.: {resolution_no}",
+      "Mantralaya, Mumbai 400 032",
+      "Madam Cama Road, Hutatma Rajguru Chowk",
+      "Date: {date}",
+      "",
+      "Read:-",
+      "{read}",
+      "",
+      "Preamble:-",
+      "{preamble}",
+      "",
+      "Resolution:-",
+      "{resolution}",
+      "",
+      "{expenditure}",
+      "{finance_concurrence}",
+      "",
+      "This Government Resolution is available on the Government of Maharashtra website www.maharashtra.gov.in.",
+      "",
+      "By order and in the name of the Governor of Maharashtra,",
+      "",
+      "{signature}",
+      "",
+      "To,",
+      "{distribution}"
+    ]
+  }
+}

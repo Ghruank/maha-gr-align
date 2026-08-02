@@ -77,6 +77,29 @@ MR_DATE = re.compile(MR_DATEMARK + r'([०-९]{1,2})\s*[.\-/]\s*([०-९]{1,2}
 MR_NO = re.compile(r'(?:क्रमांक|क्र)\s*[.:ः]?\s*(.{4,90}?)(?=\s*,?\s*' + MR_DATEMARK + r'[०-९])', re.S)
 MR_GR_WORD = re.compile(r'शासन\s*(?:निर्णय|परिपत्रक|शुद्धिपत्रक|आदेश|पूरक\s*पत्र)')
 
+# Spelled-out Marathi months. `MR_DATE` accepts only `दि.०७.०३.२०१८`, but a large minority of
+# citations write `दिनांक ०९ जुलै, २०२६` — MEASURED on 600 corpus GRs, 730 of 1,625 date-bearing
+# reference items (45%) were dropped for this reason alone, and it was the ONLY reason any of
+# them were dropped. Supporting it is the difference between extracting half the citations in a
+# वाचा block and extracting nearly all of them.
+#
+# Months are matched on their SKELETON — consonants with every matra and virama removed —
+# because a PDF text layer returns `एप्रिल` as `एिप्रल` with the matras in visual order. The
+# twelve skeletons stay distinct from one another.
+MR_MONTHS = ["जानेवारी", "फेब्रुवारी", "मार्च", "एप्रिल", "मे", "जून",
+             "जुलै", "ऑगस्ट", "सप्टेंबर", "ऑक्टोबर", "नोव्हेंबर", "डिसेंबर"]
+
+
+def skeleton(s: str) -> str:
+    """A Devanagari word with its combining marks stripped. Matra-order independent."""
+    import unicodedata
+    return ''.join(c for c in s if unicodedata.category(c) not in ('Mn', 'Mc'))
+
+
+MONTH_BY_SKELETON = {skeleton(m): i + 1 for i, m in enumerate(MR_MONTHS)}
+MR_DATE_WORD = re.compile(
+    MR_DATEMARK + r'([०-९]{1,2})\s*([ऀ-ॿ]{2,14}?)\s*,?\s*([०-९]{4})')
+
 # Department names as they appear in Marathi citations. A citation naming a department other
 # than the indexed one cannot resolve against a single-department index — that is the ~53%
 # cross-departmental population, and it must be labelled unresolved rather than forced.
@@ -139,13 +162,27 @@ def _mkdate(d, m, y):
         return None
 
 
-def extract_mr_citations(text: str) -> list[dict]:
-    """Reference items from the Marathi side, one record per citation."""
+def mr_reference_span(text: str) -> tuple[int, int] | None:
+    """(start, end) of the वाचा / संदर्भ block, or None when the document labels none."""
     h = MR_REF_HEAD.search(text)
     if not h:
-        return []
+        return None
     b = MR_BODY_START.search(text, h.end())
-    region = text[h.end(): b.start() if b else min(len(text), h.end() + 4000)]
+    return h.end(), (b.start() if b else min(len(text), h.end() + 4000))
+
+
+def mr_reference_items(text: str) -> list[tuple[int, str]]:
+    """[(offset_into_text, item_text)] for the reference block. [] when there is no block.
+
+    Offsets are returned rather than discarded because a *draft* checker must be able to tell an
+    officer which line a bad citation is on (SRS FR-3), and recovering the offset afterwards by
+    searching for the item fails — items are whitespace-normalised downstream.
+    """
+    span = mr_reference_span(text)
+    if not span:
+        return []
+    base, end = span
+    region = text[base:end]
 
     def is_ordinal(m):
         """True for a list ordinal, False for a sub-run inside a file number."""
@@ -159,34 +196,70 @@ def extract_mr_citations(text: str) -> list[dict]:
     if marks:
         spans = [(m.end(), marks[i + 1].start() if i + 1 < len(marks) else len(region))
                  for i, m in enumerate(marks)]
-        items = [region[s:e] for s, e in spans]
     else:
-        items = [l for l in region.split('\n') if l.strip()]
+        spans, at = [], 0
+        for line in region.split('\n'):
+            if line.strip():
+                spans.append((at, at + len(line)))
+            at += len(line) + 1
+    return [(base + s, region[s:e]) for s, e in spans]
 
-    out = []
-    for raw in items:
-        raw = ' '.join(raw.split())
-        if len(raw) < 12:
-            continue
-        dm = MR_DATE.search(raw)
-        if not dm:
-            continue
+
+def _cited_date(raw: str):
+    """The date a citation names, numeric or spelled out. None when neither form is present."""
+    dm = MR_DATE.search(raw)
+    if dm:
         d = _mkdate(*dm.groups())
-        if not d:
+        if d:
+            return d
+    for m in MR_DATE_WORD.finditer(raw):
+        mon = MONTH_BY_SKELETON.get(skeleton(m.group(2)))
+        if not mon:
             continue
-        nm = MR_NO.search(raw)
-        no = ' '.join(nm.group(1).split()) if nm else None
-        if no and (MR_NO_REJECT.search(no) or not re.search(r'[०-९]', no)):
-            no = None                       # captured noise, not a file number
-        dept = next((v for k, v in MR_DEPTS.items() if k in raw), None)
-        out.append({
-            "raw": raw[:400],
-            "cited_no": no,
-            "cited_date": d.isoformat(),
-            "cited_dept": dept,
-            "is_gr": bool(MR_GR_WORD.search(raw)),
-            "same_no": bool(MR_SAME_NO.search(raw)),
-        })
+        try:
+            return datetime.date(int(m.group(3).translate(DEV_DIGITS)), mon,
+                                 int(m.group(1).translate(DEV_DIGITS)))
+        except ValueError:
+            continue
+    return None
+
+
+def mr_citation(raw: str) -> dict | None:
+    """One citation record from one reference item, or None if the item is not a citation.
+
+    Split out of `extract_mr_citations` so that `references.py` can parse a draft — which has no
+    uid, and often no वाचा block — under exactly the rules the corpus was parsed under. Two
+    definitions of "what a citation looks like" would drift, and the graph and the draft checker
+    would then disagree about the same sentence.
+    """
+    raw = ' '.join(raw.split())
+    if len(raw) < 12:
+        return None
+    d = _cited_date(raw)
+    if not d:
+        return None
+    nm = MR_NO.search(raw)
+    no = ' '.join(nm.group(1).split()) if nm else None
+    if no and (MR_NO_REJECT.search(no) or not re.search(r'[०-९]', no)):
+        no = None                       # captured noise, not a file number
+    dept = next((v for k, v in MR_DEPTS.items() if k in raw), None)
+    return {
+        "raw": raw[:400],
+        "cited_no": no,
+        "cited_date": d.isoformat(),
+        "cited_dept": dept,
+        "is_gr": bool(MR_GR_WORD.search(raw)),
+        "same_no": bool(MR_SAME_NO.search(raw)),
+    }
+
+
+def extract_mr_citations(text: str) -> list[dict]:
+    """Reference items from the Marathi side, one record per citation."""
+    out = []
+    for _, item in mr_reference_items(text):
+        c = mr_citation(item)
+        if c:
+            out.append(c)
     return out
 
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { api, fmt, type Finding } from '../api'
+import { api, fmt, type Finding } from '../../api'
 
 // Two tabs, deliberately separate: proven dead references, and citations we could not verify.
 // Keeping them apart IS the credibility feature — merging them would multiply the headline
@@ -106,7 +106,7 @@ export default function Audit() {
                   <tr>
                     <th style={{ width: 110 }}>Citing GR</th>
                     <td>
-                      <Link to={`/graph/${f.citing_uid}`} className="mono">{f.citing_uid}</Link>{' '}
+                      <Link to={`/archive/graph/${f.citing_uid}`} className="mono">{f.citing_uid}</Link>{' '}
                       <span className="muted">{f.citing_date} · {f.citing_dept}</span>
                       <div>{f.citing_subject}</div>
                     </td>
@@ -114,7 +114,7 @@ export default function Audit() {
                   <tr>
                     <th>Cites</th>
                     <td>
-                      <Link to={`/graph/${f.target_uid}`} className="mono">{f.target_uid}</Link>{' '}
+                      <Link to={`/archive/graph/${f.target_uid}`} className="mono">{f.target_uid}</Link>{' '}
                       <span className="muted">{f.target_date} · {f.target_dept}</span>
                       <div>{f.target_subject}</div>
                     </td>
@@ -122,7 +122,7 @@ export default function Audit() {
                   <tr>
                     <th>Killed by</th>
                     <td>
-                      <Link to={`/graph/${f.superseded_by}`} className="mono">
+                      <Link to={`/archive/graph/${f.superseded_by}`} className="mono">
                         {f.superseded_by}</Link>{' '}
                       <span className="muted">{f.superseded_on}</span>
                       <div>{f.superseded_by_subject}</div>

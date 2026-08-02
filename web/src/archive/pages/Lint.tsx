@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fmt } from '../api'
+import { fmt } from '../../api'
 
 // GR-Lint. The persuasive part is not the rule list — it is the *free variation* list next to it.
 // "Here are 18 orderings we deliberately do not enforce, because the corpus varies" is the proof
