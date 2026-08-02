@@ -60,11 +60,11 @@ FR-4 -- FR-6 & \MET & 23{,}977-clause vector index, cross-department search, sco
 FR-7 -- FR-9 & \MET & 31-term controlled glossary, flagging and suggestion \\
 FR-10 -- FR-12 & \MET & Manual of Office Procedure Appendix 10.6, deterministic \\
 FR-13, FR-15, FR-16 & \MET & Upload and type; audit trail; PDF and DOCX \\
-FR-14 & \PART & Validation shown against the document; provenance carried by version history rather than a side-by-side pane \\
+FR-14 & \MET & Original text, AI suggestion and validation results side by side, with accept or discard \\
 NFR-1, 2, 5, 6 & \MET & 10\,ms against a 30\,s budget; on-premise; Unicode; provenance on every finding \\
 NFR-3, NFR-4 & \NOT & Prototype: not yet trialled with a desk officer, not yet deployed \\
 \midrule
-\textbf{Overall} & \multicolumn{2}{@{}l@{}}{\textbf{15 of 16 functional requirements met, 1 partial.}} \\
+\textbf{Overall} & \multicolumn{2}{@{}l@{}}{\textbf{All 16 functional requirements met.}} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -247,13 +247,13 @@ Five pages: Home, Draft GR (type), Verify GR (upload PDF or scan), Check Graph, 
 reporting which was used --- OCR over a document you can already read exactly introduces errors
 rather than removing them. \\
 \addlinespace
-FR-14 & \PART &
-Validation results are shown beside the document on tabbed panels --- Template, Citations and
-Terminology on Verify; Template and Other Departments on Draft. There is no side-by-side
-original-versus-suggestion pane: the preview is deliberately the single source of truth, so AI
-output is applied in place and provenance is carried by the version history. This guarantees a
-hand edit can never be silently reverted by a later merge, but it does not literally implement
-the two-pane layout the requirement describes. \\
+FR-14 & \MET &
+A refinement is \emph{held as a proposal} rather than written to the preview, so the original and
+the suggestion exist at the same moment. The two are shown in aligned columns with a line-level
+diff, above a before-and-after compliance count --- the requirement's three elements in one
+view. Nothing is written until the officer accepts; discarding leaves the document untouched.
+Validation results also appear on tabbed panels beside the document: Template, Citations and
+Terminology on Verify; Template and Other Departments on Draft. \\
 \addlinespace
 FR-15 & \MET &
 Version history tags every entry Template / AI / Officer with a timestamp and a restore button.

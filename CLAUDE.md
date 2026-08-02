@@ -104,6 +104,13 @@ refine sends the CURRENT preview text, hand edits included. If AI output were ke
 and merged later, a hand edit could be silently reverted — in a legal document that is a
 correctness failure, not a UX wrinkle.
 
+**FR-14, added 2026-08-02.** A refinement is now HELD as a proposal and shown beside the current
+text as a line-level diff, with a before/after compliance count, until the officer accepts or
+discards. This does not weaken the invariant — the request still sends the current preview, and
+the proposal is a whole-document replacement that is never *merged*. A merge is what could
+revert a hand edit; an accept-or-discard cannot. It also strengthens FR-15: an accepted
+suggestion is an explicit human decision with a timestamp, and a DISCARDED one is recorded too.
+
 **Verify GR** (`/verify`) — upload a PDF or scan, extract, then run THREE checks in one pass,
 shown on tabs that each carry their own count:
 
@@ -430,7 +437,7 @@ From `documents/Maha-GR-Align_Simple_SRS-updated.pdf`. ✅ built · ◐ partial 
 | FR-7..9 | controlled bilingual glossary, flag, suggest | ✅ `glossary.py`, Terminology tab |
 | FR-10..12 | Manual of Office Procedure structure, mandatory sections, warn | ✅ `template.py` |
 | FR-13 | upload or type a draft | ✅ both pages |
-| FR-14 | side-by-side text, AI suggestions, validation | ✅ |
+| FR-14 | side-by-side text, AI suggestions, validation | ✅ `SuggestionDiff.tsx`, accept/discard |
 | FR-15 | audit trail of AI suggestions and human edits | ✅ version history |
 | FR-16 | export PDF / DOCX | ✅ `docgen.py` |
 | NFR-1 | 30 s for reference + conflict check | ◐ drafting 28–35 s, OCR 18.5 s warm |

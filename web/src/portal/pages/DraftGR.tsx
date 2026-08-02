@@ -7,6 +7,7 @@ import {
 } from '../draftApi'
 import VerifyPanel from '../VerifyPanel'
 import SemanticPanel from '../SemanticPanel'
+import SuggestionDiff from '../SuggestionDiff'
 
 /* SRS FR-13..FR-16.
 
@@ -56,6 +57,13 @@ export default function DraftGR() {
   const [semStatus, setSemStatus] = useState<SemanticStatus | null>(null)
   const [semBusy, setSemBusy] = useState(false)
   const [tab, setTab] = useState<'template' | 'semantic'>('template')
+
+  // FR-14. The model's refinement is HELD as a proposal rather than written to the preview, so
+  // the original and the suggestion exist at the same moment and can be shown side by side.
+  // Accepting is what writes — see SuggestionDiff.tsx for why this does not break the
+  // single-source-of-truth invariant.
+  const [proposal, setProposal] = useState<
+    { text: string; instruction: string; stats?: Stats; verify: Verification } | null>(null)
 
   // Re-read on every open, not once on mount. The index takes ~35 minutes to build, so a page
   // left open across the end of a build would otherwise keep reporting "not built" for as long
@@ -154,20 +162,43 @@ export default function DraftGR() {
     } catch (e) { setError(String(e)) } finally { setBusy(null) }
   }
 
-  // Refinement always sends the CURRENT preview, hand edits included.
+  // Refinement always sends the CURRENT preview, hand edits included. The response is held as
+  // a proposal; only `acceptProposal` writes to the preview.
   const refine = async () => {
     if (!prompt.trim()) return
     flushPendingEdit()
     setBusy('refine'); setError(null)
     try {
       const d = await draftApi.refine(text, prompt, lang)
-      setText(d.text)
-      setVerification(d.verify)
       setLastStats(d.stats)
-      pushVersion('ai', (mr ? 'एआय सुधारणा: ' : 'AI refinement: ') + prompt, d.text, d.stats)
-      if (!d.changed) setError(d.note || (mr ? 'मॉडेलने बदल केला नाही.' : 'The model returned no change.'))
-      setPrompt('')
+      if (!d.changed || d.text.trim() === text.trim()) {
+        setError(d.note || (mr ? 'मॉडेलने बदल केला नाही.' : 'The model returned no change.'))
+        return
+      }
+      setProposal({ text: d.text, instruction: prompt, stats: d.stats, verify: d.verify })
     } catch (e) { setError(String(e)) } finally { setBusy(null) }
+  }
+
+  const acceptProposal = () => {
+    if (!proposal) return
+    setText(proposal.text)
+    setVerification(proposal.verify)
+    pushVersion('ai', (mr ? 'एआय सुधारणा (स्वीकारली): ' : 'AI refinement, accepted: ')
+      + proposal.instruction, proposal.text, proposal.stats)
+    setProposal(null)
+    setPrompt('')
+  }
+
+  const discardProposal = () => {
+    if (!proposal) return
+    // Recorded, because an officer REJECTING a suggestion is part of the audit trail (FR-15)
+    // just as much as accepting one — and the text is unchanged, so no version is created.
+    setVersions(v => [...v, {
+      n: v.length + 1, origin: 'human',
+      label: (mr ? 'एआय सूचना नाकारली: ' : 'AI suggestion discarded: ') + proposal.instruction,
+      text, at: new Date().toLocaleTimeString(),
+    }])
+    setProposal(null)
   }
 
   const verify = async () => {
@@ -355,6 +386,13 @@ export default function DraftGR() {
             )}
           </div>
 
+          {proposal ? (
+            <SuggestionDiff
+              current={text} proposed={proposal.text} instruction={proposal.instruction}
+              stats={proposal.stats} before={verification} after={proposal.verify}
+              lang={lang} mr={mr} busy={busy !== null}
+              onAccept={acceptProposal} onDiscard={discardProposal} />
+          ) : (
           <div className="pk-sheet-scroll">
             <div className="pk-sheet">
               <textarea className={`pk-preview ${mr ? 'pk-mr' : ''}`} value={text}
@@ -362,6 +400,7 @@ export default function DraftGR() {
                 spellCheck={false} />
             </div>
           </div>
+          )}
 
           {(verification || semantic || text.trim()) && (
             <div className="pk-resulttabs">
